@@ -1,0 +1,76 @@
+{ config, lib, pkgs, pkgs-unstable, inputs, outputs, ... }:
+
+{
+  imports =
+    [ 
+      ./hardware/laptop/hardware-configuration.nix
+      ./hardware/laptop/nvidia.nix
+      ./hardware/laptop/laptop.nix
+      ./settings.nix
+      ./fonts.nix
+      ./hyprland.nix
+#     ./stylix.nix
+    ];
+
+  programs.nix-ld.enable = true;
+
+  nixpkgs.config.allowUnfree = true;
+  environment.systemPackages = (with pkgs; [
+    wget
+    steam
+    wireguard-tools
+    linuxKernel.packages.linux_5_4.wireguard
+    wg-netmanager
+    gnomeExtensions.wireguard-vpn-extension
+    gnomeExtensions.wireguard-indicator
+    gnomeExtensions.xremap
+    keyd
+    kitty
+    steam-run
+    alacritty
+    virt-manager
+    virt-viewer
+    zip
+    unzip
+
+    #Gaming
+    mangohud
+    protonup
+    lutris
+  ])
+
+  ++
+  
+  (with pkgs-unstable; [
+#    git
+    openrgb
+    nh
+    nix-output-monitor
+    nvd
+    brave
+    spotify
+#    ollama-cuda
+    vesktop
+    fastfetch
+    onlyoffice-bin_latest
+    nautilus
+    wineWow64Packages.staging
+    protonup-qt
+  ]);
+
+  programs.gamemode.enable = true;
+
+  programs.steam = {
+    enable = true;
+    gamescopeSession.enable = true;
+    remotePlay.openFirewall = true; 
+    dedicatedServer.openFirewall = true;
+  };
+  
+  system.stateVersion = "24.05";  
+
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+
+}
+
