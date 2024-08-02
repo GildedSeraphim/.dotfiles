@@ -8,7 +8,7 @@
 #      ./hardware/laptop/laptop.nix
       ./settings.nix
       ./fonts.nix
-      ./hyprland.nix
+     ./hyprland.nix
 #     ./stylix.nix
     ];
 
@@ -18,14 +18,6 @@
   environment.systemPackages = (with pkgs; [
     wget
     steam
-    wireguard-tools
-    linuxKernel.packages.linux_5_4.wireguard
-    wg-netmanager
-    gnomeExtensions.wireguard-vpn-extension
-    gnomeExtensions.wireguard-indicator
-    gnomeExtensions.xremap
-    keyd
-    kitty
     steam-run
     alacritty
     virt-manager
