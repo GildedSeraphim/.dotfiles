@@ -17,6 +17,7 @@ in
     ./hyprland-environment.nix
   ];
 
+
   wayland.windowManager.hyprland = {
     enable = true;
 
@@ -83,7 +84,7 @@ in
 
       input = {
         touchpad = {
-          "natural_scroll" = "false";
+          "natural_scroll" = "true";
         };
         "accel_profile" = "flat";
         "follow_mouse" = "true";
@@ -104,27 +105,30 @@ in
         "$mod, Q, killactive"
         "$mod, W, exec, mako"
             
-        "bind = $mod, 1, workspace, 1"
-        "bind = $mod, 2, workspace, 2"
-        "bind = $mod, 3, workspace, 3"
-        "bind = $mod, 4, workspace, 4"
-        "bind = $mod, 5, workspace, 5"
-        "bind = $mod, 6, workspace, 6"
-        "bind = $mod, 7, workspace, 7"
+        "$mod, 1, workspace, 1"
+        "$mod, 2, workspace, 2"
+        "$mod, 3, workspace, 3"
+        "$mod, 4, workspace, 4"
+        "$mod, 5, workspace, 5"
+        "$mod, 6, workspace, 6"
+        "$mod, 7, workspace, 7"
 
-        "bind = $mod SHIFT, 1, movetoworkspacesilent, 1"
-        "bind = $mod SHIFT, 2, movetoworkspacesilent, 2"
-        "bind = $mod SHIFT, 3, movetoworkspacesilent, 3"
-        "bind = $mod SHIFT, 4, movetoworkspacesilent, 4"
-        "bind = $mod SHIFT, 5, movetoworkspacesilent, 5"
-        "bind = $mod SHIFT, 6, movetoworkspacesilent, 6"
-        "bind = $mod SHIFT, 7, movetoworkspacesilent, 7"
+        "$mod SHIFT, 1, movetoworkspacesilent, 1"
+        "$mod SHIFT, 2, movetoworkspacesilent, 2"
+        "$mod SHIFT, 3, movetoworkspacesilent, 3"
+        "$mod SHIFT, 4, movetoworkspacesilent, 4"
+        "$mod SHIFT, 5, movetoworkspacesilent, 5"
+        "$mod SHIFT, 6, movetoworkspacesilent, 6"
+        "$mod SHIFT, 7, movetoworkspacesilent, 7"
 
-        "bind = $mod, S, togglespecialworkspace, magic"
-        "bind = $mod SHIFT, S, movetoworkspace, special:magic"
+        "$mod, S, togglespecialworkspace, magic"
+        "$mod SHIFT, S, movetoworkspace, special:magic"
 
-        "bind = $mod, mouse_down, workspace, e+1"
-        "bind = $mod, mouse_up, workspace, e-1"
+        ", XF86MonBrightnessUp, exec, brightnessctl s +5%"
+        ", XF86MonBrightnessDown, exec, brightnessctl s 5%-"
+
+        "$mod, mouse_down, workspace, e+1"
+        "$mod, mouse_up, workspace, e-1"
       ];
 
       bindm = [

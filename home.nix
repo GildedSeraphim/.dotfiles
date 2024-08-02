@@ -65,6 +65,11 @@
     xfce.thunar-archive-plugin
     ranger
     krusader
+    brightnessctl
+    librewolf
+    floorp
+    ungoogled-chromium
+    esshader
   ])
 
   ++

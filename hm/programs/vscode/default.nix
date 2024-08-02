@@ -21,6 +21,7 @@
           "cmake.configureOnOpen" = true;
           "window.titleBarStyle" = "custom";
           "terminal.integrated.gpuAcceleration" = "off";
+          "disable-hardware-acceleration" = true;
         };
     };
 }

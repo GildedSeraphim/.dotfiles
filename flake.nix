@@ -78,6 +78,7 @@
 	cairo
 	glm
 	SDL2
+        esshader
 	
       ];
       shellHook = ''
