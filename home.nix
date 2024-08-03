@@ -70,6 +70,7 @@
     floorp
     ungoogled-chromium
     esshader
+    pavucontrol
   ])
 
   ++
