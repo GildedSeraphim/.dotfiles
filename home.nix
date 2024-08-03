@@ -77,6 +77,7 @@
   (with pkgs-unstable; [
     krita
     jetbrains.clion
+    r2modman
   ]);
   
   home.file = {
