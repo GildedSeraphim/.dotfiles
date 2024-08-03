@@ -3,9 +3,9 @@
 {
   imports =
     [ 
-      ./hardware/desktop/hardware-configuration.nix
-      ./hardware/desktop/nvidia.nix
-#      ./hardware/laptop/laptop.nix
+      ./hardware/laptop/hardware-configuration.nix
+      ./hardware/laptop/nvidia.nix
+      ./hardware/laptop/laptop.nix
       ./settings.nix
       ./fonts.nix
      ./hyprland.nix
