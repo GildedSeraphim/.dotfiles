@@ -13,9 +13,23 @@
     ];
 
   programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [
+    stdenv.cc.cc
+    bash
+    zlib
+    nss
+    openssl
+    curl
+    expat
+    envfs
+  ];
+
 
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages = (with pkgs; [
+    nix-ld
+    envfs
+
     wget
     steam
     steam-run

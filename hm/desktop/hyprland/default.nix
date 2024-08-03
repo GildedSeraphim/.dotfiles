@@ -99,7 +99,7 @@ in
       bind = [
         "$mod, B, exec, brave"
         "$mod, Return, exec, alacritty"
-        "$mod, R, exec, wofi"
+        "$mod, R, exec, rofi -show drun"
         "$mod SHIFT, R, exec, rofi -show run"
         "$mod, F, togglefloating"
         "$mod, Q, killactive"
