@@ -6,7 +6,6 @@
     nixpkgs-unstable.url = "nixpkgs/nixos-unstable";
     home-manager.url = "github:nix-community/home-manager/release-24.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    xremap-flake.url = "github:xremap/nix-flake";
     nix-colors.url = "github:misterio77/nix-colors";
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
     stylix.url = "github:danth/stylix";
@@ -14,7 +13,6 @@
       url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
     };
-    ags.url = "github:Aylur/ags";
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
   };
   
@@ -36,7 +34,6 @@
         inherit system;
         modules = [ 
           ./configuration.nix
-#          stylix.nixosModules.stylix
         ];
         specialArgs = {
           inherit hyprland;

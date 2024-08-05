@@ -1,17 +1,13 @@
 { config, pkgs, pkgs-unstable, lib, inputs, outputs, nix-colors, ... }:
 {
-  # Home Manager needs a bit of information about you and the paths it should
-  # manage.
   home.username = "sn";
   home.homeDirectory = "/home/sn";
 
   imports = [
     nix-colors.homeManagerModules.default
     ./hm
-#    (import stylix).homeManagerModules.stylix
-    #./stylix.nix
   ];
-    stylix.enable = true;
+  stylix.enable = true;
 
   stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-medium.yaml";
 
@@ -101,14 +97,6 @@
     protonup-qt
   ]);
   
-  home.file = {
-
-  };
-
-  home.sessionVariables = {
-
-  };
-
   programs.bash.enable = true;
   programs.bash.shellAliases = {
     ll = "ls -l";
@@ -119,6 +107,5 @@
     "fui" = "nix run github:vimjoyer/nix-update-input";
   };
 
-  # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 }

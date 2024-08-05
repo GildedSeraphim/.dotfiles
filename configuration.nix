@@ -9,7 +9,6 @@
       ./settings.nix
       ./fonts.nix
      ./hyprland.nix
-#     ./stylix.nix
     ];
 
   programs.nix-ld.enable = true;
