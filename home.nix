@@ -53,6 +53,7 @@
 
   home.packages = 
   (with pkgs; [
+    times-newer-roman
     hyprcursor
     eww
     mako
@@ -71,6 +72,15 @@
     ungoogled-chromium
     esshader
     pavucontrol
+    famistudio
+    wget
+    steam-run
+    zip
+    unzip
+    mangohud
+    protonup
+    lutris
+    ardour
   ])
 
   ++
@@ -79,6 +89,15 @@
     krita
     jetbrains.clion
     r2modman
+    openrgb
+    nh
+    nix-output-monitor
+    nvd
+    brave
+    vesktop
+    onlyoffice-bin_latest
+    wineWow64Packages.staging
+    protonup-qt
   ]);
   
   home.file = {

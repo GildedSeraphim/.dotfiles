@@ -29,39 +29,12 @@
   environment.systemPackages = (with pkgs; [
     nix-ld
     envfs
-
-    wget
-    steam
-    steam-run
-    alacritty
-    virt-manager
-    virt-viewer
-    zip
-    unzip
-
-    #Gaming
-    mangohud
-    protonup
-    lutris
   ])
 
   ++
   
   (with pkgs-unstable; [
-#    git
-    openrgb
-    nh
-    nix-output-monitor
-    nvd
-    brave
-    spotify
-#    ollama-cuda
-    vesktop
-    fastfetch
-    onlyoffice-bin_latest
-    nautilus
-    wineWow64Packages.staging
-    protonup-qt
+
   ]);
 
   programs.gamemode.enable = true;

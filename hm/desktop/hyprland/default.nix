@@ -7,7 +7,7 @@ let
       ${pkgs.mako}/bin/mako init &
       sleep 1
 
-      ${pkgs.swww}/bin/swww img ${./wallpaper.png} &
+      ${pkgs.swww}/bin/swww img ${./redlipstick.jpg} &
   
     '';
 in
@@ -86,6 +86,7 @@ in
         "numlock_by_default" = true;
         touchpad = {
           "natural_scroll" = "true";
+          "scroll_factor" = "0.2";
         };
         "accel_profile" = "flat";
         "follow_mouse" = "true";
@@ -113,6 +114,9 @@ in
         "$mod, 5, workspace, 5"
         "$mod, 6, workspace, 6"
         "$mod, 7, workspace, 7"
+        "$mod, 8, workspace, 8"
+        "$mod, 9, workspace, 9"
+        "$mod, 0, workspace, 10"
 
         "$mod SHIFT, 1, movetoworkspacesilent, 1"
         "$mod SHIFT, 2, movetoworkspacesilent, 2"
@@ -121,6 +125,14 @@ in
         "$mod SHIFT, 5, movetoworkspacesilent, 5"
         "$mod SHIFT, 6, movetoworkspacesilent, 6"
         "$mod SHIFT, 7, movetoworkspacesilent, 7"
+        "$mod SHIFT, 8, movetoworkspacesilent, 8"
+        "$mod SHIFT, 9, movetoworkspacesilent, 9"
+        "$mod SHIFT, 0, movetoworkspacesilent, 10"
+
+        "$mod, left, movefocus, l"
+        "$mod, right, movefocus, r"
+	"$mod, up, movefocus, u"	 
+	"$mod, down, movefocus, d"
 
         "$mod, S, togglespecialworkspace, magic"
         "$mod SHIFT, S, movetoworkspace, special:magic"
