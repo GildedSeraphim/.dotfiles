@@ -14,7 +14,8 @@
       url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
     };
-   ags.url = "github:Aylur/ags";
+    ags.url = "github:Aylur/ags";
+    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
   };
   
   outputs = { self, nixpkgs, home-manager, nixpkgs-unstable, nix-colors, hyprland, stylix, ...}@inputs :
@@ -49,10 +50,12 @@
     homeConfigurations = {
       sn = home-manager.lib.homeManagerConfiguration {
         modules = [ 
+          ./spicetify.nix
           ./home.nix 
           hyprland.homeManagerModules.default
           inputs.ags.homeManagerModules.default
           stylix.homeManagerModules.stylix
+          inputs.spicetify-nix.homeManagerModules.default
         ];
         inherit pkgs;
         extraSpecialArgs = {
