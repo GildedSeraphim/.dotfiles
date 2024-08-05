@@ -1,5 +1,12 @@
 { config, lib, pkgs, pkgs-unstable, ... }:
 {
+  hardware.cpu.intel.updateMicrocode = true;
+  hardware.enableAllFirmware = true;
+
+  boot.kernelModules = [ "coretemp" ];
+
+  powerManagement.powertop.enable = true;
+
   services.thermald.enable = true;
   services.tlp = {
       enable = true;
@@ -11,7 +18,7 @@
         CPU_ENERGY_PERF_POLICY_ON_AC = "performance";
 
         CPU_MIN_PERF_ON_AC = 0;
-        CPU_MAX_PERF_ON_AC = 100;
+        CPU_MAX_PERF_ON_AC = 99;
         CPU_MIN_PERF_ON_BAT = 0;
         CPU_MAX_PERF_ON_BAT = 20;
 

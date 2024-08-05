@@ -70,7 +70,15 @@
         libgcc
         cmake
 
+        #xorg stuff
+        xorg.libXrandr
+        xorg.libXinerama
+        xorg.libXcursor
+        xorg.xinput
+        xorg.libXi
+
 	#OpenGL
+        libGLU
 	libGL
 	glfw
 	glew
