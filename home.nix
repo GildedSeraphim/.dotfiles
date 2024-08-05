@@ -81,6 +81,7 @@
     protonup
     lutris
     ardour
+    kdePackages.falkon
   ])
 
   ++

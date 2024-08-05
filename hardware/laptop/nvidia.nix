@@ -5,7 +5,23 @@
     enable = true;
     driSupport = true;
     driSupport32Bit = true;
+    extraPackages = with pkgs; [
+      intel-media-driver
+      intel-vaapi-driver
+      vaapiVdpau
+      libvdpau-va-gl
+      nvidia-vaapi-driver
+    ];
   };
+
+  environment.sessionVariables = {
+    LIBVA_DRIVER_NAME = "iHD";
+  };
+
+  environment.systemPackages = with pkgs; [
+    nvidia-vaapi-driver
+    egl-wayland
+  ];
 
   services.xserver.videoDrivers = ["nvidia"];
 
@@ -21,6 +37,7 @@
     powerManagement.finegrained = false;
     open = false;
     nvidiaSettings = true;
+#    nvidiaPersistenced = true;
   };
 
   hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.mkDriver {

@@ -3,6 +3,8 @@
   hardware.cpu.intel.updateMicrocode = true;
   hardware.enableAllFirmware = true;
 
+  boot.kernelParams = ["nvidia-drm.fbdev=1"];
+
   boot.kernelModules = [ "coretemp" ];
 
   powerManagement.powertop.enable = true;

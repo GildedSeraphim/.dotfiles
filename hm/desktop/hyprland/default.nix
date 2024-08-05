@@ -2,11 +2,12 @@
 let
     startupScript = pkgs.pkgs.writeShellScriptBin "start" ''
       exec waybar &
+      exec pkill swww-daemon &
       ${pkgs.waybar}/bin/waybar waybar &
       ${pkgs.swww}/bin/swww init &
       ${pkgs.mako}/bin/mako init &
-      sleep 1
-
+      sleep 1 &
+      
       ${pkgs.swww}/bin/swww img ${./redlipstick.jpg} &
   
     '';
