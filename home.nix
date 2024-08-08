@@ -9,7 +9,7 @@
   ];
   stylix.enable = true;
 
-  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-medium.yaml";
+  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/solarized-dark.yaml";
 
   stylix.image = ./hm/desktop/hyprland/wallpaper.png;
 
@@ -31,7 +31,7 @@
     };
   };
 
-  colorScheme = inputs.nix-colors.colorSchemes.gruvbox-dark-medium;
+  colorScheme = inputs.nix-colors.colorSchemes.solarized-dark;
  
   programs.git = {
     enable = true;
@@ -78,6 +78,7 @@
     lutris
     ardour
     kdePackages.falkon
+    inputs.nixvim.packages.${system}.default
   ])
 
   ++

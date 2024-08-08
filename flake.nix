@@ -14,9 +14,10 @@
       inputs.hyprland.follows = "hyprland";
     };
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
+    nixvim.url = "github:mikaelfangel/nixvim-config";
   };
   
-  outputs = { self, nixpkgs, home-manager, nixpkgs-unstable, nix-colors, hyprland, stylix, ...}@inputs :
+  outputs = { self, nixpkgs, home-manager, nixpkgs-unstable, nix-colors, hyprland, stylix, nixvim, ...}@inputs :
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {
@@ -50,7 +51,6 @@
           ./spicetify.nix
           ./home.nix 
           hyprland.homeManagerModules.default
-          inputs.ags.homeManagerModules.default
           stylix.homeManagerModules.stylix
           inputs.spicetify-nix.homeManagerModules.default
         ];
@@ -60,6 +60,7 @@
           inherit inputs;
           inherit pkgs-unstable;
           inherit nix-colors;
+          inherit nixvim;
         };
       };
     };

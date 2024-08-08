@@ -18,7 +18,7 @@ in
     ./hyprland-environment.nix
   ];
 
-
+  wayland.windowManager.hyprland.xwayland.enable = true;
   wayland.windowManager.hyprland = {
     enable = true;
 
@@ -100,7 +100,7 @@ in
       "$mod" = "SUPER";
 
       bind = [
-        "$mod, B, exec, brave"
+        "$mod, B, exec, librewolf"
         "$mod, Return, exec, alacritty"
         "$mod, R, exec, rofi -show drun"
         "$mod SHIFT, R, exec, rofi -show run"

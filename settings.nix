@@ -10,8 +10,24 @@
     options = "--delete-older-than 1w";
   };
 
+  security.rtkit.enable = true;
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+    wireplumber.enable = true;
+  };
+
+  xdg.portal.config = {
+    common.default = ["gtk"];
+    hyprland.default = [ "gtk" "hyprland" ];
+  };
   xdg.portal.enable = true;
-  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+  xdg.portal.extraPortals = [ 
+    pkgs.xdg-desktop-portal-gtk
+    pkgs.xdg-desktop-portal-wlr
+  ];
   services.xserver.displayManager.sddm.enable = true;
   services.xserver.enable = true;
   
@@ -41,7 +57,7 @@
 
   time.timeZone = "America/Chicago";  
 
-  hardware.pulseaudio.enable = true;
+#  hardware.pulseaudio.enable = true;
 
   programs = {
     adb.enable = true;
