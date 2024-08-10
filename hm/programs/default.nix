@@ -8,5 +8,6 @@
       ./lf
       ./vscode
       ./btop
+      ./nvchad
     ];
 }

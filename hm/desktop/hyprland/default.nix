@@ -43,6 +43,7 @@ in
         "HDMI-A-1,2560x1440@60.00,0x0,auto"
         "DP-3,2560x1440@144,2560x0,auto"
         "Unknown-1,630x350,-2560x-1440,auto"
+        "eDP-1, 3840x2160@60,0x0,auto"
       ];
 
       decoration = {

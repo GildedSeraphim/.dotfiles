@@ -2,9 +2,9 @@
   description = "System Flake";
 
   inputs = {
-    nixpkgs.url = "nixpkgs/nixos-24.05";
+    nixpkgs.url = "nixpkgs/nixos-unstable";
     nixpkgs-unstable.url = "nixpkgs/nixos-unstable";
-    home-manager.url = "github:nix-community/home-manager/release-24.05";
+    home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     nix-colors.url = "github:misterio77/nix-colors";
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
@@ -14,26 +14,33 @@
       inputs.hyprland.follows = "hyprland";
     };
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
-    nixvim.url = "github:mikaelfangel/nixvim-config";
+    nvchad4nix = {
+      url = "github:NvChad/nix";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
+    nvchad-on-steroids = {  # <- here
+      url = "github:MOIS3Y/nvchad-on-steroids";
+      flake = false;
+    };
   };
-  
-  outputs = { self, nixpkgs, home-manager, nixpkgs-unstable, nix-colors, hyprland, stylix, nixvim, ...}@inputs :
+
+  outputs = { self, nixpkgs, home-manager, nixpkgs-unstable, nix-colors, hyprland, stylix, ...}@inputs :
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {
         inherit system;
         config.allowUnfree = true;
       };
-      pkgs-unstable = import nixpkgs-unstable { 
+      pkgs-unstable = import nixpkgs-unstable {
         inherit system;
         config.allowUnfree = true;
       };
-      lib = nixpkgs.lib; 
+      lib = nixpkgs.lib;
   in {
       nixosConfigurations = {
       nixos = lib.nixosSystem {
         inherit system;
-        modules = [ 
+        modules = [
           ./configuration.nix
         ];
         specialArgs = {
@@ -44,12 +51,12 @@
         };
       };
     };
-    
+
     homeConfigurations = {
       sn = home-manager.lib.homeManagerConfiguration {
-        modules = [ 
+        modules = [
           ./spicetify.nix
-          ./home.nix 
+          ./home.nix
           hyprland.homeManagerModules.default
           stylix.homeManagerModules.stylix
           inputs.spicetify-nix.homeManagerModules.default
@@ -60,7 +67,6 @@
           inherit inputs;
           inherit pkgs-unstable;
           inherit nix-colors;
-          inherit nixvim;
         };
       };
     };
@@ -88,12 +94,12 @@
 	glm
 	SDL2
         esshader
-	
+
       ];
       shellHook = ''
 	echo "Welcome"
         echo "To my C++ OpenGL Shell!!!" | ${pkgs.lolcat}/bin/lolcat
-      '';      
+      '';
     };
   };
 

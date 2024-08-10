@@ -7,6 +7,7 @@
     nix-colors.homeManagerModules.default
     ./hm
   ];
+
   stylix.enable = true;
 
   stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/solarized-dark.yaml";
@@ -78,7 +79,8 @@
     lutris
     ardour
     kdePackages.falkon
-    inputs.nixvim.packages.${system}.default
+#    inputs.nixvim.packages.${system}.default
+#    neovim
   ])
 
   ++

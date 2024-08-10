@@ -24,6 +24,14 @@
   ];
 
 
+  nixpkgs = {
+    overlays = [
+      (final: prev: {
+        nvchad = inputs.nvchad4nix.packages."${pkgs-unstable.system}".nvchad;
+      })
+    ];
+  };
+
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages = (with pkgs; [
     nix-ld
