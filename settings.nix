@@ -28,7 +28,7 @@
     pkgs.xdg-desktop-portal-gtk
     pkgs.xdg-desktop-portal-wlr
   ];
-  services.xserver.displayManager.sddm.enable = true;
+  services.displayManager.sddm.enable = true;
   services.xserver.enable = true;
   
   nix.settings.auto-optimise-store = true;
@@ -51,6 +51,8 @@
 
   networking.networkmanager.enable = true; 
 
+  hardware.bluetooth.enable = true;
+  hardware.bluetooth.powerOnBoot = true;
   services.blueman.enable = true;
 
   services.flatpak.enable = true;

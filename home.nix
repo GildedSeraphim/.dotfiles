@@ -81,6 +81,9 @@
     kdePackages.falkon
 #    inputs.nixvim.packages.${system}.default
 #    neovim
+    vlc
+    yt-dlp-light
+    ffmpeg
   ])
 
   ++
