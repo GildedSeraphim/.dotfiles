@@ -8,7 +8,7 @@ let
       ${pkgs.mako}/bin/mako init &
       sleep 1 &
       
-      ${pkgs.swww}/bin/swww img ${./redlipstick.jpg} &
+      ${pkgs.swww}/bin/swww swww img ${./code.png} &
   
     '';
 in
