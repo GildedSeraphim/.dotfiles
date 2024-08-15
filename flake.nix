@@ -31,6 +31,8 @@
   outputs = { self, nixpkgs, home-manager, nixpkgs-unstable, nix-colors, hyprland, stylix, ...}@inputs :
     let
       system = "x86_64-linux";
+      host = "nixos";
+      username = "sn";
       pkgs = import nixpkgs {
         inherit system;
         config.allowUnfree = true;

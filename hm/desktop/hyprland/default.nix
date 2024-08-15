@@ -8,7 +8,7 @@ let
       ${pkgs.mako}/bin/mako init &
       sleep 1 &
       
-      ${pkgs.swww}/bin/swww swww img ${./wallpapers/spider.jpg}
+      ${pkgs.swww}/bin/swww swww img ${./wallpapers/spider.jpg} &
   
     '';
 in
