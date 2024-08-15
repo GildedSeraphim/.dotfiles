@@ -1,10 +1,11 @@
-{ config, lib, ... }:
+{ ... }:
 
 {
-    imports = [
-      ./hyprland  
-      ./waybar
-      ./rofi
-      ./hyprlock
-    ];
+  imports = [
+    ./hyprland
+    ./waybar
+    ./hyprlock
+    ./rofi
+    ./ags
+  ];
 }

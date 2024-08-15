@@ -3,12 +3,34 @@
 in {
   programs.hyprlock.enable = true;
 
+    services.hypridle = {
+      enable = true;
+      settings = {
+        general = {
+          after_sleep_cmd = "hyprctl dispatch dpms on";
+          ignore_dbus_inhibit = false;
+          lock_cmd = "hyprlock";
+        };
+        listener = [
+          {
+            timeout = 900;
+            on-timeout = "hyprlock";
+          }
+          {
+            timeout = 1200;
+            on-timeout = "hyprctl dispatch dpms off";
+            on-resume = "hyprctl dispatch dpms on";
+          }
+        ];
+      };
+    };
+
   home.file.".config/hypr/hyprlock.conf".text = ''
       source=/tmp/.current_wallpaper_path_hyprlock
     # BACKGROUND
       background {
           monitor =
-          path =$WALLPAPER
+          path = /home/sn/.dotfiles/hm/desktop/hyprland/wallpapers/spider.jpg
           blur_passes = 2
           contrast = 0.8916
           brightness = 0.8172
@@ -26,7 +48,7 @@ in {
       # INPUT FIELD
       input-field {
           monitor =
-          size = 250, 60
+          size = 500, 120
           outline_thickness = 2
           dots_size = 0.2 # Scale of input-field height, 0.2 - 0.8
           dots_spacing = 0.2 # Scale of dots' absolute size, 0.0 - 1.0
@@ -104,3 +126,4 @@ in {
       }
   '';
 }
+
