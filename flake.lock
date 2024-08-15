@@ -610,6 +610,22 @@
         "type": "github"
       }
     },
+    "nvim-cpp": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1723655817,
+        "narHash": "sha256-C3g5/wlPI+kvGOxyblrfnWWDBAhOKRT0ahnml4i/hBk=",
+        "owner": "GildedSeraphim",
+        "repo": "NvChad-fork",
+        "rev": "5d45d851b8218f167f2ca16b67235a60962262f9",
+        "type": "github"
+      },
+      "original": {
+        "owner": "GildedSeraphim",
+        "repo": "NvChad-fork",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "home-manager": "home-manager",
@@ -620,6 +636,7 @@
         "nixpkgs-unstable": "nixpkgs-unstable",
         "nvchad-on-steroids": "nvchad-on-steroids",
         "nvchad4nix": "nvchad4nix",
+        "nvim-cpp": "nvim-cpp",
         "spicetify-nix": "spicetify-nix",
         "stylix": "stylix"
       }

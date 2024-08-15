@@ -22,6 +22,10 @@
       url = "github:MOIS3Y/nvchad-on-steroids";
       flake = false;
     };
+    nvim-cpp = {
+      url = "github:GildedSeraphim/NvChad-fork";
+      flake = false;
+    };
   };
 
   outputs = { self, nixpkgs, home-manager, nixpkgs-unstable, nix-colors, hyprland, stylix, ...}@inputs :

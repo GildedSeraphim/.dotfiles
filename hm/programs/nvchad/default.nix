@@ -9,9 +9,12 @@
     enable = true;
     extraPackages = with pkgs; [
       nixd
+      clang-tools
+      vimPlugins.lsp-zero-nvim
+      python3
     ];
-    
-    extraConfig = inputs.nvchad-on-steroids;
+
+    extraConfig = inputs.nvim-cpp;
     hm-activation = true;
     backup = true;
   };

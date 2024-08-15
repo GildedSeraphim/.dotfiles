@@ -10,7 +10,7 @@
 
   stylix.enable = true;
 
-  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/solarized-dark.yaml";
+  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
 
   stylix.image = ./hm/desktop/hyprland/wallpaper.png;
 
@@ -32,7 +32,7 @@
     };
   };
 
-  colorScheme = inputs.nix-colors.colorSchemes.solarized-dark;
+  colorScheme = inputs.nix-colors.colorSchemes.catppuccin-mocha;
  
   programs.git = {
     enable = true;
@@ -50,6 +50,7 @@
 
   home.packages = 
   (with pkgs; [
+    swayidle
     times-newer-roman
     hyprcursor
     eww
@@ -84,6 +85,8 @@
     vlc
     yt-dlp-light
     ffmpeg
+    mission-center
+    nvidia-system-monitor-qt
   ])
 
   ++

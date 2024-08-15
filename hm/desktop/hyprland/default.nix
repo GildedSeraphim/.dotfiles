@@ -8,7 +8,7 @@ let
       ${pkgs.mako}/bin/mako init &
       sleep 1 &
       
-      ${pkgs.swww}/bin/swww swww img ${./code.png} &
+      ${pkgs.swww}/bin/swww swww img ${./wallpapers/spider.jpg}
   
     '';
 in
@@ -18,6 +18,7 @@ in
     ./hyprland-environment.nix
   ];
 
+  services.swayidle.enable = true;
   wayland.windowManager.hyprland.xwayland.enable = true;
   wayland.windowManager.hyprland = {
     enable = true;
@@ -108,7 +109,8 @@ in
         "$mod, F, togglefloating"
         "$mod, Q, killactive"
         "$mod, W, exec, mako"
-            
+	"$mod, L, exec, hyprlock"        
+
         "$mod, 1, workspace, 1"
         "$mod, 2, workspace, 2"
         "$mod, 3, workspace, 3"

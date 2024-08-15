@@ -5,5 +5,6 @@
       ./hyprland  
       ./waybar
       ./rofi
+      ./hyprlock
     ];
 }
