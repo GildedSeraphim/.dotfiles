@@ -14,11 +14,11 @@
   home.file."/home/sn/.dotfiles/hm/desktop/ags/css/ags-variables.scss" =
   {
     text = ''
-      $backgroundColor: ${config.colorScheme.colors.base00};
-      $backgroundColor2: ${config.colorScheme.colors.base01};
-      $highlightColor: ${config.colorScheme.colors.base03};
-      $foregroundColor: ${config.colorScheme.colors.base04};
-      $foregroundColor2: ${config.colorScheme.colors.base05};
+      $backgroundColor: ${config.colorScheme.palette.base00};
+      $backgroundColor2: ${config.colorScheme.palette.base01};
+      $highlightColor: ${config.colorScheme.palette.base03};
+      $foregroundColor: ${config.colorScheme.palette.base04};
+      $foregroundColor2: ${config.colorScheme.palette.base05};
       $wallpaperPath: /home/sn/.dotfiles/hm/desktop/hyprland/wallpapers/spider.jpg;
     '';
   };
@@ -38,5 +38,6 @@
  #       $wallpaperPath: url("file://${osConfig.masterOptions.joe.wallpaperPath}");
  #     '';
  #   };
+
 }
 
