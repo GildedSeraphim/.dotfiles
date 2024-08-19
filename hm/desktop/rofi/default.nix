@@ -1,6 +1,11 @@
-{pkgs, ... }: {
-
-  home.file = {
-    ".config/rofi/config.rasi".source = ./config.rasi;
-  };
+{
+  imports = [
+    ./main.nix
+    ./application-launcher.nix
+    ./run.nix
+    ./clipboard.nix
+    ./web-search.nix
+    ./selector.nix
+    ./selector-big.nix
+  ];
 }
