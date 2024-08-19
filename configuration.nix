@@ -8,7 +8,7 @@
       ./hardware/laptop/laptop.nix
       ./settings.nix
       ./fonts.nix
-     ./hyprland.nix
+      ./hyprland.nix
     ];
 
   programs.nix-ld.enable = true;
@@ -56,7 +56,6 @@
   system.stateVersion = "24.05";  
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
 
 }
 

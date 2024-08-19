@@ -3,6 +3,8 @@ let
   palette = config.stylix.base16Scheme;
 in
 {
+
+  
     # Default rofi
   home.file.".config/rofi/config.rasi".text = ''
         /*****----- Configuration -----*****/
