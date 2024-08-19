@@ -1,13 +1,12 @@
 { pkgs, lib, nix-colors, config, inputs, ... }:
 let
     startupScript = pkgs.pkgs.writeShellScriptBin "start" ''
-      exec waybar &
-      ${pkgs.waybar}/bin/waybar waybar &
+
+      ${pkgs.waybar}/bin/waybar &
       ${pkgs.swww}/bin/swww init &
-      ${pkgs.mako}/bin/mako init &
       sleep 1 &
 
-      ${pkgs.swww}/bin/swww swww img ${./wallpapers/spider.jpg} &
+      ${pkgs.swww}/bin/swww img ${./wallpapers/spider.jpg} &
   
     '';
 in
@@ -26,8 +25,11 @@ in
     ];
 
     settings = {
-      exec-once = ''${startupScript}/bin/start'';
-    
+      exec-once = [
+        ''${startupScript}/bin/start''
+#        ''${pkgs.hyprpanel}/bin/hyprpanel''
+      ];
+
       general = {
         "gaps_in" = 5;
         "gaps_out" = 20;

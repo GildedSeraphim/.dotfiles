@@ -50,25 +50,15 @@
 
   home.packages = 
   (with pkgs; [
-    swayidle
+    hyprpanel
+    rofi-wayland
     times-newer-roman
     hyprcursor
     eww
     mako
-    swww
-    rofi-wayland
-    qtcreator
-    kdePackages.dolphin
-    xfce.thunar
-    xfce.thunar-volman
-    xfce.thunar-archive-plugin
-    ranger
-    krusader
     brightnessctl
     librewolf
-    floorp
     ungoogled-chromium
-    esshader
     pavucontrol
     famistudio
     wget
@@ -87,6 +77,7 @@
     ffmpeg
     mission-center
     nvidia-system-monitor-qt
+    fzf
   ])
 
   ++

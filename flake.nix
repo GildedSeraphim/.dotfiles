@@ -26,6 +26,7 @@
       url = "github:GildedSeraphim/NvChad-fork";
       flake = false;
     };
+    hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
   };
 
   outputs = { self, nixpkgs, home-manager, nixpkgs-unstable, nix-colors, hyprland, stylix, ...}@inputs :
@@ -35,13 +36,25 @@
       username = "sn";
       pkgs = import nixpkgs {
         inherit system;
+        inherit host;
+        inherit username;
+        inherit inputs;
         config.allowUnfree = true;
+
+        overlays = [
+	  inputs.hyprpanel.overlay.${system}
+        ];
+
       };
       pkgs-unstable = import nixpkgs-unstable {
         inherit system;
+        inherit host;
+        inherit username;
+        inherit inputs;
         config.allowUnfree = true;
       };
       lib = nixpkgs.lib;
+
   in {
       nixosConfigurations = {
       nixos = lib.nixosSystem {
@@ -69,6 +82,9 @@
         ];
         inherit pkgs;
         extraSpecialArgs = {
+          inherit system;
+	  inherit username;
+          inherit pkgs;
           inherit hyprland;
           inherit inputs;
           inherit pkgs-unstable;

@@ -6,6 +6,6 @@
     ./waybar
     ./hyprlock
     ./rofi
-    ./ags
+#    ./ags
   ];
 }
