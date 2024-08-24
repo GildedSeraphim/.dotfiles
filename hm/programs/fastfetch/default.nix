@@ -71,13 +71,13 @@
             "key": "└",
             "keyColor": "blue"
         },
-				/*
+				
         {
             "type": "wallpaper",
             "key": "└󰸉",
             "keyColor": "blue"
         },
-				*/
+				
 
         "break",
         {

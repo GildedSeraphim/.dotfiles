@@ -16,7 +16,7 @@
 
     extraConfig = inputs.nvim-cpp;
     hm-activation = true;
-    backup = true;
+    backup = false;
   };
 
 }

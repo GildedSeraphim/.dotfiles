@@ -50,6 +50,8 @@
 
   home.packages = 
   (with pkgs; [
+    obsidian
+    glava
     hyprpanel
     rofi-wayland
     times-newer-roman

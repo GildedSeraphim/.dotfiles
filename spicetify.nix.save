@@ -33,7 +33,9 @@ in
 #      oneko
 #      Hide-Full-Screen-Button
     ];
-     theme = spicePkgs.themes.catppuccin;
-     colorScheme = "mocha";
+     theme = flow;
+     colorScheme = 
+     #theme = spicePkgs.themes.catppuccin;
+     #colorScheme = "mocha";
    }; 
 }
