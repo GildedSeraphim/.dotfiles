@@ -37,6 +37,7 @@
       "custom/github"
       "bluetooth"
       "group/audio"
+      "battery"
     ];
   };
 

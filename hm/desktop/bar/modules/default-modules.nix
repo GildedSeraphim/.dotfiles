@@ -29,13 +29,14 @@ in
 
   battery = {
     states = {
+      good = 95;
       warning = 30;
       critical = 15;
     };
-    format = "{icon}";
-    format-charging = "󰂄";
-    format-plugged = "󰂄";
-    format-alt = "{icon}";
+    format = "{icon} {capacity}%";
+    format-charging = "󰂄 {capacity}%";
+    format-plugged = "󰂄 {capacity}%";
+    format-alt = "{time} {icon}";
     format-icons = [
       "󰂃"
       "󰁺"
@@ -200,10 +201,10 @@ in
       interval = 1;
       format-wifi = "󰜷 {bandwidthUpBytes} 󰜮 {bandwidthDownBytes}";
       format-ethernet = "󰜷 {bandwidthUpBytes} 󰜮 {bandwidthDownBytes}";
-      tooltip-format = "󰈀 {ifname} via {gwaddr}";
+      tooltip-format = "󰈀 {essid} via {gwaddr}";
       format-linked = "󰈁 {ifname} (No IP)";
       format-disconnected = " Disconnected";
-      format-alt = "{ifname}: {ipaddr}/{cidr}";
+      format-alt = "{essid} ({signalStrength}%)";
       on-click-right = "${nm-editor}";
     };
 

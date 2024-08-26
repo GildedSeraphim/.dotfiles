@@ -2,8 +2,8 @@
 
 {
   fonts = {
-    packages = lib.attrValues {
-      inherit (pkgs)
+    fontDir.enable = true;
+    packages = with pkgs;[
       # apple-fonts
       noto-fonts
       noto-fonts-cjk
@@ -23,7 +23,7 @@
       comic-mono
       lmmath
       cm_unicode
-      nerdfonts;
-    };    
+      nerdfonts
+    ];    
   };
 }

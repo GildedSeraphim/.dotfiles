@@ -644,6 +644,22 @@
         "type": "github"
       }
     },
+    "nixpkgs_7": {
+      "locked": {
+        "lastModified": 1724224976,
+        "narHash": "sha256-Z/ELQhrSd7bMzTO8r7NZgi9g5emh+aRKoCdaAv5fiO0=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "c374d94f1536013ca8e92341b540eba4c22f9c62",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "nvchad-on-steroids": {
       "flake": false,
       "locked": {
@@ -709,7 +725,8 @@
         "nvchad4nix": "nvchad4nix",
         "nvim-cpp": "nvim-cpp",
         "spicetify-nix": "spicetify-nix",
-        "stylix": "stylix"
+        "stylix": "stylix",
+        "zen": "zen"
       }
     },
     "spicetify-nix": {
@@ -816,6 +833,24 @@
       "original": {
         "owner": "hyprwm",
         "repo": "xdg-desktop-portal-hyprland",
+        "type": "github"
+      }
+    },
+    "zen": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_7"
+      },
+      "locked": {
+        "lastModified": 1724606645,
+        "narHash": "sha256-DbCadjzxtoz+datSdp1oJO/+k0i5EyiKPOyQf72+1Y8=",
+        "owner": "GildedSeraphim",
+        "repo": "zen-browser-flake",
+        "rev": "9c4c0519c683d71b44e2ce421e57e9097c58bd90",
+        "type": "github"
+      },
+      "original": {
+        "owner": "GildedSeraphim",
+        "repo": "zen-browser-flake",
         "type": "github"
       }
     }

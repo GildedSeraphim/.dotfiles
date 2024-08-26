@@ -3,7 +3,7 @@
 {
   imports = [
     ./hyprland
-    ./waybar
+    ./bar
     ./hyprlock
     ./rofi
 #    ./ags

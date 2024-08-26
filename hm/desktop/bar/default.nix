@@ -26,7 +26,7 @@ let
     layer = "top";
     position = "top";
 
-    margin-top = 10;
+    margin-top = 5;
     margin-left = 10;
     margin-right = 10;
 
@@ -74,15 +74,15 @@ let
 
 in
 {
-  config = lib.mkIf (config.default.bar == "waybar") {
+#  config = lib.mkIf (config.default.bar == "waybar") {
 
     programs.waybar = {
       enable = true;
-      systemd.enable = true;
+#      systemd.enable = true;
 
       settings = generateOutputSettings [
         "eDP-1"
-        "HDMI-A-1"
+        "HDMI-A-2"
       ];
       style =
         with config.lib.stylix.colors;
@@ -114,10 +114,10 @@ in
           "${style}${controlCenterStyle}${powerStyle}${statsStyle}${workspacesStyle}"
         ];
     };
-    sops.secrets = {
-      weather_config = {
-        path = "${config.home.homeDirectory}/weather_config.json";
-      };
-    };
-  };
+#    sops.secrets = {
+#      weather_config = {
+#        path = "${config.home.homeDirectory}/weather_config.json";
+#      };
+#    };
+#  };
 }

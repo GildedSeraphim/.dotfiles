@@ -50,7 +50,11 @@
 
   home.packages = 
   (with pkgs; [
-    obsidian
+    jetbrains.pycharm-professional
+    nerdfonts
+    inputs.zen.packages.${system}.default
+    swww
+    fast-cli
     glava
     hyprpanel
     rofi-wayland
@@ -80,6 +84,8 @@
     mission-center
     nvidia-system-monitor-qt
     fzf
+    obsidian
+    renderdoc
   ])
 
   ++
@@ -108,6 +114,6 @@
     "cl" = "clear";
     "fui" = "nix run github:vimjoyer/nix-update-input";
   };
-
+  fonts.fontconfig.enable = true;
   programs.home-manager.enable = true;
 }

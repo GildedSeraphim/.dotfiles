@@ -4,10 +4,11 @@ let
 
       ${pkgs.waybar}/bin/waybar &
       ${pkgs.swww}/bin/swww init &
+      exec swww-daemon
       sleep 1 &
 
-      ${pkgs.swww}/bin/swww img ${./wallpapers/spider.jpg} &
-  
+      ${pkgs.swww}/bin/swww swww img ${./wallpapers/spider.jpg} &
+      exec swww img ${./wallpapers/spider.jpg} &   
     '';
 in
 {
