@@ -646,11 +646,11 @@
     },
     "nixpkgs_7": {
       "locked": {
-        "lastModified": 1724224976,
-        "narHash": "sha256-Z/ELQhrSd7bMzTO8r7NZgi9g5emh+aRKoCdaAv5fiO0=",
+        "lastModified": 1724819573,
+        "narHash": "sha256-GnR7/ibgIH1vhoy8cYdmXE6iyZqKqFxQSVkFgosBh6w=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "c374d94f1536013ca8e92341b540eba4c22f9c62",
+        "rev": "71e91c409d1e654808b2621f28a327acfdad8dc2",
         "type": "github"
       },
       "original": {
@@ -841,15 +841,15 @@
         "nixpkgs": "nixpkgs_7"
       },
       "locked": {
-        "lastModified": 1724606645,
-        "narHash": "sha256-DbCadjzxtoz+datSdp1oJO/+k0i5EyiKPOyQf72+1Y8=",
-        "owner": "GildedSeraphim",
+        "lastModified": 1725096998,
+        "narHash": "sha256-ylP5YehroiFnf1AIT5yq1mcc8HUVlj9ItsWCtY6J6ck=",
+        "owner": "MarceColl",
         "repo": "zen-browser-flake",
-        "rev": "9c4c0519c683d71b44e2ce421e57e9097c58bd90",
+        "rev": "cfc894abb631e3ea61ff590b7520d79d35a26366",
         "type": "github"
       },
       "original": {
-        "owner": "GildedSeraphim",
+        "owner": "MarceColl",
         "repo": "zen-browser-flake",
         "type": "github"
       }

@@ -27,7 +27,7 @@
       flake = false;
     };
     hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
-    zen.url = "github:GildedSeraphim/zen-browser-flake";
+    zen.url = "github:MarceColl/zen-browser-flake";
   };
 
   outputs = { self, nixpkgs, home-manager, nixpkgs-unstable, nix-colors, hyprland, stylix, ...}@inputs :

@@ -6,13 +6,14 @@
   imports = [
     nix-colors.homeManagerModules.default
     ./hm
+    ./scripts.nix
   ];
 
   stylix.enable = true;
 
   stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
 
-  stylix.image = ./hm/desktop/hyprland/wallpaper.png;
+  stylix.image = ./hm/desktop/hyprland/wallpapers/spider.jpg;
 
   stylix.cursor.package = pkgs.bibata-cursors;
   stylix.cursor.name = "Bibata-Modern-Ice";
@@ -86,6 +87,7 @@
     fzf
     obsidian
     renderdoc
+    libreoffice
   ])
 
   ++
@@ -100,9 +102,9 @@
     nvd
     brave
     vesktop
-    onlyoffice-bin_latest
     wineWow64Packages.staging
     protonup-qt
+    obs-studio
   ]);
   
   programs.bash.enable = true;
