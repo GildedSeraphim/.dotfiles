@@ -1,11 +1,19 @@
-{ pkgs, system, ... }:
+{ inputs, pkgs, system, ... }:
 {
-    pkgs.writeShellApplication {
+    home.packages = [
+   (pkgs.writeShellApplication {
         name = "spot";
-        runtimeInputs = [pkgs.spotify];
-
+	
         text = ''
             exec spotify --disable-gpu    
         '';
-    }
+    })
+    (pkgs.writeShellApplication {
+        name = "code";
+
+        text = ''
+            exec codium --disable-gpu .
+        '';
+    })
+    ];
 }

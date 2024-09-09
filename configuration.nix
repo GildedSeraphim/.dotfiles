@@ -1,5 +1,9 @@
 { config, lib, pkgs, pkgs-unstable, inputs, outputs, ... }:
-
+let
+my-llama =pkgs.alpaca.override {
+  ollama = pkgs.ollama-cuda;
+};
+in
 {
   imports =
     [ 
@@ -41,7 +45,8 @@
   ++
   
   (with pkgs-unstable; [
-
+    ollama-cuda
+    alpaca
   ]);
 
   programs.gamemode.enable = true;

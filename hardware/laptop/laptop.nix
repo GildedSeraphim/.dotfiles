@@ -7,6 +7,8 @@
 
   boot.kernelModules = [ "coretemp" ];
 
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+
   powerManagement.powertop.enable = true;
 
   services.thermald.enable = true;

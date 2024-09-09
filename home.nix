@@ -88,6 +88,8 @@
     obsidian
     renderdoc
     libreoffice
+    qalculate-gtk
+    prismlauncher
   ])
 
   ++
@@ -102,7 +104,8 @@
     nvd
     brave
     vesktop
-    wineWow64Packages.staging
+    wineWowPackages.unstableFull
+    winetricks
     protonup-qt
     obs-studio
   ]);

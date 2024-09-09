@@ -22,6 +22,9 @@
           "window.titleBarStyle" = "custom";
           "terminal.integrated.gpuAcceleration" = "off";
           "disable-hardware-acceleration" = true;
+          "extensions.experimental.affinity" = {
+            "asvetliakov.vscode-nvim" = 1;
+          };
         };
     };
 }
