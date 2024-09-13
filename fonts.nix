@@ -24,6 +24,9 @@
       lmmath
       cm_unicode
       nerdfonts
+      # MS Fonts
+      corefonts
+      vistafonts     
     ];    
   };
 }

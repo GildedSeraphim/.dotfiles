@@ -11,9 +11,9 @@
 
   stylix.enable = true;
 
-  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
+  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
 
-  stylix.image = ./hm/desktop/hyprland/wallpapers/spider.jpg;
+  stylix.image = ./wal/house.jpg;
 
   stylix.cursor.package = pkgs.bibata-cursors;
   stylix.cursor.name = "Bibata-Modern-Ice";
@@ -33,7 +33,7 @@
     };
   };
 
-  colorScheme = inputs.nix-colors.colorSchemes.catppuccin-mocha;
+  colorScheme = inputs.nix-colors.colorSchemes.gruvbox-dark-hard;
  
   programs.git = {
     enable = true;
@@ -56,18 +56,14 @@
     inputs.zen.packages.${system}.default
     swww
     fast-cli
-    glava
     hyprpanel
     rofi-wayland
-    times-newer-roman
     hyprcursor
     eww
     mako
     brightnessctl
-    librewolf
     ungoogled-chromium
     pavucontrol
-    famistudio
     wget
     steam-run
     zip
@@ -75,14 +71,11 @@
     mangohud
     protonup
     lutris
-    ardour
-    kdePackages.falkon
 #    inputs.nixvim.packages.${system}.default
 #    neovim
     vlc
     yt-dlp-light
     ffmpeg
-    mission-center
     nvidia-system-monitor-qt
     fzf
     obsidian
@@ -90,6 +83,7 @@
     libreoffice
     qalculate-gtk
     prismlauncher
+    gnome-obfuscate
   ])
 
   ++
@@ -98,7 +92,6 @@
     krita
     jetbrains.clion
     r2modman
-    openrgb
     nh
     nix-output-monitor
     nvd

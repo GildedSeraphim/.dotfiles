@@ -46,7 +46,6 @@ in
   
   (with pkgs-unstable; [
     ollama-cuda
-    alpaca
   ]);
 
   programs.gamemode.enable = true;
