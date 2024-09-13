@@ -17,7 +17,8 @@ in
     enable = true;
 
      plugins = [
-      #inputs.hyprland-plugins.packages."${pkgs.system}".borders-plus-plus
+#      inputs.hyprland-plugins.packages."${pkgs.system}".borders-plus-plus
+      inputs.hyprland-plugins.packages."${pkgs.system}".hyprexpo
     ];
 
     settings = {
@@ -30,17 +31,18 @@ in
         "gaps_in" = 5;
         "gaps_out" = 20;
         "border_size" = 2;
-       # "col.active_border" = lib.mkForce "rgb(${config.stylix.base16Scheme.base0E})";
-       # "col.inactive_border" = lib.mkForce "rgb(${config.stylix.base16Scheme.base00})";
+#        "col.active_border" = lib.mkForce "rgb(${config.stylix.base16Scheme.base0E})";
+#        "col.inactive_border" = lib.mkForce "rgb(${config.stylix.base16Scheme.base00})";
 
         "layout" = "dwindle";
       };
 
       monitor = [
-        "HDMI-A-1,2560x1440@60.00,0x0,auto"
-        "DP-3,2560x1440@144,2560x0,auto"
+#        "HDMI-A-1,2560x1440@60.00,0x0,auto"
+#        "DP-3,2560x1440@144,2560x0,auto"
         "Unknown-1,630x350,-2560x-1440,auto"
         "eDP-1, 3840x2160@60,0x0,auto"
+        "HDMI-A-2, 1920x1080@74.97,auto,auto"
       ];
 
       decoration = {
@@ -93,6 +95,20 @@ in
         "kb_layout" = "us";
         "sensitivity" = "0.000000";
       }; 
+
+      plugin = {
+        hyprexpo = {
+          "columns" = 3;
+          "gap_size" = 5;
+          "bg_col" = "rgb(111111)";
+          "workspace_method" = "center current"; # [center/first] [workspace] e.g. first 1 or center m+1
+
+          "enable_gesture" = true; # laptop touchpad
+          "gesture_fingers" = 3;  # 3 or 4
+          "gesture_distance" = 300; # how far is the "max"
+          "gesture_positive" = true; # positive = swipe down. Negative = swipe up.
+        };
+      };
   
 
       "$mod" = "SUPER";
@@ -103,6 +119,7 @@ in
         "$mod, R, exec, rofi -show drun"
         "$mod SHIFT, R, exec, rofi -show run"
         "$mod, F, togglefloating"
+        "$mod SHIFT, F, fullscreen"
         "$mod, Q, killactive"
         "$mod, W, exec, mako"
 	"$mod, L, exec, hyprlock"        

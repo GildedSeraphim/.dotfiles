@@ -1,4 +1,8 @@
 { config, pkgs, pkgs-unstable, lib, inputs, outputs, nix-colors, ... }:
+let
+  theme = "gruvbox-dark-hard";
+  wallpaper = ./wal/house.jpg;
+in
 {
   home.username = "sn";
   home.homeDirectory = "/home/sn";
@@ -11,9 +15,9 @@
 
   stylix.enable = true;
 
-  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
+  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/${theme}.yaml";
 
-  stylix.image = ./wal/house.jpg;
+  stylix.image = wallpaper;
 
   stylix.cursor.package = pkgs.bibata-cursors;
   stylix.cursor.name = "Bibata-Modern-Ice";
@@ -33,7 +37,7 @@
     };
   };
 
-  colorScheme = inputs.nix-colors.colorSchemes.gruvbox-dark-hard;
+  colorScheme = inputs.nix-colors.colorSchemes.${theme};
  
   programs.git = {
     enable = true;
@@ -84,6 +88,7 @@
     qalculate-gtk
     prismlauncher
     gnome-obfuscate
+    imagemagick
   ])
 
   ++
