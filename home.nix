@@ -1,7 +1,7 @@
 { config, pkgs, pkgs-unstable, lib, inputs, outputs, nix-colors, ... }:
 let
   theme = "gruvbox-dark-hard";
-  wallpaper = ./wal/unix.jpg;
+  wallpaper = ./wal/house.jpg;
 in
 {
   home.username = "sn";

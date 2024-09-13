@@ -69,12 +69,12 @@ in
       "class<code>" = "󰨞";
       "class<com.obsproject.Studio" = "󱜠";
       "class<com.usebottles.bottles>" = "󰡔";
-      "class<discord>" = "󰙯";
+      "class<vesktop>" = "󰙯";
       "class<dropbox>" = "";
       "class<dupeGuru>" = "";
-      "class<firefox.*> title<.*github.*>" = "";
-      "class<firefox.*> title<.*twitch|youtube|plex|tntdrama|bally sports.*>" = "";
-      "class<firefox.*>" = "";
+      "class<zen.*> title<.*github.*>" = "";
+      "class<zen.*> title<.*twitch|youtube|plex|tntdrama|bally sports.*>" = "";
+      "class<zen.*>" = "";
       "class<foot>" = "";
       "class<fr.handbrake.ghb" = "󱁆";
       "class<heroic>" = "󱢾";
@@ -117,6 +117,7 @@ in
       "title<RPCS3.*>" = "";
       "title<Spotify Free>" = "";
       "title<Steam>" = "";
+      "title<obsidian>" = "";
     };
   };
 }

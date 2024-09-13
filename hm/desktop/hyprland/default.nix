@@ -100,7 +100,11 @@ in
 
       plugin = {
         overview = {
-          "onBottom" = true;
+          "onBottom" = false;
+          "exitOnClick" = true;
+          "dragAlpha" = 0;
+          "affectStrut" = false;
+          "autoDrag" = false;
         };
       };
 
