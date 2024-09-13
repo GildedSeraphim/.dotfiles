@@ -13,6 +13,7 @@ in
       ./settings.nix
       ./fonts.nix
       ./hyprland.nix
+      ./firewall.nix
     ];
 
   programs.nix-ld.enable = true;
