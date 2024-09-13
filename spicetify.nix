@@ -1,4 +1,4 @@
-{ pkgs, lib, outputs, inputs, ... }:
+{ config, pkgs, lib, outputs, inputs, ... }:
 let
   spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.system};
 in
@@ -34,6 +34,25 @@ in
 #      Hide-Full-Screen-Button
     ];
      theme = spicePkgs.themes.catppuccin;
-     colorScheme = "mocha";
+     colorScheme = "custom";
+
+     customColorScheme = with config.lib.stylix.colors; {
+        text = "${base05}";
+        subtext = "${base04}";
+        sidebar-text = "${base04}";
+        main = "${base00}";
+        sidebar = "${base01}";
+        player = "${base02}";
+        card = "${base01}";
+        shadow = "${base00}";
+        selected-row = "${base0D}";
+        button = "${base03}";
+        button-active = "${base0D}";
+        button-disabled = "${base01}";
+        tab-active = "${base0D}";
+        notification = "${base0A}";
+        notification-error = "${base08}";
+        misc = "${base09}";
+      };
    }; 
 }

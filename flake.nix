@@ -28,6 +28,10 @@
     };
     hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
     zen.url = "github:MarceColl/zen-browser-flake";
+    split-monitor-workspaces = {
+      url = "github:Duckonaut/split-monitor-workspaces";
+      inputs.hyprland.follows = "hyprland";
+    };
   };
 
   outputs = { self, nixpkgs, home-manager, nixpkgs-unstable, nix-colors, hyprland, stylix, ...}@inputs :
