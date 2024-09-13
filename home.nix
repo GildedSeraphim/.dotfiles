@@ -1,7 +1,7 @@
 { config, pkgs, pkgs-unstable, lib, inputs, outputs, nix-colors, ... }:
 let
   theme = "gruvbox-dark-hard";
-  wallpaper = ./wal/house.jpg;
+  wallpaper = ./wal/unix.jpg;
 in
 {
   home.username = "sn";
@@ -58,10 +58,8 @@ in
     jetbrains.pycharm-professional
     nerdfonts
     inputs.zen.packages.${system}.default
-    swww
     fast-cli
     hyprpanel
-    rofi-wayland
     hyprcursor
     eww
     mako

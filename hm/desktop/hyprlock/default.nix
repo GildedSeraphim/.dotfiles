@@ -1,5 +1,6 @@
 {config, ...}: let
   palette = config.stylix.base16Scheme;
+  wallpaper = config.stylix.image;
 in {
   programs.hyprlock.enable = true;
 
@@ -30,7 +31,7 @@ in {
     # BACKGROUND
       background {
           monitor =
-          path = /home/sn/.dotfiles/hm/desktop/hyprland/wallpapers/spider.jpg
+          path = ${wallpaper}
           blur_passes = 2
           contrast = 0.8916
           brightness = 0.8172

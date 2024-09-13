@@ -1,5 +1,7 @@
 {pkgs, config, lib,  ... }: {
 
+  programs.rofi.enable = true;
+  programs.rofi.package = pkgs.rofi-wayland;
   xdg.configFile."rofi/config.rasi".text = with config.lib.stylix.colors; ''
     * {
     font: "MapleMono NF 10";

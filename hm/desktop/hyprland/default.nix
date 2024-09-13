@@ -20,6 +20,7 @@ in
 #      inputs.hyprland-plugins.packages."${pkgs.system}".hyprbars
 #      inputs.hyprland-plugins.packages."${pkgs.system}".hyprexpo
 #      inputs.split-monitor-workspaces.packages."${pkgs.system}".split-monitor-workspaces
+      inputs.hyprspace.packages."${pkgs.system}".Hyprspace
     ];
 
     settings = {
@@ -97,6 +98,12 @@ in
         "sensitivity" = "0.000000";
       }; 
 
+      plugin = {
+        overview = {
+          "onBottom" = true;
+        };
+      };
+
       "$mod" = "SUPER";
 
       bind = [
@@ -109,6 +116,7 @@ in
         "$mod, Q, killactive"
         "$mod, W, exec, mako"
 	"$mod, L, exec, hyprlock"        
+        "$mod, TAB, overview:toggle"
 
         "$mod, 1, workspace, 1"
         "$mod, 2, workspace, 2"
