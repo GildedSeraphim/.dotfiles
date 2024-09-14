@@ -33,7 +33,7 @@ in
 #      oneko
 #      Hide-Full-Screen-Button
     ];
-     theme = spicePkgs.themes.sleek;
+     theme = spicePkgs.themes.ziro;
      colorScheme = "custom";
 
      customColorScheme = with config.lib.stylix.colors; {

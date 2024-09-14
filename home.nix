@@ -57,7 +57,7 @@ in
   (with pkgs; [
     jetbrains.pycharm-professional
     nerdfonts
-    inputs.zen.packages.${system}.default
+    inputs.zen.packages.${system}.specific
     fast-cli
     hyprpanel
     hyprcursor

@@ -104,7 +104,9 @@ in
           "exitOnClick" = true;
           "dragAlpha" = 0;
           "affectStrut" = false;
-          "autoDrag" = false;
+          "autoDrag" = true;
+          "exitOnSwitch" = true;
+#          "showSpecialWorkspace" = true;
         };
       };
 
