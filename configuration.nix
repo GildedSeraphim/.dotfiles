@@ -45,7 +45,6 @@ in
   ++
   
   (with pkgs-unstable; [
-    ollama-cuda
   ]);
 
   programs.gamemode.enable = true;
