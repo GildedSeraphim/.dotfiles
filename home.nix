@@ -100,10 +100,12 @@ in
     nvd
     brave
     vesktop
-    wineWowPackages.unstableFull
+    wine
     winetricks
     protonup-qt
     obs-studio
+    nitch
+    protontricks
   ]);
   
   programs.bash.enable = true;
@@ -111,7 +113,7 @@ in
     ll = "ls -l";
     ".." = "cd ..";
     "dot" = "cd /home/sn/.dotfiles/";
-    "neo" = "fastfetch";
+    "neo" = "nitch";
     "cl" = "clear";
     "fui" = "nix run github:vimjoyer/nix-update-input";
   };
