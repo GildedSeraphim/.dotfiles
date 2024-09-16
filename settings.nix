@@ -77,7 +77,7 @@
  
   users.users.sn = {
     isNormalUser = true;
-    shell = pkgs.bash;
+    shell = pkgs.zsh;
     initialPassword = "password";
     extraGroups = [ "wheel" "video" "audio" "networkmanager" "lp" "scanner" "libvirtd" "libvirt" ]; 
     packages = with pkgs; [
@@ -86,20 +86,20 @@
 
   programs.noisetorch.enable = true;
 
-  hardware.opentabletdriver.enable = true;
-  hardware.opentabletdriver.daemon.enable = true;
+  hardware.opentabletdriver.enable = false;
+  hardware.opentabletdriver.daemon.enable = false;
 
-  programs.virt-manager.enable = true;
+  programs.virt-manager.enable = false;
   boot.kernelModules = ["kvm-amd" "kvm-intel"];
 
   virtualisation.libvirtd = {
-  enable = true;
+  enable = false;
   qemu = {
     package = pkgs.qemu_kvm;
     runAsRoot = true;
     swtpm.enable = true;
     ovmf = {
-      enable = true;
+      enable = false;
       packages = [(pkgs.OVMF.override {
         secureBoot = true;
         tpmSupport = true;

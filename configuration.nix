@@ -1,9 +1,4 @@
 { config, lib, pkgs, pkgs-unstable, inputs, outputs, ... }:
-let
-my-llama =pkgs.alpaca.override {
-  ollama = pkgs.ollama-cuda;
-};
-in
 {
   imports =
     [ 

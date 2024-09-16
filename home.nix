@@ -106,17 +106,9 @@ in
     obs-studio
     nitch
     protontricks
+    sl
   ]);
   
-  programs.bash.enable = true;
-  programs.bash.shellAliases = {
-    ll = "ls -l";
-    ".." = "cd ..";
-    "dot" = "cd /home/sn/.dotfiles/";
-    "neo" = "nitch";
-    "cl" = "clear";
-    "fui" = "nix run github:vimjoyer/nix-update-input";
-  };
   fonts.fontconfig.enable = true;
   programs.home-manager.enable = true;
 }

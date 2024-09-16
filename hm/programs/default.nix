@@ -8,5 +8,6 @@
       ./vscode
       ./btop
       ./nvchad
+      ./shell
     ];
 }
