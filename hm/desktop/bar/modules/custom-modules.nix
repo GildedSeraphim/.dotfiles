@@ -129,7 +129,7 @@ in
       let
         systemctl = getExe' pkgs.systemd "systemctl";
         hyprlock = getExe config.programs.hyprlock.package;
-        poweroff = getExe' pkgs.systemd "poweroff";
+        shutdown = getExe' pkgs.systemd "poweroff";
         reboot = getExe' pkgs.systemd "reboot";
         terminal = getExe config.programs.foot.package;
         top = getExe config.programs.btop.package;
@@ -137,7 +137,7 @@ in
         swaymsg = getExe' config.wayland.windowManager.sway.package "swaymsg";
       in
       {
-        inherit poweroff reboot;
+        inherit shutdown reboot;
 
         hibernate = "${systemctl} hibernate";
         lock = ''([[ "$XDG_CURRENT_DESKTOP" == "Hyprland" ]] && ${hyprlock} --immediate)'';

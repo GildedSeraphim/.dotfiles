@@ -53,7 +53,7 @@ window {
 }
 
 prompt {
-    text-color: @fg-color;
+    text-color: @red;
 }
 
 inputbar {
@@ -102,12 +102,12 @@ element selected.active {
 }
 
 element selected.normal {
-	background-color: @red;
+	background-color: @blue;
 	text-color: @bg-color;
 }
 
 message {
-    background-color: red;
+    background-color: blue;
     border: 0px solid;
 }
   '';

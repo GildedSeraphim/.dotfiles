@@ -35,6 +35,9 @@
   environment.systemPackages = (with pkgs; [
     nix-ld
     envfs
+    calf
+    qjackctl
+    easyeffects
   ])
 
   ++

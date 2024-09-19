@@ -55,6 +55,8 @@ in
 
   home.packages = 
   (with pkgs; [
+    thefuck
+    python312Packages.pip
     jetbrains.pycharm-professional
     nerdfonts
     inputs.zen.packages.${system}.specific
@@ -87,6 +89,9 @@ in
     prismlauncher
     gnome-obfuscate
     imagemagick
+    firefox
+    mpv
+    cava
   ])
 
   ++
@@ -108,7 +113,7 @@ in
     protontricks
     sl
   ]);
-  
+
   fonts.fontconfig.enable = true;
   programs.home-manager.enable = true;
 }

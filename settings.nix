@@ -17,6 +17,14 @@
     alsa.support32Bit = true;
     pulse.enable = true;
     wireplumber.enable = true;
+    jack.enable = false;
+  };
+  services.jack = {
+    jackd.enable = true;
+    alsa.enable = false;
+    loopback = {
+      enable = true;
+    };
   };
 
   xdg.portal.config = {
@@ -77,7 +85,7 @@
  
   users.users.sn = {
     isNormalUser = true;
-    shell = pkgs.zsh;
+    shell = pkgs.bash;
     initialPassword = "password";
     extraGroups = [ "wheel" "video" "audio" "networkmanager" "lp" "scanner" "libvirtd" "libvirt" ]; 
     packages = with pkgs; [
