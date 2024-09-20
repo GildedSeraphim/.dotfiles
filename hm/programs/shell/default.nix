@@ -20,6 +20,9 @@
     "neo" = "nitch";
     "cl" = "clear";
     "fui" = "nix run github:vimjoyer/nix-update-input";
+    "nt" = "nix-tree";
+    "dl" = "cd $HOME/Downloads";
+    "doc" = "cd $HOME/Documents";
   };
 
 }

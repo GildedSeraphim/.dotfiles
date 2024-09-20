@@ -1,6 +1,6 @@
 { config, pkgs, pkgs-unstable, lib, inputs, outputs, nix-colors, ... }:
 let
-  theme = "gruvbox-dark-hard";
+  theme = "everforest-dark-hard";
   wallpaper = ./wal/house.jpg;
 in
 {
@@ -112,6 +112,7 @@ in
     nitch
     protontricks
     sl
+    nix-tree
   ]);
 
   fonts.fontconfig.enable = true;
