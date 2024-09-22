@@ -43,6 +43,7 @@
   ++
   
   (with pkgs-unstable; [
+    nix-init
   ]);
 
   programs.gamemode.enable = true;

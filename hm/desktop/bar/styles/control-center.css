@@ -7,7 +7,7 @@
   background-color: @surface0;
   border: 2px solid @surface1;
 }
-
+#backlight,
 #custom-notification,
 #custom-updates,
 #custom-github,
@@ -87,4 +87,25 @@
     min-width: 10px;
     border-radius: 5px;
     background-color: @green;
+}
+
+#backlight-slider slider {
+    min-height: 0px;
+    min-width: 0px;
+    opacity: 0;
+    background-color: @blue;
+    background-image: none;
+    border: none;
+    box-shadow: none;
+}
+#backlight-slider trough {
+    min-height: 10px;
+    min-width: 80px;
+    border-radius: 5px;
+    background-color: @base;
+}
+#backlight-slider highlight {
+    min-width: 10px;
+    border-radius: 5px;
+    background-color: @blue;
 }

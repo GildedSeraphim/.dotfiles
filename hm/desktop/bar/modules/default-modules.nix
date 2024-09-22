@@ -27,6 +27,12 @@ in
       on-scroll-down = "${brightnessctl} s +1%";
     };
 
+  "backlight/slider" = {
+    min = 1;
+    max = 100;
+    orientation = "horizontal";
+  };
+
   battery = {
     states = {
       good = 95;
@@ -154,7 +160,7 @@ in
     player-icons = {
       chromium = "";
       default = "";
-      firefox = "";
+      zen = "";
       mopidy = "";
       mpv = "";
       spotify = "";
@@ -226,6 +232,7 @@ in
     };
     scroll-step = 1;
     on-click = "pavucontrol";
+    on-click-right = "easyeffects";
     ignored-sinks = [ "Easy Effects Sink" ];
   };
 

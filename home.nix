@@ -1,6 +1,6 @@
 { config, pkgs, pkgs-unstable, lib, inputs, outputs, nix-colors, ... }:
 let
-  theme = "everforest-dark-hard";
+  theme = "gruvbox-dark-hard";
   wallpaper = ./wal/house.jpg;
 in
 {
@@ -92,6 +92,7 @@ in
     firefox
     mpv
     cava
+    spotify-cli-linux
   ])
 
   ++
@@ -113,6 +114,7 @@ in
     protontricks
     sl
     nix-tree
+    librewolf
   ]);
 
   fonts.fontconfig.enable = true;

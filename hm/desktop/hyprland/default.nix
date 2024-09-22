@@ -19,7 +19,7 @@ in
      plugins = [
 #      inputs.hyprland-plugins.packages."${pkgs.system}".hyprbars
 #      inputs.hyprland-plugins.packages."${pkgs.system}".hyprexpo
-      inputs.split-monitor-workspaces.packages."${pkgs.system}".split-monitor-workspaces
+#      inputs.split-monitor-workspaces.packages."${pkgs.system}".split-monitor-workspaces
       inputs.hyprspace.packages."${pkgs.system}".Hyprspace
     ];
 
@@ -27,6 +27,7 @@ in
       exec-once = [
         ''${startupScript}/bin/start''
 #        ''${pkgs.hyprpanel}/bin/hyprpanel''
+        ''${pkgs.easyeffects}/bin/easyeffects --gapplication-service''
       ];
 
       general = {
@@ -113,7 +114,7 @@ in
       "$mod" = "SUPER";
 
       bind = [
-        "$mod, B, exec, zen"
+        "$mod, B, exec, librewolf"
         "$mod, Return, exec, alacritty"
         "$mod, R, exec, rofi -show drun"
         "$mod SHIFT, R, exec, rofi -show run"

@@ -1,4 +1,16 @@
 {
+  "group/backlight" = {
+    orientation = "horizontal";
+    drawer = {
+      transition-duration = 500;
+      transition-left-to-right = false;
+    };
+    modules = [
+      "backlight"
+      "backlight/slider"
+    ];
+  };
+
   "group/audio" = {
     orientation = "horizontal";
     drawer = {
@@ -30,11 +42,8 @@
   "group/control-center" = {
     orientation = "horizontal";
     modules = [
-      "gamemode"
-      "idle_inhibitor"
-      "systemd-failed-units"
+      "cava"
       "custom/notification"
-      "custom/github"
       "bluetooth"
       "group/audio"
       "battery"
