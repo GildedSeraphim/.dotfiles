@@ -3,6 +3,7 @@
 {
     imports = [
       ./alacritty
+      ./browsers
       ./mako
       ./lf
       ./vscode

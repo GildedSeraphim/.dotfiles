@@ -24,6 +24,7 @@
       url = "github:MOIS3Y/nvchad-on-steroids";
       flake = false;
     };
+    xremap-flake.url = "github:xremap/nix-flake";
     nvim-cpp = {
       url = "github:GildedSeraphim/NvChad-fork";
       flake = false;
@@ -38,10 +39,21 @@
       url = "github:KZDKM/Hyprspace";
       inputs.hyprland.follows = "hyprland";
     };
+    firefox-shyfox = {
+      url = "github:Naezr/ShyFox";
+      flake = false;
+    };
+
+    # Firefox addons
+    firefox-addons = {
+      url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { self, nixpkgs, home-manager, nixpkgs-unstable, nix-colors, hyprland, stylix, ...}@inputs :
     let
+      inherit (self) outputs;
       system = "x86_64-linux";
       host = "nixos";
       username = "sn";
@@ -100,6 +112,7 @@
           inherit inputs;
           inherit pkgs-unstable;
           inherit nix-colors;
+          inherit outputs;
         };
       };
     };

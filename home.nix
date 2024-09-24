@@ -55,6 +55,7 @@ in
 
   home.packages = 
   (with pkgs; [
+    bookworm
     thefuck
     python312Packages.pip
     jetbrains.pycharm-professional
@@ -89,10 +90,12 @@ in
     prismlauncher
     gnome-obfuscate
     imagemagick
-    firefox
     mpv
     cava
     spotify-cli-linux
+    firefox
+    darktable
+    bitwarden-desktop
   ])
 
   ++
@@ -114,7 +117,6 @@ in
     protontricks
     sl
     nix-tree
-    librewolf
   ]);
 
   fonts.fontconfig.enable = true;

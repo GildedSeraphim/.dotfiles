@@ -114,7 +114,7 @@ in
       "$mod" = "SUPER";
 
       bind = [
-        "$mod, B, exec, librewolf"
+        "$mod, B, exec, zen"
         "$mod, Return, exec, alacritty"
         "$mod, R, exec, rofi -show drun"
         "$mod SHIFT, R, exec, rofi -show run"
