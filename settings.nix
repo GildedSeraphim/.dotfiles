@@ -92,7 +92,20 @@
     ];
   };
 
-  programs.noisetorch.enable = true;
+  programs.noisetorch.enable = false;
+
+  # DISABLE CUPS DUE TO 9.9 CVE
+  #services.printing.browsed.enable = false;
+  services.avahi.enable = lib.mkForce false;
+  services.printing.enable = lib.mkForce false;
+  hardware.pulseaudio.zeroconf.publish.enable = false;
+  hardware.pulseaudio.zeroconf.discovery.enable = false;
+  services.gnome.core-shell.enable = false;
+  services.shairport-sync.enable = false;
+  services.printing.cups-pdf.enable = false;
+  services.printing.startWhenNeeded = false;
+  services.printing.browsing = false;
+  # --------------------------
 
   hardware.opentabletdriver.enable = false;
   hardware.opentabletdriver.daemon.enable = false;
