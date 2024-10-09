@@ -7,5 +7,6 @@
     ./hyprlock
     ./rofi
 #    ./ags
+    ./xdg
   ];
 }

@@ -113,6 +113,8 @@
   programs.virt-manager.enable = false;
   boot.kernelModules = ["kvm-amd" "kvm-intel"];
 
+  programs.firejail.enable = true;
+
   virtualisation.libvirtd = {
   enable = false;
   qemu = {

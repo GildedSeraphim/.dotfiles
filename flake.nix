@@ -29,22 +29,11 @@
       url = "github:GildedSeraphim/NvChad-fork";
       flake = false;
     };
-    hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
     zen.url = "github:MarceColl/zen-browser-flake";
-    split-monitor-workspaces = {
-      url = "github:Duckonaut/split-monitor-workspaces";
-      inputs.hyprland.follows = "hyprland";
-    };
     hyprspace = {
       url = "github:KZDKM/Hyprspace";
       inputs.hyprland.follows = "hyprland";
     };
-    firefox-shyfox = {
-      url = "github:Naezr/ShyFox";
-      flake = false;
-    };
-
-    # Firefox addons
     firefox-addons = {
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -65,7 +54,7 @@
         config.allowUnfree = true;
 
         overlays = [
-	  inputs.hyprpanel.overlay.${system}
+
         ];
 
       };

@@ -1,10 +1,11 @@
-{pkgs, config, lib,  ... }: {
+{pkgs, config, lib, stylix, ... }: {
 
   programs.rofi.enable = true;
   programs.rofi.package = pkgs.rofi-wayland;
+  stylix.targets.rofi.enable = true;
   xdg.configFile."rofi/config.rasi".text = with config.lib.stylix.colors; ''
     * {
-    font: "MapleMono NF 10";
+    font: "IosevkaTermSlab Nerd Font Mono 10";
 
     background: #${base00};
     foreground: #${base05};

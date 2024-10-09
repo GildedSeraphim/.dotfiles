@@ -1,27 +1,57 @@
-{ pkgs, ... }:
-
+{ pkgs, config, nix-colors, ... }:
+let
+  theme = "gruvbox-dark-hard";
+  th = "${pkgs.base16-schemes}/share/themes/${theme}.yaml";
+  wallpaper = ./wal/house.jpg;
+in
 {
+  imports = [
+    nix-colors.homeManagerModules.default
+  ];
+
   stylix.enable = true;
+  
+  stylix.base16Scheme = "${th}";
 
-  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-medium.yaml";
-
-  stylix.image = ./hm/desktop/hyprland/wallpaper.png;
+  stylix.image = wallpaper;
 
   stylix.cursor.package = pkgs.bibata-cursors;
   stylix.cursor.name = "Bibata-Modern-Ice";
-  
+
   stylix.fonts = {
     monospace = {
-      package = pkgs.nerdfonts.override { fonts = ["JetBrainsMono"];};
-      name = "JetBrainsMono Nerd Font Mono";
+      package = pkgs.nerdfonts.override { fonts = ["IosevkaTermSlab"];};
+      name = "IosevkaTermSlab Nerd Font Mono";
     };
-    sansSerif = {
-      package = pkgs.dejavu_fonts;
-      name = "DejaVu Sans";
-    };
+    sansSerif = config.stylix.fonts.monospace;
     serif = {
-      package = pkgs.dejavu_fonts;
-      name = "DejaVu Serif";
+      package = pkgs.texlivePackages.theanodidot;
+      name = "GFS Didot";
     };
   };
+
+  colorScheme = {
+    slug = "${theme}";
+    name = "${theme}";
+    author = "idk man";
+    palette = with config.lib.stylix.colors; {
+      base00 = "#${base00}";
+      base01 = "#${base01}";
+      base02 = "#${base02}";
+      base03 = "#${base03}";
+      base04 = "#${base04}";
+      base05 = "#${base05}";
+      base06 = "#${base06}";
+      base07 = "#${base07}";
+      base08 = "#${base08}";
+      base09 = "#${base09}";
+      base0A = "#${base0A}";
+      base0B = "#${base0B}";
+      base0C = "#${base0C}";
+      base0D = "#${base0D}";
+      base0E = "#${base0E}";
+      base0F = "#${base0F}";
+    };
+  };
+  
 }

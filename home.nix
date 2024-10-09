@@ -1,44 +1,14 @@
-{ config, pkgs, pkgs-unstable, lib, inputs, outputs, nix-colors, ... }:
-let
-  theme = "gruvbox-dark-hard";
-  wallpaper = ./wal/house.jpg;
-in
+{ config, pkgs, pkgs-unstable, lib, inputs, outputs, ... }:
 {
   home.username = "sn";
   home.homeDirectory = "/home/sn";
 
   imports = [
-    nix-colors.homeManagerModules.default
     ./hm
     ./scripts.nix
+    ./stylix.nix
   ];
 
-  stylix.enable = true;
-
-  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/${theme}.yaml";
-
-  stylix.image = wallpaper;
-
-  stylix.cursor.package = pkgs.bibata-cursors;
-  stylix.cursor.name = "Bibata-Modern-Ice";
-  
-  stylix.fonts = {
-    monospace = {
-      package = pkgs.nerdfonts.override { fonts = ["JetBrainsMono"];};
-      name = "JetBrainsMono Nerd Font Mono";
-    };
-    sansSerif = {
-      package = pkgs.dejavu_fonts;
-      name = "DejaVu Sans";
-    };
-    serif = {
-      package = pkgs.dejavu_fonts;
-      name = "DejaVu Serif";
-    };
-  };
-
-  colorScheme = inputs.nix-colors.colorSchemes.${theme};
- 
   programs.git = {
     enable = true;
     userName = "GildedSeraphim";
@@ -55,14 +25,11 @@ in
 
   home.packages = 
   (with pkgs; [
-    bookworm
     thefuck
     python312Packages.pip
     jetbrains.pycharm-professional
-    nerdfonts
     inputs.zen.packages.${system}.specific
     fast-cli
-    hyprpanel
     hyprcursor
     eww
     mako
@@ -90,12 +57,13 @@ in
     prismlauncher
     gnome-obfuscate
     imagemagick
-    mpv
-    cava
-    spotify-cli-linux
-    firefox
-    darktable
     bitwarden-desktop
+    dejavu_fonts
+    firefox
+    okular
+    zathura
+    nsxiv
+    nautilus
   ])
 
   ++

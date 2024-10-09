@@ -3,12 +3,16 @@
 {
     imports = [
       ./alacritty
-      ./browsers
+      ./kitty
       ./mako
       ./lf
       ./vscode
       ./btop
       ./nvchad
       ./shell
+      ./cava
+#      ./firefox
+      ./glava
+      ./mpv
     ];
 }

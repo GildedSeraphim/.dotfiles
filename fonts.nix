@@ -4,7 +4,12 @@
   fonts = {
     fontDir.enable = true;
     packages = with pkgs;[
+      # nerd fonts
+      (nerdfonts.override { fonts = [
+        "IosevkaTermSlab"
+      ]; })
       # apple-fonts
+      dejavu_fonts
       noto-fonts
       noto-fonts-cjk
       inter
@@ -13,6 +18,7 @@
       fira-code
       scientifica
       siji
+      texlivePackages.gfsdidot
       # twemoji-color-font
       twitter-color-emoji
       paratype-pt-serif
@@ -26,7 +32,7 @@
       nerdfonts
       # MS Fonts
       corefonts
-      vistafonts     
+      vistafonts
     ];    
   };
 }

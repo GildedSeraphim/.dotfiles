@@ -21,6 +21,7 @@ in
 #      inputs.hyprland-plugins.packages."${pkgs.system}".hyprexpo
 #      inputs.split-monitor-workspaces.packages."${pkgs.system}".split-monitor-workspaces
       inputs.hyprspace.packages."${pkgs.system}".Hyprspace
+      inputs.hyprland-plugins.packages."${pkgs.system}".hyprwinwrap
     ];
 
     settings = {
@@ -28,30 +29,32 @@ in
         ''${startupScript}/bin/start''
 #        ''${pkgs.hyprpanel}/bin/hyprpanel''
         ''${pkgs.easyeffects}/bin/easyeffects --gapplication-service''
+        "${pkgs.wl-clipboard}/bin/wl-paste --type text --watch cliphist store &"
+        "${pkgs.wl-clipboard}/bin/wl-paste --type image --watch cliphist store &"
       ];
 
       general = {
-        "gaps_in" = 5;
-        "gaps_out" = 20;
+        "gaps_in" = 0;
+        "gaps_out" = 5;
         "border_size" = 2;
 #        "col.active_border" = lib.mkForce "rgb(${config.stylix.base16Scheme.base0E})";
 #        "col.inactive_border" = lib.mkForce "rgb(${config.stylix.base16Scheme.base00})";
 
-        "layout" = "dwindle";
+        "layout" = "master";
       };
 
       monitor = [
 #        "HDMI-A-1,2560x1440@60.00,0x0,auto"
 #        "DP-3,2560x1440@144,2560x0,auto"
         "Unknown-1,630x350,-2560x-1440,auto"
-        "eDP-1, 3840x2160@60,0x0,auto"
+        "eDP-1, 3840x2160@60,0x0,2"
         "HDMI-A-2, 1920x1080@74.97,auto,auto"
       ];
 
       decoration = {
-        "rounding" = 10;
+        "rounding" = 0;
         blur = {
-          "enabled" = "true";
+          "enabled" = "false";
           "size" = 3;
           "passes" = 1;
         };
@@ -70,17 +73,44 @@ in
           "workspaces, 1, 6, default"
         ];
       };
+      windowrule = [
+        "noblur, GLava"
+        "noborder, GLava"
+        "noshadow, GLava"
+        "noanim, GLava"
+        "nofocus, GLava"
+        "float, GLava"
+        "pin, GLava"
+        "idleinhibit always, GLava"
+        "size 100% 100%, GLava"
+        "move 0 0, GLava"
+      ];
+      layerrule = [
+        "noanim, selection"
+      ];
+
+      windowrulev2 = [
+        "float, class:(qalculate-gtk)"
+        "size 70% 55%, class:(qalculate-gtk)"
+        "center, class:(qalculate-gtk)"
+        "suppressevent maximize, class:.*"
+      ];
 
       dwindle = {
-        "pseudotile" = "yes";
+        "force_split" = 2;
+        "pseudotile" = "false";
         "preserve_split" = "yes";
+      };
+      misc = {
+        enable_swallow = true;
+        force_default_wallpaper = 0;
+        disable_splash_rendering = true;
+        disable_hyprland_logo = true;
       };
 
       master = {
         #"new_is_master" = true;
       };
-
-      "windowrulev2" = "suppressevent maximize, class:.*";
 
       cursor = {
 	"no_hardware_cursors" = true;
@@ -100,6 +130,9 @@ in
       }; 
 
       plugin = {
+        hyprwinwrap = {
+          "class" = "GLava";
+        };
         overview = {
           "onBottom" = false;
           "exitOnClick" = true;
@@ -115,7 +148,7 @@ in
 
       bind = [
         "$mod, B, exec, zen"
-        "$mod, Return, exec, alacritty"
+        "$mod, Return, exec, kitty"
         "$mod, R, exec, rofi -show drun"
         "$mod SHIFT, R, exec, rofi -show run"
         "$mod, F, togglefloating"

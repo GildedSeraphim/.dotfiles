@@ -6,10 +6,13 @@
   config,
   pkgs,
   lib,
+  stylix,
   ...
 }:
 let
   inherit (lib) mkMerge;
+ 
+  stylix.targets.waybar.enable = true;
 
   style = builtins.readFile ./styles/style.css;
   controlCenterStyle = builtins.readFile ./styles/control-center.css;

@@ -9,8 +9,6 @@ in
    programs.spicetify = {
      enable = true;
      enabledExtensions = with spicePkgs.extensions; [
-       adblock
-       hidePodcasts
        shuffle # shuffle+ (special characters are sanitized out of extension names)
        keyboardShortcut
        betterGenres
@@ -23,7 +21,6 @@ in
       newReleases
       lyricsPlus
       marketplace
-      ncsVisualizer
       betterLibrary
     ];
     enabledSnippets = with spicePkgs.snippets; [
@@ -33,7 +30,7 @@ in
 #      oneko
 #      Hide-Full-Screen-Button
     ];
-     theme = spicePkgs.themes.dreary;
+     theme = spicePkgs.themes.comfy;
      colorScheme = "custom";
 
      customColorScheme = with config.lib.stylix.colors; {

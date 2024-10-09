@@ -2,9 +2,9 @@
 * Global configuration for theme
 * */
 * {
-  font-family: ZedMono NF;
+  font-family: IosevkaTermSlab Nerd Font Mono;
   font-size: 16px;
-  border-radius: 0.5em;
+  border-radius: 0em;
 }
 
 window#waybar {
@@ -21,6 +21,8 @@ window#waybar.hidden {
 }
 
 tooltip {
+  font-family: IosevkaTermSlab Nerd Font Mono;
+  font-size: 10;
   background: @base;
   border: 1px solid @blue;
 }
@@ -60,7 +62,7 @@ box {
 }
 
 #clock {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 900;
 }
 
