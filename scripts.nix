@@ -15,5 +15,12 @@
             exec codium --disable-gpu .
         '';
     })
+    (pkgs.writeShellApplication {
+        name = "spotify-offline";
+
+        text = ''
+            exec firejail --net=none spotify --disable-gpu
+        '';
+    })
     ];
 }

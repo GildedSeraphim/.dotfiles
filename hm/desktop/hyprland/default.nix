@@ -29,6 +29,7 @@ in
         ''${startupScript}/bin/start''
 #        ''${pkgs.hyprpanel}/bin/hyprpanel''
         ''${pkgs.easyeffects}/bin/easyeffects --gapplication-service''
+        "${pkgs.glava}/bin/glava &"
         "${pkgs.wl-clipboard}/bin/wl-paste --type text --watch cliphist store &"
         "${pkgs.wl-clipboard}/bin/wl-paste --type image --watch cliphist store &"
       ];
@@ -157,6 +158,8 @@ in
         "$mod, W, exec, mako"
 	"$mod, L, exec, hyprlock"        
         "$mod, TAB, overview:toggle"
+        "$mod, C, exec, rofi -show calc"
+        "$mod SHIFT, C, exec, qalculate-gtk"
 
         "$mod, 1, workspace, 1"
         "$mod, 2, workspace, 2"

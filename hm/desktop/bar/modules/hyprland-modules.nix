@@ -115,9 +115,10 @@ in
       "class<xwaylandvideobridge>" = "";
       "code-url-handler" = "󰨞";
       "title<RPCS3.*>" = "";
-      "title<Spotify Free>" = "";
+      "title<Spotify Premium>" = "";
       "title<Steam>" = "";
       "title<obsidian>" = "";
+      "class<GLava>" = "";
     };
   };
 }

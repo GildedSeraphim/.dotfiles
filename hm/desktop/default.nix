@@ -5,8 +5,9 @@
     ./hyprland
     ./bar
     ./hyprlock
-    ./rofi
+#    ./rofi
 #    ./ags
     ./xdg
+    ./test
   ];
 }
