@@ -22,5 +22,12 @@
             exec firejail --net=none spotify --disable-gpu
         '';
     })
+    (pkgs.writeShellApplication {
+        name = "glava-vis";
+        text = ''
+            exec glava &
+            glava --force-mod=bars
+        '';
+    })
     ];
 }

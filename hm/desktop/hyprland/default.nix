@@ -10,6 +10,7 @@ in
 
   imports = [
     ./hyprland-environment.nix
+    ./wlsunset.nix
   ];
 
   wayland.windowManager.hyprland.xwayland.enable = true;
@@ -29,7 +30,6 @@ in
         ''${startupScript}/bin/start''
 #        ''${pkgs.hyprpanel}/bin/hyprpanel''
         ''${pkgs.easyeffects}/bin/easyeffects --gapplication-service''
-        "${pkgs.glava}/bin/glava &"
         "${pkgs.wl-clipboard}/bin/wl-paste --type text --watch cliphist store &"
         "${pkgs.wl-clipboard}/bin/wl-paste --type image --watch cliphist store &"
       ];
@@ -54,10 +54,14 @@ in
 
       decoration = {
         "rounding" = 0;
+        "active_opacity" = 1;
+        "inactive_opacity" = 1;
         blur = {
-          "enabled" = "false";
-          "size" = 3;
-          "passes" = 1;
+          "enabled" = false;
+          "size" = 1;
+          "passes" = 4;
+          "new_optimizations" = true;
+          "ignore_opacity" = true;
         };
       };
 
@@ -160,6 +164,9 @@ in
         "$mod, TAB, overview:toggle"
         "$mod, C, exec, rofi -show calc"
         "$mod SHIFT, C, exec, qalculate-gtk"
+#        "$mod, G, exec, pkill glava-vis && pkill glava"
+        "$mod, G, exec, glava-vis"
+        "$mod SHIFT, G, exec, pkill glava-vis && pkill glava"
 
         "$mod, 1, workspace, 1"
         "$mod, 2, workspace, 2"

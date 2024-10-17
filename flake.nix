@@ -10,6 +10,9 @@
     hyprland = { 
       url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
     };
+    hyprlux = {
+      url = "github:amadejkastelic/Hyprlux";
+    };
     stylix.url = "github:danth/stylix";
     hyprland-plugins = {
       url = "github:hyprwm/hyprland-plugins";
@@ -17,8 +20,9 @@
     };
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
     nvchad4nix = {
-      url = "github:NvChad/nix";
+      url = "github:nix-community/nix4nvchad";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
+      inputs.nvchad-starter.follows = "nvim-cpp";
     };
     nvchad-on-steroids = {  # <- here
       url = "github:MOIS3Y/nvchad-on-steroids";
@@ -29,7 +33,7 @@
       url = "github:GildedSeraphim/NvChad-fork";
       flake = false;
     };
-    zen.url = "github:MarceColl/zen-browser-flake";
+    zen.url = "github:0xc000022070/zen-browser-flake";
     hyprspace = {
       url = "github:KZDKM/Hyprspace";
       inputs.hyprland.follows = "hyprland";
@@ -91,6 +95,7 @@
           hyprland.homeManagerModules.default
           stylix.homeManagerModules.stylix
           inputs.spicetify-nix.homeManagerModules.default
+          inputs.hyprlux.homeManagerModules.default
         ];
         inherit pkgs;
         extraSpecialArgs = {
