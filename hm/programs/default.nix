@@ -13,5 +13,6 @@
       ./cava
 #      ./firefox
       ./glava
+      ./emacs
     ];
 }
