@@ -1,6 +1,6 @@
 { pkgs, lib, nix-colors, config, inputs, ... }:
 let
-    startupScript = pkgs.pkgs.writeShellScriptBin "start" ''
+   startupScript = pkgs.pkgs.writeShellScriptBin "start" ''
 
       ${pkgs.waybar}/bin/waybar &
       sleep 1
@@ -11,7 +11,10 @@ in
   imports = [
     ./hyprland-environment.nix
     ./wlsunset.nix
+    ./hyprpaper.nix
   ];
+
+  services.swayosd.enable = true;
 
   wayland.windowManager.hyprland.xwayland.enable = true;
   wayland.windowManager.hyprland = {
@@ -21,7 +24,7 @@ in
 #      inputs.hyprland-plugins.packages."${pkgs.system}".hyprbars
 #      inputs.hyprland-plugins.packages."${pkgs.system}".hyprexpo
 #      inputs.split-monitor-workspaces.packages."${pkgs.system}".split-monitor-workspaces
-      inputs.hyprspace.packages."${pkgs.system}".Hyprspace
+#      inputs.hyprspace.packages."${pkgs.system}".Hyprspace
       inputs.hyprland-plugins.packages."${pkgs.system}".hyprwinwrap
     ];
 
@@ -160,8 +163,8 @@ in
         "$mod SHIFT, F, fullscreen"
         "$mod, Q, killactive"
         "$mod, W, exec, mako"
-	"$mod, L, exec, hyprlock"        
-        "$mod, TAB, overview:toggle"
+	    "$mod SHIFT, L, exec, hyprlock"        
+#        "$mod, TAB, overview:toggle"
         "$mod, C, exec, rofi -show calc"
         "$mod SHIFT, C, exec, qalculate-gtk"
 #        "$mod, G, exec, pkill glava-vis && pkill glava"
@@ -190,10 +193,10 @@ in
         "$mod SHIFT, 9, movetoworkspacesilent, 9"
         "$mod SHIFT, 0, movetoworkspacesilent, 10"
 
-        "$mod, left, movefocus, l"
-        "$mod, right, movefocus, r"
-	"$mod, up, movefocus, u"	 
-	"$mod, down, movefocus, d"
+        "$mod, h, movefocus, l"
+        "$mod, l, movefocus, r"
+    	"$mod, k, movefocus, u"	 
+	    "$mod, j, movefocus, d"
 
         "$mod, S, togglespecialworkspace, magic"
         "$mod SHIFT, S, movetoworkspace, special:magic"

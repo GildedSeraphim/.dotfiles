@@ -44,19 +44,5 @@
   (with pkgs-unstable; [
     nix-init
   ]);
-
-  programs.gamemode.enable = true;
-
-  programs.steam = {
-    enable = true;
-    gamescopeSession.enable = true;
-    remotePlay.openFirewall = true; 
-    dedicatedServer.openFirewall = true;
-  };
-  
-  system.stateVersion = "24.05";  
-
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
 }
 

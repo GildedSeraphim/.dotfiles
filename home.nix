@@ -25,6 +25,7 @@
 
   home.packages = 
   (with pkgs; [
+    ladybird
     thefuck
     python312Packages.pip
     jetbrains.pycharm-professional
@@ -64,6 +65,7 @@
     zathura
     nsxiv
     nautilus
+    geek-life
   ])
 
   ++

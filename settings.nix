@@ -53,6 +53,19 @@
       "/run/opengl-driver/share/vulkan/icd.d/nvidia_icd.x86_64.json";
   };
 
+   programs.gamemode.enable = true;
+
+  programs.steam = {
+    enable = true;
+    gamescopeSession.enable = true;
+    remotePlay.openFirewall = true; 
+    dedicatedServer.openFirewall = true;
+  };
+  
+  system.stateVersion = "24.05";  
+
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
   services.devmon.enable = true;
   services.udisks2.enable = true;
   programs.xfconf.enable = true;
@@ -74,7 +87,6 @@
   programs = {
     adb.enable = true;
     dconf.enable = true;
-    steam.enable = true;
     xwayland.enable = true;
     zsh = {
       enable = true;

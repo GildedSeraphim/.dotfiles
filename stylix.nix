@@ -2,7 +2,11 @@
 let
   theme = "gruvbox-dark-hard";
   th = "${pkgs.base16-schemes}/share/themes/${theme}.yaml";
+  alterfile = ./wal/color.txt;
   wallpaper = ./wal/house.jpg;
+    #altered-wallpaper = pkgs.runCommand "altered.png" {} ''
+    #${pkgs.imagemagick}/bin/magick convert ${wallpaper} -colorspace sRGB -color-matrix < ${alterfile} altered.png $out
+    #'';
 in
 {
   imports = [
@@ -12,6 +16,8 @@ in
   stylix.enable = true;
   
   stylix.base16Scheme = "${th}";
+
+  stylix.override.base00 = "000000";
 
   stylix.image = wallpaper;
 
@@ -52,6 +58,26 @@ in
       base0E = "#${base0E}";
       base0F = "#${base0F}";
     };
+  };
+
+  home.file = {
+    ".dotfiles/wal/color.txt".text = with config.lib.stylix.colors; ''
+      #${base00} 
+      #${base01} 
+      #${base02} 
+      #${base03} 
+      #${base04} 
+      #${base05} 
+      #${base07} 
+      #${base08} 
+      #${base09} 
+      #${base0A} 
+      #${base0B} 
+      #${base0C} 
+      #${base0D} 
+      #${base0E} 
+      #${base0F}
+    '';
   };
   
 }
