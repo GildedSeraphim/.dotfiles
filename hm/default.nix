@@ -1,7 +1,10 @@
-{ config, lib, ... }:
 {
-    imports = [
-      ./desktop
-      ./programs
-    ];
+  config,
+  lib,
+  ...
+}: {
+  imports = [
+    ./desktop
+    ./programs
+  ];
 }

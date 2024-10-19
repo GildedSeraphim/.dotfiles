@@ -1,12 +1,14 @@
-{ pkgs, config,  ... }:
 {
+  pkgs,
+  config,
+  ...
+}: {
   imports = [
     ./starship.nix
     ./zoxide.nix
   ];
 
   home.packages = with pkgs; [
-    
   ];
 
   programs.bash.enable = true;
@@ -24,5 +26,4 @@
     "dl" = "cd $HOME/Downloads";
     "doc" = "cd $HOME/Documents";
   };
-
 }

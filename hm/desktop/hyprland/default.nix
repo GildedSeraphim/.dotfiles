@@ -1,13 +1,17 @@
-{ pkgs, lib, nix-colors, config, inputs, ... }:
-let
-   startupScript = pkgs.pkgs.writeShellScriptBin "start" ''
-
-      ${pkgs.waybar}/bin/waybar &
-      sleep 1
-    '';
-in
 {
+  pkgs,
+  lib,
+  nix-colors,
+  config,
+  inputs,
+  ...
+}: let
+  startupScript = pkgs.pkgs.writeShellScriptBin "start" ''
 
+    ${pkgs.waybar}/bin/waybar &
+    sleep 1
+  '';
+in {
   imports = [
     ./hyprland-environment.nix
     ./wlsunset.nix
@@ -20,18 +24,18 @@ in
   wayland.windowManager.hyprland = {
     enable = true;
 
-     plugins = [
-#      inputs.hyprland-plugins.packages."${pkgs.system}".hyprbars
-#      inputs.hyprland-plugins.packages."${pkgs.system}".hyprexpo
-#      inputs.split-monitor-workspaces.packages."${pkgs.system}".split-monitor-workspaces
-#      inputs.hyprspace.packages."${pkgs.system}".Hyprspace
+    plugins = [
+      #      inputs.hyprland-plugins.packages."${pkgs.system}".hyprbars
+      #      inputs.hyprland-plugins.packages."${pkgs.system}".hyprexpo
+      #      inputs.split-monitor-workspaces.packages."${pkgs.system}".split-monitor-workspaces
+      #      inputs.hyprspace.packages."${pkgs.system}".Hyprspace
       inputs.hyprland-plugins.packages."${pkgs.system}".hyprwinwrap
     ];
 
     settings = {
       exec-once = [
         ''${startupScript}/bin/start''
-#        ''${pkgs.hyprpanel}/bin/hyprpanel''
+        #        ''${pkgs.hyprpanel}/bin/hyprpanel''
         ''${pkgs.easyeffects}/bin/easyeffects --gapplication-service''
         "${pkgs.wl-clipboard}/bin/wl-paste --type text --watch cliphist store &"
         "${pkgs.wl-clipboard}/bin/wl-paste --type image --watch cliphist store &"
@@ -41,15 +45,15 @@ in
         "gaps_in" = 0;
         "gaps_out" = 5;
         "border_size" = 2;
-#        "col.active_border" = lib.mkForce "rgb(${config.stylix.base16Scheme.base0E})";
-#        "col.inactive_border" = lib.mkForce "rgb(${config.stylix.base16Scheme.base00})";
+        #        "col.active_border" = lib.mkForce "rgb(${config.stylix.base16Scheme.base0E})";
+        #        "col.inactive_border" = lib.mkForce "rgb(${config.stylix.base16Scheme.base00})";
 
         "layout" = "master";
       };
 
       monitor = [
-#        "HDMI-A-1,2560x1440@60.00,0x0,auto"
-#        "DP-3,2560x1440@144,2560x0,auto"
+        #        "HDMI-A-1,2560x1440@60.00,0x0,auto"
+        #        "DP-3,2560x1440@144,2560x0,auto"
         "Unknown-1,630x350,-2560x-1440,auto"
         "eDP-1, 3840x2160@60,0x0,2"
         "HDMI-A-2, 1920x1080@74.97,auto,auto"
@@ -70,7 +74,7 @@ in
 
       animations = {
         "enabled" = "yes";
-        
+
         "bezier" = "myBezier,0.05, 0.9, 0.1, 1.05";
         animation = [
           "windows, 1, 7, myBezier"
@@ -121,7 +125,7 @@ in
       };
 
       cursor = {
-	"no_hardware_cursors" = true;
+        "no_hardware_cursors" = true;
       };
 
       input = {
@@ -135,7 +139,7 @@ in
         "force_no_accel" = "true";
         "kb_layout" = "us";
         "sensitivity" = "0.000000";
-      }; 
+      };
 
       plugin = {
         hyprwinwrap = {
@@ -148,7 +152,7 @@ in
           "affectStrut" = false;
           "autoDrag" = true;
           "exitOnSwitch" = true;
-#          "showSpecialWorkspace" = true;
+          #          "showSpecialWorkspace" = true;
         };
       };
 
@@ -163,11 +167,11 @@ in
         "$mod SHIFT, F, fullscreen"
         "$mod, Q, killactive"
         "$mod, W, exec, mako"
-	    "$mod SHIFT, L, exec, hyprlock"        
-#        "$mod, TAB, overview:toggle"
+        "$mod SHIFT, L, exec, hyprlock"
+        #        "$mod, TAB, overview:toggle"
         "$mod, C, exec, rofi -show calc"
         "$mod SHIFT, C, exec, qalculate-gtk"
-#        "$mod, G, exec, pkill glava-vis && pkill glava"
+        #        "$mod, G, exec, pkill glava-vis && pkill glava"
         "$mod, G, exec, glava-vis"
         "$mod SHIFT, G, exec, pkill glava-vis && pkill glava"
 
@@ -195,8 +199,8 @@ in
 
         "$mod, h, movefocus, l"
         "$mod, l, movefocus, r"
-    	"$mod, k, movefocus, u"	 
-	    "$mod, j, movefocus, d"
+        "$mod, k, movefocus, u"
+        "$mod, j, movefocus, d"
 
         "$mod, S, togglespecialworkspace, magic"
         "$mod SHIFT, S, movetoworkspace, special:magic"
@@ -213,7 +217,6 @@ in
         "$mod, mouse:273, resizewindow"
         "$mod ALT, mouse:272, resizewindow"
       ];
-
     };
   };
 }

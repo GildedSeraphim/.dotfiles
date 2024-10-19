@@ -1,6 +1,11 @@
-{ config, lib, pkgs, pkgs-unstable, inputs, ... }:
-
 {
+  config,
+  lib,
+  pkgs,
+  pkgs-unstable,
+  inputs,
+  ...
+}: {
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
@@ -29,10 +34,10 @@
 
   xdg.portal.config = {
     common.default = ["gtk"];
-    hyprland.default = [ "gtk" "hyprland" ];
+    hyprland.default = ["gtk" "hyprland"];
   };
   xdg.portal.enable = true;
-  xdg.portal.extraPortals = [ 
+  xdg.portal.extraPortals = [
     pkgs.xdg-desktop-portal-gtk
     pkgs.xdg-desktop-portal-wlr
   ];
@@ -40,31 +45,29 @@
   services.displayManager.sddm.wayland.enable = true;
   services.displayManager.sddm.autoNumlock = true;
   services.xserver.enable = true;
-  
+
   nix.settings.auto-optimise-store = true;
 
   environment.sessionVariables = {
     FLAKE = "/home/sn/.dotfiles";
     NIXOS_CONFIG = "/home/sn/.dotfiles/";
-    NIXOS_OZONE_WL = "1";    
-    STEAM_EXTRA_COMPAT_TOOLS_PATH =
-      "/home/sn/.steam/root/compatibilitytools.d";
-    VK_DRIVER_FILES = 
-      "/run/opengl-driver/share/vulkan/icd.d/nvidia_icd.x86_64.json";
+    NIXOS_OZONE_WL = "1";
+    STEAM_EXTRA_COMPAT_TOOLS_PATH = "/home/sn/.steam/root/compatibilitytools.d";
+    VK_DRIVER_FILES = "/run/opengl-driver/share/vulkan/icd.d/nvidia_icd.x86_64.json";
   };
 
-   programs.gamemode.enable = true;
+  programs.gamemode.enable = true;
 
   programs.steam = {
     enable = true;
     gamescopeSession.enable = true;
-    remotePlay.openFirewall = true; 
+    remotePlay.openFirewall = true;
     dedicatedServer.openFirewall = true;
   };
-  
-  system.stateVersion = "24.05";  
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  system.stateVersion = "24.05";
+
+  nix.settings.experimental-features = ["nix-command" "flakes"];
 
   services.devmon.enable = true;
   services.udisks2.enable = true;
@@ -72,7 +75,7 @@
   services.gvfs.enable = true;
   services.tumbler.enable = true;
 
-  networking.networkmanager.enable = true; 
+  networking.networkmanager.enable = true;
 
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
@@ -80,9 +83,9 @@
 
   services.flatpak.enable = true;
 
-  time.timeZone = "America/Chicago";  
+  time.timeZone = "America/Chicago";
 
-#  hardware.pulseaudio.enable = true;
+  #  hardware.pulseaudio.enable = true;
 
   programs = {
     adb.enable = true;
@@ -94,12 +97,12 @@
     };
     fish.enable = true;
   };
- 
+
   users.users.sn = {
     isNormalUser = true;
     shell = pkgs.bash;
     initialPassword = "password";
-    extraGroups = [ "wheel" "video" "audio" "networkmanager" "lp" "scanner" "libvirtd" "libvirt" ]; 
+    extraGroups = ["wheel" "video" "audio" "networkmanager" "lp" "scanner" "libvirtd" "libvirt"];
     packages = with pkgs; [
     ];
   };
@@ -128,18 +131,21 @@
   programs.firejail.enable = true;
 
   virtualisation.libvirtd = {
-  enable = false;
-  qemu = {
-    package = pkgs.qemu_kvm;
-    runAsRoot = true;
-    swtpm.enable = true;
-    ovmf = {
-      enable = false;
-      packages = [(pkgs.OVMF.override {
-        secureBoot = true;
-        tpmSupport = true;
-      }).fd];
+    enable = false;
+    qemu = {
+      package = pkgs.qemu_kvm;
+      runAsRoot = true;
+      swtpm.enable = true;
+      ovmf = {
+        enable = false;
+        packages = [
+          (pkgs.OVMF.override {
+            secureBoot = true;
+            tpmSupport = true;
+          })
+          .fd
+        ];
+      };
     };
   };
-};
 }

@@ -1,5 +1,9 @@
-{ pkgs, lib, inputs, ... }:
 {
+  pkgs,
+  lib,
+  inputs,
+  ...
+}: {
   programs.firefox = {
     enable = true;
     package = pkgs.librewolf;
@@ -12,7 +16,7 @@
           "Brave" = {
             urls = [{template = "https://search.brave.com/search?q={searchTerms}";}];
           };
-        "Bing".metaData.hidden = true;
+          "Bing".metaData.hidden = true;
         };
       };
       extensions = with inputs.firefox-addons.packages.${pkgs.system}; [
@@ -23,11 +27,11 @@
         darkreader
         sidebery
         decentraleyes
-#        mtab
+        #        mtab
         sponsorblock
         unpaywall
         ublock-origin
-      ];      
+      ];
     };
   };
 }

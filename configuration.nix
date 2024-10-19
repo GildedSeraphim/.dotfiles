@@ -1,14 +1,20 @@
-{ config, lib, pkgs, pkgs-unstable, inputs, outputs, ... }:
 {
-  imports =
-    [ 
-      ./hardware/laptop/hardware-configuration.nix
-      ./hardware/laptop/nvidia.nix
-      ./hardware/laptop/laptop.nix
-      ./settings.nix
-      ./fonts.nix
-      ./hyprland.nix
-    ];
+  config,
+  lib,
+  pkgs,
+  pkgs-unstable,
+  inputs,
+  outputs,
+  ...
+}: {
+  imports = [
+    ./hardware/laptop/hardware-configuration.nix
+    ./hardware/laptop/nvidia.nix
+    ./hardware/laptop/laptop.nix
+    ./settings.nix
+    ./fonts.nix
+    ./hyprland.nix
+  ];
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
     stdenv.cc.cc
@@ -21,7 +27,6 @@
     envfs
   ];
 
-
   nixpkgs = {
     overlays = [
       (final: prev: {
@@ -31,18 +36,15 @@
   };
 
   nixpkgs.config.allowUnfree = true;
-  environment.systemPackages = (with pkgs; [
-    nix-ld
-    envfs
-    calf
-    qjackctl
-    easyeffects
-  ])
-
-  ++
-  
-  (with pkgs-unstable; [
-    nix-init
-  ]);
+  environment.systemPackages =
+    (with pkgs; [
+      nix-ld
+      envfs
+      calf
+      qjackctl
+      easyeffects
+    ])
+    ++ (with pkgs-unstable; [
+      nix-init
+    ]);
 }
-

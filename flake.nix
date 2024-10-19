@@ -7,7 +7,7 @@
     home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     nix-colors.url = "github:misterio77/nix-colors";
-    hyprland = { 
+    hyprland = {
       url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
     };
     hyprlux = {
@@ -24,7 +24,8 @@
       inputs.nixpkgs.follows = "nixpkgs-unstable";
       inputs.nvchad-starter.follows = "nvim-cpp";
     };
-    nvchad-on-steroids = {  # <- here
+    nvchad-on-steroids = {
+      # <- here
       url = "github:MOIS3Y/nvchad-on-steroids";
       flake = false;
     };
@@ -44,35 +45,40 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, nixpkgs-unstable, nix-colors, hyprland, stylix, ...}@inputs :
-    let
-      inherit (self) outputs;
-      system = "x86_64-linux";
-      host = "nixos";
-      username = "sn";
-      pkgs = import nixpkgs {
-        inherit system;
-        inherit host;
-        inherit username;
-        inherit inputs;
-        config.allowUnfree = true;
+  outputs = {
+    self,
+    nixpkgs,
+    home-manager,
+    nixpkgs-unstable,
+    nix-colors,
+    hyprland,
+    stylix,
+    ...
+  } @ inputs: let
+    inherit (self) outputs;
+    system = "x86_64-linux";
+    host = "nixos";
+    username = "sn";
+    pkgs = import nixpkgs {
+      inherit system;
+      inherit host;
+      inherit username;
+      inherit inputs;
+      config.allowUnfree = true;
 
-        overlays = [
-
-        ];
-
-      };
-      pkgs-unstable = import nixpkgs-unstable {
-        inherit system;
-        inherit host;
-        inherit username;
-        inherit inputs;
-        config.allowUnfree = true;
-      };
-      lib = nixpkgs.lib;
-
+      overlays = [
+      ];
+    };
+    pkgs-unstable = import nixpkgs-unstable {
+      inherit system;
+      inherit host;
+      inherit username;
+      inherit inputs;
+      config.allowUnfree = true;
+    };
+    lib = nixpkgs.lib;
   in {
-      nixosConfigurations = {
+    nixosConfigurations = {
       nixos = lib.nixosSystem {
         inherit system;
         modules = [
@@ -100,7 +106,7 @@
         inherit pkgs;
         extraSpecialArgs = {
           inherit system;
-	  inherit username;
+          inherit username;
           inherit pkgs;
           inherit hyprland;
           inherit inputs;
@@ -113,7 +119,7 @@
 
     devShells.x86_64-linux.default = pkgs.mkShell {
       nativeBuildInputs = with pkgs; [
-	#C++ Dev
+        #C++ Dev
         libgcc
         cmake
 
@@ -124,23 +130,21 @@
         xorg.xinput
         xorg.libXi
 
-	#OpenGL
+        #OpenGL
         libGLU
-	libGL
-	glfw
-	glew
-	freeglut
-	cairo
-	glm
-	SDL2
+        libGL
+        glfw
+        glew
+        freeglut
+        cairo
+        glm
+        SDL2
         esshader
-
       ];
       shellHook = ''
-	echo "Welcome"
-        echo "To my C++ OpenGL Shell!!!" | ${pkgs.lolcat}/bin/lolcat
+        echo "Welcome"
+               echo "To my C++ OpenGL Shell!!!" | ${pkgs.lolcat}/bin/lolcat
       '';
     };
   };
-
 }

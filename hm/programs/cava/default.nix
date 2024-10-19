@@ -1,5 +1,4 @@
-{ config, ... }:
-{
+{config, ...}: {
   programs.cava = {
     enable = true;
     settings = {
@@ -35,11 +34,11 @@
         integral = 77;
       };
       eq = {
-       "1" = 2; # bass
-       "2" = 2;
-       "3" = 1; # midtone
-       "4" = 1;
-       "5" = "0.5"; # treble
+        "1" = 2; # bass
+        "2" = 2;
+        "3" = 1; # midtone
+        "4" = 1;
+        "5" = "0.5"; # treble
       };
     };
   };

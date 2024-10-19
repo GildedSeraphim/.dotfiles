@@ -3,29 +3,25 @@
   config,
   pkgs,
   ...
-}:
-let
+}: let
   inherit (lib) getExe getExe';
-in
-{
-  backlight =
-    let
-      brightnessctl = lib.getExe pkgs.brightnessctl;
-    in
-    {
-      format = "{icon}";
-      format-icons = [
-        "󰋙"
-        "󰫃"
-        "󰫄"
-        "󰫅"
-        "󰫆"
-        "󰫇"
-        "󰫈"
-      ];
-      on-scroll-up = "${brightnessctl} s 1%-";
-      on-scroll-down = "${brightnessctl} s +1%";
-    };
+in {
+  backlight = let
+    brightnessctl = lib.getExe pkgs.brightnessctl;
+  in {
+    format = "{icon}";
+    format-icons = [
+      "󰋙"
+      "󰫃"
+      "󰫄"
+      "󰫅"
+      "󰫆"
+      "󰫇"
+      "󰫈"
+    ];
+    on-scroll-up = "${brightnessctl} s 1%-";
+    on-scroll-down = "${brightnessctl} s +1%";
+  };
 
   "backlight/slider" = {
     min = 1;
@@ -199,20 +195,18 @@ in
     tooltip-format-disconnected = "MPD (disconnected)";
   };
 
-  network =
-    let
-      nm-editor = "${getExe' pkgs.networkmanagerapplet "nm-connection-editor"}";
-    in
-    {
-      interval = 1;
-      format-wifi = "󰜷 {bandwidthUpBytes} 󰜮 {bandwidthDownBytes}";
-      format-ethernet = "󰜷 {bandwidthUpBytes} 󰜮 {bandwidthDownBytes}";
-      tooltip-format = "󰈀 {essid} via {gwaddr}";
-      format-linked = "󰈁 {ifname} (No IP)";
-      format-disconnected = " Disconnected";
-      format-alt = "{essid} ({signalStrength}%)";
-      on-click-right = "${nm-editor}";
-    };
+  network = let
+    nm-editor = "${getExe' pkgs.networkmanagerapplet "nm-connection-editor"}";
+  in {
+    interval = 1;
+    format-wifi = "󰜷 {bandwidthUpBytes} 󰜮 {bandwidthDownBytes}";
+    format-ethernet = "󰜷 {bandwidthUpBytes} 󰜮 {bandwidthDownBytes}";
+    tooltip-format = "󰈀 {essid} via {gwaddr}";
+    format-linked = "󰈁 {ifname} (No IP)";
+    format-disconnected = " Disconnected";
+    format-alt = "{essid} ({signalStrength}%)";
+    on-click-right = "${nm-editor}";
+  };
 
   pulseaudio = {
     format = "{volume}% {icon}";
@@ -233,7 +227,7 @@ in
     scroll-step = 1;
     on-click = "pavucontrol";
     on-click-right = "easyeffects";
-    ignored-sinks = [ "Easy Effects Sink" ];
+    ignored-sinks = ["Easy Effects Sink"];
   };
 
   "pulseaudio/slider" = {

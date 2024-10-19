@@ -1,6 +1,9 @@
-{ config, lib, pkgs, ... }:
-
 {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   hardware.opengl = {
     enable = true;
     driSupport = true;
@@ -25,5 +28,4 @@
     settingsSha256 = "sha256-vWnrXlBCb3K5uVkDFmJDVq51wrCoqgPF03lSjZOuU8M=";
     persistencedSha256 = lib.fakeSha256;
   };
-
 }

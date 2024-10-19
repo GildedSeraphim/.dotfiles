@@ -1,33 +1,37 @@
-{ inputs, pkgs, system, ... }:
 {
-    home.packages = [
-   (pkgs.writeShellApplication {
-        name = "spot";
-	
-        text = ''
-            exec spotify --disable-gpu    
-        '';
-    })
+  inputs,
+  pkgs,
+  system,
+  ...
+}: {
+  home.packages = [
     (pkgs.writeShellApplication {
-        name = "code";
+      name = "spot";
 
-        text = ''
-            exec codium --disable-gpu .
-        '';
+      text = ''
+        exec spotify --disable-gpu
+      '';
     })
     (pkgs.writeShellApplication {
-        name = "spotify-offline";
+      name = "code";
 
-        text = ''
-            exec firejail --net=none spotify --disable-gpu
-        '';
+      text = ''
+        exec codium --disable-gpu .
+      '';
     })
     (pkgs.writeShellApplication {
-        name = "glava-vis";
-        text = ''
-            exec glava &
-            glava --force-mod=bars
-        '';
+      name = "spotify-offline";
+
+      text = ''
+        exec firejail --net=none spotify --disable-gpu
+      '';
     })
-    ];
+    (pkgs.writeShellApplication {
+      name = "glava-vis";
+      text = ''
+        exec glava &
+        glava --force-mod=bars
+      '';
+    })
+  ];
 }

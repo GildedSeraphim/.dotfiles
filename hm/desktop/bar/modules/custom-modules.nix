@@ -3,22 +3,21 @@
   lib,
   pkgs,
   ...
-}:
-let
+}: let
   inherit (lib) getExe getExe';
 
   githubHelper =
     pkgs.writeShellScriptBin "githubHelper" # bash
-      ''
-        #!/usr/bin/env bash
+    
+    ''
+      #!/usr/bin/env bash
 
-        NOTIFICATIONS="$(${getExe pkgs.gh} api notifications)"
-        COUNT="$(echo "$NOTIFICATIONS" | ${getExe pkgs.jq} 'length')"
+      NOTIFICATIONS="$(${getExe pkgs.gh} api notifications)"
+      COUNT="$(echo "$NOTIFICATIONS" | ${getExe pkgs.jq} 'length')"
 
-        echo '{"text":'"$COUNT"',"tooltip":"'"$COUNT"' Notifications","class":""}'
-      '';
-in
-{
+      echo '{"text":'"$COUNT"',"tooltip":"'"$COUNT"' Notifications","class":""}'
+    '';
+in {
   "custom/ellipses" = {
     format = "";
     tooltip = false;
@@ -77,74 +76,73 @@ in
     menu = "on-click";
     menu-file =
       pkgs.writeText "powermenu.xml" # xml
-        ''
-          <?xml version="1.0" encoding="UTF-8"?>
-          <interface>
-            <object class="GtkMenu" id="menu">
-              <child>
-          		  <object class="GtkMenuItem" id="top">
-          			  <property name="label">Activity</property>
-                </object>
-          	  </child>
-              <child>
-                <object class="GtkSeparatorMenuItem" id="delimiter1"/>
-              </child>
-              <child>
-          		  <object class="GtkMenuItem" id="lock">
-          			  <property name="label">Lock</property>
-                </object>
-          	  </child>
-              <child>
-          		  <object class="GtkMenuItem" id="logout">
-          			  <property name="label">Logout</property>
-                </object>
-          	  </child>
-              <child>
-          		  <object class="GtkMenuItem" id="suspend">
-          			  <property name="label">Suspend</property>
-                </object>
-          	  </child>
-          	  <child>
-                <object class="GtkMenuItem" id="hibernate">
-          			  <property name="label">Hibernate</property>
-                </object>
-          	  </child>
-              <child>
-                <object class="GtkSeparatorMenuItem" id="delimiter2"/>
-              </child>
-              <child>
-                <object class="GtkMenuItem" id="shutdown">
-          			  <property name="label">Shutdown</property>
-                </object>
-              </child>
-              <child>
-          		  <object class="GtkMenuItem" id="reboot">
-          			  <property name="label">Reboot</property>
-          		  </object>
-              </child>
-            </object>
-          </interface>
-        '';
-    menu-actions =
-      let
-        systemctl = getExe' pkgs.systemd "systemctl";
-        hyprlock = getExe config.programs.hyprlock.package;
-        shutdown = getExe' pkgs.systemd "poweroff";
-        reboot = getExe' pkgs.systemd "reboot";
-        terminal = getExe config.programs.foot.package;
-        top = getExe config.programs.btop.package;
-        hyprctl = getExe' config.wayland.windowManager.hyprland.package "hyprctl";
-        swaymsg = getExe' config.wayland.windowManager.sway.package "swaymsg";
-      in
-      {
-        inherit shutdown reboot;
+      
+      ''
+        <?xml version="1.0" encoding="UTF-8"?>
+        <interface>
+          <object class="GtkMenu" id="menu">
+            <child>
+        		  <object class="GtkMenuItem" id="top">
+        			  <property name="label">Activity</property>
+              </object>
+        	  </child>
+            <child>
+              <object class="GtkSeparatorMenuItem" id="delimiter1"/>
+            </child>
+            <child>
+        		  <object class="GtkMenuItem" id="lock">
+        			  <property name="label">Lock</property>
+              </object>
+        	  </child>
+            <child>
+        		  <object class="GtkMenuItem" id="logout">
+        			  <property name="label">Logout</property>
+              </object>
+        	  </child>
+            <child>
+        		  <object class="GtkMenuItem" id="suspend">
+        			  <property name="label">Suspend</property>
+              </object>
+        	  </child>
+        	  <child>
+              <object class="GtkMenuItem" id="hibernate">
+        			  <property name="label">Hibernate</property>
+              </object>
+        	  </child>
+            <child>
+              <object class="GtkSeparatorMenuItem" id="delimiter2"/>
+            </child>
+            <child>
+              <object class="GtkMenuItem" id="shutdown">
+        			  <property name="label">Shutdown</property>
+              </object>
+            </child>
+            <child>
+        		  <object class="GtkMenuItem" id="reboot">
+        			  <property name="label">Reboot</property>
+        		  </object>
+            </child>
+          </object>
+        </interface>
+      '';
+    menu-actions = let
+      systemctl = getExe' pkgs.systemd "systemctl";
+      hyprlock = getExe config.programs.hyprlock.package;
+      shutdown = getExe' pkgs.systemd "poweroff";
+      reboot = getExe' pkgs.systemd "reboot";
+      terminal = getExe config.programs.foot.package;
+      top = getExe config.programs.btop.package;
+      hyprctl = getExe' config.wayland.windowManager.hyprland.package "hyprctl";
+      swaymsg = getExe' config.wayland.windowManager.sway.package "swaymsg";
+    in {
+      inherit shutdown reboot;
 
-        hibernate = "${systemctl} hibernate";
-        lock = ''([[ "$XDG_CURRENT_DESKTOP" == "Hyprland" ]] && ${hyprlock} --immediate)'';
-        suspend = "${systemctl} suspend";
-        top = "${terminal} ${top}";
-        logout = "$(${hyprctl} dispatch exit || ${swaymsg} exit) && ${systemctl} --user exit ";
-      };
+      hibernate = "${systemctl} hibernate";
+      lock = ''([[ "$XDG_CURRENT_DESKTOP" == "Hyprland" ]] && ${hyprlock} --immediate)'';
+      suspend = "${systemctl} suspend";
+      top = "${terminal} ${top}";
+      logout = "$(${hyprctl} dispatch exit || ${swaymsg} exit) && ${systemctl} --user exit ";
+    };
   };
 
   "custom/separator-right" = {

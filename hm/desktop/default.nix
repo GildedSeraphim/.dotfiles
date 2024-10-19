@@ -1,12 +1,10 @@
-{ ... }:
-
-{
+{...}: {
   imports = [
     ./hyprland
     ./bar
     ./hyprlock
-#    ./rofi
-#    ./ags
+    #    ./rofi
+    #    ./ags
     ./xdg
     ./test
   ];

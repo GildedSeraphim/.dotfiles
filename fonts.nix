@@ -1,13 +1,17 @@
-{ lib, pkgs, ... }:
-
 {
+  lib,
+  pkgs,
+  ...
+}: {
   fonts = {
     fontDir.enable = true;
-    packages = with pkgs;[
+    packages = with pkgs; [
       # nerd fonts
-      (nerdfonts.override { fonts = [
-        "IosevkaTermSlab"
-      ]; })
+      (nerdfonts.override {
+        fonts = [
+          "IosevkaTermSlab"
+        ];
+      })
       # apple-fonts
       dejavu_fonts
       noto-fonts
@@ -33,6 +37,6 @@
       # MS Fonts
       corefonts
       vistafonts
-    ];    
+    ];
   };
 }

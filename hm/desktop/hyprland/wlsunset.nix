@@ -1,5 +1,4 @@
-{ ... }:
-{
+{...}: {
   services.wlsunset = {
     enable = true;
     sunset = "19:00";
@@ -8,5 +7,4 @@
     temperature.day = 6500;
     temperature.night = 4000;
   };
-
 }
