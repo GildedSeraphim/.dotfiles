@@ -6,6 +6,7 @@
   imports = [
     ./starship.nix
     ./zoxide.nix
+    ./direnv.nix
   ];
 
   home.packages = with pkgs; [
@@ -14,6 +15,7 @@
   programs.bash.enable = true;
   programs.bash.initExtra = ''
     eval $(${pkgs.thefuck}/bin/thefuck --alias)
+    eval "$(direnv hook bash)"
   '';
   programs.bash.shellAliases = {
     ll = "ls -l";

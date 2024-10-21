@@ -32,7 +32,6 @@
 
   home.packages =
     (with pkgs; [
-      ladybird
       thefuck
       python312Packages.pip
       jetbrains.pycharm-professional
@@ -73,6 +72,7 @@
       nsxiv
       nautilus
       geek-life
+      texliveMedium
     ])
     ++ (with pkgs-unstable; [
       krita

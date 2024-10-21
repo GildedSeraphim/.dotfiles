@@ -98,6 +98,8 @@
     fish.enable = true;
   };
 
+  nix.trustedUsers = ["root" "sn"];
+
   users.users.sn = {
     isNormalUser = true;
     shell = pkgs.bash;

@@ -16,6 +16,7 @@ in {
     ./hyprland-environment.nix
     ./wlsunset.nix
     ./hyprpaper.nix
+    ./pyprland.nix
   ];
 
   services.swayosd.enable = true;
@@ -30,6 +31,7 @@ in {
       #      inputs.split-monitor-workspaces.packages."${pkgs.system}".split-monitor-workspaces
       #      inputs.hyprspace.packages."${pkgs.system}".Hyprspace
       inputs.hyprland-plugins.packages."${pkgs.system}".hyprwinwrap
+      inputs.hyprland-easymotion.packages.${pkgs.system}.hyprland-easymotion
     ];
 
     settings = {
@@ -39,6 +41,7 @@ in {
         ''${pkgs.easyeffects}/bin/easyeffects --gapplication-service''
         "${pkgs.wl-clipboard}/bin/wl-paste --type text --watch cliphist store &"
         "${pkgs.wl-clipboard}/bin/wl-paste --type image --watch cliphist store &"
+        "${pkgs.pyprland}/bin/pypr"
       ];
 
       general = {
@@ -109,19 +112,15 @@ in {
       ];
 
       dwindle = {
-        "force_split" = 2;
-        "pseudotile" = "false";
-        "preserve_split" = "yes";
+        #"force_split" = 2;
+        #"pseudotile" = "false";
+        #"preserve_split" = "yes";
       };
       misc = {
         enable_swallow = true;
         force_default_wallpaper = 0;
         disable_splash_rendering = true;
         disable_hyprland_logo = true;
-      };
-
-      master = {
-        #"new_is_master" = true;
       };
 
       cursor = {
@@ -142,6 +141,17 @@ in {
       };
 
       plugin = {
+        easymotion = {
+          textsize = 15;
+          textcolor = "rgba(ffffffff)";
+          bgcolor = "rgba(000000ff)";
+          textFont = "Monospace";
+          textpadding = 0;
+          bordersize = 0;
+          bordercolor = "rgba(ffffffff)";
+          rounding = 0;
+          motionkeys = "asdfghjklqwertyuiopzxcvbnm1234567890";
+        };
         hyprwinwrap = {
           "class" = "GLava";
         };
@@ -159,6 +169,7 @@ in {
       "$mod" = "SUPER";
 
       bind = [
+        "$mod, TAB, easymotion, action:hyprctl dispatch focuswindow addresss:{}"
         "$mod, B, exec, zen"
         "$mod, Return, exec, kitty"
         "$mod, R, exec, rofi -show drun"
@@ -174,6 +185,9 @@ in {
         #        "$mod, G, exec, pkill glava-vis && pkill glava"
         "$mod, G, exec, glava-vis"
         "$mod SHIFT, G, exec, pkill glava-vis && pkill glava"
+
+        # pyprland commands
+        "$mod, V, exec, pypr toggle volume"
 
         "$mod, 1, workspace, 1"
         "$mod, 2, workspace, 2"

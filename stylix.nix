@@ -24,8 +24,8 @@ in {
 
   stylix.image = wallpaper;
 
-  stylix.cursor.package = pkgs.bibata-cursors;
-  stylix.cursor.name = "Bibata-Modern-Ice";
+  stylix.cursor.package = pkgs.banana-cursor;
+  stylix.cursor.name = "Banana Red";
 
   stylix.fonts = {
     monospace = {
