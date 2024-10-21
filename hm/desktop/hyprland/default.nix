@@ -16,7 +16,6 @@ in {
     ./hyprland-environment.nix
     ./wlsunset.nix
     ./hyprpaper.nix
-    ./pyprland.nix
   ];
 
   services.swayosd.enable = true;
@@ -30,8 +29,8 @@ in {
       #      inputs.hyprland-plugins.packages."${pkgs.system}".hyprexpo
       #      inputs.split-monitor-workspaces.packages."${pkgs.system}".split-monitor-workspaces
       #      inputs.hyprspace.packages."${pkgs.system}".Hyprspace
-      inputs.hyprland-plugins.packages."${pkgs.system}".hyprwinwrap
-      inputs.hyprland-easymotion.packages.${pkgs.system}.hyprland-easymotion
+      #inputs.hyprland-plugins.packages."${pkgs.system}".hyprwinwrap
+      # inputs.hyprland-easymotion.packages.${pkgs.system}.hyprland-easymotion
     ];
 
     settings = {
@@ -140,36 +139,15 @@ in {
         "sensitivity" = "0.000000";
       };
 
-      plugin = {
-        easymotion = {
-          textsize = 15;
-          textcolor = "rgba(ffffffff)";
-          bgcolor = "rgba(000000ff)";
-          textFont = "Monospace";
-          textpadding = 0;
-          bordersize = 0;
-          bordercolor = "rgba(ffffffff)";
-          rounding = 0;
-          motionkeys = "asdfghjklqwertyuiopzxcvbnm1234567890";
-        };
-        hyprwinwrap = {
-          "class" = "GLava";
-        };
-        overview = {
-          "onBottom" = false;
-          "exitOnClick" = true;
-          "dragAlpha" = 0;
-          "affectStrut" = false;
-          "autoDrag" = true;
-          "exitOnSwitch" = true;
-          #          "showSpecialWorkspace" = true;
-        };
-      };
+      #plugin = {
+      #hyprwinwrap = {
+      #"class" = "GLava";
+      #};
+      # };
 
       "$mod" = "SUPER";
 
       bind = [
-        "$mod, TAB, easymotion, action:hyprctl dispatch focuswindow addresss:{}"
         "$mod, B, exec, zen"
         "$mod, Return, exec, kitty"
         "$mod, R, exec, rofi -show drun"
@@ -187,7 +165,6 @@ in {
         "$mod SHIFT, G, exec, pkill glava-vis && pkill glava"
 
         # pyprland commands
-        "$mod, V, exec, pypr toggle volume"
 
         "$mod, 1, workspace, 1"
         "$mod, 2, workspace, 2"

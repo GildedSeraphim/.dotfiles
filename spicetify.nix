@@ -34,8 +34,8 @@ in {
       #      oneko
       #      Hide-Full-Screen-Button
     ];
-    theme = spicePkgs.themes.dribbblish;
-    colorScheme = "custom";
+    theme = lib.mkForce spicePkgs.themes.dribbblish;
+    colorScheme = lib.mkForce "custom";
 
     customColorScheme = with config.lib.stylix.colors; {
       text = "${base05}";

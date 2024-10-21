@@ -10,13 +10,8 @@
     hyprland = {
       url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
     };
-    pyprland.url = "github:hyprland-community/pyprland";
     hyprlux = {
       url = "github:amadejkastelic/Hyprlux";
-    };
-    hyprland-easymotion = {
-      url = "github:zakk4223/hyprland-easymotion";
-      inputs.hyprland.follows = "hyprland";
     };
     stylix.url = "github:danth/stylix";
     hyprland-plugins = {
