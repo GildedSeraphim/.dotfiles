@@ -7,7 +7,7 @@
   imports = [
     inputs.nvchad4nix.homeManagerModule
   ];
-
+  nix.nixPath = ["nixpkgs=${inputs.nixpkgs}"];
   programs.nvchad = {
     enable = true;
     extraPackages = with pkgs; [

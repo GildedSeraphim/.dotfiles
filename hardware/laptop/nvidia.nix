@@ -4,6 +4,7 @@
   pkgs,
   ...
 }: {
+  nixpkgs.config.nvidia.acceptLicense = true;
   hardware.graphics = {
     enable = true;
     extraPackages = with pkgs; [
@@ -15,18 +16,25 @@
     ];
   };
 
-  environment.sessionVariables = {
-    LIBVA_DRIVER_NAME = "iHD";
-  };
-
   environment.systemPackages = with pkgs; [
-    nvidia-vaapi-driver
+    libva-utils
+    vdpauinfo
+    vulkan-tools
+    vulkan-validation-layers
+    libvdpau-va-gl
     egl-wayland
+    wgpu-utils
+    mesa
+    libglvnd
+    nvtop
+    nvitop
+    libGL
   ];
 
   services.xserver.videoDrivers = ["nvidia"];
 
   hardware.nvidia = {
+    forceFullCompositionPipeline = true;
     prime = {
       sync.enable = true;
 
@@ -52,10 +60,10 @@
 
   #  hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.mkDriver {
   #    version = "560.35.03";
-  #    sha256_64bit = "sha256-8pMskvrdQ8WyNBvkU/xPc/CtcYXCa7ekP73oGuKfH+M=";
+  #   sha256_64bit = "sha256-8pMskvrdQ8WyNBvkU/xPc/CtcYXCa7ekP73oGuKfH+M=";
   #    sha256_aarch64 = "sha256-s8ZAVKvRNXpjxRYqM3E5oss5FdqW+tv1qQC2pDjfG+s=";
   #    openSha256 = "sha256-/32Zf0dKrofTmPZ3Ratw4vDM7B+OgpC4p7s+RHUjCrg=";
-  #    settingsSha256 = "sha256-kQsvDgnxis9ANFmwIwB7HX5MkIAcpEEAHc8IBOLdXvk=";
+  #   settingsSha256 = "sha256-kQsvDgnxis9ANFmwIwB7HX5MkIAcpEEAHc8IBOLdXvk=";
   #    persistencedSha256 = "sha256-E2J2wYYyRu7Kc3MMZz/8ZIemcZg68rkzvqEwFAL3fFs=";
   #  };
 }

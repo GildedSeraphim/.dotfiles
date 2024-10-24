@@ -29,7 +29,7 @@ in {
       #      inputs.hyprland-plugins.packages."${pkgs.system}".hyprexpo
       #      inputs.split-monitor-workspaces.packages."${pkgs.system}".split-monitor-workspaces
       #      inputs.hyprspace.packages."${pkgs.system}".Hyprspace
-      #inputs.hyprland-plugins.packages."${pkgs.system}".hyprwinwrap
+      #      inputs.hyprland-plugins.packages."${pkgs.system}".hyprwinwrap
       # inputs.hyprland-easymotion.packages.${pkgs.system}.hyprland-easymotion
     ];
 
@@ -139,11 +139,11 @@ in {
         "sensitivity" = "0.000000";
       };
 
-      #plugin = {
-      #hyprwinwrap = {
-      #"class" = "GLava";
-      #};
-      # };
+      plugin = {
+        hyprwinwrap = {
+          "class" = "GLava";
+        };
+      };
 
       "$mod" = "SUPER";
 

@@ -34,7 +34,7 @@ in {
       #      oneko
       #      Hide-Full-Screen-Button
     ];
-    theme = lib.mkForce spicePkgs.themes.dribbblish;
+    theme = lib.mkForce spicePkgs.themes.text;
     colorScheme = lib.mkForce "custom";
 
     customColorScheme = with config.lib.stylix.colors; {
@@ -49,7 +49,7 @@ in {
       selected-row = "${base0D}";
       button = "${base03}";
       button-active = "${base0D}";
-      button-disabled = "${base01}";
+      button-disabled = "${base0D}";
       tab-active = "${base0D}";
       notification = "${base0A}";
       notification-error = "${base08}";

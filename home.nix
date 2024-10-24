@@ -32,6 +32,8 @@
 
   home.packages =
     (with pkgs; [
+      heroic
+      inputs.hyprsysteminfo.packages."${pkgs.system}".hyprsysteminfo
       thefuck
       python312Packages.pip
       jetbrains.pycharm-professional
@@ -83,7 +85,6 @@
       nvd
       brave
       vesktop
-      wine
       winetricks
       protonup-qt
       obs-studio
@@ -91,6 +92,7 @@
       protontricks
       sl
       nix-tree
+      wineWowPackages.waylandFull
     ]);
 
   fonts.fontconfig.enable = true;

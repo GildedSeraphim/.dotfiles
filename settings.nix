@@ -53,12 +53,31 @@
     NIXOS_CONFIG = "/home/sn/.dotfiles/";
     NIXOS_OZONE_WL = "1";
     STEAM_EXTRA_COMPAT_TOOLS_PATH = "/home/sn/.steam/root/compatibilitytools.d";
-    VK_DRIVER_FILES = "/run/opengl-driver/share/vulkan/icd.d/nvidia_icd.x86_64.json";
+    #    VK_DRIVER_FILES = "/run/opengl-driver/share/vulkan/icd.d/nvidia_icd.x86_64.json";
   };
 
   programs.gamemode.enable = true;
 
+  programs.java.enable = true;
+
   programs.steam = {
+    package = pkgs.steam.override {
+      extraPkgs = pkgs:
+        with pkgs; [
+          xorg.libXcursor
+          xorg.libXi
+          xorg.libXinerama
+          xorg.libXScrnSaver
+          libpng
+          libpulseaudio
+          libvorbis
+          stdenv.cc.cc.lib
+          libkrb5
+          keyutils
+          bumblebee
+          glxinfo
+        ];
+    };
     enable = true;
     gamescopeSession.enable = true;
     remotePlay.openFirewall = true;
@@ -98,8 +117,14 @@
     fish.enable = true;
   };
 
-  nix.trustedUsers = ["root" "sn"];
+  #  nix.settings = {
+  #use-sandbox = true;
+  # show-trace = true;
 
+  #system-features = ["big-parallel" "kvm" "recursive-nix"];
+  # sandbox-paths = ["/bin/sh=${pkgs.busybox-sandbox-shell.out}/bin/busybox"];
+  # trustedUsers = ["root" "sn"];
+  # };
   users.users.sn = {
     isNormalUser = true;
     shell = pkgs.bash;

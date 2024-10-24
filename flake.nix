@@ -43,6 +43,9 @@
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    hyprsysteminfo = {
+      url = "github:hyprwm/hyprsysteminfo";
+    };
   };
 
   outputs = {
@@ -65,6 +68,7 @@
       inherit username;
       inherit inputs;
       config.allowUnfree = true;
+      config.nvidia.acceptLicense = true;
 
       overlays = [
       ];
@@ -75,6 +79,7 @@
       inherit username;
       inherit inputs;
       config.allowUnfree = true;
+      config.nvidia.acceptLicense = true;
     };
     lib = nixpkgs.lib;
   in {
@@ -119,6 +124,8 @@
 
     devShells.x86_64-linux.default = pkgs.mkShell {
       nativeBuildInputs = with pkgs; [
+        #Python stuff
+        python312Packages.pip
         #C++ Dev
         libgcc
         cmake
