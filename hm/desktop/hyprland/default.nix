@@ -108,6 +108,9 @@ in {
         "size 70% 55%, class:(qalculate-gtk)"
         "center, class:(qalculate-gtk)"
         "suppressevent maximize, class:.*"
+        "float, title:(Spotify Premium)"
+        "size 80% 75%, title:(Spotify Premium)"
+        "center, title:(Spotify Premium)"
       ];
 
       dwindle = {
