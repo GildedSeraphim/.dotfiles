@@ -81,7 +81,7 @@ in {
     #      systemd.enable = true;
 
     settings = generateOutputSettings [
-      "eDP-1"
+      "DP-3"
       "HDMI-A-2"
     ];
     style = with config.lib.stylix.colors;

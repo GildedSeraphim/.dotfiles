@@ -4,11 +4,25 @@
   pkgs,
   ...
 }: {
-  hardware.opengl = {
+  nixpkgs.config.nvidia.acceptLicense = true;
+  hardware.graphics = {
     enable = true;
-    driSupport = true;
-    driSupport32Bit = true;
   };
+
+  environment.systemPackages = with pkgs; [
+    libva-utils
+    vdpauinfo
+    vulkan-tools
+    vulkan-validation-layers
+    libvdpau-va-gl
+    egl-wayland
+    wgpu-utils
+    mesa
+    libglvnd
+    nvtop
+    nvitop
+    libGL
+  ];
 
   services.xserver.videoDrivers = ["nvidia"];
 

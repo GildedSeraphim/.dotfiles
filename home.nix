@@ -32,12 +32,13 @@
 
   home.packages =
     (with pkgs; [
+      gimp-with-plugins
       heroic
       inputs.hyprsysteminfo.packages."${pkgs.system}".hyprsysteminfo
       thefuck
       python312Packages.pip
       jetbrains.pycharm-professional
-      inputs.zen.packages.${system}.specific
+      inputs.zen.packages.${system}.generic
       fast-cli
       hyprcursor
       eww

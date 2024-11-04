@@ -8,9 +8,11 @@
   ...
 }: {
   imports = [
-    ./hardware/laptop/hardware-configuration.nix
-    ./hardware/laptop/nvidia.nix
-    ./hardware/laptop/laptop.nix
+    #./hardware/laptop/hardware-configuration.nix
+    #./hardware/laptop/nvidia.nix
+    #./hardware/laptop/laptop.nix
+    ./hardware/desktop/nvidia.nix
+    ./hardware/desktop/hardware-configuration.nix
     ./settings.nix
     ./fonts.nix
     ./hyprland.nix

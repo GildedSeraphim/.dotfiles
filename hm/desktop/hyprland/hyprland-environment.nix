@@ -7,7 +7,6 @@
     sessionVariables = {
       GBM_BACKEND = "nvidia-drm";
       __GLX_VENDOR_LIBRARY_NAME = "nvidia";
-      LIBVA_DRIVER_NAME = "nvidia";
       GDK_BACKEND = "wayland";
       QT_QPA_PLATFORM = "wayland";
       #      __GL_VRR_ALLOWED = "1";

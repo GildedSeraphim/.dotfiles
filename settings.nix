@@ -22,15 +22,9 @@
     alsa.support32Bit = true;
     pulse.enable = true;
     wireplumber.enable = true;
-    jack.enable = false;
   };
-  services.jack = {
-    jackd.enable = true;
-    alsa.enable = false;
-    loopback = {
-      enable = true;
-    };
-  };
+
+  hardware.enableAllFirmware = true;
 
   xdg.portal.config = {
     common.default = ["gtk"];
