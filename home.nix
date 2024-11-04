@@ -32,9 +32,8 @@
 
   home.packages =
     (with pkgs; [
-      unigine-valley
+      unityhub
       gimp-with-plugins
-      heroic
       inputs.hyprsysteminfo.packages."${pkgs.system}".hyprsysteminfo
       thefuck
       python312Packages.pip
@@ -54,15 +53,13 @@
       mangohud
       protonup
       lutris
-      #    inputs.nixvim.packages.${system}.default
-      #    neovim
       vlc
       yt-dlp-light
       ffmpeg
       nvidia-system-monitor-qt
       fzf
       obsidian
-      renderdoc
+      #      renderdoc
       libreoffice
       qalculate-gtk
       prismlauncher
@@ -80,7 +77,6 @@
     ])
     ++ (with pkgs-unstable; [
       krita
-      jetbrains.clion
       r2modman
       nh
       nix-output-monitor
@@ -91,7 +87,6 @@
       protonup-qt
       obs-studio
       nitch
-      protontricks
       sl
       nix-tree
       wineWowPackages.waylandFull

@@ -7,7 +7,7 @@
   theme = "gruvbox-dark-hard";
   th = "${pkgs.base16-schemes}/share/themes/${theme}.yaml";
   alterfile = ./wal/color.txt;
-  wallpaper = ./wal/house.jpg;
+  wallpaper = ./wal/f17.png;
   #altered-wallpaper = pkgs.runCommand "altered.png" {} ''
   #${pkgs.imagemagick}/bin/magick convert ${wallpaper} -colorspace sRGB -color-matrix < ${alterfile} altered.png $out
   #'';

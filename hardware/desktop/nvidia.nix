@@ -7,9 +7,11 @@
   nixpkgs.config.nvidia.acceptLicense = true;
   hardware.graphics = {
     enable = true;
+    extraPackages = with pkgs; [nvidia-vaapi-driver];
   };
 
   environment.systemPackages = with pkgs; [
+    nvidia-vaapi-driver
     libva-utils
     vdpauinfo
     vulkan-tools
