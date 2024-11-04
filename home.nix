@@ -32,6 +32,7 @@
 
   home.packages =
     (with pkgs; [
+      unigine-valley
       gimp-with-plugins
       heroic
       inputs.hyprsysteminfo.packages."${pkgs.system}".hyprsysteminfo

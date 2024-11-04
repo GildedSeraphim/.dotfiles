@@ -166,6 +166,7 @@ in {
         #        "$mod, G, exec, pkill glava-vis && pkill glava"
         "$mod, G, exec, glava-vis"
         "$mod SHIFT, G, exec, pkill glava-vis && pkill glava"
+        "$mod, V, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy"
 
         # pyprland commands
 

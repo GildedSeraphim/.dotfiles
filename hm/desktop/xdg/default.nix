@@ -55,11 +55,11 @@
       enable = true;
       createDirectories = true;
       download = "${config.home.homeDirectory}/dl";
-      documents = "${config.home.homeDirectory}/dl/dox";
-      desktop = "${config.home.homeDirectory}/dl/desk";
-      videos = "${config.home.homeDirectory}/dl/vid";
+      documents = "${config.home.homeDirectory}/dox";
+      desktop = "${config.home.homeDirectory}/desk";
+      videos = "${config.home.homeDirectory}/vid";
       pictures = "${config.home.homeDirectory}/pix";
-      music = "${config.home.homeDirectory}/dl/music";
+      music = "${config.home.homeDirectory}/music";
       templates = "${config.home.homeDirectory}/.local/share/templates";
       publicShare = "${config.home.homeDirectory}/.local/share/public";
     };
@@ -67,7 +67,6 @@
       --enable-features=WaylandWindowDecorations
       --enable-features=UseOzonePlatform
       --ozone-platform-hint=wayland
-      --disable-gpu-compositing
     '';
   };
 }
