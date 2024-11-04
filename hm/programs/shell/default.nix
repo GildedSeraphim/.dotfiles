@@ -7,6 +7,7 @@
     ./starship.nix
     ./zoxide.nix
     ./direnv.nix
+    ./tmux.nix
   ];
 
   home.packages = with pkgs; [
