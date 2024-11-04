@@ -123,7 +123,7 @@
     isNormalUser = true;
     shell = pkgs.bash;
     initialPassword = "password";
-    extraGroups = ["wheel" "video" "audio" "networkmanager" "lp" "scanner" "libvirtd" "libvirt"];
+    extraGroups = ["wheel" "video" "audio" "networkmanager" "lp" "scanner" "libvirtd" "libvirt" "uinput"];
     packages = with pkgs; [
     ];
   };
