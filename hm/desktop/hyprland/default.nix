@@ -18,6 +18,11 @@ in {
     ./hyprpaper.nix
   ];
 
+  home.packages = with pkgs; [
+    wl-clipboard-rs
+    cliphist
+  ];
+
   services.swayosd.enable = true;
 
   wayland.windowManager.hyprland.xwayland.enable = true;
@@ -37,10 +42,8 @@ in {
       exec-once = [
         ''${startupScript}/bin/start''
         #        ''${pkgs.hyprpanel}/bin/hyprpanel''
-        ''${pkgs.easyeffects}/bin/easyeffects --gapplication-service''
-        "${pkgs.wl-clipboard}/bin/wl-paste --type text --watch cliphist store &"
-        "${pkgs.wl-clipboard}/bin/wl-paste --type image --watch cliphist store &"
-        "${pkgs.pyprland}/bin/pypr"
+        ''${pkgs.easyeffects}/bin/easyeffects --gapplication-service &''
+        "wl-paste --type text --watch cliphist store # Stores only text data"
       ];
 
       general = {

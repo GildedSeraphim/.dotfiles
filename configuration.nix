@@ -16,7 +16,7 @@
     ./settings.nix
     ./fonts.nix
     ./hyprland.nix
-    ./hardware/keyboard/default.nix
+    #./hardware/keyboard/default.nix
   ];
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
