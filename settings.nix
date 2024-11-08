@@ -146,19 +146,19 @@
   hardware.opentabletdriver.enable = false;
   hardware.opentabletdriver.daemon.enable = false;
 
-  programs.virt-manager.enable = false;
+  programs.virt-manager.enable = true;
   boot.kernelModules = ["kvm-amd" "kvm-intel"];
 
   programs.firejail.enable = true;
 
   virtualisation.libvirtd = {
-    enable = false;
+    enable = true;
     qemu = {
       package = pkgs.qemu_kvm;
       runAsRoot = true;
       swtpm.enable = true;
       ovmf = {
-        enable = false;
+        enable = true;
         packages = [
           (pkgs.OVMF.override {
             secureBoot = true;

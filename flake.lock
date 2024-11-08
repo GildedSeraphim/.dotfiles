@@ -1184,11 +1184,11 @@
     "nvim-cpp": {
       "flake": false,
       "locked": {
-        "lastModified": 1729706042,
-        "narHash": "sha256-E+Bn8IcTKZqI9jefe3JMrVW2yFWloXfJrTFdrZ9kgh8=",
+        "lastModified": 1730990071,
+        "narHash": "sha256-PyAF0G4Ja5EOKc0DAMzmq+2OvNkmWGMYpivhIjeiV7c=",
         "owner": "GildedSeraphim",
         "repo": "NvChad-fork",
-        "rev": "73ecb18d159682cc792eb7451d3b160e4e21dad9",
+        "rev": "ac5acdaa64e6f31606889209a57f92193d0e8dd0",
         "type": "github"
       },
       "original": {

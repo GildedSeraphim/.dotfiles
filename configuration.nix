@@ -28,6 +28,10 @@
     curl
     expat
     envfs
+    virt-manager
+    virt-viewer
+    virtiofsd
+    libguestfs-tools
   ];
 
   nixpkgs = {

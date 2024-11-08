@@ -23,10 +23,11 @@ in {
   };
 
   "hyprland/workspaces" = {
-    all-outputs = false;
+    show-special = true;
+    all-outputs = true;
     active-only = "false";
-    on-scroll-up = "${getExe' config.wayland.windowManager.hyprland.package "hyprctl"} dispatch workspace e+1";
-    on-scroll-down = "${getExe' config.wayland.windowManager.hyprland.package "hyprctl"} dispatch workspace e-1";
+    on-scroll-down = "${getExe' config.wayland.windowManager.hyprland.package "hyprctl"} dispatch workspace e+1";
+    on-scroll-up = "${getExe' config.wayland.windowManager.hyprland.package "hyprctl"} dispatch workspace e-1";
     format = "{icon} {windows}";
     format-icons = {
       "1" = "󰎤";
@@ -42,6 +43,7 @@ in {
       "urgent" = "󱨇";
       "default" = "";
       "empty" = "󱓼";
+      "special" = "";
     };
     # "format-window-separator" = "->";
     window-rewrite-default = "";
@@ -117,7 +119,7 @@ in {
       "class<xwaylandvideobridge>" = "";
       "code-url-handler" = "󰨞";
       "title<RPCS3.*>" = "";
-      "title<Spotify Premium>" = "";
+      "initialTitle<Spotify Premium>" = "";
       "title<Steam>" = "";
       "title<obsidian>" = "";
       "class<GLava>" = "";
