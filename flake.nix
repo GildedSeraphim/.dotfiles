@@ -19,33 +19,12 @@
       inputs.hyprland.follows = "hyprland";
     };
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
-    nvchad4nix = {
-      url = "github:nix-community/nix4nvchad";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
-      inputs.nvchad-starter.follows = "nvim-cpp";
-    };
-    nvchad-on-steroids = {
-      # <- here
-      url = "github:MOIS3Y/nvchad-on-steroids";
-      flake = false;
-    };
     xremap-flake.url = "github:xremap/nix-flake";
-    nvim-cpp = {
-      url = "github:GildedSeraphim/NvChad-fork";
-      flake = false;
-    };
     zen.url = "github:0xc000022070/zen-browser-flake";
-    hyprspace = {
-      url = "github:KZDKM/Hyprspace";
-      inputs.hyprland.follows = "hyprland";
-    };
-    firefox-addons = {
-      url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     hyprsysteminfo = {
       url = "github:hyprwm/hyprsysteminfo";
     };
+    nixvim.url = "github:mikaelfangel/nixvim-config";
   };
 
   outputs = {

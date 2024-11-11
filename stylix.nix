@@ -4,10 +4,10 @@
   nix-colors,
   ...
 }: let
-  theme = "gruvbox-dark-hard";
+  theme = "catppuccin-mocha";
   th = "${pkgs.base16-schemes}/share/themes/${theme}.yaml";
   alterfile = ./wal/color.txt;
-  wallpaper = ./wal/blue-beach.png;
+  wallpaper = ./wal/sand-light.png;
   #altered-wallpaper = pkgs.runCommand "altered.png" {} ''
   #${pkgs.imagemagick}/bin/magick convert ${wallpaper} -colorspace sRGB -color-matrix < ${alterfile} altered.png $out
   #'';
@@ -20,7 +20,7 @@ in {
 
   stylix.base16Scheme = "${th}";
 
-  stylix.override.base00 = "000000";
+  #stylix.override.base00 = "000000";
 
   stylix.image = wallpaper;
 

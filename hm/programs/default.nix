@@ -10,7 +10,7 @@
     ./lf
     ./vscode
     ./btop
-    ./nvchad
+    #./nvchad
     ./shell
     ./cava
     #      ./firefox

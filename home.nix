@@ -32,6 +32,7 @@
 
   home.packages =
     (with pkgs; [
+      inputs.nixvim.packages.${system}.default
       unityhub
       gimp-with-plugins
       inputs.hyprsysteminfo.packages."${pkgs.system}".hyprsysteminfo
