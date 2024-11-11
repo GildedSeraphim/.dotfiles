@@ -4,7 +4,7 @@
   ...
 }: {
   imports = [
-    #./hardware/laptop/hardware-configuration.nix
+    #./hardware/laptop/hardware-ea::onfiguration.nix
     #./hardware/laptop/nvidia.nix
     #./hardware/laptop/laptop.nix
     ./hardware/desktop/nvidia.nix
