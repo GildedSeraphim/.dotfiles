@@ -1,10 +1,6 @@
 {
-  config,
-  lib,
   pkgs,
   pkgs-unstable,
-  inputs,
-  outputs,
   ...
 }: {
   imports = [
@@ -33,14 +29,6 @@
     virtiofsd
   ];
 
-  nixpkgs = {
-    overlays = [
-      (final: prev: {
-        nvchad = inputs.nvchad4nix.packages."${pkgs-unstable.system}".nvchad;
-      })
-    ];
-  };
-
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages =
     (with pkgs; [
@@ -51,6 +39,5 @@
       easyeffects
     ])
     ++ (with pkgs-unstable; [
-      nix-init
     ]);
-tf}
+}
