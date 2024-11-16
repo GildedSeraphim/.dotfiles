@@ -7,12 +7,8 @@
     home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     nix-colors.url = "github:misterio77/nix-colors";
-    hyprland = {
-      url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
-    };
-    hyprlux = {
-      url = "github:amadejkastelic/Hyprlux";
-    };
+    hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
+    hyprlux.url = "github:amadejkastelic/Hyprlux";
     stylix.url = "github:danth/stylix";
     hyprland-plugins = {
       url = "github:hyprwm/hyprland-plugins";
@@ -21,9 +17,6 @@
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
     xremap-flake.url = "github:xremap/nix-flake";
     zen.url = "github:0xc000022070/zen-browser-flake";
-    hyprsysteminfo = {
-      url = "github:hyprwm/hyprsysteminfo";
-    };
     nixvim.url = "github:mikaelfangel/nixvim-config";
   };
 
@@ -99,38 +92,6 @@
           inherit outputs;
         };
       };
-    };
-
-    devShells.x86_64-linux.default = pkgs.mkShell {
-      nativeBuildInputs = with pkgs; [
-        #Python stuff
-        python312Packages.pip
-        #C++ Dev
-        libgcc
-        cmake
-
-        #xorg stuff
-        xorg.libXrandr
-        xorg.libXinerama
-        xorg.libXcursor
-        xorg.xinput
-        xorg.libXi
-
-        #OpenGL
-        libGLU
-        libGL
-        glfw
-        glew
-        freeglut
-        cairo
-        glm
-        SDL2
-        esshader
-      ];
-      shellHook = ''
-        echo "Welcome"
-               echo "To my C++ OpenGL Shell!!!" | ${pkgs.lolcat}/bin/lolcat
-      '';
     };
   };
 }

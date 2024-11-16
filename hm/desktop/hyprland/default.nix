@@ -19,7 +19,7 @@ in {
   ];
 
   home.packages = with pkgs; [
-    wl-clipboard-rs
+    wl-clipboard
     cliphist
   ];
 
@@ -43,7 +43,7 @@ in {
         ''${startupScript}/bin/start''
         #        ''${pkgs.hyprpanel}/bin/hyprpanel''
         ''${pkgs.easyeffects}/bin/easyeffects --gapplication-service &''
-        "wl-paste --type text --watch cliphist store # Stores only text data"
+        ''wl-paste --type text --watch cliphist store''
       ];
 
       general = {

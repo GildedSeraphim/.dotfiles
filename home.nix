@@ -1,10 +1,7 @@
 {
-  config,
   pkgs,
   pkgs-unstable,
-  lib,
   inputs,
-  outputs,
   ...
 }: {
   home.username = "sn";
@@ -35,7 +32,6 @@
       inputs.nixvim.packages.${system}.default
       unityhub
       gimp-with-plugins
-      inputs.hyprsysteminfo.packages."${pkgs.system}".hyprsysteminfo
       thefuck
       python312Packages.pip
       jetbrains.pycharm-professional
@@ -75,6 +71,7 @@
       nautilus
       geek-life
       texliveMedium
+      audacious
     ])
     ++ (with pkgs-unstable; [
       krita
@@ -91,6 +88,8 @@
       sl
       nix-tree
       wineWowPackages.waylandFull
+      bottles
+      jetbrains.rider
     ]);
 
   fonts.fontconfig.enable = true;

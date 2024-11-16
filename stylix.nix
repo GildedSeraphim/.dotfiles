@@ -28,9 +28,13 @@ in {
   stylix.cursor.name = "Banana Red";
 
   stylix.fonts = {
+    #    monospace = {
+    # package = pkgs.nerdfonts.override {fonts = ["IosevkaTermSlab"];};
+    #name = "IosevkaTermSlab Nerd Font Mono";
+    #};
     monospace = {
-      package = pkgs.nerdfonts.override {fonts = ["IosevkaTermSlab"];};
-      name = "IosevkaTermSlab Nerd Font Mono";
+      package = pkgs.monocraft;
+      name = "Monocraft";
     };
     sansSerif = config.stylix.fonts.monospace;
     serif = {

@@ -1,9 +1,8 @@
 {
   config,
   pkgs,
-  lib,
-  outputs,
   inputs,
+  lib,
   ...
 }: let
   spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.system};
@@ -20,11 +19,13 @@ in {
       copyToClipboard
       volumePercentage
       keyboardShortcut
+      oldSidebar
+
     ];
     enabledCustomApps = with spicePkgs.apps; [
-      newReleases
       lyricsPlus
       marketplace
+      reddit
       betterLibrary
     ];
     enabledSnippets = with spicePkgs.snippets; [
@@ -33,9 +34,10 @@ in {
       #      hide-playing-gif
       #      oneko
       #      Hide-Full-Screen-Button
+      spinningCdCoverArt
     ];
-    #theme = lib.mkForce spicePkgs.themes.text;
-    #colorScheme = lib.mkForce "custom";
+    theme = lib.mkForce spicePkgs.themes.dribbblish;
+    # colorScheme = lib.mkForce "CatppuccinMocha";
 
     customColorScheme = with config.lib.stylix.colors; {
       text = "${base05}";

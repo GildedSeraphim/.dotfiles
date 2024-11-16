@@ -25,7 +25,7 @@ in {
   "hyprland/workspaces" = {
     show-special = true;
     all-outputs = true;
-    active-only = "false";
+    active-only = "true";
     on-scroll-down = "${getExe' config.wayland.windowManager.hyprland.package "hyprctl"} dispatch workspace e+1";
     on-scroll-up = "${getExe' config.wayland.windowManager.hyprland.package "hyprctl"} dispatch workspace e-1";
     format = "{icon} {windows}";
