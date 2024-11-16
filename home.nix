@@ -29,12 +29,12 @@
 
   home.packages =
     (with pkgs; [
+      lollypop
       inputs.nixvim.packages.${system}.default
       unityhub
       gimp-with-plugins
       thefuck
       python312Packages.pip
-      jetbrains.pycharm-professional
       inputs.zen.packages.${system}.generic
       fast-cli
       hyprcursor
@@ -69,9 +69,12 @@
       zathura
       nsxiv
       nautilus
-      geek-life
       texliveMedium
-      audacious
+
+      # icons
+      adwaita-icon-theme
+      gnome-icon-theme
+      hicolor-icon-theme
     ])
     ++ (with pkgs-unstable; [
       krita
