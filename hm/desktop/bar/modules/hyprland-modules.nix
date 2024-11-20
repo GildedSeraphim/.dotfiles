@@ -25,11 +25,12 @@ in {
   "hyprland/workspaces" = {
     show-special = true;
     all-outputs = true;
-    active-only = "true";
+    active-only = "::";
     on-scroll-down = "${getExe' config.wayland.windowManager.hyprland.package "hyprctl"} dispatch workspace e+1";
     on-scroll-up = "${getExe' config.wayland.windowManager.hyprland.package "hyprctl"} dispatch workspace e-1";
     format = "{icon} {windows}";
     format-icons = {
+      "special" = "";     
       "1" = "󰎤";
       "2" = "󰎧";
       "3" = "󰎪";
@@ -43,7 +44,6 @@ in {
       "urgent" = "󱨇";
       "default" = "";
       "empty" = "󱓼";
-      "special" = "";
     };
     # "format-window-separator" = "->";
     window-rewrite-default = "";

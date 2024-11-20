@@ -20,7 +20,6 @@ in {
       volumePercentage
       keyboardShortcut
       oldSidebar
-
     ];
     enabledCustomApps = with spicePkgs.apps; [
       lyricsPlus

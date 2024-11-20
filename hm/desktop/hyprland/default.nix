@@ -32,7 +32,7 @@ in {
     plugins = [
       #      inputs.hyprland-plugins.packages."${pkgs.system}".hyprbars
       inputs.hyprland-plugins.packages."${pkgs.system}".csgo-vulkan-fix
-      #      inputs.split-monitor-workspaces.packages."${pkgs.system}".split-monitor-workspaces
+      #     inputs.split-monitor-workspaces.packages."${pkgs.system}".split-monitor-workspaces
       #      inputs.hyprspace.packages."${pkgs.system}".Hyprspace
       #      inputs.hyprland-plugins.packages."${pkgs.system}".hyprwinwrap
       # inputs.hyprland-easymotion.packages.${pkgs.system}.hyprland-easymotion
@@ -176,6 +176,7 @@ in {
         #        "$mod, TAB, overview:toggle"
         "$mod, C, exec, rofi -show calc"
         "$mod SHIFT, C, exec, qalculate-gtk"
+        "$mod, T, togglegroup"
         #        "$mod, G, exec, pkill glava-vis && pkill glava"
         "$mod, G, exec, glava-vis"
         "$mod SHIFT, G, exec, pkill glava-vis && pkill glava"
