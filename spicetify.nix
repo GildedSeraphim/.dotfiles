@@ -35,7 +35,7 @@ in {
       #      Hide-Full-Screen-Button
       spinningCdCoverArt
     ];
-    theme = lib.mkForce spicePkgs.themes.dribbblish;
+    theme = lib.mkForce spicePkgs.themes.text;
     # colorScheme = lib.mkForce "CatppuccinMocha";
 
     customColorScheme = with config.lib.stylix.colors; {

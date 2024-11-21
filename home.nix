@@ -29,6 +29,7 @@
 
   home.packages =
     (with pkgs; [
+      davinci-resolve
       protonvpn-gui
       inputs.nixvim.packages.${system}.default
       unityhub

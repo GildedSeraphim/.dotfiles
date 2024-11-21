@@ -32,6 +32,8 @@
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages =
     (with pkgs; [
+      wireguard-tools
+      #erosanix.packages."${pkgs.system}".foobar2000
       nix-ld
       envfs
       calf

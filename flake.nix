@@ -18,6 +18,7 @@
     xremap-flake.url = "github:xremap/nix-flake";
     zen.url = "github:0xc000022070/zen-browser-flake";
     nixvim.url = "github:mikaelfangel/nixvim-config";
+    erosanix.url = "github:emmanuelrosa/erosanix";
   };
 
   outputs = {
@@ -28,6 +29,7 @@
     nix-colors,
     hyprland,
     stylix,
+    erosanix,
     ...
   } @ inputs: let
     inherit (self) outputs;
@@ -59,6 +61,7 @@
       nixos = lib.nixosSystem {
         inherit system;
         modules = [
+          erosanix.nixosModules.protonvpn
           ./configuration.nix
         ];
         specialArgs = {
