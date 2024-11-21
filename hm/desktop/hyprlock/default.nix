@@ -26,7 +26,7 @@ in {
     };
   };
 
-  home.file.".config/hypr/hyprlock.conf".text = ''
+   programs.hyprlock.extraConfig = ''
       source=/tmp/.current_wallpaper_path_hyprlock
     # BACKGROUND
       background {

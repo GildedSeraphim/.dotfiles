@@ -15,7 +15,7 @@
       # apple-fonts
       dejavu_fonts
       noto-fonts
-      noto-fonts-cjk
+      noto-fonts-cjk-sans
       inter
       iosevka
       ibm-plex

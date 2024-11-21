@@ -1,1 +1,1 @@
-/nix/store/j7vnrji6p2kwyd0b7mgd30n9gc3bgxph-home-manager-files/.dotfiles/wal/color.txt
+/nix/store/xljsk36ci7flf8k86khq6w8h90ivf9d4-home-manager-files/.dotfiles/wal/color.txt

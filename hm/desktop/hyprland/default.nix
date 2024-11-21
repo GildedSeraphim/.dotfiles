@@ -30,11 +30,12 @@ in {
     enable = true;
 
     plugins = [
-      #      inputs.hyprland-plugins.packages."${pkgs.system}".hyprbars
+      inputs.hyprland-plugins.packages."${pkgs.system}".hyprbars
       inputs.hyprland-plugins.packages."${pkgs.system}".csgo-vulkan-fix
       #     inputs.split-monitor-workspaces.packages."${pkgs.system}".split-monitor-workspaces
       #      inputs.hyprspace.packages."${pkgs.system}".Hyprspace
-      #      inputs.hyprland-plugins.packages."${pkgs.system}".hyprwinwrap
+      inputs.hyprland-plugins.packages."${pkgs.system}".hyprwinwrap
+      inputs.hyprland-plugins.packages."${pkgs.system}".borders-plus-plus
       # inputs.hyprland-easymotion.packages.${pkgs.system}.hyprland-easymotion
     ];
 
@@ -49,7 +50,7 @@ in {
       general = {
         "gaps_in" = 0;
         "gaps_out" = 5;
-        "border_size" = 2;
+        "border_size" = 0;
         #        "col.active_border" = lib.mkForce "rgb(${config.stylix.base16Scheme.base0E})";
         #        "col.inactive_border" = lib.mkForce "rgb(${config.stylix.base16Scheme.base00})";
 
@@ -146,6 +147,29 @@ in {
       };
 
       plugin = {
+	borders-plus-plus = {
+	  add_borders = 2;
+	  "col.border_2" = "rgb(4d0e55)";
+          "col.border_1" = "rgb(d4cacb)";
+	  border_size_1 = 3;
+          border_size_2 = 2;
+       	  natural_rounding = "yes";
+	};	
+        hyprbars = {
+          bar_height = 30;
+          bar_color = "rgb(8f7fa3)";
+          bar_text_font = "${config.stylix.fonts.monospace.name}";
+	  bar_text_size = 15;
+          "col.text" = "rgb(4d0e55)";
+	  bar_text_align = "left";
+	  bar_precedence_over_border = true;
+          # example buttons (R -> L)
+          # hyprbars-button = color, size, on-click
+          hyprbars-button = [
+            "rgb(f88999), 15, 󰖭, hyprctl dispatch killactive"
+            "rgb(d4cacb), 15, , hyprctl dispatch fullscreen 1"
+          ];
+        };
         hyprwinwrap = {
           "class" = "GLava";
         };

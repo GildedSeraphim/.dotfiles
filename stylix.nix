@@ -20,7 +20,7 @@ in {
 
   stylix.base16Scheme = "${th}";
 
-  #stylix.override.base00 = "000000";
+  #stylix.override.base00 = "d4cacb";
 
   stylix.image = wallpaper;
 
