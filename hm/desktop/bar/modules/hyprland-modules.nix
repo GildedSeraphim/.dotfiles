@@ -30,7 +30,7 @@ in {
     on-scroll-up = "${getExe' config.wayland.windowManager.hyprland.package "hyprctl"} dispatch workspace e-1";
     format = "{icon} {windows}";
     format-icons = {
-      "special" = "";     
+      "special" = "";
       "1" = "󰎤";
       "2" = "󰎧";
       "3" = "󰎪";

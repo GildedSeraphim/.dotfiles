@@ -15,6 +15,11 @@
     options = "--delete-older-than 1w";
   };
 
+  virtualisation.docker.rootless = {
+    enable = true;
+    setSocketVariable = true;
+  };
+
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;

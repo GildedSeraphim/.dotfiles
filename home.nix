@@ -29,7 +29,7 @@
 
   home.packages =
     (with pkgs; [
-      lollypop
+      protonvpn-gui
       inputs.nixvim.packages.${system}.default
       unityhub
       gimp-with-plugins

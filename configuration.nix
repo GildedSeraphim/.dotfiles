@@ -39,5 +39,6 @@
       easyeffects
     ])
     ++ (with pkgs-unstable; [
-      ]);
+      ollama-cuda
+    ]);
 }
