@@ -36,7 +36,7 @@ in {
       spinningCdCoverArt
     ];
     theme = lib.mkForce spicePkgs.themes.text;
-    # colorScheme = lib.mkForce "CatppuccinMocha";
+    colorScheme = lib.mkForce "CatppuccinMocha";
 
     customColorScheme = with config.lib.stylix.colors; {
       text = "${base05}";

@@ -147,22 +147,23 @@ in {
       };
 
       plugin = {
-	borders-plus-plus = {
-	  add_borders = 2;
-	  "col.border_2" = "rgb(4d0e55)";
+        borders-plus-plus = {
+          add_borders = 2;
+          "col.border_2" = "rgb(4d0e55)";
           "col.border_1" = "rgb(d4cacb)";
-	  border_size_1 = 3;
+          border_size_1 = 3;
           border_size_2 = 2;
-       	  natural_rounding = "yes";
-	};	
+          natural_rounding = "yes";
+        };
         hyprbars = {
           bar_height = 30;
           bar_color = "rgb(8f7fa3)";
           bar_text_font = "${config.stylix.fonts.monospace.name}";
-	  bar_text_size = 15;
+          bar_text_size = 15;
           "col.text" = "rgb(4d0e55)";
-	  bar_text_align = "left";
-	  bar_precedence_over_border = true;
+          bar_text_align = "left";
+          bar_precedence_over_border = true;
+          bar_button_padding = 7;
           # example buttons (R -> L)
           # hyprbars-button = color, size, on-click
           hyprbars-button = [

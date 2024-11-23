@@ -39,6 +39,7 @@
       calf
       qjackctl
       easyeffects
+      waydroid
     ])
     ++ (with pkgs-unstable; [
       ollama-cuda
