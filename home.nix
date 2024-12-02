@@ -29,8 +29,7 @@
 
   home.packages =
     (with pkgs; [
-      davinci-resolve
-      protonvpn-gui
+      protonmail-desktop
       inputs.nixvim.packages.${system}.default
       unityhub
       gimp-with-plugins
@@ -94,6 +93,7 @@
       wineWowPackages.waylandFull
       bottles
       jetbrains.rider
+      zed-editor
     ]);
 
   fonts.fontconfig.enable = true;

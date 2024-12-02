@@ -12,6 +12,7 @@
     ./settings.nix
     ./fonts.nix
     ./hyprland.nix
+#    ./network.nix
     #    ./hardware/keyboard/default.nix
   ];
   programs.nix-ld.enable = true;
