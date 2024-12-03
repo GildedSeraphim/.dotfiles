@@ -2,7 +2,8 @@
   pkgs,
   pkgs-unstable,
   ...
-}: {
+}:
+ {
   imports = [
     #./hardware/laptop/hardware-ea::onfiguration.nix
     #./hardware/laptop/nvidia.nix
@@ -30,6 +31,12 @@
     virtiofsd
   ];
 
+  # packageOverrides = pkgs-unstable: {
+  #  alpaca = pkgs-unstable.alpaca.override{
+  #    ollama = pkgs-unstable.ollama-cuda;
+  #  };
+  #};
+
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages =
     (with pkgs; [
@@ -43,6 +50,7 @@
       waydroid
     ])
     ++ (with pkgs-unstable; [
+      alpaca-cuda
       ollama-cuda
     ]);
 }

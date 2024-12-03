@@ -54,6 +54,14 @@
       inherit inputs;
       config.allowUnfree = true;
       config.nvidia.acceptLicense = true;
+      overlays = [
+        (final: prev: {
+          alpaca = prev.alpaca.override {
+            ollama = pkgs-unstable.ollama-cuda;
+          };
+          alpaca-cuda = final.alpaca;
+        })
+      ];
     };
     lib = nixpkgs.lib;
   in {
