@@ -2,6 +2,10 @@
   description = "System Flake";
 
   inputs = {
+    # DeterminateSystems stuff
+    determinate.url = "https://flakehub.com/f/DeterminateSystems/determinate/0.1";
+    fh.url = "https://flakehub.com/f/DeterminateSystems/fh/*";
+
     nixpkgs.url = "nixpkgs/nixos-unstable";
     nixpkgs-unstable.url = "nixpkgs/nixos-unstable";
     home-manager.url = "github:nix-community/home-manager/master";
@@ -30,6 +34,7 @@
     hyprland,
     stylix,
     erosanix,
+    determinate,
     ...
   } @ inputs: let
     inherit (self) outputs;
@@ -70,6 +75,8 @@
         inherit system;
         modules = [
           erosanix.nixosModules.protonvpn
+          erosanix.nixosModules.fzf
+          determinate.nixosModules.default
           ./configuration.nix
         ];
         specialArgs = {

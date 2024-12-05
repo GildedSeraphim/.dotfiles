@@ -1,6 +1,7 @@
 {
   pkgs,
   pkgs-unstable,
+  inputs,
   ...
 }:
  {
@@ -29,6 +30,7 @@
     virt-manager
     virt-viewer
     virtiofsd
+    inputs.fh.packages.x86_64-linux.default
   ];
 
   # packageOverrides = pkgs-unstable: {
@@ -41,7 +43,8 @@
   environment.systemPackages =
     (with pkgs; [
       wireguard-tools
-      #erosanix.packages."${pkgs.system}".foobar2000
+      inputs.erosanix.packages."${pkgs.system}".foobar2000
+      #inputs.erosanix.packages."${pkgs.system}".nvidia-offload
       nix-ld
       envfs
       calf
@@ -50,7 +53,9 @@
       waydroid
     ])
     ++ (with pkgs-unstable; [
-      alpaca-cuda
       ollama-cuda
     ]);
+  services.open-webui = {
+    enable = true;
+  };
 }

@@ -29,6 +29,7 @@
 
   home.packages =
     (with pkgs; [
+      kdenlive
       protonmail-desktop
       inputs.nixvim.packages.${system}.default
       unityhub
