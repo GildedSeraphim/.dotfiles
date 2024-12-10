@@ -22,7 +22,6 @@
       pkgs-unstable.vscode-extensions.jeff-hykin.better-nix-syntax
       asvetliakov.vscode-neovim
     ];
-    xdg.configFile."VSCodium/User/settings.json".source = ./settings.json;
     userSettings = {
       #	  "editor.fontFamily" = "${config.lib.stylix.fonts.monospace}";
       #	  "terminal.integrated.fontFamily" = "${config.lib.stylix.fonts.monospace}";
