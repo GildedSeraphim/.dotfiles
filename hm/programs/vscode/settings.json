@@ -1,0 +1,33 @@
+{
+    "[nix]": {
+      "editor.tabSize": 2
+    },
+    "cmake.configureOnOpen": true,
+    "disable-hardware-acceleration": true,
+    "editor.fontFamily": "'Monocraft'",
+    "extensions.experimental.affinity": {
+      "asvetliakov.vscode-nvim": 1
+    },
+    "formatting": {
+      "command": ["alejandra"],
+    },
+    "nix.enableLanguageServer": true,
+    "nix.serverPath": "nixd",
+    "nixpkgs": {
+      "expr": "import <nixpkgs> { }"
+    },
+    "options": {
+        "nixos": {
+            "expr": "(builtins.getFlake \"/PATH/TO/FLAKE\").nixosConfigurations.CONFIGNAME.options"
+        },
+        "home_manager": {
+           "expr": "(builtins.getFlake \"/PATH/TO/FLAKE\").homeConfigurations.CONFIGNAME.options"
+        },
+       },
+    "terminal.integrated.fontFamily": "'Monocraft'",
+    "terminal.integrated.gpuAcceleration": "off",
+    "window.titleBarStyle": "custom",
+    "workbench.colorTheme": "Stylix",
+    "workbench.iconTheme": "vscode-icons"
+  }
+  
