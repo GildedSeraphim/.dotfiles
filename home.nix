@@ -29,9 +29,9 @@
 
   home.packages =
     (with pkgs; [
+      freetube
       kdenlive
       protonmail-desktop
-      inputs.nixvim.packages.${system}.default
       unityhub
       gimp-with-plugins
       thefuck
@@ -39,7 +39,6 @@
       inputs.zen.packages.${system}.generic
       fast-cli
       hyprcursor
-      eww
       mako
       brightnessctl
       ungoogled-chromium
@@ -92,9 +91,6 @@
       sl
       nix-tree
       wineWowPackages.waylandFull
-      bottles
-      jetbrains.rider
-      zed-editor
     ]);
 
   fonts.fontconfig.enable = true;

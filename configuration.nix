@@ -14,7 +14,7 @@
     ./settings.nix
     ./fonts.nix
     ./hyprland.nix
-#    ./network.nix
+    ./network.nix
     #    ./hardware/keyboard/default.nix
   ];
   programs.nix-ld.enable = true;
@@ -30,7 +30,6 @@
     virt-manager
     virt-viewer
     virtiofsd
-    inputs.fh.packages.x86_64-linux.default
   ];
 
   # packageOverrides = pkgs-unstable: {
@@ -51,6 +50,8 @@
       qjackctl
       easyeffects
       waydroid
+      alejandra
+      nixd
     ])
     ++ (with pkgs-unstable; [
       ollama-cuda

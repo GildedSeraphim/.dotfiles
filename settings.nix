@@ -9,6 +9,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  nix.nixPath = ["nixpkgs=${inputs.nixpkgs}"];
   nix.gc = {
     automatic = true;
     dates = "weekly";
@@ -155,6 +156,9 @@
   boot.kernelModules = ["kvm-amd" "kvm-intel"];
 
   programs.firejail.enable = true;
+
+  services.clamav.daemon.enable = true;
+  services.clamav.updater.enable = true;
 
   virtualisation.libvirtd = {
     enable = true;

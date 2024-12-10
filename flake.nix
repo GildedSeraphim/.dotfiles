@@ -3,8 +3,6 @@
 
   inputs = {
     # DeterminateSystems stuff
-    determinate.url = "https://flakehub.com/f/DeterminateSystems/determinate/0.1";
-    fh.url = "https://flakehub.com/f/DeterminateSystems/fh/*";
 
     nixpkgs.url = "nixpkgs/nixos-unstable";
     nixpkgs-unstable.url = "nixpkgs/nixos-unstable";
@@ -21,7 +19,6 @@
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
     xremap-flake.url = "github:xremap/nix-flake";
     zen.url = "github:0xc000022070/zen-browser-flake";
-    nixvim.url = "github:mikaelfangel/nixvim-config";
     erosanix.url = "github:emmanuelrosa/erosanix";
   };
 
@@ -34,7 +31,6 @@
     hyprland,
     stylix,
     erosanix,
-    determinate,
     ...
   } @ inputs: let
     inherit (self) outputs;
@@ -76,7 +72,6 @@
         modules = [
           erosanix.nixosModules.protonvpn
           erosanix.nixosModules.fzf
-          determinate.nixosModules.default
           ./configuration.nix
         ];
         specialArgs = {

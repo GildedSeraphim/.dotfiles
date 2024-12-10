@@ -70,7 +70,7 @@ in {
       "class<Spotify>" = "";
       "class<Youtube Music>" = "";
       "class<bleachbit>" = "";
-      "class<code>" = "󰨞";
+      "class<codium>" = "󰨞";
       "class<com.obsproject.Studio" = "󱜠";
       "class<com.usebottles.bottles>" = "󰡔";
       "class<vesktop>" = "󰙯";

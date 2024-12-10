@@ -21,6 +21,7 @@ in {
   home.packages = with pkgs; [
     wl-clipboard
     cliphist
+    grimblast
   ];
 
   services.swayosd.enable = true;
@@ -207,7 +208,7 @@ in {
         "$mod SHIFT, G, exec, pkill glava-vis && pkill glava"
         "$mod, V, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy"
 
-        # pyprland commands
+        "Control_L SHIFT, S, exec, grimblast copy area"
 
         "$mod, 1, workspace, 1"
         "$mod, 2, workspace, 2"
