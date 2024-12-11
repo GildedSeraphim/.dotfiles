@@ -10,5 +10,8 @@
     ./markdown.nix
     ./neo-tree.nix
     ./treesitter.nix
+    ./obsidian.nix
+    ./telescope.nix
+    ./cmp.nix
   ];
 }
