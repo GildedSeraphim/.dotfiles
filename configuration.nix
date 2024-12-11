@@ -3,8 +3,7 @@
   pkgs-unstable,
   inputs,
   ...
-}:
- {
+}: {
   imports = [
     #./hardware/laptop/hardware-ea::onfiguration.nix
     #./hardware/laptop/nvidia.nix
