@@ -1,5 +1,5 @@
 {...}: {
-  programs.nvim = {
+  programs.nixvim = {
     plugins = {
       noice = {
         enable = true;
