@@ -1,6 +1,7 @@
 {...}: {
   imports = [
     ./plugins
+    ./core
   ];
 
   programs.nixvim = {
