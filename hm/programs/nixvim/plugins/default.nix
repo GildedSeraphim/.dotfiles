@@ -13,5 +13,8 @@
     ./obsidian.nix
     ./telescope.nix
     ./cmp.nix
+    ./which-key.nix
+    ./vimtex.nix
+    ./ui
   ];
 }
