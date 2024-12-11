@@ -8,5 +8,6 @@
     ./lint.nix
     ./lsp.nix
     ./markdown.nix
+    ./neo-tree.nix
   ];
 }
