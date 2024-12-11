@@ -20,7 +20,7 @@
     xremap-flake.url = "github:xremap/nix-flake";
     zen.url = "github:0xc000022070/zen-browser-flake";
     erosanix.url = "github:emmanuelrosa/erosanix";
-    nixvim.url = "https://github.com/nix-community/nixvim";
+    nixvim.url = "github:nix-community/nixvim";
   };
 
   outputs = {
