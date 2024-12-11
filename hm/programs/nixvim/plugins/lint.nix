@@ -1,8 +1,11 @@
-{...}: {
+{pkgs, ...}: {
+  home.packages = with pkgs; [
+    nixpkgs-lint-community
+  ];
   programs.nixvim = {
     plugins = {
       lint = {
-        enbale = true;
+        enable = true;
         lintersByFt = {
           clojure = [
             "clj-kondo"
@@ -35,7 +38,7 @@
             "vale"
           ];
           nix = [
-            "nixd"
+            "nixpkgs-lint"
           ];
           python = [
             "pylint"

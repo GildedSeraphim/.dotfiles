@@ -6,5 +6,7 @@
     ./conform.nix
     ./dap.nix
     ./lint.nix
+    ./lsp.nix
+    ./markdown.nix
   ];
 }
