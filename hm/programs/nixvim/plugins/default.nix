@@ -9,5 +9,6 @@
     ./lsp.nix
     ./markdown.nix
     ./neo-tree.nix
+    ./treesitter.nix
   ];
 }

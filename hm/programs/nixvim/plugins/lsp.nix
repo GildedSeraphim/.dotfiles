@@ -3,7 +3,7 @@
     enable = true;
     inlayHints = true;
     servers = {
-      lua-ls = {
+      lua_ls = {
         enable = true;
       };
       pylsp = {
