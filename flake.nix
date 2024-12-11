@@ -20,6 +20,7 @@
     xremap-flake.url = "github:xremap/nix-flake";
     zen.url = "github:0xc000022070/zen-browser-flake";
     erosanix.url = "github:emmanuelrosa/erosanix";
+    nixvim.url = "https://github.com/nix-community/nixvim";
   };
 
   outputs = {
@@ -92,6 +93,7 @@
           stylix.homeManagerModules.stylix
           inputs.spicetify-nix.homeManagerModules.default
           inputs.hyprlux.homeManagerModules.default
+          inputs.nixvim.homeManagerModules.nixvim
         ];
         inherit pkgs;
         extraSpecialArgs = {

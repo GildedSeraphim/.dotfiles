@@ -15,5 +15,6 @@
     #./cava
     #      ./firefox
     ./glava
+    ./nixvim
   ];
 }
