@@ -1,6 +1,6 @@
-{}:
+{...}:
 {
-  nixvim = {
+  programs.nixvim = {
     plugins.auto-session = {
       settings = {
         auto_restore = true;
