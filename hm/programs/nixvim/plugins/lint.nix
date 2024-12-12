@@ -37,9 +37,9 @@
           text = [
             "vale"
           ];
-          nix = [
-            "nixpkgs-lint"
-          ];
+          #nix = [
+          #  "nixpkgs-lint"
+          #];
           python = [
             "pylint"
           ];

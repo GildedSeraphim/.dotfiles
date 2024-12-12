@@ -1,5 +1,4 @@
-{...}:
-{
+{...}: {
   programs.nixvim = {
     plugins = {
       barbar = {
