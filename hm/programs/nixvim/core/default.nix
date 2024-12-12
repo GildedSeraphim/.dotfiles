@@ -1,5 +1,4 @@
-{...}:
-{
+{...}: {
   imports = [
     #./keymaps.nix
   ];

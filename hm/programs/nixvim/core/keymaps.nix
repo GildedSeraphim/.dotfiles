@@ -1,5 +1,4 @@
-{...}:
-{
+{...}: {
   programs.nixvim = {
     keymaps = [
       #
@@ -7,7 +6,7 @@
       #
       {
         # show definitions, references
-        mode = [ "n" ];
+        mode = ["n"];
         key = "gR";
         action = "<cmd>Telescope lsp_references<CR>";
       }
@@ -17,9 +16,8 @@
         key = "gD";
         action = "vim.lsp.buf.declaration";
         options = {
-          
         };
       }
-    ]; 
+    ];
   };
 }

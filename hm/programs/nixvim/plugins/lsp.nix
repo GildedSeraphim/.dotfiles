@@ -3,6 +3,7 @@
     plugins = {
       lsp = {
         enable = true;
+        inlayHints = true;
 
         keymaps = {
           silent = true;
@@ -26,7 +27,10 @@
           gopls.enable = true;
           golangci_lint_ls.enable = true;
           lua_ls.enable = true;
-          nixd.enable = true;
+          nixd = {
+            enable = true;
+            extraOptions = { offset_encoding = "utf-8"; };
+          };
           pyright.enable = true;
           pylsp.enable = true;
           tflint.enable = true;
