@@ -2,10 +2,11 @@
   programs.nixvim = {
     plugins = {
       indent-blankline = {
-        enable = true;
+        enable = false;
         settings = {
           exclude = {
             buftypes = [
+              "dashboard"
               "terminal"
               "quickfix"
             ];

@@ -1,4 +1,4 @@
-{...}: {
+{ ... }: {
   imports = [
     ./auto-sessions.nix
     #./codeium.nix
@@ -16,5 +16,7 @@
     ./which-key.nix
     ./vimtex.nix
     ./ui
+    ./markdown-preview.nix
+    ./cmake-tools.nix
   ];
 }

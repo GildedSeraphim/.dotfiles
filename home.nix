@@ -29,7 +29,6 @@
 
   home.packages =
     (with pkgs; [
-      freetube
       kdenlive
       protonmail-desktop
       unityhub

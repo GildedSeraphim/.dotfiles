@@ -209,6 +209,7 @@ in {
         "$mod, V, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy"
 
         "Control_L SHIFT, S, exec, grimblast copy area"
+        "Control_L ALT, S, exec, grimblast --notify --cursor save screen"
 
         "$mod, 1, workspace, 1"
         "$mod, 2, workspace, 2"
