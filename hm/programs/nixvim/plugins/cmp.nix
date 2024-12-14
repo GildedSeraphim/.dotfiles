@@ -83,5 +83,6 @@
     prettierd
     nixfmt-classic
     stylua
+    llvmPackages_19.clang-tools
   ];
 }

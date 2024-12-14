@@ -6,7 +6,7 @@
 }: let
   theme = "catppuccin-mocha";
   th = "${pkgs.base16-schemes}/share/themes/${theme}.yaml";
-  alterfile = ./wal/color.txt;
+  #alterfile = ./wal/color.txt;
   wallpaper = ./wal/retro.png;
   #altered-wallpaper = pkgs.runCommand "altered.png" {} ''
   #${pkgs.imagemagick}/bin/magick convert ${wallpaper} -colorspace sRGB -color-matrix < ${alterfile} altered.png $out
@@ -20,18 +20,18 @@ in {
 
   stylix.base16Scheme = "${th}";
 
-  #stylix.override.base00 = "d6cccd"; # base
+  ##stylix.override.base00 = "d6cccd"; # base
   #stylix.override.base01 = "2f2b51"; # mantle
   #stylix.override.base02 = ""; # surface0
   #stylix.override.base03 = ""; # surface1
   #stylix.override.base04 = ""; # surface2
-  #stylix.override.base05 = "562058"; # text
+  ##stylix.override.base05 = "562058"; # text
   #stylix.override.base06 = "DE9BEE"; # rosewater
-  #stylix.override.base07 = "A379BF"; # lavender
-  #stylix.override.base08 = "eb7186"; # red
+  ##stylix.override.base0E = "8f7fa3"; # lavender
+  ##stylix.override.base0F = "eb7186"; # red
   #stylix.override.base09 = "f1b5cf"; # peach
   #stylix.override.base0A = "fde9c9"; # yellow
-  #stylix.override.base0B = "82b0a3"; # green
+  ##stylix.override.base0C = "82b0a3"; # green
   #stylix.override.base0C = "afbdda"; # teal
   #stylix.override.base0D = "313696"; # blue
   #stylix.override.base0E = "FC4DA3"; # mauve

@@ -38,6 +38,9 @@
           html.enable = true;
           htmx.enable = true;
           tailwindcss.enable = true;
+          clangd.enable = true;
+          glsl_analyzer.enable = true;
+          glslls.enable = true;
         };
       };
     };

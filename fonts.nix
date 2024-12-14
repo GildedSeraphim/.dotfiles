@@ -7,11 +7,14 @@
     fontDir.enable = true;
     packages = with pkgs; [
       # nerd fonts
+      hack-font
       (nerdfonts.override {
         fonts = [
           "IosevkaTermSlab"
         ];
       })
+      #cozette
+      monocraft
       # apple-fonts
       dejavu_fonts
       noto-fonts
