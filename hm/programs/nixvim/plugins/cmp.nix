@@ -1,88 +1,117 @@
-{pkgs, ...}: {
-  programs.nixvim = {
-    plugins = {
-      lspkind.enable = true; # Icons for CMP
+{
+  programs.nixvim.plugins = {
+    luasnip.enable = true;
+    cmp-buffer = { enable = true; };
+    cmp-emoji = { enable = true; };
+    cmp-nvim-lsp = { enable = true; };
+    cmp-path = { enable = true; };
+    cmp_luasnip = { enable = true; };
 
-      cmp-nvim-lsp-signature-help.enable = true;
-      cmp = {
-        enable = true;
-        settings.sources = [
-          # LSP
-          {name = "nvim_lsp";}
-          {name = "nvim_lsp_signature_help";}
-
-          # Filesystem paths
-          {name = "path";}
-
-          # Buffer CMP
-          {name = "buffer";}
-
-          # Snippets
-          {name = "snippy";}
-          {name = "luasnip";}
-
-          {name = "cmp-dap";}
+    cmp = {
+      enable = true;
+      settings = {
+        snippet.expand =
+          "function(args) require('luasnip').lsp_expand(args.body) end";
+        sources = [
+          { name = "nvim_lsp"; }
+          { name = "luasnip"; }
+          {
+            name = "buffer";
+            option.get_bufnrs.__raw = "vim.api.nvim_list_bufs";
+          }
+          { name = "nvim_lua"; }
+          { name = "mkdnflow"; }
+          { name = "path"; }
         ];
-        settings.mapping = {
-          "<Tab>" = "cmp.mapping.select_next_item()";
-          "<S-Tab>" = "cmp.mapping.select_prev_item()";
-          "<C-j>" = "cmp.mapping.scroll_docs(4)";
-          "<C-k>" = "cmp.mapping.scroll_docs(-4)";
-          "<C-Space>" = "cmp.mapping.complete()";
-          "<C-Esc>" = "cmp.mapping.close()";
-          "<CR>" = "cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Insert, select = true })";
-        };
-      };
 
-      # LSP's used: css html nix bash java lua asm?
-      # Completion path buffer snippy luasnip cmp-dap
-      lsp-format.enable = true;
-      none-ls = {
-        enable = true;
-        enableLspFormat = true;
-        sources.formatting = {
-          alejandra.enable = true;
-          nixpkgs_fmt.enable = true;
-          prettier.enable = true;
-          prettierd.enable = true;
-          stylua.enable = true;
+        formatting = {
+          fields = [ "abbr" "kind" "menu" ];
+          format =
+            # lua
+            ''
+                function(_, item)
+                local icons = {
+                  Namespace = "󰌗",
+                  Text = "󰉿",
+                  Method = "󰆧",
+                  Function = "󰆧",
+                  Constructor = "",
+                  Field = "󰜢",
+                  Variable = "󰀫",
+                  Class = "󰠱",
+                  Interface = "",
+                  Module = "",
+                  Property = "󰜢",
+                  Unit = "󰑭",
+                  Value = "󰎠",
+                  Enum = "",
+                  Keyword = "󰌋",
+                  Snippet = "",
+                  Color = "󰏘",
+                  File = "󰈚",
+                  Reference = "󰈇",
+                  Folder = "󰉋",
+                  EnumMember = "",
+                  Constant = "󰏿",
+                  Struct = "󰙅",
+                  Event = "",
+                  Operator = "󰆕",
+                  TypeParameter = "󰊄",
+                  Table = "",
+                  Object = "󰅩",
+                  Tag = "",
+                  Array = "[]",
+                  Boolean = "",
+                  Number = "",
+                  Null = "󰟢",
+                  String = "󰉿",
+                  Calendar = "",
+                  Watch = "󰥔",
+                  Package = "",
+                  Copilot = "",
+                  Codeium = "",
+                  TabNine = "",
+                }
+
+              local icon = icons[item.kind] or ""
+                item.kind = string.format("%s %s", icon, item.kind or "")
+                return item
+                end
+            '';
+        };
+
+        window = {
+          completion = {
+            winhighlight =
+              "FloatBorder:CmpBorder,Normal:CmpPmenu,Search:PmenuSel";
+            scrollbar = false;
+            sidePadding = 0;
+            border = [ "╭" "─" "╮" "│" "╯" "─" "╰" "│" ];
+          };
+
+          documentation = {
+            border = [ "╭" "─" "╮" "│" "╯" "─" "╰" "│" ];
+            winhighlight =
+              "FloatBorder:CmpBorder,Normal:CmpPmenu,Search:PmenuSel";
+          };
+        };
+
+        mapping = {
+          "<C-n>" = "cmp.mapping.select_next_item()";
+          "<C-p>" = "cmp.mapping.select_prev_item()";
+          "<Down>" = "cmp.mapping.select_next_item()";
+          "<Up>" = "cmp.mapping.select_prev_item()";
+          "<C-j>" = "cmp.mapping.select_next_item()";
+          "<C-k>" = "cmp.mapping.select_prev_item()";
+          "<C-d>" = "cmp.mapping.scroll_docs(-4)";
+          "<C-f>" = "cmp.mapping.scroll_docs(4)";
+          "<C-Space>" = "cmp.mapping.complete()";
+          "<C-e>" = "cmp.mapping.close()";
+          "<CR>" =
+            "cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Insert, select = true })";
         };
       };
     };
 
-    # Ability to toggle cmp
-    extraConfigLua = ''
-
-           local cmp_enabled = true
-             vim.api.nvim_create_user_command("ToggleAutoComplete", function()
-             	if cmp_enabled then
-           require("cmp").setup.buffer({ enabled = false })
-        require("notify")("Disabled Autocomplete")
-        cmp_enabled = false
-      else
-        require("cmp").setup.buffer({ enabled = true })
-        require("notify")("Enabled Autocomplete")
-        cmp_enabled = true
-             	end
-             end, {})
-    '';
-
-    keymaps = [
-      {
-        key = "<Leader>ta";
-        action = "<cmd> ToggleAutoComplete <CR>";
-        mode = "n";
-        options.desc = "Toggle Autocomplete";
-      }
-    ];
   };
-
-  home.packages = with pkgs; [
-    alejandra
-    nixpkgs-fmt
-    prettierd
-    nixfmt-classic
-    stylua
-    llvmPackages_19.clang-tools
-  ];
 }
