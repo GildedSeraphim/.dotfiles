@@ -8,51 +8,51 @@
       {
         action = ":nohl<CR>";
         key = "<leader>nh";
-        mode = [ "n" ];
+        mode = ["n"];
       }
       {
         # delete a single character without copying into register
         action = ''"_x'';
         key = "x";
-        mode = [ "n" ];
+        mode = ["n"];
       }
       {
         # increment/decrement numbers
         action = "<C-a>";
         key = "<leader>+";
-        mode = [ "n" ];
+        mode = ["n"];
       }
       {
         action = "<C-x>";
         key = "<leader>-";
-        mode = [ "n" ];
+        mode = ["n"];
       }
 
       # window management
       {
         action = "<C-w>v";
         key = "<leader>sv";
-        mode = [ "n" ];
+        mode = ["n"];
       }
       {
         action = "<C-w>s";
         key = "<leader>sh";
-        mode = [ "n" ];
+        mode = ["n"];
       }
       {
         action = "<C-w>=";
         key = "<leader>se";
-        mode = [ "n" ];
+        mode = ["n"];
       }
       {
         action = ":close<CR>";
         key = "<leader>cs";
-        mode = [ "n" ];
+        mode = ["n"];
       }
       {
         action = ":tabnew<CR>";
         key = "<leader>nt";
-        mode = [ "n" ];
+        mode = ["n"];
       }
       #  {
       #    action = ":BufferClose<CR>";
@@ -62,12 +62,12 @@
       {
         action = ":tabn<CR>";
         key = "<leader>tn";
-        mode = [ "n" ];
+        mode = ["n"];
       }
       {
         action = "tabp<CR>";
         key = "<leader>tp";
-        mode = [ "n" ];
+        mode = ["n"];
       }
 
       # Plugin Keybinds
@@ -166,96 +166,96 @@
       {
         action = ":BufferGoto 1<CR>";
         key = "<A-1>";
-        mode = [ "n" ];
+        mode = ["n"];
       }
       {
         action = ":BufferGoto 2<CR>";
         key = "<A-2>";
-        mode = [ "n" ];
+        mode = ["n"];
       }
       {
         action = ":BufferGoto 3<CR>";
         key = "<A-3>";
-        mode = [ "n" ];
+        mode = ["n"];
       }
       {
         action = ":BufferGoto 4<CR>";
         key = "<A-4>";
-        mode = [ "n" ];
+        mode = ["n"];
       }
       {
         action = ":BufferGoto 5<CR>";
         key = "<A-5>";
-        mode = [ "n" ];
+        mode = ["n"];
       }
       {
         action = ":BufferGoto 6<CR>";
         key = "<A-6>";
-        mode = [ "n" ];
+        mode = ["n"];
       }
       {
         action = ":BufferGoto 7<CR>";
         key = "<A-7>";
-        mode = [ "n" ];
+        mode = ["n"];
       }
       {
         action = ":BufferGoto 8<CR>";
         key = "<A-8>";
-        mode = [ "n" ];
+        mode = ["n"];
       }
       {
         action = ":BufferGoto 9<CR>";
         key = "<A-9>";
-        mode = [ "n" ];
+        mode = ["n"];
       }
       {
         action = ":BufferGoto 0<CR>";
         key = "<A-0>";
-        mode = [ "n" ];
+        mode = ["n"];
       }
 
       # vim maximizer
       {
         action = ":MaximizerToggle<CR>";
         key = "<leader>mt";
-        mode = [ "n" ];
+        mode = ["n"];
       }
 
       # FOR NEO TREE
       {
         action = ":Neotree left<CR>";
         key = "<leader>e";
-        mode = [ "n" ];
+        mode = ["n"];
       }
       {
         action = ":Neotree float<CR>";
         key = "<leader>ef";
-        mode = [ "n" ];
+        mode = ["n"];
       }
       {
         action = ":Neotree close<CR>";
         key = "<leader>ec";
-        mode = [ "n" ];
+        mode = ["n"];
       }
       {
         action = ":Neotree float git_status git_base=main<CR>";
         key = "<leader>ee";
-        mode = [ "n" ];
+        mode = ["n"];
       }
 
       # Terminal
       {
         action = ":terminal<CR>";
         key = "<leader>ot";
-        mode = [ "n" ];
+        mode = ["n"];
       }
 
       # Diagnostics
       {
         action = ":lua vim.diagnostic.open_float()<CR>";
         key = "<leader>ch";
-        mode = [ "n" ];
-        options = { desc = "Diagnostics"; };
+        mode = ["n"];
+        options = {desc = "Diagnostics";};
       }
 
       # markdown preview mapping

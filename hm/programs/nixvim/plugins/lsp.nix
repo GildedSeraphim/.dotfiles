@@ -29,7 +29,7 @@
           lua_ls.enable = true;
           nixd = {
             enable = true;
-            extraOptions = { offset_encoding = "utf-8"; };
+            extraOptions = {offset_encoding = "utf-8";};
           };
           pyright.enable = true;
           pylsp.enable = true;

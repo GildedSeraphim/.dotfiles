@@ -4,7 +4,7 @@
     ./bar
     ./hyprlock
     #    ./rofi
-    #    ./ags
+    ./ags
     ./xdg
     ./test
   ];

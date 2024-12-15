@@ -1,4 +1,4 @@
-{ ... }: {
+{...}: {
   imports = [
     ./auto-sessions.nix
     #./codeium.nix

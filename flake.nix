@@ -22,6 +22,7 @@
     erosanix.url = "github:emmanuelrosa/erosanix";
     #nixvim.url = "github:nix-community/nixvim";
     nvix.url = "github:niksingh710/nvix";
+    ags.url = "github:aylur/ags";
   };
 
   outputs = {
@@ -48,8 +49,8 @@
       config.nvidia.acceptLicense = true;
 
       overlays = [
-	(final: prev: {
-	  nvix = inputs.nvix.packages.${pkgs.system}.full.extend {
+        (final: prev: {
+          nvix = inputs.nvix.packages.${pkgs.system}.full.extend {
             config.colorschemes.tokyonight.settings.transparent = true;
           };
         })
@@ -99,7 +100,7 @@
           stylix.homeManagerModules.stylix
           inputs.spicetify-nix.homeManagerModules.default
           inputs.hyprlux.homeManagerModules.default
-#          inputs.nixvim.homeManagerModules.nixvim
+          #          inputs.nixvim.homeManagerModules.nixvim
         ];
         inherit pkgs;
         extraSpecialArgs = {

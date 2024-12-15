@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   programs.nixvim = {
     plugins = {
       lspkind.enable = true; # Icons for CMP
@@ -8,20 +8,20 @@
         enable = true;
         settings.sources = [
           # LSP
-          { name = "nvim_lsp"; }
-          { name = "nvim_lsp_signature_help"; }
+          {name = "nvim_lsp";}
+          {name = "nvim_lsp_signature_help";}
 
           # Filesystem paths
-          { name = "path"; }
+          {name = "path";}
 
           # Buffer CMP
-          { name = "buffer"; }
+          {name = "buffer";}
 
           # Snippets
-          { name = "snippy"; }
-          { name = "luasnip"; }
+          {name = "snippy";}
+          {name = "luasnip";}
 
-          { name = "cmp-dap"; }
+          {name = "cmp-dap";}
         ];
         settings.mapping = {
           "<Tab>" = "cmp.mapping.select_next_item()";

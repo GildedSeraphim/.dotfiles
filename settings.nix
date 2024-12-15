@@ -29,6 +29,7 @@
     pulse.enable = true;
     wireplumber.enable = true;
   };
+  programs.noisetorch.enable = true;
 
   hardware.enableAllFirmware = true;
 
@@ -133,8 +134,6 @@
     packages = with pkgs; [
     ];
   };
-
-  programs.noisetorch.enable = false;
 
   # DISABLE CUPS DUE TO 9.9 CVE
   #services.printing.browsed.enable = false;

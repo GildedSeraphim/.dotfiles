@@ -1,7 +1,7 @@
 {...}: {
   imports = [
     ./plugins
-  #  ./core
+    #  ./core
     ./keybinds.nix
   ];
 
