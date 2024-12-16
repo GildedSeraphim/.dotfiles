@@ -20,8 +20,7 @@
     xremap-flake.url = "github:xremap/nix-flake";
     zen.url = "github:0xc000022070/zen-browser-flake";
     erosanix.url = "github:emmanuelrosa/erosanix";
-    #nixvim.url = "github:nix-community/nixvim";
-    nvix.url = "github:niksingh710/nvix";
+    nixvim.url = "github:nix-community/nixvim";
     ags.url = "github:aylur/ags";
   };
 
@@ -50,9 +49,7 @@
 
       overlays = [
         (final: prev: {
-          nvix = inputs.nvix.packages.${pkgs.system}.full.extend {
-            config.colorschemes.tokyonight.settings.transparent = true;
-          };
+
         })
       ];
     };
@@ -100,7 +97,6 @@
           stylix.homeManagerModules.stylix
           inputs.spicetify-nix.homeManagerModules.default
           inputs.hyprlux.homeManagerModules.default
-          #          inputs.nixvim.homeManagerModules.nixvim
         ];
         inherit pkgs;
         extraSpecialArgs = {

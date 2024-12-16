@@ -6,13 +6,9 @@
   fonts = {
     fontDir.enable = true;
     packages = with pkgs; [
-      # nerd fonts
+      #nerd-fonts
       hack-font
-      (nerdfonts.override {
-        fonts = [
-          "IosevkaTermSlab"
-        ];
-      })
+      nerd-fonts.iosevka-term-slab
       #cozette
       monocraft
       # apple-fonts
@@ -36,7 +32,6 @@
       comic-mono
       lmmath
       cm_unicode
-      nerdfonts
       # MS Fonts
       corefonts
       vistafonts

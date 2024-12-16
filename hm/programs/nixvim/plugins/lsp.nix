@@ -22,6 +22,7 @@
         svelte.enable = true;
         marksman.enable = true;
         texlab.enable = true;
+        glsl_analyzer.enable = true;
       };
       keymaps.lspBuf = {
         "gd" = "definition";
