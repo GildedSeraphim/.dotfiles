@@ -33,7 +33,10 @@ in {
     inputs.ags.homeManagerModules.default
   ];
 
-  programs.ags.enable = true;
+  programs.ags = {
+    enable = true;
+    configDir = ../ags;
+  };
 
   systemd.user.services.ags = {
     Unit = {
