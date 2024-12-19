@@ -4,8 +4,10 @@
     ./bar
     ./hyprlock
     #    ./rofi
-    #./ags
+    ./ags
     ./xdg
     ./test
+    # ./eww
   ];
+  opt.services.ags.enable = true;
 }

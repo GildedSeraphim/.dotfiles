@@ -6,7 +6,7 @@
   imports = [
     ./alacritty
     ./kitty
-    ./mako
+    #./mako
     ./lf
     ./vscode
     ./btop

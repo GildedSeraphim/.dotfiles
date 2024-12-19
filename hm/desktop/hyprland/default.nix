@@ -42,8 +42,9 @@ in {
 
     settings = {
       exec-once = [
-        ''${startupScript}/bin/start''
+        #''${startupScript}/bin/start''
         #        ''${pkgs.hyprpanel}/bin/hyprpanel''
+        ''ags run''
         ''${pkgs.easyeffects}/bin/easyeffects --gapplication-service &''
         ''wl-paste --type text --watch cliphist store''
       ];

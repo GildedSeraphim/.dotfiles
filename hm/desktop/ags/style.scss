@@ -1,13 +1,23 @@
-/* style aggregator */
+@use "sass:math";
+@import "../ags_res/colors.scss";
 
-/* setup */
-@import "style/prelude";
-@import "style/colors";
-@import "style/general";
+* {
+  &:not(separator) {
+    all: unset;
+  }
 
-/* modules & windows */
-@import "style/bar";
-@import "style/music";
-@import "style/osd";
-@import "style/system-menu";
-@import "style/notifications";
+  &:not(icon) {
+    font-family: "Rubik";
+    font-size: 13px;
+  }
+
+  button {
+    transition: all 0.8s cubic-bezier(0.17, 0.67, 0.24, 1.46);
+  }
+}
+
+@import "./scss/shared.scss";
+@import "./scss/bar.scss";
+@import "./scss/panel.scss";
+@import "./scss/notif.scss";
+@import "./scss/launcher.scss";

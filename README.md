@@ -3,4 +3,4 @@ Updates coming soon!
 
 Special thanks to the following:
 Nixvim Config :: @anotherhadi
-AGS Config :: @fufexan
+AGS Config :: @elythh

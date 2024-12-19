@@ -1,18 +1,20 @@
 {
-  "compilerOptions": {
-    "target": "ES2022",
-    "module": "ES2022",
-    "lib": [
-      "ES2022"
-    ],
-    "allowJs": true,
-    "checkJs": true,
-    "strict": true,
-    "noImplicitAny": false,
-    "baseUrl": ".",
-    "typeRoots": [
-      "./types"
-    ],
-    "skipLibCheck": true
-  }
+    "$schema": "https://json.schemastore.org/tsconfig",
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "jsx": "react-jsx",
+        "jsxImportSource": "/home/gwen/.local/share/ags/gtk3",
+        "module": "ES2022",
+        "moduleResolution": "Bundler",
+        "paths": {
+            "astal": [
+                "/home/gwen/.local/share/ags"
+            ],
+            "astal/*": [
+                "/home/gwen/.local/share/ags/*"
+            ]
+        },
+        "strict": true,
+        "target": "ES2022"
+    }
 }

@@ -21,7 +21,7 @@
     zen.url = "github:0xc000022070/zen-browser-flake";
     erosanix.url = "github:emmanuelrosa/erosanix";
     nixvim.url = "github:nix-community/nixvim";
-    ags.url = "github:aylur/ags/60180a184cfb32b61a1d871c058b31a3b9b0743d";
+    ags.url = "github:aylur/ags";
   };
 
   outputs = {
