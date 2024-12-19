@@ -14,8 +14,8 @@
     ./fonts.nix
     ./hyprland.nix
     ./network.nix
-    ./hardware/rog-strix/laptop.nix
-    ./hardware/rog-strix/nvidia.nix
+    #./hardware/rog-strix/laptop.nix
+    #./hardware/rog-strix/nvidia.nix
     ./hardware/rog-strix/hardware-configuration.nix
     #    ./hardware/keyboard/default.nix
   ];
@@ -41,10 +41,11 @@
   #};
 
   nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.nvidia.acceptLicense = true;
   environment.systemPackages =
     (with pkgs; [
       wireguard-tools
-      inputs.erosanix.packages."${pkgs.system}".foobar2000
+      #     inputs.erosanix.packages."${pkgs.system}".foobar2000
       #inputs.erosanix.packages."${pkgs.system}".nvidia-offload
       nix-ld
       envfs

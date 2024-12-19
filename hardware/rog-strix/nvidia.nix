@@ -8,8 +8,6 @@
   hardware.graphics = {
     enable = true;
     extraPackages = with pkgs; [
-      intel-media-driver
-      intel-vaapi-driver
       vaapiVdpau
       libvdpau-va-gl
       nvidia-vaapi-driver
@@ -38,7 +36,7 @@
     prime = {
       sync.enable = true;
 
-      intelBusId = "PCI:0:2:0";
+      amdgpuBusId = "PCI:4:0:0";
       nvidiaBusId = "PCI:1:0:0";
     };
     modesetting.enable = true;

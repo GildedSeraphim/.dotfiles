@@ -3,7 +3,7 @@
 
   inputs = {
     # DeterminateSystems stuff
-
+    nixos-hardware.url = "github:NixOS/nixos-hardware";
     nixpkgs.url = "nixpkgs/nixos-unstable";
     nixpkgs-unstable.url = "nixpkgs/nixos-unstable";
     home-manager.url = "github:nix-community/home-manager/master";
@@ -33,6 +33,7 @@
     hyprland,
     stylix,
     erosanix,
+    nixos-hardware,
     ...
   } @ inputs: let
     inherit (self) outputs;
@@ -49,7 +50,6 @@
 
       overlays = [
         (final: prev: {
-
         })
       ];
     };
@@ -75,6 +75,7 @@
       nixos = lib.nixosSystem {
         inherit system;
         modules = [
+          nixos-hardware.nixosModules.asus-zephyrus-ga401
           erosanix.nixosModules.protonvpn
           erosanix.nixosModules.fzf
           ./configuration.nix
