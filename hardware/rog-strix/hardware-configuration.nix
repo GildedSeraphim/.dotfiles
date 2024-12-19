@@ -17,8 +17,6 @@
   boot.kernelModules = ["kvm-amd"];
   boot.extraModulePackages = [];
 
-  # config.nvidia.
-
   fileSystems."/" = {
     device = "/dev/disk/by-uuid/9b56ef43-dd86-45a4-ae93-d3a711a87039";
     fsType = "ext4";

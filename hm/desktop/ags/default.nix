@@ -1,28 +1,54 @@
 {
   inputs,
   pkgs,
+  lib,
+  config,
   ...
-}: {
+}: let
+  requiredDeps = with pkgs; [
+    config.wayland.windowManager.hyprland.package
+    bash
+    coreutils
+    dart-sass
+    gawk
+    imagemagick
+    inotify-tools
+    procps
+    ripgrep
+    util-linux
+  ];
+
+  guiDeps = with pkgs; [
+    gnome-control-center
+    mission-center
+    overskride
+    wlogout
+  ];
+
+  dependencies = requiredDeps ++ guiDeps;
+
+  cfg = config.programs.ags;
+in {
   imports = [
     inputs.ags.homeManagerModules.default
   ];
 
-  programs.ags = {
-    enable = true;
-    configDir = ../ags;
+  programs.ags.enable = true;
 
-    extraPackages = with pkgs; [
-      inputs.ags.packages.${pkgs.system}.apps
-      inputs.ags.packages.${pkgs.system}.battery
-      inputs.ags.packages.${pkgs.system}.bluetooth
-      inputs.ags.packages.${pkgs.system}.cava
-      inputs.ags.packages.${pkgs.system}.greet
-      inputs.ags.packages.${pkgs.system}.hyprland
-      inputs.ags.packages.${pkgs.system}.mpris
-      inputs.ags.packages.${pkgs.system}.network
-      inputs.ags.packages.${pkgs.system}.notifd
-      inputs.ags.packages.${pkgs.system}.tray
-      inputs.ags.packages.${pkgs.system}.wireplumber
-    ];
+  systemd.user.services.ags = {
+    Unit = {
+      Description = "Aylur's Gtk Shell";
+      PartOf = [
+        "tray.target"
+        "graphical-session.target"
+      ];
+      After = "graphical-session.target";
+    };
+    Service = {
+      Environment = "PATH=/run/wrappers/bin:${lib.makeBinPath dependencies}";
+      ExecStart = "${cfg.package}/bin/ags";
+      Restart = "on-failure";
+    };
+    Install.WantedBy = ["graphical-session.target"];
   };
 }

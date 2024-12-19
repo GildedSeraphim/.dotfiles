@@ -1,20 +1,13 @@
-// https://gitlab.gnome.org/GNOME/gtk/-/blob/gtk-3-24/gtk/theme/Adwaita/_colors-public.scss
-$theme_fg_color: "@theme_fg_color";
-$theme_bg_color: "@theme_bg_color";
+/* style aggregator */
 
-window.Bar {
-    background: transparent;
-    color: #{$theme_bg_color};
-    font-weight: bold;
+/* setup */
+@import "style/prelude";
+@import "style/colors";
+@import "style/general";
 
-    >centerbox {
-        background: #{$theme_bg_color};
-        border-radius: 10px;
-        margin: 8px;
-    }
-
-    button {
-        border-radius: 8px;
-        margin: 2px;
-    }
-}
+/* modules & windows */
+@import "style/bar";
+@import "style/music";
+@import "style/osd";
+@import "style/system-menu";
+@import "style/notifications";

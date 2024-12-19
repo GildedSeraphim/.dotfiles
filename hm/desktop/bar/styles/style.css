@@ -22,7 +22,7 @@ window#waybar.hidden {
 
 tooltip {
   font-family: IosevkaTermSlab Nerd Font Mono;
-  font-size: 10;
+  font-size: 10px;
   background: @base;
   border: 1px solid @blue;
 }
