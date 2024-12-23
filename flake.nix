@@ -76,8 +76,8 @@
         inherit system;
         modules = [
             #nixos-hardware.nixosModules.asus-zephyrus-ga401
-          erosanix.nixosModules.protonvpn
-          erosanix.nixosModules.fzf
+        #  erosanix.nixosModules.protonvpn
+        #  erosanix.nixosModules.fzf
           ./configuration.nix
         ];
         specialArgs = {

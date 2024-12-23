@@ -16,11 +16,6 @@
     options = "--delete-older-than 1w";
   };
 
-  virtualisation.docker.rootless = {
-    enable = true;
-    setSocketVariable = true;
-  };
-
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -89,11 +84,11 @@
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
-  services.devmon.enable = true;
-  services.udisks2.enable = true;
-  programs.xfconf.enable = true;
-  services.gvfs.enable = true;
-  services.tumbler.enable = true;
+  #  services.devmon.enable = true;
+  # services.udisks2.enable = true;
+  # programs.xfconf.enable = true;
+  # services.gvfs.enable = true;
+  # services.tumbler.enable = true;
 
   networking.networkmanager.enable = true;
 
@@ -108,7 +103,6 @@
   #  hardware.pulseaudio.enable = true;
 
   programs = {
-    adb.enable = true;
     dconf.enable = true;
     xwayland.enable = true;
     zsh = {
@@ -148,33 +142,33 @@
   services.printing.browsing = false;
   # --------------------------
 
-  hardware.opentabletdriver.enable = false;
-  hardware.opentabletdriver.daemon.enable = false;
+  #  hardware.opentabletdriver.enable = false;
+  #hardware.opentabletdriver.daemon.enable = false;
 
-  programs.virt-manager.enable = true;
-  boot.kernelModules = ["kvm-amd" "kvm-intel"];
+  #  programs.virt-manager.enable = true;
+  # boot.kernelModules = ["kvm-amd" "kvm-intel"];
 
   programs.firejail.enable = true;
 
   services.clamav.daemon.enable = true;
   services.clamav.updater.enable = true;
 
-  virtualisation.libvirtd = {
-    enable = true;
-    qemu = {
-      package = pkgs.qemu_kvm;
-      runAsRoot = true;
-      swtpm.enable = true;
-      ovmf = {
-        enable = true;
-        packages = [
-          (pkgs.OVMF.override {
-            secureBoot = true;
-            tpmSupport = true;
-          })
-          .fd
-        ];
-      };
-    };
-  };
+  # virtualisation.libvirtd = {
+  #  enable = true;
+  #  qemu = {
+  #    package = pkgs.qemu_kvm;
+  #    runAsRoot = true;
+  #    swtpm.enable = true;
+  #    ovmf = {
+  #      enable = true;
+  #      packages = [
+  #        (pkgs.OVMF.override {
+  #          secureBoot = true;
+  #         tpmSupport = true;
+  #         })
+  #        .fd
+  #      ];
+  #    };
+  #  };
+  #};
 }
