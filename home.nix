@@ -29,6 +29,7 @@
 
   home.packages =
     (with pkgs; [
+      tree
       kdenlive
       protonmail-desktop
       unityhub
@@ -69,6 +70,7 @@
       nsxiv
       nautilus
       texliveMedium
+      zotero
 
       # icons
       adwaita-icon-theme

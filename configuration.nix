@@ -56,6 +56,9 @@
       waydroid
       alejandra
       nixd
+      lm_sensors
+      lact
+      acpi
     ])
     ++ (with pkgs-unstable; [
       #ollama-cuda

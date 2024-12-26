@@ -12,9 +12,9 @@
         privateKeyFile = "/home/sn/keys/proton.key";
         peers = [
           {
-            publicKey = "rlVvNuYLq3Rsfghyh3ILYLZMifyvlqbIIaUAUlvy2zs=";
+            publicKey = "8jEgre7McUnWFLvjlQSenvYJgUGISWeNyLonrEupuDA=";
             allowedIPs = ["0.0.0.0/0"];
-            endpoint = "37.19.199.139:51820";
+            endpoint = "146.70.230.114:51820";
           }
         ];
       };

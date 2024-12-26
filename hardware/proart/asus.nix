@@ -4,4 +4,8 @@
   services.tlp = {
     enable = true;
   };
+  programs.coolercontrol = {
+    enable = true;
+    nvidiaSupport = true;
+  };
 }

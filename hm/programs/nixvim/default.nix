@@ -13,6 +13,7 @@
     ./plugins/telescope.nix
     ./plugins/vimtex.nix
     ./plugins/zenmode.nix
+    ./plugins/obsidian.nix
 
     ./options.nix
     ./keymaps.nix
