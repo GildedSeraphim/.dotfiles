@@ -12,7 +12,7 @@
     ./btop
     #./nvchad
     ./shell
-    #./cava
+    ./cava
     #      ./firefox
     ./glava
     ./nixvim

@@ -59,6 +59,7 @@
       lm_sensors
       lact
       acpi
+      nvtop
     ])
     ++ (with pkgs-unstable; [
       #ollama-cuda

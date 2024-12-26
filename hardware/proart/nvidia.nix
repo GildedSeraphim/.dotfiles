@@ -14,10 +14,11 @@
   services.xserver.videoDrivers = ["nvidia"];
 
   hardware.nvidia = {
-    hardware.nvidia.prime = {
+   prime = {
       # Make sure to use the correct Bus ID values for your system!
       amdgpuBusId = "PCI:66:0:0";
       nvidiaBusId = "PCI:65:0:0";
+      sync.enable = true;
       # amdgpuBusId = "PCI:54:0:0"; For AMD GPU
     };
     modesetting.enable = true;
