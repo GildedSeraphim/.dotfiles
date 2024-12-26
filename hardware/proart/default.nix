@@ -1,7 +1,7 @@
 {...}:{
   imports = [
     ./hardware-configuration.nix
-    #./nvidia.nix
+    ./nvidia.nix
     ./amd.nix
     ./asus.nix
   ];

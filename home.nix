@@ -36,7 +36,7 @@
       gimp-with-plugins
       thefuck
       python312Packages.pip
-      inputs.zen.packages.${system}.generic
+      inputs.zen.packages.${system}.default
       fast-cli
       hyprcursor
       mako
