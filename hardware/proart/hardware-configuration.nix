@@ -17,6 +17,7 @@
   boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.kernelModules = ["kvm-amd"];
   boot.extraModulePackages = [];
+  boot.blacklistedKernelModules = ["ucsi_acpi"];
 
   fileSystems."/" = {
     device = "/dev/disk/by-uuid/c8c37600-590f-4f9e-ac14-19620b64477a";
