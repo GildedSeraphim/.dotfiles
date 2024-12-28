@@ -8,6 +8,7 @@
     ./zoxide.nix
     ./direnv.nix
     ./tmux.nix
+    ./eza.nix
   ];
 
   home.packages = with pkgs; [
