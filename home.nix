@@ -29,6 +29,7 @@
 
   home.packages =
     (with pkgs; [
+      lazygit
       tree
       kdenlive
       protonmail-desktop

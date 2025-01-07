@@ -9,18 +9,20 @@
     ./direnv.nix
     ./tmux.nix
     ./eza.nix
+    ./zellij.nix
   ];
 
   home.packages = with pkgs; [
   ];
 
-  programs.bash.enable = true;
-  programs.bash.initExtra = ''
-    eval $(${pkgs.thefuck}/bin/thefuck --alias)
-    eval "$(direnv hook bash)"
-  '';
-  programs.bash.shellAliases = {
-    ll = "ls -l";
+  
+  programs.fish.enable = true;
+
+  programs.fish.shellAliases = {
+    l = "eza -al";
+    cd = "z";
+    ls = "eza";
+    ll = "eza -l";
     ".." = "cd ..";
     "dot" = "cd /home/sn/.dotfiles/";
     "neo" = "nitch";
@@ -29,5 +31,10 @@
     "nt" = "nix-tree";
     "dl" = "cd $HOME/Downloads";
     "doc" = "cd $HOME/Documents";
+    "develop" = "nix develop --command fish";
+  };
+
+  programs.fish.shellAbbrs = {
+    "zj" = "zellij";
   };
 }

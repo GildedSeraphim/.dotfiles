@@ -22,6 +22,8 @@
     erosanix.url = "github:emmanuelrosa/erosanix";
     nixvim.url = "github:nix-community/nixvim";
     ags.url = "github:aylur/ags";
+    ghostty.url = "github:ghostty-org/ghostty";
+    sops-nix.url = "github:mic92/sops-nix";
   };
 
   outputs = {
@@ -34,6 +36,7 @@
     stylix,
     erosanix,
     nixos-hardware,
+    ghostty,
     ...
   } @ inputs: let
     inherit (self) outputs;
@@ -75,10 +78,11 @@
       nixos = lib.nixosSystem {
         inherit system;
         modules = [
-            #nixos-hardware.nixosModules.asus-zephyrus-ga401
-        #  erosanix.nixosModules.protonvpn
-        #  erosanix.nixosModules.fzf
+          #nixos-hardware.nixosModules.asus-zephyrus-ga401
+          #  erosanix.nixosModules.protonvpn
+          #  erosanix.nixosModules.fzf
           ./configuration.nix
+          inputs.sops-nix.nixosModules.sops
         ];
         specialArgs = {
           inherit hyprland;
@@ -98,6 +102,11 @@
           stylix.homeManagerModules.stylix
           inputs.spicetify-nix.homeManagerModules.default
           inputs.hyprlux.homeManagerModules.default
+          {
+            home.packages = [
+              ghostty.packages.x86_64-linux.default
+            ];
+          }
         ];
         inherit pkgs;
         extraSpecialArgs = {

@@ -3,6 +3,20 @@
   pkgs,
   ...
 }: {
+  services.syncthing = {
+    enable = false;
+    openDefaultPorts = true;
+    settings.gui = {
+      user = "user";
+      password = "password";
+    };
+  };
+
+  services.openssh = {
+    enable = true;
+    passwordAuthentication = true;
+  };
+
   networking = {
     wg-quick.interfaces = {
       wg0 = {
