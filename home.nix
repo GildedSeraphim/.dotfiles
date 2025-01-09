@@ -34,7 +34,6 @@
       kdenlive
       protonmail-desktop
       unityhub
-      gimp-with-plugins
       thefuck
       python312Packages.pip
       inputs.zen.packages.${system}.default

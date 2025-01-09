@@ -133,6 +133,12 @@ in {
 
       cursor = {
         "no_hardware_cursors" = true;
+        "hide_on_key_press" = true;
+      };
+
+      gestures = {
+        workspace_swipe = true;
+        workspace_swipe_fingers = 4;
       };
 
       input = {
@@ -146,6 +152,12 @@ in {
         "force_no_accel" = "true";
         "kb_layout" = "us";
         "sensitivity" = "0.000000";
+      };
+
+      experimental = {
+        wide_color_gamut = false;
+        hdr = true;
+        xx_color_management_v4 = false;
       };
 
       plugin = {
