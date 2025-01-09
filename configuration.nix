@@ -62,9 +62,10 @@
       nvtop
     ])
     ++ (with pkgs-unstable; [
-      #ollama-cuda
+      #     ollama-cuda
     ]);
   services.open-webui = {
     enable = true;
+    #localhost/8080
   };
 }
