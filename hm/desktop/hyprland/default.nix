@@ -171,10 +171,10 @@ in {
         };
         hyprbars = {
           bar_height = 30;
-          bar_color = "rgb(8f7fa3)";
+          bar_color = "rgb(${config.stylix.base16Scheme.base04})";
           bar_text_font = "${config.stylix.fonts.monospace.name}";
           bar_text_size = 15;
-          "col.text" = "rgb(4d0e55)";
+          "col.text" = "rgb(${config.stylix.base16Scheme.base03})";
           bar_text_align = "left";
           bar_precedence_over_border = true;
           bar_button_padding = 7;
