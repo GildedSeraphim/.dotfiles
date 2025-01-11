@@ -28,7 +28,6 @@ in {
       betterLibrary
     ];
     enabledSnippets = with spicePkgs.snippets; [
-      pointer
       #      rotating-cover-art
       #      hide-playing-gif
       #      oneko
