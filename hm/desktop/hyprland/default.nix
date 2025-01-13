@@ -138,7 +138,7 @@ in {
 
       gestures = {
         workspace_swipe = true;
-        workspace_swipe_fingers = 4;
+        workspace_swipe_fingers = 3;
       };
 
       input = {
