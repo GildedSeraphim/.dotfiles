@@ -19,6 +19,10 @@
   boot.extraModulePackages = [];
   boot.blacklistedKernelModules = ["ucsi_acpi"];
 
+  boot.initrd.systemd.managerEnvironment = {
+    SYSTEMD_BYPASS_HIBERNATION_MEMORY_CHECK = 1;
+  };
+
   fileSystems."/" = {
     device = "/dev/disk/by-uuid/c8c37600-590f-4f9e-ac14-19620b64477a";
     fsType = "ext4";
