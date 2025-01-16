@@ -204,7 +204,7 @@ in {
     tooltip-format = "󰈀 {essid} via {gwaddr}";
     format-linked = "󰈁 {ifname} (No IP)";
     format-disconnected = " Disconnected";
-    format-alt = "{essid} ({signalStrength}%)";
+    format-alt = "({signalStrength}%)";
     on-click-right = "${nm-editor}";
   };
 

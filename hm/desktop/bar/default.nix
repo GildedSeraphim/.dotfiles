@@ -28,15 +28,15 @@
     layer = "top";
     position = "top";
 
-    margin-top = 5;
-    margin-left = 10;
-    margin-right = 10;
+    margin-top = 1;
+    margin-left = 1;
+    margin-right = 1;
 
     modules-left = [
       "custom/power"
-      "hyprland/workspaces"
-      "custom/separator-left"
-      "hyprland/window"
+      #"hyprland/workspaces"
+      #"custom/separator-left"
+      #"hyprland/window"
     ];
   };
 
@@ -83,6 +83,7 @@ in {
     settings = generateOutputSettings [
       "DP-3"
       "HDMI-A-2"
+      "eDP-1"
     ];
     style = with config.lib.stylix.colors;
       mkMerge [
