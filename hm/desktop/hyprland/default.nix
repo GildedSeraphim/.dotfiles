@@ -45,6 +45,7 @@ in {
         #''${startupScript}/bin/start''
         #        ''${pkgs.hyprpanel}/bin/hyprpanel''
         ''ags run''
+        ''waybar''
         ''${pkgs.easyeffects}/bin/easyeffects --gapplication-service &''
         ''wl-paste --type text --watch cliphist store''
       ];
