@@ -69,7 +69,16 @@
       zathura
       nsxiv
       nautilus
-      texliveMedium
+      texliveFull
+      texlivePackages.xfrac
+      texlivePackages.newpx
+      texlivePackages.newtx
+      texlivePackages.newtxsf
+      texlivePackages.eulerpx
+      texlivePackages.pagella-otf
+      texlivePackages.pxfonts
+      texlivePackages.sectsty
+
       zotero
 
       # icons
