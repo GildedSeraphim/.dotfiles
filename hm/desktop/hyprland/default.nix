@@ -205,7 +205,7 @@ in {
 
       bind = [
         "$mod, B, exec, zen"
-        "$mod, Return, exec, kitty"
+        "$mod, Return, exec, foot"
         "$mod, R, exec, rofi -show drun"
         "$mod SHIFT, R, exec, rofi -show run"
         "$mod, F, togglefloating"
