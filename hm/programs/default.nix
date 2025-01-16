@@ -16,5 +16,6 @@
     #      ./firefox
     ./glava
     ./nixvim
+    ./foot
   ];
 }
