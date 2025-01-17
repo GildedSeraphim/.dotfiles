@@ -25,7 +25,7 @@
     ls = "eza";
     ll = "eza -l";
     ".." = "cd ..";
-    "dot" = "cd /home/sn/.dotfiles/";
+    "dot" = "cd /home/sn/.dotfiles/ && onefetch";
     "neo" = "nitch";
     "cl" = "clear";
     "fui" = "nix run github:vimjoyer/nix-update-input";
