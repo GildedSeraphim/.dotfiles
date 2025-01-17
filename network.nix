@@ -4,8 +4,12 @@
   ...
 }: {
   services.syncthing = {
-    enable = false;
+    enable = true;
     openDefaultPorts = true;
+    dataDir = "/home/sn/sync";
+    configDir = "/home/sn/.config/syncthing";
+    user = "sn";
+    group = "users";
     settings.gui = {
       user = "user";
       password = "password";
