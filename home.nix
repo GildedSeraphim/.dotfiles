@@ -80,6 +80,7 @@
       texlivePackages.sectsty
 
       zotero
+      calibre
 
       # icons
       adwaita-icon-theme
