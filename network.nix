@@ -11,6 +11,7 @@
       password = "password";
     };
   };
+  #localhost 8384
 
   services.openssh = {
     enable = true;
