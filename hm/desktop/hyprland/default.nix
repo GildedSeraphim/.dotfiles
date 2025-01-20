@@ -45,7 +45,7 @@ in {
         #''${startupScript}/bin/start''
         #        ''${pkgs.hyprpanel}/bin/hyprpanel''
         ''ags run''
-        ''waybar''
+        #       ''waybar''
         ''${pkgs.easyeffects}/bin/easyeffects --gapplication-service &''
         ''wl-paste --type text --watch cliphist store''
       ];
@@ -171,20 +171,20 @@ in {
           natural_rounding = "yes";
         };
         hyprbars = {
-          bar_height = 30;
-          bar_color = "rgb(8f7fa3)";
-          bar_text_font = "${config.stylix.fonts.monospace.name}";
-          bar_text_size = 15;
-          "col.text" = "rgb(4d0e55)";
-          bar_text_align = "left";
-          bar_precedence_over_border = true;
-          bar_button_padding = 7;
+          # bar_height = 30;
+          #bar_color = "rgb(8f7fa3)";
+          #bar_text_font = "${config.stylix.fonts.monospace.name}";
+          #bar_text_size = 15;
+          #"col.text" = "rgb(4d0e55)";
+          #bar_text_align = "left";
+          #bar_precedence_over_border = true;
+          #bar_button_padding = 7;
           # example buttons (R -> L)
           # hyprbars-button = color, size, on-click
-          hyprbars-button = [
-            "rgb(f88999), 15, 󰖭, hyprctl dispatch killactive"
-            "rgb(d4cacb), 15, , hyprctl dispatch fullscreen 1"
-          ];
+          #hyprbars-button = [
+          #  "rgb(f88999), 15, 󰖭, hyprctl dispatch killactive"
+          #  "rgb(d4cacb), 15, , hyprctl dispatch fullscreen 1"
+          #];
         };
         hyprwinwrap = {
           "class" = "GLava";
