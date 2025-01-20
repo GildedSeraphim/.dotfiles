@@ -31,7 +31,7 @@ in {
     enable = true;
 
     plugins = [
-      inputs.hyprland-plugins.packages."${pkgs.system}".hyprbars
+      #     inputs.hyprland-plugins.packages."${pkgs.system}".hyprbars
       inputs.hyprland-plugins.packages."${pkgs.system}".csgo-vulkan-fix
       #     inputs.split-monitor-workspaces.packages."${pkgs.system}".split-monitor-workspaces
       #      inputs.hyprspace.packages."${pkgs.system}".Hyprspace
