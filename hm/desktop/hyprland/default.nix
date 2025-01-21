@@ -1,17 +1,8 @@
 {
   pkgs,
-  lib,
-  nix-colors,
-  config,
   inputs,
   ...
-}: let
-  startupScript = pkgs.pkgs.writeShellScriptBin "start" ''
-
-    ${pkgs.waybar}/bin/waybar &
-    sleep 1
-  '';
-in {
+}: {
   imports = [
     ./hyprland-environment.nix
     ./wlsunset.nix
@@ -157,7 +148,7 @@ in {
 
       experimental = {
         wide_color_gamut = false;
-        hdr = true;
+        hdr = false;
         xx_color_management_v4 = false;
       };
 
@@ -217,7 +208,7 @@ in {
         "$mod, C, exec, rofi -show calc"
         "$mod SHIFT, C, exec, qalculate-gtk"
         "$mod, T, togglegroup"
-        #        "$mod, G, exec, pkill glava-vis && pkill glava"
+
         "$mod, G, exec, glava-vis"
         "$mod SHIFT, G, exec, pkill glava-vis && pkill glava"
         "$mod, V, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy"
