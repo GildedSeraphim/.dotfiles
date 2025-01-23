@@ -50,6 +50,7 @@
     NIXOS_OZONE_WL = "1";
     STEAM_EXTRA_COMPAT_TOOLS_PATH = "/home/sn/.steam/root/compatibilitytools.d";
     #    VK_DRIVER_FILES = "/run/opengl-driver/share/vulkan/icd.d/nvidia_icd.x86_64.json";
+    CUDA_VISIBLE_DEVICES=0;
   };
 
   programs.gamemode.enable = true;

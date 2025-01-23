@@ -4,7 +4,7 @@
       FloatBorder.fg = "#${config.lib.stylix.colors.base0D}";
     };
     plugins = {
-      copilot-vim.enable = true;
+      copilot-vim.enable = false;
       flash.enable = true;
       image = {
         enable = true;

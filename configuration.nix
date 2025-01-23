@@ -65,7 +65,7 @@
       #     ollama-cuda
     ]);
   services.open-webui = {
-    enable = true;
+    enable = false;
     #localhost/8080
   };
 }
