@@ -8,8 +8,8 @@
     #./hardware/laptop/hardware-configuration.nix
     #./hardware/laptop/nvidia.nix
     #./hardware/laptop/laptop.nix
-    #./hardware/desktop/nvidia.nix
-    #./hardware/desktop/hardware-configuration.nix
+    ./hardware/desktop/nvidia.nix
+    ./hardware/desktop/hardware-configuration.nix
     ./settings.nix
     ./fonts.nix
     ./hyprland.nix
@@ -18,7 +18,7 @@
     #./hardware/rog-strix/nvidia.nix
     #./hardware/rog-strix/hardware-configuration.nix
     #    ./hardware/keyboard/default.nix
-    ./hardware/proart
+    #./hardware/proart
   ];
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
@@ -62,10 +62,10 @@
       nvtop
     ])
     ++ (with pkgs-unstable; [
-      #     ollama-cuda
+           ollama-cuda
     ]);
   services.open-webui = {
-    enable = false;
+    enable = true;
     #localhost/8080
   };
 }
