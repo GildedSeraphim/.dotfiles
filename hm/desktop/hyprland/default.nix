@@ -1,6 +1,7 @@
 {
   pkgs,
   inputs,
+  config,
   ...
 }: {
   imports = [
@@ -22,12 +23,12 @@
     enable = true;
 
     plugins = [
-      #     inputs.hyprland-plugins.packages."${pkgs.system}".hyprbars
+      #inputs.hyprland-plugins.packages."${pkgs.system}".hyprbars
       #     inputs.hyprland-plugins.packages."${pkgs.system}".csgo-vulkan-fix
       #     inputs.split-monitor-workspaces.packages."${pkgs.system}".split-monitor-workspaces
       #      inputs.hyprspace.packages."${pkgs.system}".Hyprspace
-      #inputs.hyprland-plugins.packages."${pkgs.system}".hyprwinwrap
-      #inputs.hyprland-plugins.packages."${pkgs.system}".borders-plus-plus
+      inputs.hyprland-plugins.packages."${pkgs.system}".hyprwinwrap
+      inputs.hyprland-plugins.packages."${pkgs.system}".borders-plus-plus
       # inputs.hyprland-easymotion.packages.${pkgs.system}.hyprland-easymotion
     ];
 
@@ -74,15 +75,29 @@
 
       animations = {
         "enabled" = "yes";
+        first_launch_animation = true;
 
-        "bezier" = "myBezier,0.05, 0.9, 0.1, 1.05";
+        bezier = [
+          "easeOutQuart, 0.25, 1, 0.5, 1"
+        ];
+
         animation = [
-          "windows, 1, 7, myBezier"
-          "windowsOut, 1, 7, default, popin 80%"
-          "border, 1, 10, default"
-          "borderangle, 1, 8, default"
-          "fade, 1, 7, default"
-          "workspaces, 1, 6, default"
+          "global, 1, 5, default"
+          "border, 1, 5, easeOutQuart"
+          "windows, 1, 3, easeOutQuart"
+          "windowsIn, 1, 3, easeOutQuart, slide"
+          "windowsOut, 1, 3, easeOutQuart, slide"
+          "windowsMove, 1, 3, easeOutQuart, slide"
+          "layers, 1, 3, easeOutQuart"
+          "layersIn, 1, 3, easeOutQuart, fade"
+          "layersOut, 1, 3, easeOutQuart, fade"
+          "fade, 1, 3, easeOutQuart"
+          "fadeIn, 1, 3, easeOutQuart"
+          "fadeOut, 1, 3, easeOutQuart"
+          "fadeLayersIn, 1, 3, easeOutQuart"
+          "fadeLayersOut, 1, 3, easeOutQuart"
+          "workspaces, 1, 5, easeOutQuart, slide"
+          "specialWorkspace, 1, 5, easeOutQuart, slidevert"
         ];
       };
       windowrule = [
@@ -161,35 +176,35 @@
           border_size_2 = 2;
           natural_rounding = "yes";
         };
-        hyprbars = {
-          # bar_height = 30;
-          #bar_color = "rgb(8f7fa3)";
-          #bar_text_font = "${config.stylix.fonts.monospace.name}";
-          #bar_text_size = 15;
-          #"col.text" = "rgb(4d0e55)";
-          #bar_text_align = "left";
-          #bar_precedence_over_border = true;
-          #bar_button_padding = 7;
-          # example buttons (R -> L)
-          # hyprbars-button = color, size, on-click
-          #hyprbars-button = [
-          #  "rgb(f88999), 15, 󰖭, hyprctl dispatch killactive"
-          #  "rgb(d4cacb), 15, , hyprctl dispatch fullscreen 1"
-          #];
+        hyprbars = with config.lib.stylix.colors; {
+          bar_height = 30;
+          bar_color = "rgb(8f7fa3)";
+          bar_text_font = "${config.stylix.fonts.monospace.name}";
+          bar_text_size = 15;
+          "col.text" = "rgb(4d0e55)";
+          bar_text_align = "left";
+          bar_precedence_over_border = true;
+          bar_button_padding = 7;
+          #example buttons (R -> L)
+          #hyprbars-button = color, size, on-click
+          hyprbars-button = [
+            "rgb(f88999), 15, 󰖭, hyprctl dispatch killactive"
+            "rgb(d4cacb), 15, , hyprctl dispatch fullscreen 1"
+          ];
         };
         hyprwinwrap = {
           "class" = "GLava";
         };
-        # csgo-vulkan-fix = {
-        #  res_w = 1440;
-        #  res_h = 1080;
-        #
+        csgo-vulkan-fix = {
+          res_w = 1440;
+          res_h = 1080;
+
           # NOT a regex! This is a string and has to exactly match initial_class
-        #  class = "cs2";
-        #
+          class = "cs2";
+
           # Whether to fix the mouse position. A select few apps might be wonky with this.
-        #  fix_mouse = true;
-        #};
+          fix_mouse = true;
+        };
       };
 
       "$mod" = "SUPER";
