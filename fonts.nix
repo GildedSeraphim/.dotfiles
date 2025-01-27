@@ -35,6 +35,18 @@
       # MS Fonts
       corefonts
       vistafonts
+      jetbrains-mono
+      google-fonts
+      material-design-icons
+      rubik
+      lexend
+      noto-fonts
+      roboto
+      nerd-fonts.fira-code
+      nerd-fonts.fantasque-sans-mono
+      nerd-fonts.zed-mono
+      nerd-fonts.iosevka
+      nerd-fonts.monaspace
     ];
   };
 }

@@ -51,6 +51,7 @@ in
           path = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
           size = 24;
           tooltip = false;
+          on-click = "swaync-client -t";
         };
 
         "hyprland/workspaces" = {

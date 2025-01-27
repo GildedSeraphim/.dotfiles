@@ -44,19 +44,19 @@ in {
   stylix.cursor.name = "Banana Red";
 
   stylix.fonts = {
-    #    monospace = {
-    # package = pkgs.nerdfonts.override {fonts = ["IosevkaTermSlab"];};
-    #name = "IosevkaTermSlab Nerd Font Mono";
-    #};
+    sizes.terminal = 13;
     monospace = {
-      package = pkgs.monocraft;
-      name = "Monocraft";
+      name = "GeistMono Nerd Font";
+      package = pkgs.nerd-fonts.geist-mono;
     };
-    sansSerif = config.stylix.fonts.monospace;
-    serif = {
-      package = pkgs.texlivePackages.theanodidot;
-      name = "GFS Didot";
+    sansSerif = {
+      name = "IBM Plex Sans";
+      package = pkgs.ibm-plex;
     };
+  };
+
+  stylix.targets = {
+    hyprlock.enable = false;
   };
 
   colorScheme = {
