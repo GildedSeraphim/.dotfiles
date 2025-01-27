@@ -59,6 +59,7 @@ in
         wireplumber
         notifd
         apps
+        bluetooth
       ];
     };
   };
