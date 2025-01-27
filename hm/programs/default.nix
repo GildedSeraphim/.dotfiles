@@ -19,4 +19,5 @@
     ./foot
     ./obs
   ];
+  opt.terminal.foot.enable = true;
 }
