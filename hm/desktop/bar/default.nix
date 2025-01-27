@@ -93,7 +93,7 @@ in
         "network#address" = {
           format-disconnected = "Disconnected";
           format-ethernet = "{ipaddr}/{cidr}";
-          format-wifi = "{essid}";
+          format-wifi = "({signalStrength}%)";
           tooltip-format-wifi = "WiFi: {essid} ({signalStrength}%)\n󰅃 {bandwidthUpBytes} 󰅀 {bandwidthDownBytes}";
           tooltip-format-ethernet = "Ethernet: {ifname}\n󰅃 {bandwidthUpBytes} 󰅀 {bandwidthDownBytes}";
           tooltip-format-disconnected = "Disconnected";
