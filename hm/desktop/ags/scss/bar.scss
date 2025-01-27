@@ -1,0 +1,169 @@
+$min-size: 28px;
+
+@mixin bar-label {
+  padding: 0 0.8em;
+  background: $base01;
+  color: $base05;
+  border-radius: 5px;
+}
+
+@mixin bar-button {
+  @include bar-label();
+
+  &:hover {
+    background: $base02;
+  }
+}
+
+@mixin square-label($size) {
+  @include bar-label();
+
+  padding: 0;
+  min-width: $size;
+  min-height: $size;
+}
+
+.bar {
+  .cbox {
+    background: $base00;
+    border-top: 2px solid $base01;
+    padding: pxToRem(4px) pxToRem(12px) pxToRem(4px) pxToRem(12px);
+  }
+
+  button {
+    @include bar-button();
+  }
+
+  .launcher-button {
+    @include square-label($size: pxToRem($min-size));
+
+    icon {
+      color: $base05;
+    }
+  }
+
+  .workspaces {
+    @include bar-label();
+    padding: 0 4px;
+    min-width: 130px;
+
+    button {
+      padding: 0;
+      min-height: 20px;
+      min-width: 20px;
+      border-radius: 5px;
+
+      box {
+        transition:
+          background 0.2s cubic-bezier(0.17, 0.67, 0.24, 1.46),
+          padding 0.2s linear;
+
+        min-height: 8px;
+        min-width: 8px;
+        border-radius: 99px;
+        background: $base03;
+        margin: 0 4px;
+      }
+
+      &.occupied>box {
+        background: $base05;
+      }
+
+      &.active>box {
+        padding: 0 7px;
+        background: $base0D;
+      }
+
+      &:hover {
+        background: $base02;
+      }
+    }
+  }
+
+  .clients {
+    @include bar-label();
+
+    button {
+      min-height: 20px;
+      min-width: 20px;
+      padding: 0;
+      border-radius: 5px;
+
+      &.focused {
+        color: $base0D;
+      }
+
+      &:hover {
+        background: $base02;
+      }
+    }
+  }
+
+  .clock {
+    color: $base05;
+  }
+
+  .battery-label {
+    .battery-bulb {
+      background: $base05;
+      margin: 0.8em 0;
+      border-radius: 2px;
+    }
+
+    levelbar {
+      trough {
+        border: 1px solid $base05;
+        border-radius: 2px;
+        padding: 1px;
+        margin: 0.5em 0;
+
+        block.filled {
+          background: $base05;
+        }
+      }
+    }
+
+    &.charging {
+      levelbar {
+        trough {
+          block.filled {
+            background: $base0B;
+          }
+        }
+      }
+    }
+
+    .battery-flash {
+      color: $base05;
+      font-size: 10px;
+    }
+  }
+
+  .tray {
+    border-radius: 5px;
+    background: $base01;
+
+    .tray-items>box {
+      min-width: pxToRem($min-size);
+
+      button {
+        @include square-label($size: pxToRem($min-size));
+        background: transparent;
+      }
+    }
+
+    .tray-button {
+      padding: 0 0.35em;
+
+      icon {
+        color: $base05;
+        font-size: 12px;
+        transition: all 0.2s cubic-bezier(1, 1, 1, 1);
+
+        &.showing {
+          -gtk-icon-transform: rotate(180deg);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,186 @@
+@mixin panel-slider($color) {
+  panel icon {
+    color: $color;
+  }
+
+  scale {
+    margin-right: 0.6em;
+
+    trough {
+      background: $base03;
+      min-height: 2px;
+      border-radius: 5px;
+
+      slider {
+        background: $color;
+        min-height: 7px;
+        min-width: 7px;
+        border-radius: 25px;
+        margin: -4px;
+      }
+
+      highlight {
+        border: none;
+        border-radius: 5px;
+        background: $color;
+      }
+    }
+  }
+}
+
+window#panel {
+  background: transparent;
+
+  .notif-centre {
+    box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.36);
+    margin: 12px;
+    border: 2px solid $base01;
+    background: $base00;
+    border-radius: 5px;
+
+    scrollbar {
+      background: none;
+    }
+
+    .no-notifs {
+      color: $base05;
+    }
+
+    .nc-header {
+      color: $base05;
+      padding: 0.7em;
+      background: $base01;
+
+      .qs-toggle {
+        @include color-button($base0A);
+      }
+
+      .clear-button {
+        @include color-button($base08);
+      }
+    }
+  }
+
+  .quick-settings {
+    border-radius: 5px;
+    border: 2px solid $base01;
+    background: $base00;
+    box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.36);
+    margin: 12px;
+
+    .header {
+      padding: 0.7em;
+      background: $base01;
+      color: $base05;
+
+      .nc-toggle {
+        @include color-button($base0D);
+      }
+    }
+
+    .pb-lower {
+      margin: pxToRem(12px);
+
+      .media-player {
+        background: $base01;
+        padding: 0.7em;
+        border-radius: 5px;
+
+        .cover-art {
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          min-width: 40px;
+          min-height: 40px;
+          border-radius: 5px;
+          margin-right: 1em;
+        }
+
+        .music-icon {
+          background: $base02;
+          min-width: 40px;
+          min-height: 40px;
+          border-radius: 5px;
+          margin-right: 1em;
+          color: $base05;
+        }
+
+        .mp-right {
+          .title {
+            color: $base05;
+          }
+
+          .artist {
+            color: mix($base01, $base05, 40%);
+          }
+
+          scale {
+            trough {
+              background: transparentize($base05, 0.9);
+              border-radius: 5px;
+              min-height: 2px;
+
+              slider {
+                all: unset;
+              }
+
+              highlight {
+                border: none;
+                border-radius: 5px;
+                background: $base05;
+              }
+            }
+          }
+
+          .actions {
+            button {
+              color: $base05;
+              min-width: 18px;
+              min-height: 18px;
+              font-size: 14px;
+            }
+
+            .pause-play {
+              min-width: 26px;
+              min-height: 26px;
+
+              .progress {
+                font-size: 2px;
+                color: $base0D;
+                background: $base03;
+
+                icon {
+                  font-size: 14px;
+                  color: $base05;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .speaker-slider {
+        padding: 0.7em;
+        background: $base01;
+        border-radius: 5px;
+        color: $base05;
+
+        @include panel-slider($base05);
+      }
+
+      .info {
+        border-radius: 5px;
+        padding: 0.7em;
+        background: $base01;
+        color: $base05;
+
+        transition: background 0.8s cubic-bezier(0.17, 0.67, 0.24, 1.46);
+
+        &.active {
+          color: $base01;
+          background: $base0D;
+        }
+      }
+    }
+  }
+}

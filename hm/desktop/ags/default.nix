@@ -41,6 +41,8 @@ in
       procps
       gjs
       inputs.ags.packages.${pkgs.system}.io
+      dart-sass
+      esbuild
     ];
 
     programs.ags = {

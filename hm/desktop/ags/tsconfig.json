@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "jsx": "react-jsx",
+        "jsxImportSource": "/home/gwen/.local/share/ags/gtk3",
+        "module": "ES2022",
+        "moduleResolution": "Bundler",
+        "paths": {
+            "astal": [
+                "/home/gwen/.local/share/ags"
+            ],
+            "astal/*": [
+                "/home/gwen/.local/share/ags/*"
+            ]
+        },
+        "target": "ES2022"
+    }
+}
