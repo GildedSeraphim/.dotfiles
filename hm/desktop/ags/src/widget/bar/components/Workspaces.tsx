@@ -9,7 +9,7 @@ export default function Workspaces() {
       className="workspaces"
       center_widget={
         <box spacing={2}>
-          {Array.from({ length: 5 }, (_, i) => i + 1).map((i) => (
+          {Array.from({ length: 10 }, (_, i) => i + 1).map((i) => (
             <button
               cursor={"pointer"}
               valign={Gtk.Align.CENTER}
