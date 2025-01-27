@@ -27,8 +27,8 @@
       #     inputs.hyprland-plugins.packages."${pkgs.system}".csgo-vulkan-fix
       #     inputs.split-monitor-workspaces.packages."${pkgs.system}".split-monitor-workspaces
       #      inputs.hyprspace.packages."${pkgs.system}".Hyprspace
-      inputs.hyprland-plugins.packages."${pkgs.system}".hyprwinwrap
-      inputs.hyprland-plugins.packages."${pkgs.system}".borders-plus-plus
+      #     inputs.hyprland-plugins.packages."${pkgs.system}".hyprwinwrap
+      #inputs.hyprland-plugins.packages."${pkgs.system}".borders-plus-plus
       # inputs.hyprland-easymotion.packages.${pkgs.system}.hyprland-easymotion
     ];
 
@@ -57,7 +57,7 @@
         #"DP-3,2560x1440@144,2560x0,auto"
         #"Unknown-1,630x350,-2560x-1440,auto"
         #"eDP-1, 3840x2400@60,0x0,auto"
-        #"HDMI-A-2, 1920x1080@74.97,auto,auto"
+        "HDMI-A-2, 1920x1080@74.97,auto,auto"
       ];
 
       decoration = {

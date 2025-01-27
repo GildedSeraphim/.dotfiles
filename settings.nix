@@ -28,6 +28,8 @@
 
   hardware.enableAllFirmware = true;
 
+  qt.enable = false;
+
   xdg.portal.config = {
     common.default = ["gtk"];
     hyprland.default = ["gtk" "hyprland"];

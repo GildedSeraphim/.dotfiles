@@ -60,6 +60,7 @@
       lact
       acpi
       nvtop
+      parted
     ])
     ++ (with pkgs-unstable; [
            ollama-cuda

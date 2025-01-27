@@ -17,5 +17,6 @@
     ./glava
     ./nixvim
     ./foot
+    ./obs
   ];
 }

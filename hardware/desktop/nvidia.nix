@@ -24,6 +24,7 @@
     nvtopPackages.full
     nvitop
     libGL
+    intel-media-driver
   ];
 
   services.xserver.videoDrivers = ["nvidia"];

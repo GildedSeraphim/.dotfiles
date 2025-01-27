@@ -79,13 +79,21 @@
       texlivePackages.pxfonts
       texlivePackages.sectsty
 
+      xfce.thunar
+      xfce.thunar-volman
+      xfce.thunar-media-tags-plugin
+      xfce.thunar-archive-plugin
+
       zotero
       calibre
+
+      renderdoc
 
       # icons
       adwaita-icon-theme
       gnome-icon-theme
       hicolor-icon-theme
+      
     ])
     ++ (with pkgs-unstable; [
       krita
@@ -97,7 +105,6 @@
       vesktop
       winetricks
       protonup-qt
-      obs-studio
       nitch
       sl
       nix-tree

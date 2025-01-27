@@ -7,7 +7,8 @@
     ./ags
     ./xdg
     ./test
-    # ./eww
+    ./eww
   ];
   opt.services.ags.enable = true;
+  opt.services.eww.enable = false;
 }

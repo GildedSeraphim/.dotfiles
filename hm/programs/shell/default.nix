@@ -25,7 +25,7 @@
     ls = "eza";
     ll = "eza -l";
     ".." = "cd ..";
-    "dot" = "cd /home/sn/.dotfiles/ && onefetch";
+    "dot" = "cd /home/sn/.dotfiles/";
     "neo" = "nitch";
     "cl" = "clear";
     "fui" = "nix run github:vimjoyer/nix-update-input";
@@ -35,6 +35,7 @@
     "develop" = "nix develop --command fish";
     "vpn-on" = "systemctl start wg-quick-wg0";
     "vpn-off" = "systemctl stop wg-quick-wg0";
+    "activateLinux" = "nix run github:MrGlockenspiel/activate-linux";
   };
 
   programs.fish.shellAbbrs = {
