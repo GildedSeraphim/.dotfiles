@@ -13,11 +13,12 @@
     #./nvchad
     ./shell
     ./cava
-    #      ./firefox
+    ./firefox
     ./glava
     ./nixvim
     ./foot
     ./obs
   ];
   opt.terminal.foot.enable = true;
+  opt.browser.firefox.enable = true;
 }

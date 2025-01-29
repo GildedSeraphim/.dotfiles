@@ -64,7 +64,6 @@
       imagemagick
       bitwarden-desktop
       dejavu_fonts
-      firefox
       okular
       zathura
       nsxiv

@@ -24,6 +24,7 @@
     ags.url = "github:aylur/ags";
     ghostty.url = "github:ghostty-org/ghostty";
     sops-nix.url = "github:mic92/sops-nix";
+    nur.url = "github:nix-community/NUR";
   };
 
   outputs = {
@@ -52,6 +53,7 @@
       config.nvidia.acceptLicense = true;
 
       overlays = [
+        inputs.nur.overlays.default
         (final: prev: {
         })
       ];
@@ -64,6 +66,7 @@
       config.allowUnfree = true;
       config.nvidia.acceptLicense = true;
       overlays = [
+        inputs.nur.overlays.default
         (final: prev: {
           alpaca = prev.alpaca.override {
             ollama = pkgs-unstable.ollama-cuda;
