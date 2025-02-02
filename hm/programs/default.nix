@@ -20,5 +20,5 @@
     ./obs
   ];
   opt.terminal.foot.enable = true;
-  opt.browser.firefox.enable = true;
+  opt.browser.firefox.enable = false;
 }

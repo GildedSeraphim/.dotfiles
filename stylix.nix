@@ -4,10 +4,10 @@
   nix-colors,
   ...
 }: let
-  theme = "gruvbox-dark-hard";
+  theme = "nord";
   th = "${pkgs.base16-schemes}/share/themes/${theme}.yaml";
   #alterfile = ./wal/color.txt;
-  wallpaper = ./wal/lofoten.png;
+  wallpaper = ./wal/mountain.png;
   #altered-wallpaper = pkgs.runCommand "altered.png" {} ''
   #${pkgs.imagemagick}/bin/magick convert ${wallpaper} -colorspace sRGB -color-matrix < ${alterfile} altered.png $out
   #'';

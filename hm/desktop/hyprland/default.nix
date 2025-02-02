@@ -23,12 +23,12 @@
     enable = true;
 
     plugins = [
-      #inputs.hyprland-plugins.packages."${pkgs.system}".hyprbars
-      #     inputs.hyprland-plugins.packages."${pkgs.system}".csgo-vulkan-fix
+      inputs.hyprland-plugins.packages."${pkgs.system}".hyprbars
+      inputs.hyprland-plugins.packages."${pkgs.system}".csgo-vulkan-fix
       #     inputs.split-monitor-workspaces.packages."${pkgs.system}".split-monitor-workspaces
       #      inputs.hyprspace.packages."${pkgs.system}".Hyprspace
-      #     inputs.hyprland-plugins.packages."${pkgs.system}".hyprwinwrap
-      #inputs.hyprland-plugins.packages."${pkgs.system}".borders-plus-plus
+      inputs.hyprland-plugins.packages."${pkgs.system}".hyprwinwrap
+      inputs.hyprland-plugins.packages."${pkgs.system}".borders-plus-plus
       # inputs.hyprland-easymotion.packages.${pkgs.system}.hyprland-easymotion
     ];
 
@@ -178,19 +178,19 @@
           natural_rounding = "yes";
         };
         hyprbars = with config.lib.stylix.colors; {
-          bar_height = 30;
-          bar_color = "rgb(8f7fa3)";
-          bar_text_font = "${config.stylix.fonts.monospace.name}";
-          bar_text_size = 15;
-          "col.text" = "rgb(4d0e55)";
-          bar_text_align = "left";
+          bar_color = "rgb(${base01})";
+          bar_height = 20;
+          "col.text" = "rgb(${base05})";
           bar_precedence_over_border = true;
-          bar_button_padding = 7;
-          #example buttons (R -> L)
-          #hyprbars-button = color, size, on-click
+          bar_part_of_window = true;
+          bar_title_enabled = true;
+          bar_padding = 12;
+          bar_text_size = 11;
+          bar_text_font = "${config.stylix.fonts.monospace.name}";
+          bar_text_align = "left";
           hyprbars-button = [
-            "rgb(f88999), 15, 󰖭, hyprctl dispatch killactive"
-            "rgb(d4cacb), 15, , hyprctl dispatch fullscreen 1"
+            "rgb(${base08}), 10, 󰖭, hyprctl dispatch killactive"
+            "rgb(${base0B}), 10, , hyprctl dispatch fullscreen 1"
           ];
         };
         hyprwinwrap = {

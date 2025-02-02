@@ -17,7 +17,7 @@
     #./hardware/rog-strix/laptop.nix
     #./hardware/rog-strix/nvidia.nix
     #./hardware/rog-strix/hardware-configuration.nix
-    #    ./hardware/keyboard/default.nix
+    ./hardware/keyboard
     #./hardware/proart
   ];
   programs.nix-ld.enable = true;
@@ -63,7 +63,7 @@
       parted
     ])
     ++ (with pkgs-unstable; [
-      ollama-cuda
+      #ollama-cuda
     ]);
   services.open-webui = {
     enable = true;

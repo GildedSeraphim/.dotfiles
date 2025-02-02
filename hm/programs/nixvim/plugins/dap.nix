@@ -1,7 +1,13 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
+  programs.nixvim.plugins.dap-ui.enable = true;
+  programs.nixvim.plugins.dap-go = {
+    enable = true;
+    settings.delve.path = "${pkgs.delve}/bin/dlv";
+  };
+  programs.nixvim.plugins.dap-virtual-text.enable = true;
   programs.nixvim.plugins.dap = {
     enable = true;
-    adapters = { };
+    adapters = {};
     signs = {
       dapBreakpoint = {
         text = "●";
@@ -15,14 +21,6 @@
         text = "◆";
         texthl = "DapLogPoint";
       };
-    };
-    extensions = {
-      dap-go = {
-        enable = true;
-        delve.path = "${pkgs.delve}/bin/dlv";
-      };
-      dap-ui = { enable = true; };
-      dap-virtual-text = { enable = true; };
     };
   };
 }
