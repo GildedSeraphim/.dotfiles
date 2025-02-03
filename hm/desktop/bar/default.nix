@@ -3,13 +3,12 @@
   config,
   pkgs,
   ...
-}:
-let
+}: let
+  inherit (lib) getExe getExe';
   inherit (lib) mkIf mkEnableOption;
 
   cfg = config.opt.services.waybar;
-in
-{
+in {
   options.opt.services.waybar.enable = mkEnableOption "waybar";
 
   config.programs.waybar = with config.lib.stylix.colors.withHashtag; {
@@ -57,6 +56,11 @@ in
         "hyprland/workspaces" = {
           format = "{id}";
           show-special = true;
+          on-scroll-down = "${getExe' config.wayland.windowManager.hyprland.package "hyprctl"} dispatch workspace e+1";
+          on-scroll-up = "${getExe' config.wayland.windowManager.hyprland.package "hyprctl"} dispatch workspace e-1";
+          format-icons = {
+            "special" = "";
+          };
         };
 
         idle_inhibitor = {

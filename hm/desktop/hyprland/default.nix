@@ -24,7 +24,7 @@
 
     plugins = [
       inputs.hyprland-plugins.packages."${pkgs.system}".hyprbars
-      inputs.hyprland-plugins.packages."${pkgs.system}".csgo-vulkan-fix
+      #inputs.hyprland-plugins.packages."${pkgs.system}".csgo-vulkan-fix
       #     inputs.split-monitor-workspaces.packages."${pkgs.system}".split-monitor-workspaces
       #      inputs.hyprspace.packages."${pkgs.system}".Hyprspace
       inputs.hyprland-plugins.packages."${pkgs.system}".hyprwinwrap
@@ -230,6 +230,7 @@
         "$mod, V, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy"
 
         "$mod, O, exec, obsidian"
+        
 
         "Control_L SHIFT, S, exec, grimblast copy area"
         "Control_L ALT, S, exec, grimblast --notify --cursor save screen"

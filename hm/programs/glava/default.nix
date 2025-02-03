@@ -12,7 +12,7 @@
     /* center line thickness (pixels) */
     #define C_LINE 1.5
     /* outline color */
-    #define OUTLINE #${base0E}
+    #define OUTLINE #${base03}
     /* Amplify magnitude of the results each bar displays */
     #define AMPLIFY 150
     /* Angle (in radians) for how much to rotate the visualizer */
@@ -55,7 +55,7 @@
     /* Bar color changes with height */
     #define GRADIENT (d / GRADIENT_POWER + 1)
     /* Bar color */
-    #define COLOR (#${base0E} * GRADIENT)
+    #define COLOR (#${base03} * GRADIENT)
     /* Direction that the bars are facing, 0 for inward, 1 for outward */
     #define DIRECTION 0
     /* Whether to switch left/right audio buffers */
@@ -84,7 +84,7 @@
     /* Amplify magnitude of the results each bar displays */
     #define AMPLIFY 350
     /* Bar color */
-    #define COLOR (#${base0E} * ((d / 40) + 1))
+    #define COLOR (#${base03} * ((d / 40) + 1))
     /* Angle (in radians) for how much to rotate the visualizer */
     #define ROTATE (PI / 2)
     /* Whether to switch left/right audio buffers */

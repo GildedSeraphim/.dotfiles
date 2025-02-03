@@ -130,8 +130,8 @@
   #services.printing.browsed.enable = false;
   services.avahi.enable = lib.mkForce false;
   services.printing.enable = lib.mkForce false;
-  hardware.pulseaudio.zeroconf.publish.enable = false;
-  hardware.pulseaudio.zeroconf.discovery.enable = false;
+  services.pulseaudio.zeroconf.publish.enable = false;
+  services.pulseaudio.zeroconf.discovery.enable = false;
   services.gnome.core-shell.enable = false;
   services.shairport-sync.enable = false;
   services.printing.cups-pdf.enable = false;

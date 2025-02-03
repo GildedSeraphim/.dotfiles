@@ -18,7 +18,7 @@
   #localhost 8384
 
   services.openssh = {
-    enable = true;
+    enable = false;
     passwordAuthentication = true;
   };
 
