@@ -107,7 +107,7 @@ in {
 
       # renderdoc
       #spirv-tools
-
+      python313Packages.ds4drv
       reaperfm
 
       # icons

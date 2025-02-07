@@ -36,7 +36,7 @@
     open = false;
     nvidiaSettings = true;
   };
-  hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.stable;
+  hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.latest;
 
   #  hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.mkDriver {
   #   version = "555.58";
