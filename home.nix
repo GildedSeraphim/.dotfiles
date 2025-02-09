@@ -105,6 +105,8 @@ in {
       zotero
       calibre
 
+      jetbrains.clion
+
       # renderdoc
       #spirv-tools
       python313Packages.ds4drv

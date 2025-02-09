@@ -5,14 +5,12 @@
   inputs,
   config,
   ...
-}:
-let
+}: let
   inherit (lib) mkIf mkEnableOption;
 
   cfg = config.opt.services.ags;
-in
-{
-  imports = [ inputs.ags.homeManagerModules.default ];
+in {
+  imports = [inputs.ags.homeManagerModules.default];
 
   options.opt.services.ags.enable = mkEnableOption "ags";
 
