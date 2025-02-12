@@ -211,7 +211,7 @@
       "$mod" = "SUPER";
 
       bind = [
-        "$mod, B, exec, zen"
+        "$mod, B, exec, brave"
         "$mod, Return, exec, foot"
         "$mod, R, exec, rofi -show drun"
         "$mod SHIFT, R, exec, rofi -show run"
