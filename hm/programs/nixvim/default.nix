@@ -3,7 +3,7 @@
   imports = [
     inputs.nixvim.homeManagerModules.nixvim
     ./plugins/cmp.nix
-    ./plugins/dashboard.nix
+    #./plugins/dashboard.nix
     ./plugins/lsp.nix
     ./plugins/markdown.nix
     ./plugins/tree.nix
@@ -14,6 +14,7 @@
     ./plugins/vimtex.nix
     ./plugins/zenmode.nix
     ./plugins/obsidian.nix
+    ./plugins/mini.nix
 
     ./options.nix
     ./keymaps.nix
