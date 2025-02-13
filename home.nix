@@ -105,7 +105,8 @@ in {
       zotero
       calibre
 
-      jetbrains.clion
+
+      glow
 
       # renderdoc
       #spirv-tools
