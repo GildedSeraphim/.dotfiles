@@ -1,6 +1,7 @@
 {
   lib,
   pkgs,
+  inputs,
   ...
 }: {
   fonts = {
@@ -47,6 +48,7 @@
       nerd-fonts.zed-mono
       nerd-fonts.iosevka
       nerd-fonts.monaspace
+      inputs.apple-fonts.packages."${pkgs.system}".ny
     ];
   };
 }

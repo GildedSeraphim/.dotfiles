@@ -25,6 +25,7 @@
     ghostty.url = "github:ghostty-org/ghostty";
     sops-nix.url = "github:mic92/sops-nix";
     nur.url = "github:nix-community/NUR";
+    apple-fonts.url = "github:Lyndeno/apple-fonts.nix";
   };
 
   outputs = {
