@@ -46,11 +46,15 @@ in {
   stylix.fonts = {
     sizes.terminal = 13;
     monospace = {
-      name = "GeistMono Nerd Font";
-      package = pkgs.nerd-fonts.geist-mono;
+      name = "Iosevka";
+      package = pkgs.iosevka-bin;
     };
     sansSerif = {
       name = "IBM Plex Sans";
+      package = pkgs.ibm-plex;
+    };
+    serif = {
+      name = "IBM Plex Serif";
       package = pkgs.ibm-plex;
     };
   };

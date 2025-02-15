@@ -48,7 +48,21 @@
       nerd-fonts.zed-mono
       nerd-fonts.iosevka
       nerd-fonts.monaspace
-      inputs.apple-fonts.packages."${pkgs.system}".ny
+      inputs.apple-fonts.packages."${pkgs.system}".sf-mono
     ];
+    fontconfig = {
+      enable = true;
+      antialias = true;
+      allowBitmaps = true;
+      hinting = {
+        enable = true;
+        autohint = false;
+        style = "slight";
+      };
+      subpixel = {
+        lcdfilter = "default";
+        rgba = "rgb";
+      };
+    };
   };
 }
