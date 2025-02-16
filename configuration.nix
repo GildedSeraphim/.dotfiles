@@ -63,7 +63,7 @@
       parted
     ])
     ++ (with pkgs-unstable; [
-      ollama-cuda
+      # ollama-cuda
     ]);
   services.open-webui = {
     enable = true;

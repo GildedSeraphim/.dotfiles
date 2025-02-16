@@ -50,15 +50,11 @@ in {
     (with pkgs; [
       lazygit
       tree
-      kdenlive
       protonmail-desktop
       unityhub
-      thefuck
-      python312Packages.pip
       inputs.zen.packages.${system}.default
       fast-cli
       hyprcursor
-      mako
       brightnessctl
       ungoogled-chromium
       pavucontrol
@@ -68,7 +64,6 @@ in {
       unzip
       mangohud
       protonup
-      lutris
       vlc
       yt-dlp-light
       ffmpeg
@@ -79,24 +74,11 @@ in {
       libreoffice
       qalculate-gtk
       prismlauncher
-      gnome-obfuscate
       imagemagick
       bitwarden-desktop
-      dejavu_fonts
       okular
       zathura
       nsxiv
-      nautilus
-      texliveFull
-      texlivePackages.xfrac
-      texlivePackages.newpx
-      texlivePackages.newtx
-      texlivePackages.newtxsf
-      texlivePackages.eulerpx
-      texlivePackages.pagella-otf
-      texlivePackages.pxfonts
-      texlivePackages.sectsty
-
       xfce.thunar
       xfce.thunar-volman
       xfce.thunar-media-tags-plugin
@@ -105,11 +87,8 @@ in {
       zotero
       calibre
 
-
       glow
 
-      # renderdoc
-      #spirv-tools
       python313Packages.ds4drv
       reaperfm
 
