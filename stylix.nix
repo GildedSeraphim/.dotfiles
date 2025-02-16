@@ -20,24 +20,6 @@ in {
 
   stylix.base16Scheme = "${th}";
 
-  # stylix.override = {
-  #   base00 = "#0a090a";
-  #   base01 = "#DE5845";
-  #   base02 = "#F5A852";
-  #   base03 = "#6E6F99";
-  #   base04 = "#9070AE";
-  #   base05 = "#9D7CC2";
-  #   base06 = "#A492B4";
-  #   base07 = "#e0dfe1";
-  #   base08 = "#9c9c9d";
-  #   base09 = "#DE5845";
-  #   base0A = "#F5A852";
-  #   base0B = "#6E6F99";
-  #   base0C = "#9070AE";
-  #   base0D = "#9D7CC2";
-  #   base0E = "#A492B4";
-  #   base0F = "#e0dfe1";
-  # };
   stylix.image = wallpaper;
 
   stylix.cursor.package = pkgs.banana-cursor;
