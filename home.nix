@@ -92,6 +92,8 @@ in {
       python313Packages.ds4drv
       reaperfm
 
+      vivaldi
+
       # icons
       adwaita-icon-theme
       gnome-icon-theme
