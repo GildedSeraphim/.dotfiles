@@ -36,6 +36,7 @@
     "vpn-on" = "systemctl start wg-quick-wg0";
     "vpn-off" = "systemctl stop wg-quick-wg0";
     "activateLinux" = "nix run github:MrGlockenspiel/activate-linux";
+    "please" = "sudo";
   };
 
   programs.fish.shellAbbrs = {
