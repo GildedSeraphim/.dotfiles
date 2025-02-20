@@ -22,5 +22,4 @@
     #   ./zed
   ];
   opt.terminal.foot.enable = true;
-  opt.browser.firefox.enable = false;
 }
