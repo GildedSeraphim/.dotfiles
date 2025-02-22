@@ -63,7 +63,7 @@
     keymaps = [
       # General Mappings
       {
-        key = "<leader>e";
+        key = "<leader>E";
         action = "<cmd>Oil --float<cr>";
         options.desc = "Oil";
       }
@@ -73,7 +73,7 @@
         options.desc = "Oil";
       }
       {
-        key = "<leader>E";
+        key = "<leader>e";
         action = "<cmd>Neotree toggle<cr>";
         options.desc = "Neotree";
       }

@@ -15,6 +15,7 @@
     ./plugins/zenmode.nix
     ./plugins/obsidian.nix
     ./plugins/mini.nix
+    ./plugins/zig.nix
 
     ./options.nix
     ./keymaps.nix

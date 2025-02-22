@@ -61,9 +61,11 @@
       acpi
       nvtopPackages.full
       parted
+
     ])
     ++ (with pkgs-unstable; [
       # ollama-cuda
+      zig
     ]);
   services.open-webui = {
     enable = false;

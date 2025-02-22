@@ -110,7 +110,7 @@ in {
       winetricks
       protonup-qt
       nitch
-      sl
+
       nix-tree
       wineWowPackages.waylandFull
     ]);

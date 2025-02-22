@@ -10,6 +10,7 @@
         gopls.enable = true;
         eslint.enable = true;
         ts_ls.enable = true;
+        mesonlsp.enable = true;
         nixd = {
           enable = true;
           extraOptions = {
@@ -23,6 +24,7 @@
         marksman.enable = true;
         texlab.enable = true;
         glsl_analyzer.enable = true;
+        zls.enable = true;
       };
       keymaps.lspBuf = {
         "gd" = "definition";

@@ -22,7 +22,6 @@
     erosanix.url = "github:emmanuelrosa/erosanix";
     nixvim.url = "github:nix-community/nixvim";
     ags.url = "github:aylur/ags";
-    ghostty.url = "github:ghostty-org/ghostty";
     sops-nix.url = "github:mic92/sops-nix";
     nur.url = "github:nix-community/NUR";
     apple-fonts.url = "github:Lyndeno/apple-fonts.nix";
@@ -38,7 +37,6 @@
     stylix,
     erosanix,
     nixos-hardware,
-    ghostty,
     ...
   } @ inputs: let
     inherit (self) outputs;
@@ -108,7 +106,6 @@
           inputs.hyprlux.homeManagerModules.default
           {
             home.packages = [
-              ghostty.packages.x86_64-linux.default
             ];
           }
         ];
