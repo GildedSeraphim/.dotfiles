@@ -3,7 +3,7 @@
     zig = {
       enable = true;
       settings = {
-        fmt_autosave = 1;
+        fmt_autosave = 0;
       };
     };
   };

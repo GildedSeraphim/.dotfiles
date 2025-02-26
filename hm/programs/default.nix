@@ -19,7 +19,9 @@
     ./foot
     ./obs
     ./fastfetch
+    ./ghostty
     #   ./zed
   ];
   opt.terminal.foot.enable = true;
+  opt.terminal.ghostty.enable = false;
 }

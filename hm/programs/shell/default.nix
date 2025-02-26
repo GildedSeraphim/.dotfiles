@@ -9,6 +9,7 @@
     ./direnv.nix
     ./tmux.nix
     ./eza.nix
+    ./zellij.nix
   ];
 
   home.packages = with pkgs; [

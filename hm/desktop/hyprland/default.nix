@@ -230,7 +230,6 @@
         "$mod, V, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy"
 
         "$mod, O, exec, obsidian"
-        
 
         "Control_L SHIFT, S, exec, grimblast copy area"
         "Control_L ALT, S, exec, grimblast --notify --cursor save screen"
