@@ -37,6 +37,7 @@
         #''${startupScript}/bin/start''
         #        ''${pkgs.hyprpanel}/bin/hyprpanel''
         ''ags run''
+        ''rog-control-center &''
         #       ''waybar''
         ''${pkgs.easyeffects}/bin/easyeffects --gapplication-service &''
         ''wl-paste --type text --watch cliphist store''
