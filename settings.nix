@@ -149,6 +149,12 @@
   # boot.kernelModules = ["kvm-amd" "kvm-intel"];
 
   programs.firejail.enable = true;
+  programs.firejail.wrappedBinaries = {
+    librewolf = {
+      executable = "${pkgs.lib.getBin pkgs.librewolf}";
+      profile = "${pkgs.firejail}/etc/firejail/firefox.profile";
+    };
+  };
 
   services.clamav.daemon.enable = true;
   services.clamav.updater.enable = true;

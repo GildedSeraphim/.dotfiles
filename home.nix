@@ -92,11 +92,13 @@ in {
       python313Packages.ds4drv
       reaperfm
 
+      freetube
       
       # icons
       adwaita-icon-theme
       gnome-icon-theme
       hicolor-icon-theme
+      cryptomator
     ])
     ++ (with pkgs-unstable; [
       krita
@@ -109,6 +111,8 @@ in {
       winetricks
       protonup-qt
       nitch
+
+      kdenlive
 
       nix-tree
       wineWowPackages.waylandFull

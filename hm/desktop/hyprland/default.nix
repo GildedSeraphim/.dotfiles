@@ -211,7 +211,7 @@
       "$mod" = "SUPER";
 
       bind = [
-        "$mod, B, exec, zen"
+        "$mod, B, exec, librewolf"
         "$mod, Return, exec, foot"
         "$mod, R, exec, rofi -show drun"
         "$mod SHIFT, R, exec, rofi -show run"
@@ -220,6 +220,7 @@
         "$mod, Q, killactive"
         "$mod, W, exec, mako"
         "$mod SHIFT, L, exec, hyprlock"
+        "$mod, D, exec, vesktop"
         #        "$mod, TAB, overview:toggle"
         "$mod, C, exec, rofi -show calc"
         "$mod SHIFT, C, exec, qalculate-gtk"

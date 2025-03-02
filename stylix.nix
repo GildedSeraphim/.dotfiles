@@ -43,6 +43,7 @@ in {
 
   stylix.targets = {
     hyprlock.enable = false;
+    spicetify.enable = false;
   };
 
   colorScheme = {

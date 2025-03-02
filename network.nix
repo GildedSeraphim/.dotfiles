@@ -4,7 +4,7 @@
   ...
 }: {
   services.syncthing = {
-    enable = true;
+    enable = false;
     openDefaultPorts = true;
     dataDir = "/home/sn/sync";
     configDir = "/home/sn/.config/syncthing";
@@ -23,6 +23,12 @@
   };
 
   networking = {
+    firewall = {
+      enable = true;
+      allowedTCPPorts = [];
+      allowedUDPPorts = [];
+    };
+
     wg-quick.interfaces = {
       wg0 = {
         autostart = false;
@@ -31,9 +37,9 @@
         privateKeyFile = "/home/sn/keys/proton.key";
         peers = [
           {
-            publicKey = "N1o6VqzZtb0UCQvmkZGQj909M1sM3Xb787U0YNyODEw=";
+            publicKey = "80qDNuS6cbRa6m0nxDBaJxz4fU0VRaGWvIa5mGMZ1WI=";
             allowedIPs = ["0.0.0.0/0"];
-            endpoint = "146.70.174.66:51820";
+            endpoint = "149.88.103.38:51820";
           }
         ];
       };
