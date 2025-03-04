@@ -22,7 +22,7 @@ in {
   config = mkIf cfg.enable {
     programs.librewolf = {
       # package = (pkgs.wrapFirefox (pkgs.firefox-devedition-unwrapped.override { pipewireSupport = true; }) { });
-      package = pkgs.librewolf;
+      package = pkgs.librewolf-wayland;
       enable = true;
       policies = {
         DisableTelemetry = true;
@@ -213,7 +213,7 @@ in {
           "startup.homepage_welcome_url" = ""; # disable welcome page
           "browser.newtabpage.enabled" = false; # disable new tab page
           "full-screen-api.ignore-widgets" = true; # fullscreen within window
-          "browser.toolbars.bookmarks.visibility" = "never"; # hide bookmarks toolbar
+          "browser.toolbars.bookmarks.visibility" = "always"; # hide bookmarks toolbar
           "browser.aboutConfig.showWarning" = false; # disable warning about about:config
           "media.videocontrols.picture-in-picture.video-toggle.enabled" = true; # disable picture in picture button
 
