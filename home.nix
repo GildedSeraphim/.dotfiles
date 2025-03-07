@@ -50,8 +50,6 @@ in {
     (with pkgs; [
       lazygit
       tree
-      protonmail-desktop
-      unityhub
       inputs.zen.packages.${system}.default
       fast-cli
       hyprcursor
@@ -65,9 +63,6 @@ in {
       mangohud
       protonup
       vlc
-      yt-dlp-light
-      ffmpeg
-      nvidia-system-monitor-qt
       fzf
       obsidian
       #      renderdoc
@@ -87,13 +82,9 @@ in {
       zotero
       calibre
 
-      glow
-
       python313Packages.ds4drv
       reaperfm
 
-      freetube
-      
       # icons
       adwaita-icon-theme
       gnome-icon-theme

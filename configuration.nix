@@ -61,6 +61,7 @@
       acpi
       nvtopPackages.full
       parted
+      steamcmd
     ])
     ++ (with pkgs-unstable; [
       # ollama-cuda
