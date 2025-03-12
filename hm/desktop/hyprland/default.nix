@@ -14,6 +14,7 @@
     wl-clipboard
     cliphist
     grimblast
+    hyprshade
   ];
 
   services.swayosd.enable = true;
@@ -225,6 +226,8 @@
         "$mod, C, exec, rofi -show calc"
         "$mod SHIFT, C, exec, qalculate-gtk"
         "$mod, T, togglegroup"
+
+        "$mod, N,exec, hyprshade toggle ./greyscale.glsl"
 
         "$mod, G, exec, glava-vis"
         "$mod SHIFT, G, exec, pkill glava-vis && pkill glava"

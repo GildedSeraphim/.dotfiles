@@ -8,7 +8,7 @@
     ./kitty
     #./mako
     ./lf
-    ./vscode
+    #   ./vscode
     ./btop
     #./nvchad
     ./shell

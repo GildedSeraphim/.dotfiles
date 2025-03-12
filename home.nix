@@ -71,7 +71,6 @@ in {
       prismlauncher
       imagemagick
       bitwarden-desktop
-      okular
       zathura
       nsxiv
       xfce.thunar
@@ -102,8 +101,7 @@ in {
       winetricks
       protonup-qt
       nitch
-
-      kdenlive
+      kdePackages.kdenlive
 
       nix-tree
       wineWowPackages.waylandFull
