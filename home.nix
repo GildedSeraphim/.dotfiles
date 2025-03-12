@@ -89,6 +89,7 @@ in {
       gnome-icon-theme
       hicolor-icon-theme
       cryptomator
+      comic-mandown
     ])
     ++ (with pkgs-unstable; [
       krita
