@@ -1,35 +1,48 @@
 [
   {
     name = "Bookmarks Toolbar";
+    bookmarks = [
+    ];
+  }
+  {
+    name = "Other Bookmarks";
+    bookmarks = [
+      {
+        name = "User Settings";
+        url = "https://www.mangaread.org/user-settings/?tab=bookmark";
+      }
+    ];
+  }
+  {
+    name = "Bookmarks Toolbar";
     toolbar = true;
     bookmarks = [
       {
-        name = "art";
+        name = "toolbar";
         bookmarks = [
           {
-            name = "ArtStation - Xi Zhang";
-            url = "https://www.artstation.com/zhangxii";
-          }
-        ];
-      }
-      {
-        name = "security";
-        bookmarks = [
-          {
-            name = "Home Page | CISA";
-            url = "https://www.cisa.gov/";
+            name = "UT Canvas";
+            url = "https://utexas.instructure.com/";
           }
           {
-            name = "Introduction to a Self Managed Life: a 13 hour & 28 minute presentation by FUTO software - FUTO";
-            url = "https://wiki.futo.org/index.php/Introduction_to_a_Self_Managed_Life:_a_13_hour_&_28_minute_presentation_by_FUTO_software";
+            name = "GMAIL INBOX";
+            url = "https://mail.google.com/mail/u/0/#inbox";
           }
           {
-            name = "FUTO's Guide to a Self Managed Life: part 1 - YouTube";
-            url = "https://www.youtube.com/watch?v=Et5PPMYuOc8";
+            name = "Google Docs";
+            url = "https://docs.google.com/document/u/0/";
           }
           {
-            name = "FUTO's Guide to a Self Managed Life: part 2 - YouTube";
-            url = "https://www.youtube.com/watch?v=3fW9TV1WQi8";
+            name = "Folder - Google Drive";
+            url = "https://drive.google.com/drive/folders/1wAX9MQBjBF2s_HjZnCwEhI0rFEr-sP48";
+          }
+          {
+            name = "Microsoft apps";
+            url = "https://myapps.microsoft.com/";
+          }
+          {
+            name = "My Drive - Google Drive";
+            url = "https://drive.google.com/drive/u/0/my-drive";
           }
         ];
       }
@@ -220,6 +233,18 @@
             name = "How to Learn Vulkan – Jeremy's Blog";
             url = "https://www.jeremyong.com/c++/vulkan/graphics/rendering/2018/03/26/how-to-learn-vulkan/";
           }
+          {
+            name = "How He Sold 1,000,000+ Copies Of His Game (Thomas Vandenberg) — Full Time Game Dev Podcast Ep. 030 - YouTube";
+            url = "https://www.youtube.com/watch?v=-Gzz2LZGowU";
+          }
+          {
+            name = "Talks";
+            url = "https://caseymuratori.com/talks";
+          }
+          {
+            name = "A Gentle Introduction to Vulkan for Rendering and Compute Workloads - Vulkan Course - YouTube";
+            url = "https://www.youtube.com/watch?v=nD83r06b5NE";
+          }
         ];
       }
       {
@@ -241,35 +266,6 @@
       {
         name = "NixOS Search - Packages";
         url = "https://search.nixos.org/packages";
-      }
-      {
-        name = "toolbar";
-        bookmarks = [
-          {
-            name = "UT Canvas";
-            url = "https://utexas.instructure.com/";
-          }
-          {
-            name = "GMAIL INBOX";
-            url = "https://mail.google.com/mail/u/0/#inbox";
-          }
-          {
-            name = "Google Docs";
-            url = "https://docs.google.com/document/u/0/";
-          }
-          {
-            name = "Folder - Google Drive";
-            url = "https://drive.google.com/drive/folders/1wAX9MQBjBF2s_HjZnCwEhI0rFEr-sP48";
-          }
-          {
-            name = "Microsoft apps";
-            url = "https://myapps.microsoft.com/";
-          }
-          {
-            name = "My Drive - Google Drive";
-            url = "https://drive.google.com/drive/u/0/my-drive";
-          }
-        ];
       }
       {
         name = "nix";
@@ -326,6 +322,36 @@
         ];
       }
       {
+        name = "security";
+        bookmarks = [
+          {
+            name = "Home Page | CISA";
+            url = "https://www.cisa.gov/";
+          }
+          {
+            name = "Introduction to a Self Managed Life: a 13 hour & 28 minute presentation by FUTO software - FUTO";
+            url = "https://wiki.futo.org/index.php/Introduction_to_a_Self_Managed_Life:_a_13_hour_&_28_minute_presentation_by_FUTO_software";
+          }
+          {
+            name = "FUTO's Guide to a Self Managed Life: part 1 - YouTube";
+            url = "https://www.youtube.com/watch?v=Et5PPMYuOc8";
+          }
+          {
+            name = "FUTO's Guide to a Self Managed Life: part 2 - YouTube";
+            url = "https://www.youtube.com/watch?v=3fW9TV1WQi8";
+          }
+        ];
+      }
+      {
+        name = "art";
+        bookmarks = [
+          {
+            name = "ArtStation - Xi Zhang";
+            url = "https://www.artstation.com/zhangxii";
+          }
+        ];
+      }
+      {
         name = "Interesting";
         bookmarks = [
           {
@@ -336,16 +362,15 @@
             name = "Posts | Odysseas";
             url = "https://odysseas.kit.com/";
           }
+          {
+            name = "Self Loathing Man of Inaction - YouTube";
+            url = "https://www.youtube.com/watch?v=wMPTyjl-jvc";
+          }
+          {
+            name = "EasyPeasy";
+            url = "https://read.easypeasymethod.org/index.html";
+          }
         ];
-      }
-    ];
-  }
-  {
-    name = "Other Bookmarks";
-    bookmarks = [
-      {
-        name = "User Settings";
-        url = "https://www.mangaread.org/user-settings/?tab=bookmark";
       }
     ];
   }
