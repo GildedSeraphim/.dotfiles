@@ -9,7 +9,7 @@
   specialisation = {
     nvidia.configuration = {
       system.nixos.tags = ["nvidia"];
-      opt.services.nvidia.enable = lib.mkForce false;
+      opt.services.nvidia.enable = lib.mkForce true;
     };
   };
 }

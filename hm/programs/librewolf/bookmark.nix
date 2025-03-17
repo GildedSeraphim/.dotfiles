@@ -1,10 +1,5 @@
 [
   {
-    name = "Bookmarks Toolbar";
-    bookmarks = [
-    ];
-  }
-  {
     name = "Other Bookmarks";
     bookmarks = [
       {

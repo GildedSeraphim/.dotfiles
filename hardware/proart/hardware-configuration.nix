@@ -12,9 +12,9 @@
     (modulesPath + "/installer/scan/not-detected.nix")
   ];
 
+  boot.kernelPackages = pkgs.linuxKernel.packages.linux_xanmod_latest;
   boot.initrd.availableKernelModules = ["nvme" "xhci_pci" "thunderbolt" "usb_storage" "usbhid" "sd_mod" "sdhci_pci"];
   boot.initrd.kernelModules = ["amdgpu" "asus-wmi" "asus-nb-wmi"];
-  boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.kernelModules = ["kvm-amd"];
   boot.extraModulePackages = [];
   boot.blacklistedKernelModules = ["ucsi_acpi"];
