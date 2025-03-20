@@ -37,9 +37,9 @@
         privateKeyFile = "/home/sn/keys/proton.key";
         peers = [
           {
-            publicKey = "80qDNuS6cbRa6m0nxDBaJxz4fU0VRaGWvIa5mGMZ1WI=";
+            publicKey = "gucaLaM/mgJQbHVvnZNtW+1L4Mi7E2mtTMrhS0K4miU=";
             allowedIPs = ["0.0.0.0/0"];
-            endpoint = "149.88.103.38:51820";
+            endpoint = "146.70.230.146:51820";
           }
         ];
       };

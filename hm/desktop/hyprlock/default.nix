@@ -182,7 +182,7 @@ in {
             text = "cmd[update:1000] ${getExe weather}";
             color = "rgba(255, 255, 255, 1)";
             font_size = 13;
-            font_family = "JetBrainsMono NFM ExtraBold";
+            font_family = "${config.stylix.fonts.monospace.name}";
             position = "0, 465";
             halign = "center";
             valign = "center";
@@ -191,7 +191,7 @@ in {
             text = "cmd[update:1000] date +\"%H\"";
             color = "#${base05}";
             font_size = 150;
-            font_family = "AlfaSlabOne";
+            font_family = "${config.stylix.fonts.monospace.name}";
             position = "0, -250";
             halign = "center";
             valign = "top";
@@ -200,7 +200,7 @@ in {
             text = "cmd[update:1000] date +\"%M\"";
             color = "#${base05}";
             font_size = 150;
-            font_family = "AlfaSlabOne";
+            font_family = "${config.stylix.fonts.monospace.name}";
             position = "0, -420";
             halign = "center";
             valign = "top";
@@ -210,7 +210,7 @@ in {
             text = "cmd[update:1000] date +\"%d %b %A\"";
             color = "rgba(255, 255, 255, 1)";
             font_size = 14;
-            font_family = "JetBrainsMono NFM ExtraBold";
+            font_family = "${config.stylix.fonts.monospace.name}";
             position = "0, -130";
             halign = "center";
             valign = "center";
@@ -221,7 +221,7 @@ in {
             text = "cmd[update:0] ${lib.getExe playerctllock} --status";
             color = "#${base0D}";
             font_size = 14;
-            font_family = "JetBrainsMono Nerd Font Mono";
+            font_family = "${config.stylix.fonts.monospace.name}";
             position = "-740, -290";
             halign = "right";
             valign = "center";
@@ -232,7 +232,7 @@ in {
             text = "cmd[update:0] ${lib.getExe playerctllock} --artist";
             color = "rgba(255, 255, 255, 0.8)";
             font_size = 10;
-            font_family = "JetBrainsMono NFP ExtraBold";
+            font_family = "${config.stylix.fonts.monospace.name}";
             position = "880, -310";
             halign = "left";
             valign = "center";
@@ -243,7 +243,7 @@ in {
             text = "cmd[update:0] ${lib.getExe playerctllock} --title";
             color = "rgba(255, 255, 255, 0.8)";
             font_size = 12;
-            font_family = "JetBrainsMono NFP ExtraBold";
+            font_family = "${config.stylix.fonts.monospace.name}";
             position = "880, -290";
             halign = "left";
             valign = "center";
@@ -254,7 +254,7 @@ in {
             text = "cmd[update:0] ${lib.getExe playerctllock} --length";
             color = "rgba(255, 255, 255, 1)";
             font_size = 11;
-            font_family = "JetBrainsMono Nerd Font Mono";
+            font_family = "${config.stylix.fonts.monospace.name}";
             position = "-740, -300";
             halign = "right";
             valign = "center";
@@ -265,7 +265,7 @@ in {
             text = "cmd[update:0] ${lib.getExe playerctllock} --album";
             color = "rgba(255, 255, 255, 1)";
             font_size = 10;
-            font_family = "JetBrainsMono Nerd Font Mono";
+            font_family = "${config.stylix.fonts.monospace.name}";
             position = "880, -330";
             halign = "left";
             valign = "center";
@@ -274,7 +274,7 @@ in {
             text = "cmd[update:0] ${lib.getExe playerctllock} --source";
             color = "rgba(255, 255, 255, 0.6)";
             font_size = "10";
-            font_family = "JetBrainsMono Nerd Font Mono";
+            font_family = "${config.stylix.fonts.monospace.name}";
             position = "-740, -330";
             halign = "right";
             valign = "center";

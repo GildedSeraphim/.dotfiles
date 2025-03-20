@@ -23,6 +23,7 @@
       scientifica
       siji
       texlivePackages.gfsdidot
+      jetbrains-mono
       # twemoji-color-font
       twitter-color-emoji
       paratype-pt-serif
