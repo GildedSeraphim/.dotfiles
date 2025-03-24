@@ -90,6 +90,9 @@ in {
       hicolor-icon-theme
       cryptomator
       comic-mandown
+
+      teams-for-linux
+      onedrive
     ])
     ++ (with pkgs-unstable; [
       krita
