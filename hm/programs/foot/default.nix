@@ -45,14 +45,7 @@ in {
           command = "notify-send bell";
           command-focused = "no";
         };
-        url = {
-          launch = "${pkgs.xdg-utils}/bin/xdg-open \${url}";
-          label-letters = "sadfjklewcmpgh";
-          osc8-underline = "url-mode";
-          protocols = "http, https, ftp, ftps, file, gemini, gopher, irc, ircs";
 
-          uri-characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_.,~:;/?#@!$&%*+=\"'()[]";
-        };
         mouse = {
           hide-when-typing = "yes";
         };
