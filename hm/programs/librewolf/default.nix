@@ -50,7 +50,11 @@ in {
         };
       };
       profiles.default = {
-        bookmarks = import ./bookmark.nix;
+        bookmarks = {
+          force = true;
+          settings = import ./bookmark.nix;
+        };
+
         extensions.packages = with pkgs.nur.repos.rycee.firefox-addons; [
           ublock-origin
           clearurls

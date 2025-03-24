@@ -1,4 +1,4 @@
-{ config, ... }: {
+{config, ...}: {
   programs.nixvim = {
     highlightOverride = {
       FloatBorder.fg = "#${config.lib.stylix.colors.base0D}";
@@ -8,7 +8,7 @@
       flash.enable = true;
       image = {
         enable = true;
-        integrations.markdown = {
+        settings.integrations.markdown = {
           clearInInsertMode = true;
           onlyRenderImageAtCursor = true;
         };

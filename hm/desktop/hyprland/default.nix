@@ -15,6 +15,7 @@
     cliphist
     grimblast
     hyprshade
+    hyprland-qtutils
   ];
 
   services.swayosd.enable = true;
@@ -102,16 +103,16 @@
         ];
       };
       windowrule = [
-        "noblur, GLava"
-        "noborder, GLava"
-        "noshadow, GLava"
-        "noanim, GLava"
-        "nofocus, GLava"
-        "float, GLava"
-        "pin, GLava"
-        "idleinhibit always, GLava"
-        "size 100% 100%, GLava"
-        "move 0 0, GLava"
+        #   "noblur, GLava"
+        #   "noborder, GLava"
+        #   "noshadow, GLava"
+        #   "noanim, GLava"
+        #   "nofocus, GLava"
+        #   "float, GLava"
+        #   "pin, GLava"
+        #   "idleinhibit always, GLava"
+        #   "size 100% 100%, GLava"
+        #   "move 0 0, GLava"
       ];
       layerrule = [
         "noanim, selection"
@@ -161,12 +162,6 @@
         "force_no_accel" = "true";
         "kb_layout" = "us";
         "sensitivity" = "0.000000";
-      };
-
-      experimental = {
-        wide_color_gamut = false;
-        hdr = false;
-        xx_color_management_v4 = false;
       };
 
       plugin = {
