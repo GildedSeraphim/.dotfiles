@@ -23,6 +23,7 @@
   };
 
   networking = {
+    nameservers = ["1.1.1.1"];
     firewall = {
       enable = true;
       allowedTCPPorts = [];
@@ -37,9 +38,9 @@
         privateKeyFile = "/home/sn/keys/proton.key";
         peers = [
           {
-            publicKey = "gucaLaM/mgJQbHVvnZNtW+1L4Mi7E2mtTMrhS0K4miU=";
+            publicKey = "OKHT7YYBH4VD4vmuxrpbWQtY4SIRHuibasAZthkWEzg=";
             allowedIPs = ["0.0.0.0/0"];
-            endpoint = "146.70.230.146:51820";
+            endpoint = "146.70.230.98:51820";
           }
         ];
       };

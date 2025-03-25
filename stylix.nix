@@ -24,7 +24,7 @@ in {
 
   stylix.cursor.package = pkgs.banana-cursor;
   stylix.cursor.name = "Banana Red";
-  stylix.cursor.size = 10;
+  stylix.cursor.size = 16;
 
   stylix.fonts = {
     sizes.terminal = 13;
