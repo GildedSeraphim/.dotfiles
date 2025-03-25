@@ -66,6 +66,7 @@
     ++ (with pkgs-unstable; [
       # ollama-cuda
       zig
+      zls
     ]);
   services.open-webui = {
     enable = false;
