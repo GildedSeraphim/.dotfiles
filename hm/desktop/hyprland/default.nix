@@ -59,7 +59,7 @@
         #"DP-3,2560x1440@144,2560x0,auto"
         #"Unknown-1,630x350,-2560x-1440,auto"
         #"eDP-1, 3840x2400@60,0x0,auto"
-        "HDMI-A-2, 1920x1080@74.97,auto,auto"
+        "HDMI-A-1, 1920x1080@74.97,auto,auto"
       ];
 
       decoration = {
@@ -207,7 +207,7 @@
       "$mod" = "SUPER";
 
       bind = [
-        "$mod, B, exec, zen"
+        "$mod, B, exec, zen-beta"
         "$mod, Return, exec, foot"
         "$mod, R, exec, rofi -show drun"
         "$mod SHIFT, R, exec, rofi -show run"

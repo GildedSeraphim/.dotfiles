@@ -5,7 +5,7 @@
     mimeApps = {
       enable = true;
       defaultApplications = let
-        browser = ["zen.desktop"];
+        browser = ["zen-beta.desktop"];
         fileManager = ["org.gnome.Nautilus.desktop"];
         editor = ["vscodium.desktop"];
         player = ["vlc.desktop"];

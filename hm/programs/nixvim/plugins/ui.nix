@@ -1,18 +1,17 @@
-{ pkgs, ... }: {
-  home.packages = with pkgs; [ ctags ];
+{pkgs, ...}: {
+  home.packages = with pkgs; [ctags];
 
   programs.nixvim = {
     plugins = {
       lualine = {
         enable = true;
         settings = {
-          options.disabled_filetypes.statusline =
-            [ "dashboard" "alpha" "neo-tree" ];
+          options.disabled_filetypes.statusline = ["dashboard" "alpha" "neo-tree"];
 
           alwaysDivideMiddle = true;
           globalstatus = true;
-          ignoreFocus = [ "neo-tree" ];
-          extensions = [ "fzf" ];
+          ignoreFocus = ["neo-tree"];
+          extensions = ["fzf"];
           theme = "auto";
           componentSeparators = {
             left = "|";
@@ -23,12 +22,12 @@
             right = "█"; # 
           };
           sections = {
-            lualine_a = [ "mode" ];
-            lualine_b = [ "branch" "diff" "diagnostics" ];
-            lualine_c = [ "filename" ];
-            lualine_x = [ "filetype" ];
-            lualine_y = [ "progress" ];
-            lualine_z = [ ''" " .. os.date("%R")'' ];
+            lualine_a = ["mode"];
+            lualine_b = ["branch" "diff" "diagnostics"];
+            lualine_c = ["filename"];
+            lualine_x = ["filetype"];
+            lualine_y = ["progress"];
+            lualine_z = [''" " .. os.date("%R")''];
           };
         };
       };
@@ -36,7 +35,9 @@
       noice.enable = true;
       notify = {
         enable = true;
-        level = "warn";
+        settings = {
+          level = "warn";
+        };
       };
       gitsigns = {
         enable = true;

@@ -81,7 +81,6 @@ in {
       zotero
       calibre
 
-      python313Packages.ds4drv
       reaperfm
 
       # icons
