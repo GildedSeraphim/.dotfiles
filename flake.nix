@@ -3,6 +3,7 @@
 
   inputs = {
     # DeterminateSystems stuff
+    determinate.url = "https://flakehub.com/f/DeterminateSystems/determinate/*";
     nixos-hardware.url = "github:NixOS/nixos-hardware";
     nixpkgs.url = "nixpkgs/nixos-unstable";
     nixpkgs-unstable.url = "nixpkgs/nixos-unstable";
@@ -35,6 +36,7 @@
     nix-colors,
     hyprland,
     stylix,
+    determinate,
     erosanix,
     nixos-hardware,
     ...
@@ -85,6 +87,7 @@
           #  erosanix.nixosModules.fzf
           ./configuration.nix
           inputs.sops-nix.nixosModules.sops
+          determinate.nixosModules.default
         ];
         specialArgs = {
           inherit hyprland;

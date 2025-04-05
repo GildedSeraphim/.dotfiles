@@ -50,7 +50,7 @@ in {
     (with pkgs; [
       lazygit
       tree
-      inputs.zen.packages.${system}.default
+      inputs.zen.packages.${system}.twilight
       fast-cli
       hyprcursor
       brightnessctl
