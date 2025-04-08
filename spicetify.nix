@@ -34,8 +34,8 @@ in {
       #      Hide-Full-Screen-Button
       spinningCdCoverArt
     ];
-    theme = lib.mkForce spicePkgs.themes.sleek;
-    colorScheme = "custom";
+    theme = lib.mkForce spicePkgs.themes.text;
+    colorScheme = "Nord";
 
     customColorScheme = with config.lib.stylix.colors; {
       "text" = "${magenta}";
