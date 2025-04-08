@@ -83,6 +83,8 @@ in {
 
       reaperfm
 
+      texliveFull
+
       # icons
       adwaita-icon-theme
       gnome-icon-theme
