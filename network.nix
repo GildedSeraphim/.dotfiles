@@ -17,6 +17,13 @@
   };
   #localhost 8384
 
+  services.zerotierone = {
+    enable = true;
+    joinNetworks = [
+      "abfd31bd479fc83e"
+    ];
+  };
+
   services.openssh = {
     enable = false;
     passwordAuthentication = true;
