@@ -84,6 +84,12 @@ in {
       reaperfm
 
       texliveFull
+      texlivePackages.amsfonts
+      texlivePackages.amsmath
+            texlivePackages.newpx
+            texlivePackages.xfrac
+
+      texpresso
 
       # icons
       adwaita-icon-theme

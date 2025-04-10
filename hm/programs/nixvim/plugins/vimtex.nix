@@ -3,10 +3,15 @@
     plugins = {
       #cmp-vimtex.enable = true;
       #cmp-latex-symbols.enable = true;
+      texpresso = {
+        enable = true;
+        autoLoad = true;
+      };
+
       vimtex = {
         enable = true;
         settings = {
-          compiler_method = "texi2pdf";
+          compiler_method = "latexmk";
           toc_config = {
             split_pos = "vert topleft";
             split_width = 40;
