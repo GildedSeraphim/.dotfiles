@@ -71,7 +71,6 @@ in {
       prismlauncher
       imagemagick
       bitwarden-desktop
-      zathura
       nsxiv
       xfce.thunar
       xfce.thunar-volman

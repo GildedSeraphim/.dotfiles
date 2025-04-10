@@ -23,6 +23,7 @@
     ./librewolf
     #   ./zed
     #   ./music
+        ./zathura
   ];
   opt.terminal.foot.enable = true;
   opt.terminal.ghostty.enable = false;
