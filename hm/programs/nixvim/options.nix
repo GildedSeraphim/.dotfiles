@@ -5,6 +5,7 @@
 
     number = true;
     relativenumber = true;
+    spell = true;
 
     autoindent = true;
     clipboard = "unnamed,unnamedplus";
@@ -21,7 +22,7 @@
     hlsearch = true;
     smartcase = true;
     wildmode = "list:longest";
-    completeopt = [ "menuone" "noselect" "noinsert" ];
+    completeopt = ["menuone" "noselect" "noinsert"];
     signcolumn = "yes";
     cursorline = false;
     scrolloff = 8;

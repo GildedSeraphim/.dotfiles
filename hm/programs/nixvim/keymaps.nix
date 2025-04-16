@@ -14,12 +14,12 @@
           # General Mappings
           {
             __unkeyed-1 = "<leader>c";
-            mode = [ "n" "v" ];
+            mode = ["n" "v"];
             group = "+code";
           }
           {
             __unkeyed-1 = "<leader>d";
-            mode = [ "n" "v" ];
+            mode = ["n" "v"];
             group = "+debug";
           }
           {
@@ -90,20 +90,12 @@
       }
 
       {
-        key = "<C-h>";
-        action = "<cmd>TmuxNavigateLeft<cr>";
-      }
-      {
-        key = "<C-j>";
-        action = "<cmd>TmuxNavigateDown<cr>";
-      }
-      {
-        key = "<C-k>";
-        action = "<cmd>TmuxNavigateUp<cr>";
-      }
-      {
         key = "<C-l>";
-        action = "<cmd>TmuxNavigateRight<cr>";
+        action = "<c-g>u<Esc>[s1z=`]a<c-g>u";
+        mode = [
+          "i"
+          "n"
+        ];
       }
 
       # UI

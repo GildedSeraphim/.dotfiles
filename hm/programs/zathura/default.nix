@@ -4,7 +4,7 @@
     extraConfig = ''
       set synctex true
       set statusbar-h-padding 0
-      set font 'monospace normal 14'
+      set font 'Iosevka normal 12'
       map u scroll half-up
       map d scroll half-down
       map D toggle_page_mode

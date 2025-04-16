@@ -17,6 +17,8 @@
             split_width = 40;
           };
           view_method = "zathura";
+          conceallevel = 1;
+          tex_conceal = "abdmg";
         };
       };
     };

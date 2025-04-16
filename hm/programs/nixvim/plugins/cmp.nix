@@ -1,31 +1,31 @@
 {
   programs.nixvim.plugins = {
     luasnip.enable = true;
-    cmp-buffer = { enable = true; };
-    cmp-emoji = { enable = true; };
-    cmp-nvim-lsp = { enable = true; };
-    cmp-path = { enable = true; };
-    cmp_luasnip = { enable = true; };
+    cmp-buffer = {enable = true;};
+    cmp-emoji = {enable = true;};
+    cmp-nvim-lsp = {enable = true;};
+    cmp-path = {enable = true;};
+    cmp_luasnip = {enable = true;};
+    cmp-spell = {enable = true;};
 
     cmp = {
       enable = true;
       settings = {
-        snippet.expand =
-          "function(args) require('luasnip').lsp_expand(args.body) end";
+        snippet.expand = "function(args) require('luasnip').lsp_expand(args.body) end";
         sources = [
-          { name = "nvim_lsp"; }
-          { name = "luasnip"; }
+          {name = "nvim_lsp";}
+          {name = "luasnip";}
           {
             name = "buffer";
             option.get_bufnrs.__raw = "vim.api.nvim_list_bufs";
           }
-          { name = "nvim_lua"; }
-          { name = "mkdnflow"; }
-          { name = "path"; }
+          {name = "nvim_lua";}
+          {name = "mkdnflow";}
+          {name = "path";}
         ];
 
         formatting = {
-          fields = [ "abbr" "kind" "menu" ];
+          fields = ["abbr" "kind" "menu"];
           format =
             # lua
             ''
@@ -82,17 +82,15 @@
 
         window = {
           completion = {
-            winhighlight =
-              "FloatBorder:CmpBorder,Normal:CmpPmenu,Search:PmenuSel";
+            winhighlight = "FloatBorder:CmpBorder,Normal:CmpPmenu,Search:PmenuSel";
             scrollbar = false;
             sidePadding = 0;
-            border = [ "╭" "─" "╮" "│" "╯" "─" "╰" "│" ];
+            border = ["╭" "─" "╮" "│" "╯" "─" "╰" "│"];
           };
 
           documentation = {
-            border = [ "╭" "─" "╮" "│" "╯" "─" "╰" "│" ];
-            winhighlight =
-              "FloatBorder:CmpBorder,Normal:CmpPmenu,Search:PmenuSel";
+            border = ["╭" "─" "╮" "│" "╯" "─" "╰" "│"];
+            winhighlight = "FloatBorder:CmpBorder,Normal:CmpPmenu,Search:PmenuSel";
           };
         };
 
@@ -107,11 +105,9 @@
           "<C-f>" = "cmp.mapping.scroll_docs(4)";
           "<C-Space>" = "cmp.mapping.complete()";
           "<C-e>" = "cmp.mapping.close()";
-          "<CR>" =
-            "cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Insert, select = true })";
+          "<CR>" = "cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Insert, select = true })";
         };
       };
     };
-
   };
 }
