@@ -124,7 +124,7 @@
     isNormalUser = true;
     shell = pkgs.fish;
     initialPassword = "password";
-    extraGroups = ["wheel" "video" "audio" "networkmanager" "lp" "scanner" "libvirtd" "libvirt" "uinput"];
+    extraGroups = ["wheel" "video" "audio" "networkmanager" "lp" "scanner" "libvirtd" "libvirt" "uinput" "usbmux"];
     packages = with pkgs; [
     ];
   };

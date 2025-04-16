@@ -18,7 +18,7 @@
   #localhost 8384
 
   services.zerotierone = {
-    enable = true;
+    enable = false;
     joinNetworks = [
       "abfd31bd479fc83e"
     ];

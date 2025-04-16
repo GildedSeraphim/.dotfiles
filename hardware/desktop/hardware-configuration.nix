@@ -15,7 +15,9 @@
   boot.initrd.availableKernelModules = ["xhci_pci" "ahci" "nvme" "usbhid" "usb_storage" "sd_mod"];
   boot.initrd.kernelModules = [];
   boot.kernelModules = ["kvm-intel" "nvidia-uvm"];
-  boot.extraModulePackages = [];
+  boot.extraModulePackages = with config.boot.kernelPackages; [
+    v4l2loopback
+  ];
 
   fileSystems."/" = {
     device = "/dev/disk/by-uuid/5aa18914-d977-4262-85c8-e46ef00f49af";
