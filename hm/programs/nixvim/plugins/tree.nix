@@ -17,7 +17,7 @@
             spell = false;
             wrap = false;
           };
-          float = { padding = 5; };
+          float = {padding = 5;};
           keymaps = {
             "-" = "actions.parent";
             "b" = "actions.parent";

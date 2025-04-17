@@ -1,23 +1,43 @@
 # The render-markdown.nvim plugin is a plugin that renders markdown files in a neovim in a more readable way.
-{ config, ... }:
-let
+{config, ...}: let
   accent = "#${config.lib.stylix.colors.base0D}";
   accent-alt = "#${config.lib.stylix.colors.base08}";
   muted = "#${config.lib.stylix.colors.base03}";
   background = "#${config.lib.stylix.colors.base00}";
 in {
-
   programs.nixvim = {
+    plugins.zk = {
+      enable = true;
+      settings = {
+        lsp = {
+          auto_attach = {
+            enabled = true;
+            filetypes = [
+              "markdown"
+            ];
+          };
+          config = {
+            cmd = [
+              "zk"
+              "lsp"
+            ];
+            name = "zk";
+          };
+        };
+        picker = "telescope";
+      };
+    };
+
     plugins.mkdnflow = {
       enable = true;
-      modules = { conceal = false; };
+      modules = {conceal = false;};
 
-      toDo.symbols = [ " " "-" "x" "!" "/" ];
+      toDo.symbols = [" " "-" "x" "!" "/"];
       mappings = {
         MkdnCreateLink = false;
         MkdnCreateLinkFromClipboard = {
           key = "<leader>ml";
-          modes = [ "n" "v" ];
+          modes = ["n" "v"];
         };
         MkdnDecreaseHeading = {
           key = "<leader>m-";
@@ -26,7 +46,7 @@ in {
         MkdnDestroyLink = false;
         MkdnEnter = {
           key = "<CR>";
-          modes = [ "v" ];
+          modes = ["v"];
         };
         MkdnExtendList = false;
         MkdnFoldSection = {
@@ -97,7 +117,7 @@ in {
         MkdnTablePrevRow = false;
         MkdnToggleToDo = {
           key = "<C-Space>";
-          modes = [ "n" "v" ];
+          modes = ["n" "v"];
         };
         MkdnUpdateNumbering = {
           key = "<leader>mn";
@@ -117,7 +137,7 @@ in {
       "after/ftplugin/markdown.lua".text = ''
         vim.bo.tabstop = 2
         vim.bo.shiftwidth = 2
-        vim.bo.expandtab = true 
+        vim.bo.expandtab = true
       '';
     };
     highlight = {
@@ -151,8 +171,8 @@ in {
       enable = true;
       settings = {
         heading = {
-          icons = [ "# " "󰲣 " "󰲥 " "󰲧 " "󰲩 " "󰲫 " ];
-          backgrounds = [ "RenderMarkdownBg" ];
+          icons = ["# " "󰲣 " "󰲥 " "󰲧 " "󰲩 " "󰲫 "];
+          backgrounds = ["RenderMarkdownBg"];
           foregrounds = [
             "RenderMarkdownH1"
             "RenderMarkdownH2"
@@ -163,8 +183,8 @@ in {
           ];
         };
         checkbox = {
-          unchecked = { highlight = "RenderMarkdownTodo"; };
-          checked = { highlight = "RenderMarkdownTodo"; };
+          unchecked = {highlight = "RenderMarkdownTodo";};
+          checked = {highlight = "RenderMarkdownTodo";};
           custom = {
             pending = {
               raw = "[-]";

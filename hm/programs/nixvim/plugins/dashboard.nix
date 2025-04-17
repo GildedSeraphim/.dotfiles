@@ -1,10 +1,8 @@
-{ config, ... }:
-let
+{config, ...}: let
   accent = "#${config.lib.stylix.colors.base0D}";
   muted = "#${config.lib.stylix.colors.base03}";
   foreground = "#${config.lib.stylix.colors.base05}";
 in {
-
   programs.nixvim.highlight = {
     AlphaHeaderColor.fg = accent;
     AlphaTextColor.fg = foreground;
@@ -129,9 +127,7 @@ in {
             };
           }
         ];
-
       }
     ];
   };
-
 }

@@ -85,10 +85,11 @@ in {
       texliveFull
       texlivePackages.amsfonts
       texlivePackages.amsmath
-            texlivePackages.newpx
-            texlivePackages.xfrac
+      texlivePackages.newpx
+      texlivePackages.xfrac
 
       texpresso
+      zk
 
       # icons
       adwaita-icon-theme

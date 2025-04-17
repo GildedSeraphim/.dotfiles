@@ -1,5 +1,4 @@
-{ config, ... }:
-let
+{config, ...}: let
   accent = "#${config.lib.stylix.colors.base0D}";
   background = "#${config.lib.stylix.colors.base00}";
   background-alt = "#${config.lib.stylix.colors.base01}";
@@ -24,8 +23,8 @@ in {
     };
     plugins.telescope = {
       enable = true;
-      extensions.fzf-native = { enable = true; };
-      settings.defaults = { selection_caret = "❚ "; };
+      extensions.fzf-native = {enable = true;};
+      settings.defaults = {selection_caret = "❚ ";};
     };
   };
 }
