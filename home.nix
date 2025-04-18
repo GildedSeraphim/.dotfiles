@@ -87,6 +87,7 @@ in {
       texlivePackages.amsmath
       texlivePackages.newpx
       texlivePackages.xfrac
+      texlivePackages.pgfplots
 
       texpresso
       zk
@@ -100,6 +101,8 @@ in {
 
       teams-for-linux
       onedrive
+      inkscape
+      inkscape-extensions.textext
     ])
     ++ (with pkgs-unstable; [
       krita
