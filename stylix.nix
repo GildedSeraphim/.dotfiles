@@ -4,7 +4,7 @@
   nix-colors,
   ...
 }: let
-  theme = "nord";
+  theme = "solarized-dark";
   th = "${pkgs.base16-schemes}/share/themes/${theme}.yaml";
   #alterfile = ./wal/color.txt;
   wallpaper = ./wal/ship.png;
