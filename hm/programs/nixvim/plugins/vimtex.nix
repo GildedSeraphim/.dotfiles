@@ -3,10 +3,6 @@
     plugins = {
       #cmp-vimtex.enable = true;
       #cmp-latex-symbols.enable = true;
-      texpresso = {
-        enable = true;
-        autoLoad = true;
-      };
 
       vimtex = {
         enable = true;

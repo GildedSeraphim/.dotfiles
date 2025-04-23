@@ -41,7 +41,8 @@
         ''ags run''
         #       ''waybar''
         ''${pkgs.easyeffects}/bin/easyeffects --gapplication-service &''
-        ''wl-paste --type text --watch cliphist store''
+        ''wl-paste --type text --watch cliphist store &''
+        ''rog-control-center''
       ];
 
       general = {
