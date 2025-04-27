@@ -83,7 +83,7 @@ in {
       reaperfm
 
       texliveFull
-
+      freetube
       # icons
       adwaita-icon-theme
       gnome-icon-theme

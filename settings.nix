@@ -96,6 +96,8 @@
   hardware.bluetooth.powerOnBoot = true;
   services.blueman.enable = true;
 
+  services.solaar.enable = true;
+
   services.flatpak.enable = true;
 
   time.timeZone = "America/Chicago";

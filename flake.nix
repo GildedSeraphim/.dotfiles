@@ -26,6 +26,7 @@
     sops-nix.url = "github:mic92/sops-nix";
     nur.url = "github:nix-community/NUR";
     apple-fonts.url = "github:Lyndeno/apple-fonts.nix";
+    solaar.url = "https://flakehub.com/f/Svenum/Solaar-Flake/*.tar.gz";
   };
 
   outputs = {
@@ -88,6 +89,7 @@
           ./configuration.nix
           inputs.sops-nix.nixosModules.sops
           determinate.nixosModules.default
+          inputs.solaar.nixosModules.default
         ];
         specialArgs = {
           inherit hyprland;

@@ -29,8 +29,8 @@ in {
   stylix.fonts = {
     sizes.terminal = 13;
     monospace = {
-      name = "Iosevka";
-      package = pkgs.iosevka-bin;
+      name = "Departure Mono";
+      package = pkgs.departure-mono;
     };
     sansSerif = {
       name = "IBM Plex Sans";
