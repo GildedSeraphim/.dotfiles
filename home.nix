@@ -95,6 +95,7 @@ in {
       onedrive
       inkscape
       inkscape-extensions.textext
+      unigine-valley
     ])
     ++ (with pkgs-unstable; [
       krita
