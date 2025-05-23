@@ -20,7 +20,6 @@
   services.zerotierone = {
     enable = false;
     joinNetworks = [
-      "abfd31bd479fc83e"
     ];
   };
 

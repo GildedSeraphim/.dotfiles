@@ -64,6 +64,7 @@
       nvtopPackages.full
       parted
       steamcmd
+      fh
     ])
     ++ (with pkgs-unstable; [
       # ollama-cuda
