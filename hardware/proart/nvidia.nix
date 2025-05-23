@@ -35,7 +35,7 @@ in {
       #package = config.boot.kernelPackages.nvidiaPackages.production;
     };
 
-    hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.stable;
+    #   hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.stable;
 
     hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.mkDriver {
       version = "575.51.02";

@@ -59,8 +59,8 @@
         "HDMI-A-1,2560x1440@144.00,0x2400,auto"
         #"DP-3,2560x1440@144,2560x0,auto"
         #"Unknown-1,630x350,-2560x-1440,auto"
-        #"eDP-1, 3840x2400@60,0x0,auto"
-        "eDP-1, disabled"
+        "eDP-1, 3840x2400@60,0x0,auto"
+        #"eDP-1, disabled"
         #"HDMI-A-1, 1920x1080@74.97,auto,auto"
       ];
 
@@ -225,6 +225,9 @@
         "$mod, T, togglegroup"
 
         "$mod, N,exec, hyprshade toggle ./greyscale.glsl"
+
+        ",XF86AudioMute, exec, hyprctl keyword monitor eDP-1, disable"
+        ",XF86AudioUp, exec, hyprctl keyword monitor eDP-1, 3840x2400@60, 0x0, auto"
 
         "$mod, G, exec, glava-vis"
         "$mod SHIFT, G, exec, pkill glava-vis && pkill glava"

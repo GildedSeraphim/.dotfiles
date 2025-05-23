@@ -31,10 +31,10 @@
 
   qt.enable = false;
 
-  xdg.portal.config = {
-    common.default = ["gtk"];
-    hyprland.default = ["gtk" "hyprland"];
-  };
+   xdg.portal.config = {
+     common.default = ["gtk"];
+     hyprland.default = ["gtk" "hyprland"];
+   };
   xdg.portal.enable = true;
   xdg.portal.extraPortals = [
     pkgs.xdg-desktop-portal-gtk
@@ -51,7 +51,7 @@
     trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
   };
   environment.sessionVariables = {
-    FLAKE = "/home/sn/.dotfiles";
+    NH_FLAKE = "/home/sn/.dotfiles";
     NIXOS_CONFIG = "/home/sn/.dotfiles/";
     NIXOS_OZONE_WL = "1";
     STEAM_EXTRA_COMPAT_TOOLS_PATH = "/home/sn/.steam/root/compatibilitytools.d";

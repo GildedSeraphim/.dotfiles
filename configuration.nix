@@ -12,7 +12,7 @@
     #./hardware/desktop/hardware-configuration.nix
     ./settings.nix
     ./fonts.nix
-    ./hyprland.nix
+     ./hyprland.nix
     ./network.nix
     #./hardware/rog-strix/laptop.nix
     #./hardware/rog-strix/nvidia.nix

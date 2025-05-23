@@ -27,9 +27,9 @@ in {
   home.homeDirectory = "/home/sn";
 
   imports = [
-    ./hm
-    ./scripts.nix
-    ./stylix.nix
+     ./hm
+     ./scripts.nix
+     ./stylix.nix
   ];
 
   programs.git = {
@@ -52,7 +52,7 @@ in {
       tree
       inputs.zen.packages.${system}.default
       fast-cli
-      hyprcursor
+       hyprcursor
       brightnessctl
       ungoogled-chromium
       pavucontrol
