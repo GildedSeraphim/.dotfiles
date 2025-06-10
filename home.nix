@@ -96,6 +96,7 @@ in {
       inkscape
       inkscape-extensions.textext
       unigine-valley
+      odoo
     ])
     ++ (with pkgs-unstable; [
       krita

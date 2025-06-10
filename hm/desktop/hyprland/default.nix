@@ -195,8 +195,8 @@
           "class" = "GLava";
         };
         csgo-vulkan-fix = {
-          res_w = 1920;
-          res_h = 1080;
+          res_w = 2560;
+          res_h = 1440;
 
           # NOT a regex! This is a string and has to exactly match initial_class
           class = "cs2";
