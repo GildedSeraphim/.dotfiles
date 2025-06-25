@@ -4,8 +4,8 @@
   ...
 }: {
   imports = [
-    ./alacritty
-    ./kitty
+    # ./alacritty
+    # ./kitty
     #./mako
     ./lf
     #   ./vscode
@@ -17,15 +17,15 @@
     ./glava
     ./nixvim
     ./foot
-    ./obs
+    # ./obs
     ./fastfetch
-    ./ghostty
-    ./librewolf
+    # ./ghostty
+    # ./librewolf
     #   ./zed
     #   ./music
     ./zathura
   ];
   opt.terminal.foot.enable = true;
-  opt.terminal.ghostty.enable = false;
-  opt.browser.librewolf.enable = true;
+  # opt.terminal.ghostty.enable = false;
+  # opt.browser.librewolf.enable = true;
 }
