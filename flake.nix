@@ -27,6 +27,7 @@
     nur.url = "github:nix-community/NUR";
     apple-fonts.url = "github:Lyndeno/apple-fonts.nix";
     solaar.url = "https://flakehub.com/f/Svenum/Solaar-Flake/*.tar.gz";
+    asus-dialpad-driver.url = "github:asus-linux-drivers/asus-dialpad-driver";
   };
 
   outputs = {
@@ -90,6 +91,7 @@
           inputs.sops-nix.nixosModules.sops
           determinate.nixosModules.default
           inputs.solaar.nixosModules.default
+          inputs.asus-dialpad-driver.nixosModules.default
         ];
         specialArgs = {
           inherit hyprland;

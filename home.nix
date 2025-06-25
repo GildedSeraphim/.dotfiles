@@ -101,7 +101,6 @@ in {
     ++ (with pkgs-unstable; [
       krita
       r2modman
-      nh
       nix-output-monitor
       nvd
       brave

@@ -78,7 +78,7 @@
       };
 
       animations = {
-        "enabled" = "yes";
+        "enabled" = "no";
         first_launch_animation = true;
 
         bezier = [

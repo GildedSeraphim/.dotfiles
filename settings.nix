@@ -16,6 +16,13 @@
     options = "--delete-older-than 14d";
   };
 
+  programs.nh = {
+    enable = true;
+    clean.enable = true;
+    clean.extraArgs = "--keep-since 4d --keep 3";
+    flake = "/home/sn/.dotfiles";
+  };
+
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -31,10 +38,10 @@
 
   qt.enable = false;
 
-   xdg.portal.config = {
-     common.default = ["gtk"];
-     hyprland.default = ["gtk" "hyprland"];
-   };
+  xdg.portal.config = {
+    common.default = ["gtk"];
+    hyprland.default = ["gtk" "hyprland"];
+  };
   xdg.portal.enable = true;
   xdg.portal.extraPortals = [
     pkgs.xdg-desktop-portal-gtk
@@ -52,6 +59,7 @@
   };
   environment.sessionVariables = {
     NH_FLAKE = "/home/sn/.dotfiles";
+    NH_NO_CHECKS = "1";
     NIXOS_CONFIG = "/home/sn/.dotfiles/";
     NIXOS_OZONE_WL = "1";
     STEAM_EXTRA_COMPAT_TOOLS_PATH = "/home/sn/.steam/root/compatibilitytools.d";
