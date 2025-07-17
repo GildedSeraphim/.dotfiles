@@ -56,7 +56,7 @@
       };
 
       monitor = [
-        "HDMI-A-1,2560x1440@144.00,0x2400,auto"
+        "HDMI-A-2,2560x1440@60.00,-2560x0,auto"
         #"DP-3,2560x1440@144,2560x0,auto"
         #"Unknown-1,630x350,-2560x-1440,auto"
         "eDP-1, 3840x2400@60,0x0,auto"
@@ -196,7 +196,7 @@
           "class" = "GLava";
         };
         csgo-vulkan-fix = {
-          res_w = 2560;
+          res_w = 1920;
           res_h = 1440;
 
           # NOT a regex! This is a string and has to exactly match initial_class

@@ -12,20 +12,15 @@ in {
   programs.spicetify = {
     enable = true;
     enabledExtensions = with spicePkgs.extensions; [
-      shuffle # shuffle+ (special characters are sanitized out of extension names)
-      keyboardShortcut
       betterGenres
       fullAlbumDate
       copyToClipboard
       volumePercentage
       keyboardShortcut
-      oldSidebar
     ];
     enabledCustomApps = with spicePkgs.apps; [
-      lyricsPlus
       marketplace
       reddit
-      betterLibrary
     ];
     enabledSnippets = with spicePkgs.snippets; [
       #      rotating-cover-art
@@ -34,7 +29,7 @@ in {
       #      Hide-Full-Screen-Button
       spinningCdCoverArt
     ];
-    theme = lib.mkForce spicePkgs.themes.text;
+    theme = lib.mkForce spicePkgs.themes.sleek;
     colorScheme = "custom";
 
     customColorScheme = with config.lib.stylix.colors; {
