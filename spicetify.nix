@@ -30,7 +30,7 @@ in {
       spinningCdCoverArt
     ];
     theme = lib.mkForce spicePkgs.themes.sleek;
-    colorScheme = "custom";
+    colorScheme = "Coral";
 
     customColorScheme = with config.lib.stylix.colors; {
       # "text" = "${magenta}";

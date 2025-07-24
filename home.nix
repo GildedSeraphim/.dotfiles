@@ -66,7 +66,6 @@ in {
       #      renderdoc
       libreoffice
       qalculate-gtk
-      prismlauncher
       imagemagick
       bitwarden-desktop
       nsxiv
@@ -79,13 +78,13 @@ in {
       calibre
 
 
-      texliveFull
       # icons
       adwaita-icon-theme
       gnome-icon-theme
       hicolor-icon-theme
 
       teams-for-linux
+      vesktop
     ])
     ++ (with pkgs-unstable; [
       r2modman

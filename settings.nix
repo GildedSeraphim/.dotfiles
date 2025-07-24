@@ -10,11 +10,11 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   nix.nixPath = ["nixpkgs=${inputs.nixpkgs}"];
-  nix.gc = {
-    automatic = true;
-    dates = "weekly";
-    options = "--delete-older-than 14d";
-  };
+  # nix.gc = {
+  #   automatic = true;
+  #   dates = "weekly";
+  #   options = "--delete-older-than 14d";
+  # };
 
   programs.nh = {
     enable = true;
@@ -50,6 +50,7 @@
   services.displayManager.sddm.enable = true;
   services.displayManager.sddm.wayland.enable = true;
   services.displayManager.sddm.autoNumlock = true;
+  services.displayManager.defaultSession = "hyprland-uwsm";
   services.xserver.enable = true;
 
   nix.settings.auto-optimise-store = true;
