@@ -7,7 +7,7 @@
   theme = "ayu-dark";
   th = "${pkgs.base16-schemes}/share/themes/${theme}.yaml";
   #alterfile = ./wal/color.txt;
-  wallpaper = ./wal/brick.png;
+  wallpaper = ./wal/tokyo-boat.png;
   #altered-wallpaper = pkgs.runCommand "altered.png" {} ''
   #${pkgs.imagemagick}/bin/magick convert ${wallpaper} -colorspace sRGB -color-matrix < ${alterfile} altered.png $out
   #'';
