@@ -3,7 +3,8 @@
   config,
   nix-colors,
   ...
-}: let
+}:
+let
   theme = "ayu-dark";
   th = "${pkgs.base16-schemes}/share/themes/${theme}.yaml";
   #alterfile = ./wal/color.txt;
@@ -11,7 +12,8 @@
   #altered-wallpaper = pkgs.runCommand "altered.png" {} ''
   #${pkgs.imagemagick}/bin/magick convert ${wallpaper} -colorspace sRGB -color-matrix < ${alterfile} altered.png $out
   #'';
-in {
+in
+{
   imports = [
     nix-colors.homeManagerModules.default
   ];
@@ -45,7 +47,7 @@ in {
   stylix.targets = {
     hyprlock.enable = false;
     spicetify.enable = false;
-    librewolf.profileNames = ["default"];
+    librewolf.profileNames = [ "default" ];
   };
 
   colorScheme = {

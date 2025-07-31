@@ -14,7 +14,7 @@ in {
     enabledExtensions = with spicePkgs.extensions; [
       betterGenres
       fullAlbumDate
-      copyToClipboard
+      # copyToClipboard
       volumePercentage
       keyboardShortcut
     ];
