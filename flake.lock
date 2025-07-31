@@ -1854,11 +1854,11 @@
         "trouble-nvim": "trouble-nvim"
       },
       "locked": {
-        "lastModified": 1754000049,
-        "narHash": "sha256-QllVq1vpD22B2C7Lgoolwtta2lAQfIWKXKI1EOeHyl4=",
+        "lastModified": 1754001224,
+        "narHash": "sha256-6EvY0lJE5kwj3duD2i09G1L9IgRMPwDTAl8AffA4bjE=",
         "owner": "GildedSeraphim",
         "repo": "nixvim",
-        "rev": "365179394ff530dc4241be3a0ef2cb1e8d8aa686",
+        "rev": "017f1772baf94eb91dee4a0d547a4255c2d4dd7f",
         "type": "github"
       },
       "original": {

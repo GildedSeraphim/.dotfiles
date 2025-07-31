@@ -15,7 +15,7 @@
     ./cava
     #   ./firefox
     ./glava
-#    ./nixvim
+    #    ./nixvim
     ./foot
     # ./obs
     ./fastfetch

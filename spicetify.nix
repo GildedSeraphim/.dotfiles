@@ -4,9 +4,11 @@
   inputs,
   lib,
   ...
-}: let
+}:
+let
   spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.system};
-in {
+in
+{
   #   home.packages = [ pkgs.spotify ];
 
   programs.spicetify = {
@@ -30,7 +32,7 @@ in {
       spinningCdCoverArt
     ];
     theme = lib.mkForce spicePkgs.themes.sleek;
-    colorScheme = "Coral";
+    colorScheme = "custom";
 
     customColorScheme = with config.lib.stylix.colors; {
       # "text" = "${magenta}";

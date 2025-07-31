@@ -4,7 +4,7 @@
   ...
 }: {
   imports = [
-     ./desktop
-     ./programs
+    ./desktop
+    ./programs
   ];
 }
