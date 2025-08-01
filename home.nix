@@ -3,7 +3,8 @@
   pkgs-unstable,
   inputs,
   ...
-}: let
+}:
+let
   # reaperfm =
   #   pkgs.runCommand "reaper" {
   #     buildInputs = [pkgs.makeWrapper];
@@ -22,7 +23,8 @@
   #     makeWrapper ${pkgs.reaper}/bin/reaper $out/bin/reaper \
   #       --set GDK_BACKEND x11 \
   #   '';
-in {
+in
+{
   home.username = "sn";
   home.homeDirectory = "/home/sn";
 
@@ -84,6 +86,7 @@ in {
 
       teams-for-linux
       vesktop
+      chromium
     ])
     ++ (with pkgs-unstable; [
       r2modman

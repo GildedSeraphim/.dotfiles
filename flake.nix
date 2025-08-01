@@ -26,105 +26,112 @@
     apple-fonts.url = "github:Lyndeno/apple-fonts.nix";
     solaar.url = "https://flakehub.com/f/Svenum/Solaar-Flake/*.tar.gz";
     asus-dialpad-driver.url = "github:asus-linux-drivers/asus-dialpad-driver";
+    hyprland-easymotion = {
+      url = "github:zakk4223/hyprland-easymotion";
+      inputs.hyprland.follows = "hyprland";
+    };
   };
 
-  outputs = {
-    self,
-    nixpkgs,
-    home-manager,
-    nixpkgs-unstable,
-    nix-colors,
-    hyprland,
-    stylix,
-    erosanix,
-    nixos-hardware,
-    ...
-  } @ inputs: let
-    inherit (self) outputs;
-    system = "x86_64-linux";
-    host = "nixos";
-    username = "sn";
-    pkgs = import nixpkgs {
-      inherit system;
-      inherit host;
-      inherit username;
-      inherit inputs;
-      config.allowUnfree = true;
-      config.nvidia.acceptLicense = true;
-
-      overlays = [
-        inputs.nur.overlays.default
-        (final: prev: {
-        })
-      ];
-    };
-    pkgs-unstable = import nixpkgs-unstable {
-      inherit system;
-      inherit host;
-      inherit username;
-      inherit inputs;
-      config.allowUnfree = true;
-      config.nvidia.acceptLicense = true;
-      overlays = [
-        inputs.nur.overlays.default
-        (final: prev: {
-          alpaca = prev.alpaca.override {
-            ollama = pkgs-unstable.ollama-cuda;
-          };
-          alpaca-cuda = final.alpaca;
-        })
-      ];
-    };
-    lib = nixpkgs.lib;
-  in {
-    nixosConfigurations = {
-      nixos = lib.nixosSystem {
+  outputs =
+    {
+      self,
+      nixpkgs,
+      home-manager,
+      nixpkgs-unstable,
+      nix-colors,
+      hyprland,
+      stylix,
+      erosanix,
+      nixos-hardware,
+      ...
+    }@inputs:
+    let
+      inherit (self) outputs;
+      system = "x86_64-linux";
+      host = "nixos";
+      username = "sn";
+      pkgs = import nixpkgs {
         inherit system;
-        modules = [
-          #nixos-hardware.nixosModules.asus-zephyrus-ga401
-          #  erosanix.nixosModules.protonvpn
-          #  erosanix.nixosModules.fzf
-          ./configuration.nix
-          inputs.sops-nix.nixosModules.sops
-          inputs.solaar.nixosModules.default
-          inputs.asus-dialpad-driver.nixosModules.default
-        ];
-        specialArgs = {
-          inherit hyprland;
-          inherit inputs;
-          inherit pkgs-unstable;
-          inherit nix-colors;
-        };
-      };
-    };
+        inherit host;
+        inherit username;
+        inherit inputs;
+        config.allowUnfree = true;
+        config.nvidia.acceptLicense = true;
 
-    homeConfigurations = {
-      sn = home-manager.lib.homeManagerConfiguration {
-        modules = [
-          ./spicetify.nix
-          ./home.nix
-          hyprland.homeManagerModules.default
-          stylix.homeManagerModules.stylix
-          inputs.spicetify-nix.homeManagerModules.default
-          inputs.hyprlux.homeManagerModules.default
-          {
-            home.packages = [
-              inputs.nixvim.packages.${pkgs.system}.default
-            ];
-          }
+        overlays = [
+          inputs.nur.overlays.default
+          (final: prev: {
+          })
         ];
-        inherit pkgs;
-        extraSpecialArgs = {
+      };
+      pkgs-unstable = import nixpkgs-unstable {
+        inherit system;
+        inherit host;
+        inherit username;
+        inherit inputs;
+        config.allowUnfree = true;
+        config.nvidia.acceptLicense = true;
+        overlays = [
+          inputs.nur.overlays.default
+          (final: prev: {
+            alpaca = prev.alpaca.override {
+              ollama = pkgs-unstable.ollama-cuda;
+            };
+            alpaca-cuda = final.alpaca;
+          })
+        ];
+      };
+      lib = nixpkgs.lib;
+    in
+    {
+      nixosConfigurations = {
+        nixos = lib.nixosSystem {
           inherit system;
-          inherit username;
+          modules = [
+            #nixos-hardware.nixosModules.asus-zephyrus-ga401
+            #  erosanix.nixosModules.protonvpn
+            #  erosanix.nixosModules.fzf
+            ./configuration.nix
+            inputs.sops-nix.nixosModules.sops
+            inputs.solaar.nixosModules.default
+            inputs.asus-dialpad-driver.nixosModules.default
+          ];
+          specialArgs = {
+            inherit hyprland;
+            inherit inputs;
+            inherit pkgs-unstable;
+            inherit nix-colors;
+          };
+        };
+      };
+
+      homeConfigurations = {
+        sn = home-manager.lib.homeManagerConfiguration {
+          modules = [
+            ./spicetify.nix
+            ./home.nix
+            hyprland.homeManagerModules.default
+            stylix.homeManagerModules.stylix
+            inputs.spicetify-nix.homeManagerModules.default
+            inputs.hyprlux.homeManagerModules.default
+            {
+              home.packages = [
+                inputs.nixvim.packages.${pkgs.system}.default
+              ];
+            }
+          ];
           inherit pkgs;
-          inherit hyprland;
-          inherit inputs;
-          inherit pkgs-unstable;
-          inherit nix-colors;
-          inherit outputs;
+          extraSpecialArgs = {
+            inherit system;
+            inherit username;
+            inherit pkgs;
+            inherit hyprland;
+            inherit inputs;
+            inherit pkgs-unstable;
+            inherit nix-colors;
+            inherit outputs;
+          };
         };
       };
     };
-  };
 }

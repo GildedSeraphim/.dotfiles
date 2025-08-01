@@ -3,7 +3,8 @@
   inputs,
   config,
   ...
-}: {
+}:
+{
   imports = [
     ./hyprland-environment.nix
     ./wlsunset.nix
