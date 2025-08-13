@@ -63,6 +63,7 @@ in
       unzip
       mangohud
       protonup
+      protontricks
       vlc
       fzf
       #      renderdoc
@@ -71,10 +72,8 @@ in
       imagemagick
       bitwarden-desktop
       nsxiv
-      xfce.thunar
-      xfce.thunar-volman
-      xfce.thunar-media-tags-plugin
-      xfce.thunar-archive-plugin
+
+      kdePackages.dolphin
 
       zotero
       calibre

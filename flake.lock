@@ -1891,11 +1891,11 @@
         "trouble-nvim": "trouble-nvim"
       },
       "locked": {
-        "lastModified": 1754084995,
-        "narHash": "sha256-bjlh5Ib9ttNtWk+9i9oggiFLlVQNXQFhqTnvZ8Hav5s=",
+        "lastModified": 1754088897,
+        "narHash": "sha256-Yp/cawkiR/HGmn2yRketKPwRHT8dGLPzWT3qlCZa1Xs=",
         "owner": "GildedSeraphim",
         "repo": "nixvim",
-        "rev": "3ad483ddb17d1d945d4730f0dd6c0d42a009798f",
+        "rev": "7cb66989ed3de561df4aa47598956128e806d78b",
         "type": "github"
       },
       "original": {

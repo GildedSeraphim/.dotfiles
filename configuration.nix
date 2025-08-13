@@ -3,7 +3,8 @@
   pkgs-unstable,
   inputs,
   ...
-}: {
+}:
+{
   imports = [
     #./hardware/laptop/hardware-configuration.nix
     #./hardware/laptop/nvidia.nix
@@ -68,8 +69,6 @@
     ])
     ++ (with pkgs-unstable; [
       # ollama-cuda
-      zig
-      zls
     ]);
   services.open-webui = {
     enable = false;

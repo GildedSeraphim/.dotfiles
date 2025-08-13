@@ -2,7 +2,8 @@
   config,
   pkgs,
   ...
-}: {
+}:
+{
   services.syncthing = {
     enable = false;
     openDefaultPorts = true;
@@ -29,24 +30,24 @@
   };
 
   networking = {
-    nameservers = ["1.1.1.1"];
+    nameservers = [ "1.1.1.1" ];
     firewall = {
       enable = true;
-      allowedTCPPorts = [];
-      allowedUDPPorts = [];
+      allowedTCPPorts = [ ];
+      allowedUDPPorts = [ ];
     };
 
     wg-quick.interfaces = {
       wg0 = {
         autostart = false;
-        address = ["10.2.0.2/32"];
-        dns = ["10.2.0.1"];
+        address = [ "10.2.0.2/32" ];
+        dns = [ "10.2.0.1" ];
         privateKeyFile = "/home/sn/keys/proton.key";
         peers = [
           {
-            publicKey = "OKHT7YYBH4VD4vmuxrpbWQtY4SIRHuibasAZthkWEzg=";
-            allowedIPs = ["0.0.0.0/0"];
-            endpoint = "146.70.230.98:51820";
+            publicKey = "TaxwFJ2ajJdHlowb91UhfBxl60lsjBicCxC+dE2wDEE=";
+            allowedIPs = [ "0.0.0.0/0" ];
+            endpoint = "149.22.84.154:51820";
           }
         ];
       };

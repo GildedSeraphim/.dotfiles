@@ -16,6 +16,7 @@
     ./cava
     #   ./firefox
     ./glava
+    ./glance
     #    ./nixvim
     ./foot
     # ./obs
