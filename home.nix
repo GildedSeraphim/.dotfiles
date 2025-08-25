@@ -78,6 +78,9 @@ in
       zotero
       calibre
 
+      R
+      rstudioWrapper
+
       # icons
       adwaita-icon-theme
       gnome-icon-theme
