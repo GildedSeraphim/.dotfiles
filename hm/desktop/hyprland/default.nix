@@ -228,9 +228,6 @@
 
         "$mod, N,exec, hyprshade toggle ./greyscale.glsl"
 
-        ",XF86AudioMute, exec, hyprctl keyword monitor eDP-1, disable"
-        ",XF86AudioUp, exec, hyprctl keyword monitor eDP-1, 3840x2400@60, 0x0, auto"
-
         "$mod, G, exec, glava-vis"
         "$mod SHIFT, G, exec, pkill glava-vis && pkill glava"
         "$mod, V, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy"

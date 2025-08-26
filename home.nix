@@ -73,13 +73,10 @@ in
       bitwarden-desktop
       nsxiv
 
-      kdePackages.dolphin
+      nautilus
 
       zotero
       calibre
-
-      R
-      rstudioWrapper
 
       # icons
       adwaita-icon-theme
