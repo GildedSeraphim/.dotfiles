@@ -4,6 +4,11 @@
   ...
 }:
 {
+  services.vicinae = {
+    enable = true; # default: true
+    autoStart = true; # default: true
+  };
+
   imports = [
     # ./alacritty
     # ./kitty

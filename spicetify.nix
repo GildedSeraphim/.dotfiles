@@ -12,17 +12,12 @@ in
   #   home.packages = [ pkgs.spotify ];
 
   programs.spicetify = {
-    enable = true;
+    enable = false;
     enabledExtensions = with spicePkgs.extensions; [
-      betterGenres
       fullAlbumDate
-      # copyToClipboard
-      volumePercentage
       keyboardShortcut
     ];
     enabledCustomApps = with spicePkgs.apps; [
-      marketplace
-      reddit
     ];
     enabledSnippets = with spicePkgs.snippets; [
       #      rotating-cover-art
@@ -31,8 +26,8 @@ in
       #      Hide-Full-Screen-Button
       spinningCdCoverArt
     ];
-    theme = lib.mkForce spicePkgs.themes.sleek;
-    colorScheme = "custom";
+    #theme = lib.mkForce spicePkgs.themes.sleek;
+    #colorScheme = "custom";
 
     customColorScheme = with config.lib.stylix.colors; {
       # "text" = "${magenta}";

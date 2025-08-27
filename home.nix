@@ -86,6 +86,9 @@ in
       teams-for-linux
       vesktop
       chromium
+
+      spotify
+
     ])
     ++ (with pkgs-unstable; [
       r2modman

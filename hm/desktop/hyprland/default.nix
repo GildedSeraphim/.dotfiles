@@ -39,7 +39,6 @@
       exec-once = [
         #''${startupScript}/bin/start''
         #        ''${pkgs.hyprpanel}/bin/hyprpanel''
-        ''ags run''
         #       ''waybar''
         ''${pkgs.easyeffects}/bin/easyeffects --gapplication-service &''
         ''wl-paste --type text --watch cliphist store &''
@@ -213,7 +212,7 @@
       bind = [
         "$mod, B, exec, zen-beta"
         "$mod, Return, exec, foot"
-        "$mod, R, exec, rofi -show drun"
+        "$mod, R, exec, vicinae"
         "$mod SHIFT, R, exec, rofi -show run"
         "$mod, F, togglefloating"
         "$mod SHIFT, F, fullscreen"
