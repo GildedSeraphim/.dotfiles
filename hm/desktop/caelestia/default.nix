@@ -13,5 +13,8 @@
       };
       paths.wallpaperDir = "../../../wal";
     };
+    cli = {
+      enable = true;
+    };
   };
 }
