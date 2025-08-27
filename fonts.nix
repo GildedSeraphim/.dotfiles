@@ -3,7 +3,8 @@
   pkgs,
   inputs,
   ...
-}: {
+}:
+{
   fonts = {
     fontDir.enable = true;
     packages = with pkgs; [
@@ -40,6 +41,7 @@
       jetbrains-mono
       google-fonts
       material-design-icons
+      material-symbols
       rubik
       lexend
       noto-fonts
