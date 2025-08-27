@@ -90,7 +90,7 @@
           actions = false;
           schemes = false;
           variants = false;
-          wallpapers = false;
+          wallpapers = true;
         };
       };
       lock.recolourLogo = false;
