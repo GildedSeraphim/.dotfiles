@@ -9,7 +9,7 @@
     enable = true;
     settings = {
       appearance = {
-        anim.durations.scale = 1;
+        anim.durations.scale = 0;
         font = {
           family = {
             material = "Material Symbols Rounded";

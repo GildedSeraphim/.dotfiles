@@ -43,8 +43,6 @@
         ''${pkgs.easyeffects}/bin/easyeffects --gapplication-service &''
         ''wl-paste --type text --watch cliphist store &''
         ''rog-control-center''
-        ''systemctl --user import-environment DBUS_SESSION_BUS_ADDRESS WAYLAND_DISPLAY XDG_SESSION_TYPE XDG_CURRENT_DESKTOP XDG_SESSION_DESKTOP QT_QPA_PLATFORMTHEME GTK_THEME''
-        ''dbus-update-activation-environment --systemd --all''
       ];
 
       general = {
@@ -214,14 +212,14 @@
       bind = [
         "$mod, B, exec, zen-beta"
         "$mod, Return, exec, foot"
-        "$mod, R, global,caelestia:launcher"
+        "$mod, R, exec, vicinae"
         "$mod SHIFT, R, exec, rofi -show run"
         "$mod, F, togglefloating"
         "$mod SHIFT, F, fullscreen"
         "$mod, Q, killactive"
         "$mod, W, exec, mako"
-        "$mod SHIFT, L, global, caelestia:lock"
-        "$mod, D, exec, caelestia toggle communication"
+        "$mod SHIFT, L, exec, hyprlock"
+        "$mod, D, exec, vesktop"
         #        "$mod, TAB, overview:toggle"
         "$mod, C, exec, rofi -show calc"
         "$mod SHIFT, C, exec, qalculate-gtk"
