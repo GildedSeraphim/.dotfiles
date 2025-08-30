@@ -19,7 +19,7 @@
     xremap-flake.url = "github:xremap/nix-flake";
     zen.url = "github:0xc000022070/zen-browser-flake";
     erosanix.url = "github:emmanuelrosa/erosanix";
-    nixvim.url = "github:GildedSeraphim/nixvim";
+    nixvim.url = "github:GildedSeraphim/nixvim/main";
     ags.url = "github:aylur/ags";
     sops-nix.url = "github:mic92/sops-nix";
     nur.url = "github:nix-community/NUR";

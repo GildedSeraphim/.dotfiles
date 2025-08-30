@@ -1623,11 +1623,11 @@
     },
     "nixpkgs_12": {
       "locked": {
-        "lastModified": 1747958103,
-        "narHash": "sha256-qmmFCrfBwSHoWw7cVK4Aj+fns+c54EBP8cGqp/yK410=",
+        "lastModified": 1754340878,
+        "narHash": "sha256-lgmUyVQL9tSnvvIvBp7x1euhkkCho7n3TMzgjdvgPoU=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "fe51d34885f7b5e3e7b59572796e1bcb427eccb1",
+        "rev": "cab778239e705082fe97bb4990e0d24c50924c04",
         "type": "github"
       },
       "original": {
@@ -1968,15 +1968,16 @@
         "trouble-nvim": "trouble-nvim"
       },
       "locked": {
-        "lastModified": 1756243056,
-        "narHash": "sha256-qIdlRXfJDUUfh+9a73/z1sMAapquDR+Gany/QvJ2eP0=",
+        "lastModified": 1756407792,
+        "narHash": "sha256-kWxIhTsdHgZoLPT3kWOFazbgjmDhEIT4z8xKkXBT9Ss=",
         "owner": "GildedSeraphim",
         "repo": "nixvim",
-        "rev": "850a5aa661c606dba253a937228f85ee45fb4103",
+        "rev": "f194ed1905917205c61e70daa78fd0f24a3b4331",
         "type": "github"
       },
       "original": {
         "owner": "GildedSeraphim",
+        "ref": "main",
         "repo": "nixvim",
         "type": "github"
       }
@@ -2651,11 +2652,11 @@
         "nixpkgs": "nixpkgs_12"
       },
       "locked": {
-        "lastModified": 1749194973,
-        "narHash": "sha256-eEy8cuS0mZ2j/r/FE0/LYBSBcIs/MKOIVakwHVuqTfk=",
+        "lastModified": 1755934250,
+        "narHash": "sha256-CsDojnMgYsfshQw3t4zjRUkmMmUdZGthl16bXVWgRYU=",
         "owner": "numtide",
         "repo": "treefmt-nix",
-        "rev": "a05be418a1af1198ca0f63facb13c985db4cb3c5",
+        "rev": "74e1a52d5bd9430312f8d1b8b0354c92c17453e5",
         "type": "github"
       },
       "original": {
