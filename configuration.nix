@@ -9,8 +9,8 @@
     #./hardware/laptop/hardware-configuration.nix
     #./hardware/laptop/nvidia.nix
     #./hardware/laptop/laptop.nix
-    #./hardware/desktop/nvidia.nix
-    #./hardware/desktop/hardware-configuration.nix
+    ./hardware/desktop/nvidia.nix
+    ./hardware/desktop/hardware-configuration.nix
     ./settings.nix
     ./fonts.nix
     ./hyprland.nix
@@ -18,7 +18,7 @@
     #./hardware/rog-strix/laptop.nix
     #./hardware/rog-strix/nvidia.nix
     #./hardware/rog-strix/hardware-configuration.nix
-    ./hardware/keyboard
+    #./hardware/keyboard
     ./hardware/proart
   ];
   programs.nix-ld.enable = true;

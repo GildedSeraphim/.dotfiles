@@ -30,7 +30,7 @@
       url = "github:zakk4223/hyprland-easymotion";
       inputs.hyprland.follows = "hyprland";
     };
-    vicinae.url = "github:tomromeo/vicinae-nix";
+    vicinae.url = "github:vicinaehq/vicinae";
     caelestia.url = "github:caelestia-dots/shell";
   };
 
