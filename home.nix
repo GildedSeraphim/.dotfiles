@@ -86,8 +86,7 @@ in
       teams-for-linux
       vesktop
       chromium
-
-      spotify
+      xonotic
 
     ])
     ++ (with pkgs-unstable; [

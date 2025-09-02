@@ -18,8 +18,8 @@
     #./hardware/rog-strix/laptop.nix
     #./hardware/rog-strix/nvidia.nix
     #./hardware/rog-strix/hardware-configuration.nix
-    #./hardware/keyboard
-    ./hardware/proart
+    ./hardware/keyboard
+   # ./hardware/proart
   ];
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
@@ -41,7 +41,7 @@
   #    ollama = pkgs-unstable.ollama-cuda;
   #  };
   #};
-
+  
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.nvidia.acceptLicense = true;
   programs.droidcam.enable = true;
@@ -56,7 +56,6 @@
       calf
       qjackctl
       easyeffects
-      waydroid
       alejandra
       nixd
       lm_sensors
@@ -75,4 +74,5 @@
     enable = false;
     #localhost/8080
   };
+virtualisation.waydroid.enable = true;
 }

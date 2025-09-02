@@ -1968,11 +1968,11 @@
         "trouble-nvim": "trouble-nvim"
       },
       "locked": {
-        "lastModified": 1756608725,
-        "narHash": "sha256-Sw0W2kx7Uoa+p03Ic2XvtF5+onb1jC5Mr9KYax8ORIE=",
+        "lastModified": 1756838027,
+        "narHash": "sha256-y9NQv/K/fL/JqS3FaViOoA0ShlEAS4PvtCdt/UHGKC4=",
         "owner": "GildedSeraphim",
         "repo": "nixvim",
-        "rev": "53575c94ac698b94fb9e5ae2604178bc2744e88a",
+        "rev": "da20fbaefdc091530ee59e379430384b6892d9c2",
         "type": "github"
       },
       "original": {

@@ -12,7 +12,7 @@ in
   #   home.packages = [ pkgs.spotify ];
 
   programs.spicetify = {
-    enable = false;
+    enable = true;
     enabledExtensions = with spicePkgs.extensions; [
       fullAlbumDate
       keyboardShortcut
