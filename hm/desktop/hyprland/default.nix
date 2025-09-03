@@ -148,11 +148,9 @@
         "hide_on_key_press" = true;
       };
 
-      gestures = {
-        workspace_swipe = true;
-        workspace_swipe_forever = true;
-        workspace_swipe_fingers = 3;
-      };
+      gesture = [
+        "3, horizontal, workspace"
+      ];
 
       input = {
         "numlock_by_default" = true;
