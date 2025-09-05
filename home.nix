@@ -87,7 +87,8 @@ in
       vesktop
       chromium
       xonotic
-
+      
+      firefox-beta
     ])
     ++ (with pkgs-unstable; [
       r2modman
