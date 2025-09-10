@@ -30,8 +30,6 @@
       url = "github:zakk4223/hyprland-easymotion";
       inputs.hyprland.follows = "hyprland";
     };
-    vicinae.url = "github:vicinaehq/vicinae";
-    caelestia.url = "github:caelestia-dots/shell";
   };
 
   outputs =
@@ -116,8 +114,8 @@
             stylix.homeManagerModules.stylix
             inputs.spicetify-nix.homeManagerModules.default
             inputs.hyprlux.homeManagerModules.default
-            inputs.vicinae.homeManagerModules.default
-            inputs.caelestia.homeManagerModules.default
+            #inputs.vicinae.homeManagerModules.default
+            #            inputs.caelestia.homeManagerModules.default
             {
               home.packages = [
                 inputs.nixvim.packages.${pkgs.system}.default

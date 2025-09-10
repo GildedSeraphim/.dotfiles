@@ -4,10 +4,10 @@
   ...
 }:
 {
-  services.vicinae = {
-    enable = true; # default: true
-    autoStart = true; # default: true
-  };
+  #services.vicinae = {
+  #  enable = true; # default: true
+  #  autoStart = true; # default: true
+  #};
 
   imports = [
     # ./alacritty
