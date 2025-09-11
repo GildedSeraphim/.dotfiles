@@ -51,6 +51,7 @@ in
   home.packages =
     (with pkgs; [
       lazygit
+      gimp
       tree
       inputs.zen.packages.${system}.default
       fast-cli
@@ -89,6 +90,8 @@ in
       xonotic
       
       firefox-beta
+
+      krita
     ])
     ++ (with pkgs-unstable; [
       r2modman

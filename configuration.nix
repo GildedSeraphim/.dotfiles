@@ -41,7 +41,7 @@
   #    ollama = pkgs-unstable.ollama-cuda;
   #  };
   #};
-  
+
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.nvidia.acceptLicense = true;
   programs.droidcam.enable = true;
@@ -74,5 +74,8 @@
     enable = false;
     #localhost/8080
   };
-virtualisation.waydroid.enable = true;
+  hardware.opentabletdriver = {
+    enable = true;
+    daemon.enable = true;
+  };
 }
