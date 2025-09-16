@@ -50,6 +50,7 @@ in
 
   home.packages =
     (with pkgs; [
+      ghostty
       lazygit
       gimp
       tree
@@ -88,7 +89,7 @@ in
       vesktop
       chromium
       xonotic
-      
+
       firefox-beta
 
       krita

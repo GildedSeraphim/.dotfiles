@@ -5,11 +5,12 @@
   pkgs-unstable,
   inputs,
   ...
-}: {
+}:
+{
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  nix.nixPath = ["nixpkgs=${inputs.nixpkgs}"];
+  nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
   # nix.gc = {
   #   automatic = true;
   #   dates = "weekly";
@@ -39,8 +40,11 @@
   qt.enable = false;
 
   xdg.portal.config = {
-    common.default = ["gtk"];
-    hyprland.default = ["gtk" "hyprland"];
+    common.default = [ "gtk" ];
+    hyprland.default = [
+      "gtk"
+      "hyprland"
+    ];
   };
   xdg.portal.enable = true;
   xdg.portal.extraPortals = [
@@ -55,8 +59,8 @@
 
   nix.settings.auto-optimise-store = true;
   nix.settings = {
-    substituters = ["https://hyprland.cachix.org"];
-    trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
+    substituters = [ "https://hyprland.cachix.org" ];
+    trusted-public-keys = [ "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc=" ];
   };
   environment.sessionVariables = {
     NH_FLAKE = "/home/sn/.dotfiles";
@@ -91,15 +95,16 @@
 
   system.stateVersion = "24.05";
 
-  nix.settings.experimental-features = ["nix-command" "flakes"];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   #  services.devmon.enable = true;
   # services.udisks2.enable = true;
   # programs.xfconf.enable = true;
   # services.gvfs.enable = true;
   # services.tumbler.enable = true;
-
-  networking.networkmanager.enable = true;
 
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
@@ -135,7 +140,18 @@
     isNormalUser = true;
     shell = pkgs.fish;
     initialPassword = "password";
-    extraGroups = ["wheel" "video" "audio" "networkmanager" "lp" "scanner" "libvirtd" "libvirt" "uinput" "usbmux"];
+    extraGroups = [
+      "wheel"
+      "video"
+      "audio"
+      "networkmanager"
+      "lp"
+      "scanner"
+      "libvirtd"
+      "libvirt"
+      "uinput"
+      "usbmux"
+    ];
     packages = with pkgs; [
     ];
   };
