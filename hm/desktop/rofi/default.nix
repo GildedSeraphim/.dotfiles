@@ -6,7 +6,6 @@
   ...
 }: {
   programs.rofi.enable = true;
-  programs.rofi.package = pkgs.rofi-wayland;
   stylix.targets.rofi.enable = true;
   xdg.configFile."rofi/config.rasi".text = with config.lib.stylix.colors; ''
         * {

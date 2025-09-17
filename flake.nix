@@ -18,7 +18,6 @@
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
     xremap-flake.url = "github:xremap/nix-flake";
     zen.url = "github:0xc000022070/zen-browser-flake";
-    erosanix.url = "github:emmanuelrosa/erosanix";
     nixvim.url = "github:GildedSeraphim/nixvim/main";
     ags.url = "github:aylur/ags";
     sops-nix.url = "github:mic92/sops-nix";
@@ -41,7 +40,6 @@
       nix-colors,
       hyprland,
       stylix,
-      erosanix,
       nixos-hardware,
       ...
     }@inputs:
@@ -89,8 +87,6 @@
           inherit system;
           modules = [
             #nixos-hardware.nixosModules.asus-zephyrus-ga401
-            #  erosanix.nixosModules.protonvpn
-            #  erosanix.nixosModules.fzf
             ./configuration.nix
             inputs.sops-nix.nixosModules.sops
             inputs.solaar.nixosModules.default
