@@ -46,8 +46,8 @@
       ];
 
       general = {
-        "gaps_in" = 0;
-        "gaps_out" = 5;
+        "gaps_in" = 2;
+        "gaps_out" = 0;
         "border_size" = 0;
         #        "col.active_border" = lib.mkForce "rgb(${config.stylix.base16Scheme.base0E})";
         #        "col.inactive_border" = lib.mkForce "rgb(${config.stylix.base16Scheme.base00})";
@@ -79,7 +79,7 @@
       };
 
       animations = {
-        "enabled" = "yes";
+        "enabled" = "no";
         #first_launch_animation = true;
 
         bezier = [
@@ -166,14 +166,14 @@
       };
 
       plugin = {
-        borders-plus-plus = {
-          add_borders = 2;
-          "col.border_2" = "rgb(4d0e55)";
-          "col.border_1" = "rgb(d4cacb)";
-          border_size_1 = 3;
-          border_size_2 = 2;
-          natural_rounding = "yes";
-        };
+        #borders-plus-plus = {
+        #  add_borders = 2;
+        #  "col.border_2" = "rgb(4d0e55)";
+        #  "col.border_1" = "rgb(d4cacb)";
+        #  border_size_1 = 3;
+        #  border_size_2 = 2;
+        #  natural_rounding = "yes";
+        #};
         hyprbars = with config.lib.stylix.colors; {
           bar_color = "rgb(${base01})";
           bar_height = 20;

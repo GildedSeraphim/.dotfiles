@@ -3,12 +3,14 @@
   config,
   pkgs,
   ...
-}: let
+}:
+let
   inherit (lib) getExe getExe';
   inherit (lib) mkIf mkEnableOption;
 
   cfg = config.opt.services.waybar;
-in {
+in
+{
   options.opt.services.waybar.enable = mkEnableOption "waybar";
 
   config.programs.waybar = with config.lib.stylix.colors.withHashtag; {
@@ -30,10 +32,10 @@ in {
         margin-left = 0;
         margin-right = 0;
         modules-left = [
-          "image"
+          #"image"
           "hyprland/workspaces"
-          "idle_inhibitor"
-          "hyprland/window"
+          #"idle_inhibitor"
+          #"hyprland/window"
         ];
         modules-right = [
           "group/network-modules"
@@ -42,7 +44,7 @@ in {
           "group/battery-modules"
           "tray"
           "clock"
-          "group/notifications-modules"
+          #"group/notifications-modules"
           "group/powermenu"
         ];
 
@@ -276,7 +278,7 @@ in {
       /* Menu */
       menu {
         background: ${base01};
-        border-radius: 8px;
+        border-radius: 0px;
       }
 
       menu separator {
@@ -285,7 +287,7 @@ in {
 
       menu menuitem {
         background: transparent;
-        padding: 0.5rem;
+        padding: 0;
         transition: 300ms linear;
       }
 
@@ -312,7 +314,7 @@ in {
       }
 
       tooltip label {
-        margin: 0.5rem;
+        margin: 0;
       }
 
       /* Waybar */
@@ -345,8 +347,8 @@ in {
       #custom-reboot,
       #custom-power {
         background: ${base02};
-        border-radius: 8px;
-        margin: 0.5rem 0.25rem;
+        border-radius: 0px;
+        margin: 0 0.25rem;
         transition: 300ms linear;
       }
 
@@ -358,7 +360,7 @@ in {
       #battery.capacity,
       #tray,
       #clock {
-        padding: 0.25rem 0.75rem;
+        padding: 0.2rem 0.75rem;
       }
 
       #idle_inhibitor,
@@ -374,9 +376,9 @@ in {
       #custom-power {
         background: ${base0D};
         color: ${base02};
-        border-radius: 8px;
+        border-radius: 0px;
         font-size: 13pt;
-        padding: 0.25rem;
+        padding: 0.2rem;
         min-width: 1.5rem;
         transition: 300ms linear;
       }
@@ -384,7 +386,7 @@ in {
       /* Workspaces */
       #workspaces button {
         margin: 0;
-        padding: 0.25rem;
+        padding: 0.2rem;
         min-width: 1.5rem;
       }
 
