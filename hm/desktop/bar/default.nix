@@ -360,6 +360,9 @@ in
       #battery.capacity,
       #tray,
       #clock {
+        margin: 0;
+        margin-bottom: 0.05rem;
+        min-width: 1.5rem;
         padding: 0.2rem 0.75rem;
       }
 
@@ -387,6 +390,7 @@ in
       #workspaces button {
         margin: 0;
         padding: 0.2rem;
+        margin-bottom: 0.05rem;
         min-width: 1.5rem;
       }
 
