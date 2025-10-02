@@ -50,7 +50,6 @@ in
 
   home.packages =
     (with pkgs; [
-      ghostty
       lazygit
       gimp
       tree
@@ -91,6 +90,8 @@ in
       xonotic
 
       firefox-beta
+
+      obs-studio
 
       krita
     ])

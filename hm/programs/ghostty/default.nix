@@ -2,16 +2,19 @@
   config,
   lib,
   ...
-}: let
+}:
+let
   inherit (lib) mkIf mkEnableOption;
   cfg = config.opt.terminal.ghostty;
-in {
+in
+{
   options.opt.terminal.ghostty.enable = mkEnableOption "ghostty";
   config = mkIf cfg.enable {
     programs.ghostty = {
       enable = true;
       enableFishIntegration = true;
-      settings = {
+      settings = with config.lib.stylix.colors.withHashtag; {
+        font-family = "${config.stylix.fonts.monospace.name}";
       };
     };
   };

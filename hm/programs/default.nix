@@ -24,6 +24,7 @@
     ./glance
     #    ./nixvim
     ./foot
+    ./ghostty
     # ./obs
     ./fastfetch
     # ./ghostty
@@ -33,6 +34,6 @@
     ./zathura
   ];
   opt.terminal.foot.enable = true;
-  # opt.terminal.ghostty.enable = false;
+  opt.terminal.ghostty.enable = true;
   # opt.browser.librewolf.enable = true;
 }
