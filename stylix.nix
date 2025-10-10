@@ -49,10 +49,10 @@ in
 
   stylix.fonts = {
     sizes.terminal = 13;
-    monospace = {
-      name = "IBM Plex Mono";
-      package = pkgs.ibm-plex;
-    };
+     monospace = {
+       name = "IBM Plex Mono";
+       package = pkgs.ibm-plex;
+     };
     sansSerif = {
       name = "IBM Plex Sans";
       package = pkgs.ibm-plex;
