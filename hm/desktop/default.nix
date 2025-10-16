@@ -10,6 +10,7 @@
     ./test
     ./eww
     ./swaync
+    ./mango
     #   ./caelestia
   ];
   opt.services.ags.enable = false;

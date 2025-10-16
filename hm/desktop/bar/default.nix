@@ -33,7 +33,8 @@ in
         margin-right = 0;
         modules-left = [
           #"image"
-          "hyprland/workspaces"
+          "ext/workspaces"
+          #"hyprland/workspaces"
           #"idle_inhibitor"
           #"hyprland/window"
         ];
@@ -63,6 +64,13 @@ in
           format-icons = {
             "special" = "";
           };
+        };
+
+        "ext/workspaces" = {
+          format = "{icon}";
+          ignore-hidden = true;
+          on-click = "activate";
+          sort-by-id = true;
         };
 
         idle_inhibitor = {
