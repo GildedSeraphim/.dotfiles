@@ -33,8 +33,8 @@ in
         margin-right = 0;
         modules-left = [
           #"image"
-          "ext/workspaces"
-          #"hyprland/workspaces"
+          #"ext/workspaces"
+          "hyprland/workspaces"
           #"idle_inhibitor"
           #"hyprland/window"
         ];

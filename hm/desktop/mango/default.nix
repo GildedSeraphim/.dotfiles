@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   wayland.windowManager.mango = {
-    enable = true;
+    enable = false;
 
     autostart_sh = ''
       dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=wlroots
@@ -30,16 +30,16 @@
       tagrule=id:9,layout_name:tile
 
       # Mouse + Trackpad Settings
-      disable_trackpad = 0
-      tap_to_click = 1
-      accel_profile = 0
-      accel_speed = 0
+      disable_trackpad=0
+      tap_to_click=1
+      accel_profile=1
+      accel_speed=0
 
       #Window Rules
       windowrule=isFloating:1,appid:.spotify
 
       # Animations
-      animations = 0
+      animations=0
       gappih=0
       gappiv=0
       gappoh=0
@@ -59,6 +59,16 @@
       bind=SUPER,8,comboview,8
       bind=SUPER,9,comboview,9
 
+      bind=SUPER+SHIFT,1,tag,1
+      bind=SUPER+SHIFT,2,tag,2
+      bind=SUPER+SHIFT,3,tag,3
+      bind=SUPER+SHIFT,4,tag,4
+      bind=SUPER+SHIFT,5,tag,5
+      bind=SUPER+SHIFT,6,tag,6
+      bind=SUPER+SHIFT,7,tag,7
+      bind=SUPER+SHIFT,8,tag,8
+      bind=SUPER+SHIFT,9,tag,9
+
       bind=SUPER,b,spawn,zen-beta
       bind=SUPER+SHIFT,l,spawn,hyprlock
       bind=SUPER,c,spawn,rofi -show calc
@@ -72,6 +82,7 @@
       bind=SUPER+ALT,s,spawn,grimblast --notify --cursor save screen
 
       bind=SUPER+SHIFT,s,minimized,
+      bind=SUPER+SHIFT,i,restore_minimized
       bind=SUPER,s,toggle_scratchpad
 
       bind=SUPER,Return,spawn,foot
@@ -81,6 +92,7 @@
 
       bind=SUPER+SHIFT,f,togglefullscreen,
       bind=SUPER,f,togglefloating,
+      bind=SUPER,o,toggleoverview
 
       # smartmovewin
       bind=CTRL+SHIFT,k,smartmovewin,up

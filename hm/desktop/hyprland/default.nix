@@ -23,7 +23,7 @@
 
   wayland.windowManager.hyprland.xwayland.enable = true;
   wayland.windowManager.hyprland = {
-    enable = false;
+    enable = true;
 
     plugins = [
       inputs.hyprland-plugins.packages."${pkgs.system}".hyprbars
