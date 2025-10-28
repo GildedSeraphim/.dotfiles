@@ -94,6 +94,7 @@ in
       obs-studio
 
       krita
+      obsidian
     ])
     ++ (with pkgs-unstable; [
       r2modman
