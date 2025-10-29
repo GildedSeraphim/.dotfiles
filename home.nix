@@ -95,6 +95,8 @@ in
 
       krita
       obsidian
+
+      prismlauncher
     ])
     ++ (with pkgs-unstable; [
       r2modman
