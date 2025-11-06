@@ -97,6 +97,7 @@ in
       obsidian
 
       prismlauncher
+      freetube
     ])
     ++ (with pkgs-unstable; [
       r2modman

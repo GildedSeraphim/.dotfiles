@@ -30,6 +30,7 @@
       inputs.hyprland.follows = "hyprland";
     };
     mango.url = "github:DreamMaoMao/mango";
+    erosanix.url = "github:emmanuelrosa/erosanix";
   };
 
   outputs =
@@ -93,6 +94,7 @@
             inputs.solaar.nixosModules.default
             inputs.asus-dialpad-driver.nixosModules.default
             inputs.mango.nixosModules.mango
+            inputs.erosanix.nixosModules.onlyoffice
             {
               programs.mango.enable = true;
             }

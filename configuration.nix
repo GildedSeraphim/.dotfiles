@@ -15,6 +15,7 @@
     ./fonts.nix
     ./hyprland.nix
     ./network.nix
+    ./audio.nix
     #./hardware/rog-strix/laptop.nix
     #./hardware/rog-strix/nvidia.nix
     #./hardware/rog-strix/hardware-configuration.nix
@@ -77,5 +78,9 @@
   hardware.opentabletdriver = {
     enable = true;
     daemon.enable = true;
+  };
+
+  programs.onlyoffice = {
+    enable = true;
   };
 }
