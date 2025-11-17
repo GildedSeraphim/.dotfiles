@@ -63,7 +63,7 @@ in
       zip
       unzip
       mangohud
-      protonup
+      protonup-qt
       protontricks
       vlc
       fzf

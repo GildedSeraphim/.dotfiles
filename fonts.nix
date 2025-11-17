@@ -37,7 +37,7 @@
       cm_unicode
       # MS Fonts
       corefonts
-      vistafonts
+      vista-fonts
       jetbrains-mono
       google-fonts
       material-design-icons

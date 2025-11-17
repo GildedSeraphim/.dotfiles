@@ -26,12 +26,12 @@
     enable = true;
 
     plugins = [
-      inputs.hyprland-plugins.packages."${pkgs.system}".hyprbars
-      inputs.hyprland-plugins.packages."${pkgs.system}".csgo-vulkan-fix
+      #      inputs.hyprland-plugins.packages."${pkgs.system}".hyprbars
+      #inputs.hyprland-plugins.packages."${pkgs.system}".csgo-vulkan-fix
       #     inputs.split-monitor-workspaces.packages."${pkgs.system}".split-monitor-workspaces
       #      inputs.hyprspace.packages."${pkgs.system}".Hyprspace
-      inputs.hyprland-plugins.packages."${pkgs.system}".hyprwinwrap
-      inputs.hyprland-plugins.packages."${pkgs.system}".borders-plus-plus
+      #inputs.hyprland-plugins.packages."${pkgs.system}".hyprwinwrap
+      #inputs.hyprland-plugins.packages."${pkgs.system}".borders-plus-plus
       # inputs.hyprland-easymotion.packages.${pkgs.system}.hyprland-easymotion
     ];
 
@@ -118,18 +118,18 @@
         #   "move 0 0, GLava"
       ];
       layerrule = [
-        "noanim, selection"
+        #"noanim, selection"
       ];
 
-      windowrulev2 = [
-        "float, class:(qalculate-gtk)"
-        "size 70% 55%, class:(qalculate-gtk)"
-        "center, class:(qalculate-gtk)"
-        "suppressevent maximize, class:.*"
-        "float, title:(Spotify Premium)"
-        "size 80% 75%, title:(Spotify Premium)"
-        "center, title:(Spotify Premium)"
-      ];
+      # windowrulev2 = [
+      #   "float, class:(qalculate-gtk)"
+      #   "size 70% 55%, class:(qalculate-gtk)"
+      #   "center, class:(qalculate-gtk)"
+      #   "suppressevent maximize, class:.*"
+      #   "float, title:(Spotify Premium)"
+      #   "size 80% 75%, title:(Spotify Premium)"
+      #   "center, title:(Spotify Premium)"
+      # ];
 
       dwindle = {
         #"force_split" = 2;
@@ -174,35 +174,35 @@
         #  border_size_2 = 2;
         #  natural_rounding = "yes";
         #};
-        hyprbars = with config.lib.stylix.colors; {
-          bar_color = "rgb(${base01})";
-          bar_height = 20;
-          "col.text" = "rgb(${base05})";
-          bar_precedence_over_border = true;
-          bar_part_of_window = true;
-          bar_title_enabled = true;
-          bar_padding = 12;
-          bar_text_size = 11;
-          bar_text_font = "${config.stylix.fonts.monospace.name}";
-          bar_text_align = "left";
-          hyprbars-button = [
-            "rgb(${base08}), 10, 󰖭, hyprctl dispatch killactive"
-            "rgb(${base0B}), 10, , hyprctl dispatch fullscreen 1"
-          ];
-        };
-        hyprwinwrap = {
-          "class" = "GLava";
-        };
-        csgo-vulkan-fix = {
-          res_w = 1920;
-          res_h = 1440;
+        # hyprbars = with config.lib.stylix.colors; {
+        #   bar_color = "rgb(${base01})";
+        #   bar_height = 20;
+        #   "col.text" = "rgb(${base05})";
+        #   bar_precedence_over_border = true;
+        #   bar_part_of_window = true;
+        #   bar_title_enabled = true;
+        #   bar_padding = 12;
+        #   bar_text_size = 11;
+        #   bar_text_font = "${config.stylix.fonts.monospace.name}";
+        #   bar_text_align = "left";
+        #   hyprbars-button = [
+        #     "rgb(${base08}), 10, 󰖭, hyprctl dispatch killactive"
+        #     "rgb(${base0B}), 10, , hyprctl dispatch fullscreen 1"
+        #   ];
+        # };
+        # hyprwinwrap = {
+        #   "class" = "GLava";
+        # };
+        # csgo-vulkan-fix = {
+        #   res_w = 1920;
+        #   res_h = 1440;
 
-          #  # NOT a regex! This is a string and has to exactly match initial_class
-          class = "cs2";
-          #
-          #  # Whether to fix the mouse position. A select few apps might be wonky with this.
-          fix_mouse = true;
-        };
+        #   #  # NOT a regex! This is a string and has to exactly match initial_class
+        #   class = "cs2";
+        #   #
+        #   #  # Whether to fix the mouse position. A select few apps might be wonky with this.
+        #   fix_mouse = true;
+        # };
       };
 
       "$mod" = "SUPER";

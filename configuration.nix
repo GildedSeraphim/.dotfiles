@@ -80,7 +80,4 @@
     daemon.enable = true;
   };
 
-  programs.onlyoffice = {
-    enable = true;
-  };
 }
