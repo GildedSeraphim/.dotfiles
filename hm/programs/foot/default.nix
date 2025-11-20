@@ -19,7 +19,7 @@ in {
           app-id = "foot";
           title = "foot";
           locked-title = "no";
-          term = "xterm-256color";
+          term = "foot";
           # font = lib.mkForce "Rubik:size=12";
           vertical-letter-offset = "-0.75";
           pad = "12x21 center";

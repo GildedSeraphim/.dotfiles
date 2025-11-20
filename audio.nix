@@ -15,7 +15,5 @@
 
     };
   };
-
   security.rtkit.enable = true;
-
 }
