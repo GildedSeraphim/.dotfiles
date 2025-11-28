@@ -15,6 +15,7 @@ in
       enableFishIntegration = true;
       settings = with config.lib.stylix.colors.withHashtag; {
         font-family = "${config.stylix.fonts.monospace.name}";
+        confirm-close-surface = false;
       };
     };
   };
