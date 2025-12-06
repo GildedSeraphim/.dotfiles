@@ -2,13 +2,14 @@
   pkgs,
   config,
   nix-colors,
+  inputs,
   ...
 }:
 let
   theme = "ayu-dark";
   th = "${pkgs.base16-schemes}/share/themes/${theme}.yaml";
   #alterfile = ./wal/color.txt;
-  wallpaper = ./wal/blk.png;
+  wallpaper = ./wal/branch.png;
   #altered-wallpaper = pkgs.runCommand "altered.png" {} ''
   #${pkgs.imagemagick}/bin/magick convert ${wallpaper} -colorspace sRGB -color-matrix < ${alterfile} altered.png $out
   #'';
@@ -28,31 +29,31 @@ in
   stylix.cursor.name = "Banana Red";
   stylix.cursor.size = 25;
 
-  #  stylix.override = {
-  #base00 = "#151515";
-  #base01 = "#1F1F1F";
-  #base02 = "#2E2E2E";
-  #base03 = "#424242";
-  #base04 = "#BBB6B6";
-  #base05 = "#E8E3E3";
-  #base06 = "#E8E3E3";
-  #base07 = "#E8E3E3";
-  #base08 = "#B66467";
-  #base09 = "#D9BC8C";
-  #base0A = "#D9BC8C";
-  #base0B = "#8C977D";
-  #base0C = "#8AA6A2";
-  #base0D = "#8DA3B9";
-  #base0E = "#A988B0";
-  #base0F = "#BBB6B6";
-  #};
+  stylix.override = {
+    base00 = "#1d2433";
+    base01 = "#1a202e";
+    base02 = "#171c29";
+    base03 = "#293145";
+    base04 = "#bfd3ff";
+    base05 = "#54678c";
+    base06 = "#3d4a66";
+    base07 = "#8FBCBB";
+    base08 = "#D0879D";
+    base09 = "#D0B1A2";
+    base0A = "#CDD2AF";
+    base0B = "#9FD6B6";
+    base0C = "#acd9ec";
+    base0D = "#92b7ea";
+    base0E = "#AD9BEA";
+    base0F = "#CD9BCC";
+  };
 
   stylix.fonts = {
     sizes.terminal = 13;
-     monospace = {
-       name = "IBM Plex Mono";
-       package = pkgs.ibm-plex;
-     };
+    monospace = {
+      name = "IBM Plex Mono";
+      package = pkgs.ibm-plex;
+    };
     sansSerif = {
       name = "IBM Plex Sans";
       package = pkgs.ibm-plex;
@@ -68,6 +69,7 @@ in
     spicetify.enable = false;
     tmux.enable = true;
     librewolf.profileNames = [ "default" ];
+    nixvim.enable = true;
   };
 
   colorScheme = {

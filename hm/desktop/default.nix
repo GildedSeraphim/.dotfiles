@@ -11,6 +11,7 @@
     ./eww
     ./swaync
     ./mango
+    ./quickshell
     #   ./caelestia
   ];
   opt.services.ags.enable = false;

@@ -1998,11 +1998,11 @@
         "trouble-nvim": "trouble-nvim"
       },
       "locked": {
-        "lastModified": 1759807153,
-        "narHash": "sha256-/0LI/HEwM24QpSxk4XrrnnLYWDUaVdlGg/k7OiLY97Q=",
+        "lastModified": 1764975295,
+        "narHash": "sha256-fu4ywvfWubM2z4Cv+F4Kbj3vSu9FulkuZyRpeWbyzG4=",
         "owner": "GildedSeraphim",
         "repo": "nixvim",
-        "rev": "48f60972dd93a653618e05be85149b477276b897",
+        "rev": "48fe4a2a6ac24c71fcd9dd7acbaa1590815239ce",
         "type": "github"
       },
       "original": {
@@ -2866,11 +2866,11 @@
         "nixpkgs": "nixpkgs_23"
       },
       "locked": {
-        "lastModified": 1763353619,
-        "narHash": "sha256-y30wSzjr7QiO4OVB/Tt7dnLRLIuK2EpaftpKeMMLGu0=",
+        "lastModified": 1764534155,
+        "narHash": "sha256-HQyLJT0ikblWDR/8pzDJ7WYEZoFzkUrgwZk/f+JULBI=",
         "owner": "0xc000022070",
         "repo": "zen-browser-flake",
-        "rev": "7463345c68cfdd9e92e2d40e390b1a802b0f2add",
+        "rev": "fb066e133e614c024a470608ff56585c4f707b44",
         "type": "github"
       },
       "original": {

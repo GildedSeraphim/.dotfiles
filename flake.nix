@@ -118,11 +118,13 @@
             inputs.spicetify-nix.homeManagerModules.default
             inputs.hyprlux.homeManagerModules.default
             inputs.mango.hmModules.mango
+            inputs.nixvim.homeModules.nixvim
             #inputs.vicinae.homeManagerModules.default
             #            inputs.caelestia.homeManagerModules.default
             {
+		 programs.nixvim.enable = true;
               home.packages = [
-                inputs.nixvim.packages.${pkgs.system}.default
+                # inputs.nixvim.packages.${pkgs.system}.default
               ];
             }
           ];
