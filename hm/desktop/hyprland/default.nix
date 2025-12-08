@@ -56,7 +56,7 @@
       };
 
       monitor = [
-        "HDMI-A-2,2560x1440@60.00,-2560x0,auto"
+        "HDMI-A-1,2560x1440@60.00,-2560x0,auto"
         #"DP-3,2560x1440@144,2560x0,auto"
         #"Unknown-1,630x350,-2560x-1440,auto"
         "eDP-1, 3840x2400@60,0x0,auto"
@@ -106,16 +106,24 @@
         ];
       };
       windowrule = [
-        #   "noblur, GLava"
-        #   "noborder, GLava"
-        #   "noshadow, GLava"
-        #   "noanim, GLava"
-        #   "nofocus, GLava"
-        #   "float, GLava"
-        #   "pin, GLava"
-        #   "idleinhibit always, GLava"
-        #   "size 100% 100%, GLava"
-        #   "move 0 0, GLava"
+	   "match:class GLava, no_blur on"
+	   "match:class GLava, no_shadow on"
+	   "match:class GLava, no_anim on"
+	   "match:class GLava, no_focus on"
+	   "match:class GLava, float on"
+	   "match:class GLava, pin on"
+	   "match:class GLava, idle_inhibit always"
+	   "match:class GLava, size 100% 100%"
+	   "match:class GLava, move 0 0"
+
+           "match:class qalculate-gtk, float on"
+	   "match:class qalculate-gtk, size 70% 55%"
+	   "match:class qalculate-gtk, center on"
+	   "match:class *, suppress_event maxamize"
+	   
+	   "match:title Spotify Premium, float on"
+	   "match:title Spotify Premium, size 80% 75%"
+	   "match:title Spotify Premium, center on"
       ];
       layerrule = [
         #"noanim, selection"

@@ -98,6 +98,7 @@ in
 
       prismlauncher
       freetube
+      pureref
     ])
     ++ (with pkgs-unstable; [
       r2modman
