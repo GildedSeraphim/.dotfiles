@@ -18,7 +18,7 @@
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
     xremap-flake.url = "github:xremap/nix-flake";
     zen.url = "github:0xc000022070/zen-browser-flake";
-    nixvim.url = "github:GildedSeraphim/nixvim/main";
+    nixvim.url = "github:GildedSeraphim/nixvim-2";
     ags.url = "github:aylur/ags";
     sops-nix.url = "github:mic92/sops-nix";
     nur.url = "github:nix-community/NUR";
@@ -118,12 +118,13 @@
             inputs.spicetify-nix.homeManagerModules.default
             inputs.hyprlux.homeManagerModules.default
             inputs.mango.hmModules.mango
+            inputs.nixvim.homeManagerModule
             #inputs.nixvim.homeModules.nixvim
             #inputs.vicinae.homeManagerModules.default
             #            inputs.caelestia.homeManagerModules.default
             {
               home.packages = [
-                inputs.nixvim.packages.${pkgs.system}.default
+                #inputs.nixvim.packages.${pkgs.system}.default
               ];
             }
           ];
