@@ -79,5 +79,4 @@
     enable = true;
     daemon.enable = true;
   };
-
 }

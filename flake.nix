@@ -31,6 +31,7 @@
     };
     mango.url = "github:DreamMaoMao/mango";
     erosanix.url = "github:emmanuelrosa/erosanix";
+    winapps.url = "github:winapps-org/winapps";
   };
 
   outputs =
@@ -125,6 +126,8 @@
             {
               home.packages = [
                 #inputs.nixvim.packages.${pkgs.system}.default
+                inputs.winapps.packages.${system}.winapps
+                inputs.winapps.packages.${system}.winapps-launcher
               ];
             }
           ];

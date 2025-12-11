@@ -140,6 +140,7 @@
       "libvirt"
       "uinput"
       "usbmux"
+      "docker"
     ];
     packages = with pkgs; [
     ];

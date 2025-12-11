@@ -79,6 +79,11 @@ in
       zotero
       calibre
 
+      wine
+      winetricks
+      glibc
+      appimage-run
+
       # icons
       adwaita-icon-theme
       gnome-icon-theme
@@ -99,6 +104,7 @@ in
       prismlauncher
       freetube
       pureref
+      losslesscut-bin
     ])
     ++ (with pkgs-unstable; [
       r2modman

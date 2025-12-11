@@ -34,9 +34,9 @@ in
     base01 = "#1a202e";
     base02 = "#171c29";
     base03 = "#293145";
-    base04 = "#bfd3ff";
-    base05 = "#54678c";
-    base06 = "#3d4a66";
+    base04 = "#D8DEE9"; # Text 1
+    base05 = "#E5E9F0"; # Text 2
+    base06 = "#ECEFF4"; # Text 3
     base07 = "#8FBCBB";
     base08 = "#D0879D";
     base09 = "#D0B1A2";
