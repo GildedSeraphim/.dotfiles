@@ -106,24 +106,25 @@
         ];
       };
       windowrule = [
-	   "match:class GLava, no_blur on"
-	   "match:class GLava, no_shadow on"
-	   "match:class GLava, no_anim on"
-	   "match:class GLava, no_focus on"
-	   "match:class GLava, float on"
-	   "match:class GLava, pin on"
-	   "match:class GLava, idle_inhibit always"
-	   "match:class GLava, size 100% 100%"
-	   "match:class GLava, move 0 0"
+        "match:class GLava, no_blur on"
+        "match:class GLava, no_shadow on"
+        "match:class GLava, no_anim on"
+        "match:class GLava, no_focus on"
+        "match:class GLava, fullscreen_state 1 1"
+        "match:class GLava, float on"
+        "match:class GLava, pin on"
+        "match:class GLava, idle_inhibit always"
+        "match:class GLava, size 100% 100%"
+        "match:class GLava, move 0 0"
 
-           "match:class qalculate-gtk, float on"
-	   "match:class qalculate-gtk, size 70% 55%"
-	   "match:class qalculate-gtk, center on"
-	   "match:class *, suppress_event maxamize"
-	   
-	   "match:title Spotify Premium, float on"
-	   "match:title Spotify Premium, size 80% 75%"
-	   "match:title Spotify Premium, center on"
+        "match:class qalculate-gtk, float on"
+        "match:class qalculate-gtk, size 70% 55%"
+        "match:class qalculate-gtk, center on"
+        "match:class *, suppress_event maxamize"
+
+        "match:title Spotify Premium, float on"
+        "match:title Spotify Premium, size 80% 75%"
+        "match:title Spotify Premium, center on"
       ];
       layerrule = [
         #"noanim, selection"
