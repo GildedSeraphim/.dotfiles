@@ -105,6 +105,7 @@ in
       freetube
       pureref
       losslesscut-bin
+      reaper
     ])
     ++ (with pkgs-unstable; [
       r2modman

@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 {
   services.glance = {
-    enable = true;
+    enable = false;
     settings = {
       server = {
         port = 5678;
