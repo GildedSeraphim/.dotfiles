@@ -7,16 +7,13 @@
         #framerate = 60;
         #autosens = 1;
         #sensitivity = 100;
-        bars = 100;
-        bar_width = 3;
+        #bars = 62;
+        #bar_width = 3;
         #bar_spacing = 1;
         #bar_height = 32;
         #lower_cutoff_freq = 50;
         #higher_cutoff_freq = 1000;
         sleep_timer = 0;
-      };
-      output = {
-        alacritty_sync = 1;
       };
       color = with config.lib.stylix.colors; {
         gradient = 1;

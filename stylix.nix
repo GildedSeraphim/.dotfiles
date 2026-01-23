@@ -6,7 +6,7 @@
   ...
 }:
 let
-  theme = "ayu-dark";
+  theme = "mountain";
   th = "${pkgs.base16-schemes}/share/themes/${theme}.yaml";
   #alterfile = ./wal/color.txt;
   wallpaper = ./wal/branch.png;
@@ -29,24 +29,24 @@ in
   stylix.cursor.name = "Banana Red";
   stylix.cursor.size = 25;
 
-  stylix.override = {
-    base00 = "#1d2433";
-    base01 = "#1a202e";
-    base02 = "#171c29";
-    base03 = "#293145";
-    base04 = "#D8DEE9"; # Text 1
-    base05 = "#E5E9F0"; # Text 2
-    base06 = "#ECEFF4"; # Text 3
-    base07 = "#8FBCBB";
-    base08 = "#D0879D";
-    base09 = "#D0B1A2";
-    base0A = "#CDD2AF";
-    base0B = "#9FD6B6";
-    base0C = "#acd9ec";
-    base0D = "#92b7ea";
-    base0E = "#AD9BEA";
-    base0F = "#CD9BCC";
-  };
+    #stylix.override = {
+    #  base00 = "#1d2433";
+    #  base01 = "#1a202e";
+    #  base02 = "#171c29";
+    #  base03 = "#293145";
+    #  base04 = "#D8DEE9"; # Text 1
+    #  base05 = "#E5E9F0"; # Text 2
+    #  base06 = "#ECEFF4"; # Text 3
+    #  base07 = "#8FBCBB";
+    #  base08 = "#D0879D";
+    #  base09 = "#D0B1A2";
+    #  base0A = "#CDD2AF";
+    #  base0B = "#9FD6B6";
+    #  base0C = "#acd9ec";
+    #  base0D = "#92b7ea";
+    #  base0E = "#AD9BEA";
+    #  base0F = "#CD9BCC";
+    #};
 
   stylix.fonts = {
     sizes.terminal = 13;

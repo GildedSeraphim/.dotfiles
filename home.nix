@@ -54,7 +54,6 @@ in
       gimp
       tree
       inputs.zen.packages.${system}.default
-      fast-cli
       hyprcursor
       brightnessctl
       pavucontrol
@@ -106,6 +105,10 @@ in
       pureref
       losslesscut-bin
       reaper
+      mumble
+      hexchat
+      mpv
+      fractal
     ])
     ++ (with pkgs-unstable; [
       r2modman
