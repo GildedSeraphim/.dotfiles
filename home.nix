@@ -109,6 +109,9 @@ in
       hexchat
       mpv
       fractal
+      bottles
+      wine-wayland
+      teamspeak6-client
     ])
     ++ (with pkgs-unstable; [
       r2modman
