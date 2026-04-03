@@ -93,8 +93,6 @@ in
       chromium
       xonotic
 
-      firefox-beta
-
       obs-studio
 
       krita
@@ -103,15 +101,7 @@ in
       prismlauncher
       freetube
       pureref
-      losslesscut-bin
-      reaper
-      mumble
-      hexchat
-      mpv
-      fractal
-      bottles
-      wine-wayland
-      teamspeak6-client
+      deadlock-mod-manager
     ])
     ++ (with pkgs-unstable; [
       r2modman

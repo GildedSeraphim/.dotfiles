@@ -27,7 +27,7 @@
 
     plugins = [
       #      inputs.hyprland-plugins.packages."${pkgs.system}".hyprbars
-      #inputs.hyprland-plugins.packages."${pkgs.system}".csgo-vulkan-fix
+      inputs.hyprland-plugins.packages."${pkgs.system}".csgo-vulkan-fix
       #     inputs.split-monitor-workspaces.packages."${pkgs.system}".split-monitor-workspaces
       #      inputs.hyprspace.packages."${pkgs.system}".Hyprspace
       inputs.hyprland-plugins.packages."${pkgs.system}".hyprwinwrap
@@ -180,16 +180,16 @@
          hyprwinwrap = {
            "class" = "GLava";
          };
-        # csgo-vulkan-fix = {
-        #   res_w = 1920;
-        #   res_h = 1440;
+         csgo-vulkan-fix = {
+           res_w = 1920;
+           res_h = 1440;
 
         #   #  # NOT a regex! This is a string and has to exactly match initial_class
-        #   class = "cs2";
+           class = "cs2";
         #   #
         #   #  # Whether to fix the mouse position. A select few apps might be wonky with this.
-        #   fix_mouse = true;
-        # };
+           fix_mouse = true;
+         };
       };
 
       "$mod" = "SUPER";
