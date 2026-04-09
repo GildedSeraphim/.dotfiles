@@ -102,6 +102,7 @@ in
       freetube
       pureref
       deadlock-mod-manager
+      pom
     ])
     ++ (with pkgs-unstable; [
       r2modman

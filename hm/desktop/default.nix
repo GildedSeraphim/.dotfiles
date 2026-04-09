@@ -10,7 +10,6 @@
     ./test
     ./eww
     ./swaync
-    ./mango
     ./quickshell
     #   ./caelestia
   ];

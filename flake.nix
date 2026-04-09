@@ -29,7 +29,6 @@
       url = "github:zakk4223/hyprland-easymotion";
       inputs.hyprland.follows = "hyprland";
     };
-    mango.url = "github:DreamMaoMao/mango";
     erosanix.url = "github:emmanuelrosa/erosanix";
     winapps.url = "github:winapps-org/winapps";
   };
@@ -94,11 +93,7 @@
             inputs.sops-nix.nixosModules.sops
             inputs.solaar.nixosModules.default
             inputs.asus-dialpad-driver.nixosModules.default
-            inputs.mango.nixosModules.mango
             inputs.erosanix.nixosModules.onlyoffice
-            {
-              programs.mango.enable = true;
-            }
           ];
           specialArgs = {
             inherit hyprland;
@@ -118,7 +113,6 @@
             stylix.homeManagerModules.stylix
             inputs.spicetify-nix.homeManagerModules.default
             inputs.hyprlux.homeManagerModules.default
-            inputs.mango.hmModules.mango
             inputs.nixvim.homeManagerModule
             #inputs.nixvim.homeModules.nixvim
             #inputs.vicinae.homeManagerModules.default
