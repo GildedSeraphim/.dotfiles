@@ -103,6 +103,10 @@ in
       pureref
       deadlock-mod-manager
       pom
+      scope-tui
+
+      kitty
+
     ])
     ++ (with pkgs-unstable; [
       r2modman

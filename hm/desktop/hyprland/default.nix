@@ -212,7 +212,7 @@
 
         "$mod, T,exec, hyprshade toggle ./greyscale.glsl"
 
-        "$mod, G, exec, glava-vis"
+        "$mod, G, exec, glava"
         "$mod SHIFT, G, exec, pkill glava-vis && pkill glava"
         "$mod, V, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy"
 

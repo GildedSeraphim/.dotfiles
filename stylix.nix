@@ -20,8 +20,9 @@ in
   ];
 
   stylix.enable = true;
+  stylix.polarity = "dark";
 
-  stylix.base16Scheme = "${th}";
+  #stylix.base16Scheme = "${th}";
 
   stylix.image = wallpaper;
 
