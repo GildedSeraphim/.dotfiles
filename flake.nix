@@ -29,7 +29,6 @@
       url = "github:zakk4223/hyprland-easymotion";
       inputs.hyprland.follows = "hyprland";
     };
-    erosanix.url = "github:emmanuelrosa/erosanix";
     winapps.url = "github:winapps-org/winapps";
   };
 
@@ -93,7 +92,6 @@
             inputs.sops-nix.nixosModules.sops
             inputs.solaar.nixosModules.default
             inputs.asus-dialpad-driver.nixosModules.default
-            inputs.erosanix.nixosModules.onlyoffice
           ];
           specialArgs = {
             inherit hyprland;

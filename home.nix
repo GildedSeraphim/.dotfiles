@@ -100,12 +100,11 @@ in
 
       prismlauncher
       freetube
-      pureref
       deadlock-mod-manager
       pom
       scope-tui
 
-      kitty
+      legcord
 
     ])
     ++ (with pkgs-unstable; [

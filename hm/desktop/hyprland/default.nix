@@ -204,7 +204,7 @@
         "$mod, Q, killactive"
         "$mod, W, exec, mako"
         "$mod SHIFT, L, exec, hyprlock"
-        "$mod, D, exec, vesktop"
+        "$mod, D, exec, legcord"
         "$mod, K, exec, hyprctl kill"
         #        "$mod, TAB, overview:toggle"
         "$mod, C, exec, rofi -show calc"
