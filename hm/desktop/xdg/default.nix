@@ -58,7 +58,7 @@
       enable = true;
       createDirectories = true;
       download = "${config.home.homeDirectory}/dl";
-      #projects = "${config.home.homeDirectory}/proj";
+      projects = "${config.home.homeDirectory}/proj";
       documents = "${config.home.homeDirectory}/dox";
       desktop = "${config.home.homeDirectory}/desk";
       videos = "${config.home.homeDirectory}/vid";

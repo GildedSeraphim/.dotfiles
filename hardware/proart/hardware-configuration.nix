@@ -20,7 +20,7 @@
   boot.blacklistedKernelModules = ["ucsi_acpi"];
 
   boot.initrd.systemd.managerEnvironment = {
-    SYSTEMD_BYPASS_HIBERNATION_MEMORY_CHECK = 1;
+    SYSTEMD_BYPASS_HIBERNATION_MEMORY_CHECK = "1";
   };
 
   fileSystems."/" = {

@@ -105,6 +105,7 @@ in
       scope-tui
 
       legcord
+      localsend
 
     ])
     ++ (with pkgs-unstable; [
