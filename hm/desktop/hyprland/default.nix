@@ -56,13 +56,13 @@
       };
 
       monitor = [
-        "HDMI-A-1,2560x1440@60.00,-2560x0,auto"
+        #"HDMI-A-1,2560x1440@60.00,-2560x0,auto"
         #"DP-3,2560x1440@144,2560x0,auto"
         #"Unknown-1,630x350,-2560x-1440,auto"
         "eDP-1, 3840x2400@60,0x0,auto"
         "DP-1, 2560x1440@144.00,0x0,auto"
         #"eDP-1, disabled"
-        #"HDMI-A-1, 1920x1080@74.97,auto,auto"
+        "HDMI-A-1,1280x1024@60,-1280x0, auto"
       ];
 
       decoration = {

@@ -40,10 +40,10 @@
     pkgs.xdg-desktop-portal-gtk
     pkgs.xdg-desktop-portal-wlr
   ];
-  services.displayManager.sddm.enable = true;
-  services.displayManager.sddm.wayland.enable = true;
-  services.displayManager.sddm.autoNumlock = true;
-  services.displayManager.defaultSession = "steam";
+  # services.displayManager.sddm.enable = true;
+  # services.displayManager.sddm.wayland.enable = true;
+  # services.displayManager.sddm.autoNumlock = true;
+  # services.displayManager.defaultSession = "steam";
   services.xserver.enable = true;
 
   nix.settings.auto-optimise-store = true;

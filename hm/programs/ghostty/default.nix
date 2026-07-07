@@ -16,6 +16,9 @@ in
       settings = with config.lib.stylix.colors.withHashtag; {
         font-family = "${config.stylix.fonts.monospace.name}";
         confirm-close-surface = false;
+        window-padding-x = "10, 10";
+        window-padding-y = "10";
+        adjust-cursor-thickness = "2";
       };
     };
   };

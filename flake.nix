@@ -30,6 +30,7 @@
       inputs.hyprland.follows = "hyprland";
     };
     winapps.url = "github:winapps-org/winapps";
+    thyx.url = "github:rccyx/thyx"; # SDDM theme
   };
 
   outputs =
@@ -92,6 +93,12 @@
             inputs.sops-nix.nixosModules.sops
             inputs.solaar.nixosModules.default
             inputs.asus-dialpad-driver.nixosModules.default
+            inputs.thyx.nixosModules.default
+            {
+              services.displayManager.sddm.thyx.enable = true;
+              services.displayManager.sddm.wayland.enable = true;
+              services.displayManager.sddm.theme = "thyx";
+            }
           ];
           specialArgs = {
             inherit hyprland;
