@@ -53,7 +53,7 @@
       };
     };
 
-    resolvconf.enable = false; # Don't auto-generate /etc/resolv.conf
+    resolvconf.enable = true; # Don't auto-generate /etc/resolv.conf
 
     useDHCP = lib.mkForce true;
 

@@ -23,6 +23,7 @@
 
   wayland.windowManager.hyprland.xwayland.enable = true;
   wayland.windowManager.hyprland = {
+    configType = "hyprlang";
     enable = true;
 
     plugins = [

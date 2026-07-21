@@ -1356,11 +1356,11 @@
         "nixvim": "nixvim_2"
       },
       "locked": {
-        "lastModified": 1768262713,
-        "narHash": "sha256-AZ9lcxsGRp2rKSkJKjCeShRUqrYywXFJO80JiYyEGB0=",
+        "lastModified": 1784423881,
+        "narHash": "sha256-NS8oOYSSmh4ch3qxC9yspO8WHUF9pPPNnGG5w4CYTtI=",
         "owner": "GildedSeraphim",
         "repo": "nixvim-2",
-        "rev": "8598ce030f0dbbdee32a90b259585ea5ea098a04",
+        "rev": "685639cc9ec185e8add5d4012f8c598ab79f25fe",
         "type": "github"
       },
       "original": {
