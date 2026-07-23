@@ -70,7 +70,6 @@ in
       libreoffice
       qalculate-gtk
       imagemagick
-      bitwarden-desktop
       nsxiv
 
       nautilus
@@ -89,24 +88,17 @@ in
       hicolor-icon-theme
 
       teams-for-linux
-      vesktop
       chromium
-      xonotic
 
       obs-studio
 
       krita
       obsidian
 
-      prismlauncher
-      freetube
       deadlock-mod-manager
       pom
       scope-tui
-
       legcord
-      localsend
-
     ])
     ++ (with pkgs-unstable; [
       r2modman

@@ -44,6 +44,7 @@
         ''${pkgs.easyeffects}/bin/easyeffects --gapplication-service &''
         ''wl-paste --type text --watch cliphist store &''
         ''rog-control-center''
+        ''noctalia''
       ];
 
       general = {
@@ -197,7 +198,7 @@
 
       bind = [
         "$mod, B, exec, zen-beta"
-        "$mod, Return, exec, foot"
+        "$mod, Return, exec, ghostty"
         "$mod, R, exec, rofi -show drun"
         "$mod SHIFT, R, exec, rofi -show run"
         "$mod, F, togglefloating"

@@ -18,10 +18,10 @@
     ./btop
     #./nvchad
     ./shell
-    ./cava
+    #./cava
     #   ./firefox
     ./glava
-    ./glance
+    #./glance
     #    ./nixvim
     ./foot
     ./ghostty
@@ -33,7 +33,7 @@
     #   ./music
     ./zathura
   ];
-  opt.terminal.foot.enable = true;
+  opt.terminal.foot.enable = false;
   opt.terminal.ghostty.enable = true;
   # opt.browser.librewolf.enable = true;
 }
