@@ -101,13 +101,9 @@ in
       legcord
     ])
     ++ (with pkgs-unstable; [
-      r2modman
       nix-output-monitor
-      nvd
-      protonup-qt
-      nitch
-
       nix-tree
+      handy
     ]);
 
   fonts.fontconfig.enable = true;
