@@ -3,8 +3,7 @@
   pkgs,
   inputs,
   ...
-}:
-{
+}: {
   fonts = {
     fontDir.enable = true;
     packages = with pkgs; [
@@ -52,6 +51,7 @@
       nerd-fonts.iosevka
       nerd-fonts.monaspace
       inputs.apple-fonts.packages."${pkgs.system}".sf-mono
+      recursive
     ];
     fontconfig = {
       enable = true;

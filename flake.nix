@@ -18,7 +18,11 @@
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
     xremap-flake.url = "github:xremap/nix-flake";
     zen.url = "github:0xc000022070/zen-browser-flake";
-    nixvim.url = "github:GildedSeraphim/nixvim-2";
+    #nixvim.url = "github:GildedSeraphim/nixvim-2";
+
+    neovim.url = "github:GildedSeraphim/nvim";
+    neovim.inputs.nixpkgs.follows = "nixpkgs";
+
     ags.url = "github:aylur/ags";
     sops-nix.url = "github:mic92/sops-nix";
     nur.url = "github:nix-community/NUR";
@@ -31,117 +35,119 @@
     };
     winapps.url = "github:winapps-org/winapps";
     thyx.url = "github:rccyx/thyx"; # SDDM theme
+    handy.url = "github:cjpais/Handy";
   };
 
-  outputs =
-    {
-      self,
-      nixpkgs,
-      home-manager,
-      nixpkgs-unstable,
-      nix-colors,
-      hyprland,
-      stylix,
-      nixos-hardware,
-      ...
-    }@inputs:
-    let
-      inherit (self) outputs;
-      system = "x86_64-linux";
-      host = "nixos";
-      username = "sn";
-      pkgs = import nixpkgs {
-        inherit system;
-        inherit host;
-        inherit username;
-        inherit inputs;
-        config.allowUnfree = true;
-        config.nvidia.acceptLicense = true;
+  outputs = {
+    self,
+    nixpkgs,
+    home-manager,
+    nixpkgs-unstable,
+    nix-colors,
+    hyprland,
+    stylix,
+    nixos-hardware,
+    ...
+  } @ inputs: let
+    inherit (self) outputs;
+    system = "x86_64-linux";
+    host = "nixos";
+    username = "sn";
+    pkgs = import nixpkgs {
+      inherit system;
+      inherit host;
+      inherit username;
+      inherit inputs;
+      config.allowUnfree = true;
+      config.nvidia.acceptLicense = true;
 
-        overlays = [
-          inputs.nur.overlays.default
-          (final: prev: {
-          })
-        ];
-      };
-      pkgs-unstable = import nixpkgs-unstable {
+      overlays = [
+        inputs.nur.overlays.default
+        (final: prev: {})
+      ];
+    };
+    pkgs-unstable = import nixpkgs-unstable {
+      inherit system;
+      inherit host;
+      inherit username;
+      inherit inputs;
+      config.allowUnfree = true;
+      config.nvidia.acceptLicense = true;
+      overlays = [
+        inputs.nur.overlays.default
+        (final: prev: {
+          alpaca = prev.alpaca.override {
+            ollama = pkgs-unstable.ollama-cuda;
+          };
+          alpaca-cuda = final.alpaca;
+        })
+      ];
+    };
+    lib = nixpkgs.lib;
+  in {
+    nixosConfigurations = {
+      nixos = lib.nixosSystem {
         inherit system;
-        inherit host;
-        inherit username;
-        inherit inputs;
-        config.allowUnfree = true;
-        config.nvidia.acceptLicense = true;
-        overlays = [
-          inputs.nur.overlays.default
-          (final: prev: {
-            alpaca = prev.alpaca.override {
-              ollama = pkgs-unstable.ollama-cuda;
-            };
-            alpaca-cuda = final.alpaca;
-          })
+        modules = [
+          #nixos-hardware.nixosModules.asus-zephyrus-ga401
+          ./configuration.nix
+          inputs.sops-nix.nixosModules.sops
+          inputs.solaar.nixosModules.default
+          inputs.asus-dialpad-driver.nixosModules.default
+          inputs.thyx.nixosModules.default
+          {
+            services.displayManager.sddm.thyx.enable = true;
+            services.displayManager.sddm.wayland.enable = true;
+            services.displayManager.sddm.theme = "thyx";
+          }
         ];
-      };
-      lib = nixpkgs.lib;
-    in
-    {
-      nixosConfigurations = {
-        nixos = lib.nixosSystem {
-          inherit system;
-          modules = [
-            #nixos-hardware.nixosModules.asus-zephyrus-ga401
-            ./configuration.nix
-            inputs.sops-nix.nixosModules.sops
-            inputs.solaar.nixosModules.default
-            inputs.asus-dialpad-driver.nixosModules.default
-            inputs.thyx.nixosModules.default
-            {
-              services.displayManager.sddm.thyx.enable = true;
-              services.displayManager.sddm.wayland.enable = true;
-              services.displayManager.sddm.theme = "thyx";
-            }
-          ];
-          specialArgs = {
-            inherit hyprland;
-            inherit inputs;
-            inherit pkgs-unstable;
-            inherit nix-colors;
-          };
-        };
-      };
-
-      homeConfigurations = {
-        sn = home-manager.lib.homeManagerConfiguration {
-          modules = [
-            ./spicetify.nix
-            ./home.nix
-            hyprland.homeManagerModules.default
-            stylix.homeManagerModules.stylix
-            inputs.spicetify-nix.homeManagerModules.default
-            inputs.hyprlux.homeManagerModules.default
-            inputs.nixvim.homeManagerModule
-            #inputs.nixvim.homeModules.nixvim
-            #inputs.vicinae.homeManagerModules.default
-            #            inputs.caelestia.homeManagerModules.default
-            {
-              home.packages = [
-                #inputs.nixvim.packages.${pkgs.system}.default
-                inputs.winapps.packages.${system}.winapps
-                inputs.winapps.packages.${system}.winapps-launcher
-              ];
-            }
-          ];
-          inherit pkgs;
-          extraSpecialArgs = {
-            inherit system;
-            inherit username;
-            inherit pkgs;
-            inherit hyprland;
-            inherit inputs;
-            inherit pkgs-unstable;
-            inherit nix-colors;
-            inherit outputs;
-          };
+        specialArgs = {
+          inherit hyprland;
+          inherit inputs;
+          inherit pkgs-unstable;
+          inherit nix-colors;
         };
       };
     };
+
+    homeConfigurations = {
+      sn = home-manager.lib.homeManagerConfiguration {
+        modules = [
+          ./spicetify.nix
+          ./home.nix
+          hyprland.homeManagerModules.default
+          stylix.homeManagerModules.stylix
+          inputs.spicetify-nix.homeManagerModules.default
+          inputs.hyprlux.homeManagerModules.default
+          #inputs.nixvim.homeManagerModule
+          inputs.handy.homeManagerModules.default
+          #inputs.nixvim.homeModules.nixvim
+          #inputs.vicinae.homeManagerModules.default
+          #            inputs.caelestia.homeManagerModules.default
+          {
+            services.handy.enable = true;
+            home.packages = [
+              #inputs.neovim.packages.${pkgs.system}.default
+              pkgs.neovim
+	      pkgs.rustc
+	      pkgs.gcc
+              inputs.winapps.packages.${system}.winapps
+              inputs.winapps.packages.${system}.winapps-launcher
+            ];
+          }
+        ];
+        inherit pkgs;
+        extraSpecialArgs = {
+          inherit system;
+          inherit username;
+          inherit pkgs;
+          inherit hyprland;
+          inherit inputs;
+          inherit pkgs-unstable;
+          inherit nix-colors;
+          inherit outputs;
+        };
+      };
+    };
+  };
 }

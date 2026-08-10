@@ -3,8 +3,7 @@
   pkgs-unstable,
   inputs,
   ...
-}:
-let
+}: let
   # reaperfm =
   #   pkgs.runCommand "reaper" {
   #     buildInputs = [pkgs.makeWrapper];
@@ -23,8 +22,7 @@ let
   #     makeWrapper ${pkgs.reaper}/bin/reaper $out/bin/reaper \
   #       --set GDK_BACKEND x11 \
   #   '';
-in
-{
+in {
   home.username = "sn";
   home.homeDirectory = "/home/sn";
 
@@ -99,11 +97,13 @@ in
       pom
       scope-tui
       legcord
+
+      inputs.handy.packages.${pkgs.stdenv.hostPlatform.system}.default
+      wtype
     ])
     ++ (with pkgs-unstable; [
       nix-output-monitor
       nix-tree
-      handy
     ]);
 
   fonts.fontconfig.enable = true;

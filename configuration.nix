@@ -3,8 +3,7 @@
   pkgs-unstable,
   inputs,
   ...
-}:
-{
+}: {
   imports = [
     #./hardware/laptop/hardware-configuration.nix
     #./hardware/laptop/nvidia.nix
@@ -73,6 +72,8 @@
       s-tui
       stress
       # ------------
+
+      ollama
     ])
     ++ (with pkgs-unstable; [
       #ollama-cuda

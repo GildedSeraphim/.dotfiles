@@ -3,8 +3,7 @@
   inputs,
   config,
   ...
-}:
-{
+}: {
   imports = [
     ./hyprland-environment.nix
     ./wlsunset.nix
@@ -44,7 +43,6 @@
         ''${pkgs.easyeffects}/bin/easyeffects --gapplication-service &''
         ''wl-paste --type text --watch cliphist store &''
         ''rog-control-center''
-        ''noctalia''
       ];
 
       general = {
@@ -178,7 +176,6 @@
       };
 
       plugin = {
-       
         #   hyprwinwrap = {
         #     "class" = "GLava";
         #   };
@@ -219,6 +216,7 @@
         "$mod, V, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy"
 
         "$mod, O, exec, obsidian"
+        "$mod, M, exec, handy --toggle-transcription"
 
         "Control_L SHIFT, S, exec, grimblast copy area --freeze"
         "Control_L ALT, S, exec, grimblast --notify --cursor save screen"
