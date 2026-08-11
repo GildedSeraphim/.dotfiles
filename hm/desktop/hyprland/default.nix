@@ -22,7 +22,7 @@
 
   wayland.windowManager.hyprland.xwayland.enable = true;
   wayland.windowManager.hyprland = {
-    configType = "hyprlang";
+    configType = "lua";
     enable = true;
 
     plugins = [

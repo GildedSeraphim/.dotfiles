@@ -82,7 +82,6 @@ in {
 
       # icons
       adwaita-icon-theme
-      gnome-icon-theme
       hicolor-icon-theme
 
       teams-for-linux
@@ -98,7 +97,6 @@ in {
       scope-tui
       legcord
 
-      inputs.handy.packages.${pkgs.stdenv.hostPlatform.system}.default
       wtype
     ])
     ++ (with pkgs-unstable; [

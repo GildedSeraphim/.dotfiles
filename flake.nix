@@ -35,7 +35,6 @@
     };
     winapps.url = "github:winapps-org/winapps";
     thyx.url = "github:rccyx/thyx"; # SDDM theme
-    handy.url = "github:cjpais/Handy";
   };
 
   outputs = {
@@ -116,16 +115,14 @@
           ./spicetify.nix
           ./home.nix
           hyprland.homeManagerModules.default
-          stylix.homeManagerModules.stylix
+          stylix.homeModules.stylix
           inputs.spicetify-nix.homeManagerModules.default
           inputs.hyprlux.homeManagerModules.default
           #inputs.nixvim.homeManagerModule
-          inputs.handy.homeManagerModules.default
           #inputs.nixvim.homeModules.nixvim
           #inputs.vicinae.homeManagerModules.default
           #            inputs.caelestia.homeManagerModules.default
           {
-            services.handy.enable = true;
             home.packages = [
               #inputs.neovim.packages.${pkgs.system}.default
               pkgs.neovim

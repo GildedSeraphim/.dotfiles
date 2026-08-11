@@ -66,14 +66,6 @@
       steamcmd
       fh
       libnotify
-
-      # Undervolting
-      undervolt
-      s-tui
-      stress
-      # ------------
-
-      ollama
     ])
     ++ (with pkgs-unstable; [
       #ollama-cuda
@@ -83,7 +75,7 @@
     #localhost/8080
   };
   hardware.opentabletdriver = {
-    enable = true;
+    enable = false;
     daemon.enable = true;
   };
 }

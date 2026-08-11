@@ -4,7 +4,7 @@
   pkgs,
   ...
 }: {
-  nixpkgs.config.nvidia.acceptLicense = true;
+  #nixpkgs.config.nvidia.acceptLicense = true;
   hardware.graphics = {
     enable = true;
     extraPackages = with pkgs; [nvidia-vaapi-driver];
