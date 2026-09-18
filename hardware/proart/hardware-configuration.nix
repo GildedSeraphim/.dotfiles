@@ -5,6 +5,7 @@
   config,
   lib,
   pkgs,
+  pkgs-unstable,
   modulesPath,
   ...
 }: {
@@ -12,7 +13,8 @@
     (modulesPath + "/installer/scan/not-detected.nix")
   ];
 
-  boot.kernelPackages = pkgs.linuxKernel.packages.linux_xanmod_latest;
+  boot.kernelPackages = pkgs-unstable.linuxKernel.packages.linux_xanmod_latest;
+  #boot.kernelPackages = pkgs.linuxPackages_6_12;
   boot.initrd.availableKernelModules = ["nvme" "xhci_pci" "thunderbolt" "usb_storage" "usbhid" "sd_mod" "sdhci_pci"];
   boot.initrd.kernelModules = ["amdgpu" "asus-wmi" "asus-nb-wmi"];
   boot.kernelModules = ["kvm-amd"];
