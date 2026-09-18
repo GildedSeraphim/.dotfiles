@@ -52,6 +52,7 @@
       nerd-fonts.monaspace
       inputs.apple-fonts.packages."${pkgs.system}".sf-mono
       recursive
+      noto-fonts
     ];
     fontconfig = {
       enable = true;

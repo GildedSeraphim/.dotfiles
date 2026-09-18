@@ -32,6 +32,7 @@
     #   ./zed
     #   ./music
     ./zathura
+    ./zed
   ];
   opt.terminal.foot.enable = false;
   opt.terminal.ghostty.enable = true;

@@ -59,8 +59,8 @@ in
         "hyprland/workspaces" = {
           format = "{id}";
           show-special = true;
-          on-scroll-down = "${getExe' config.wayland.windowManager.hyprland.package "hyprctl"} dispatch workspace e+1";
-          on-scroll-up = "${getExe' config.wayland.windowManager.hyprland.package "hyprctl"} dispatch workspace e-1";
+          on-scroll-up = "hyprctl dispatch 'hl.dsp.focus({ workspace = \"e-1\" })'";
+          on-scroll-down = "hyprctl dispatch 'hl.dsp.focus({ workspace = \"e+1\" })'";
           format-icons = {
             "special" = "";
           };
