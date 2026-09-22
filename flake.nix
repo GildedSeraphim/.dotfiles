@@ -27,7 +27,6 @@
     sops-nix.url = "github:mic92/sops-nix";
     nur.url = "github:nix-community/NUR";
     apple-fonts.url = "github:Lyndeno/apple-fonts.nix";
-    solaar.url = "https://flakehub.com/f/Svenum/Solaar-Flake/*.tar.gz";
     asus-dialpad-driver.url = "github:asus-linux-drivers/asus-dialpad-driver";
     hyprland-easymotion = {
       url = "github:zakk4223/hyprland-easymotion";
@@ -91,7 +90,6 @@
           #nixos-hardware.nixosModules.asus-zephyrus-ga401
           ./configuration.nix
           inputs.sops-nix.nixosModules.sops
-          inputs.solaar.nixosModules.default
           inputs.asus-dialpad-driver.nixosModules.default
           inputs.thyx.nixosModules.default
           {

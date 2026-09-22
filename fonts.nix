@@ -9,7 +9,6 @@
     packages = with pkgs; [
       #nerd-fonts
       hack-font
-      nerd-fonts.iosevka-term-slab
       #cozette
       monocraft
       # apple-fonts
@@ -17,7 +16,6 @@
       noto-fonts
       noto-fonts-cjk-sans
       inter
-      iosevka
       ibm-plex
       fira-code
       scientifica
@@ -38,7 +36,6 @@
       corefonts
       vista-fonts
       jetbrains-mono
-      google-fonts
       material-design-icons
       material-symbols
       rubik
@@ -48,7 +45,6 @@
       nerd-fonts.fira-code
       nerd-fonts.fantasque-sans-mono
       nerd-fonts.zed-mono
-      nerd-fonts.iosevka
       nerd-fonts.monaspace
       inputs.apple-fonts.packages."${pkgs.system}".sf-mono
       recursive

@@ -99,8 +99,6 @@
   hardware.bluetooth.powerOnBoot = true;
   services.blueman.enable = true;
 
-  services.solaar.enable = true;
-
   services.flatpak.enable = true;
   services.gnome.gnome-keyring.enable = true;
 
@@ -141,11 +139,11 @@
       "libvirt"
       "uinput"
       "usbmux"
-      "docker"
     ];
     packages = with pkgs; [
     ];
   };
+
 
   # DISABLE CUPS DUE TO 9.9 CVE
   #services.printing.browsed.enable = false;
@@ -167,10 +165,11 @@
   # boot.kernelModules = ["kvm-amd" "kvm-intel"];
 
   programs.firejail.enable = true;
-  programs.firejail.wrappedBinaries = {
-    librewolf = {
-      executable = "${pkgs.lib.getBin pkgs.librewolf}";
-      profile = "${pkgs.firejail}/etc/firejail/firefox.profile";
+  programs.solaar = {
+    enable = true;
+    userService = {
+      enable = true;
+      window = "hide";
     };
   };
 
