@@ -56,6 +56,7 @@
     };
     userDirs = {
       enable = true;
+      setSessionVariables = false;
       createDirectories = true;
       download = "${config.home.homeDirectory}/dl";
       projects = "${config.home.homeDirectory}/proj";

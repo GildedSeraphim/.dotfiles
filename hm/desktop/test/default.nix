@@ -7,7 +7,6 @@
   stylix.targets.rofi.enable = false;
   programs.rofi = {
     enable = true;
-    cycle = true;
     plugins = with pkgs; [
       # HACK: temporary fix until ABI update
       (rofi-calc.override {
@@ -15,7 +14,8 @@
       })
       rofi-emoji
     ];
-    extraConfig = {
+    settings = {
+      cycle = true;
       modi = "drun,calc,window,emoji,run";
       sidebar-mode = true;
       terminal = "kitty";

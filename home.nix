@@ -34,9 +34,9 @@ in {
 
   programs.git = {
     enable = true;
-    userName = "GildedSeraphim";
-    userEmail = "snathani@protonmail.com";
-    extraConfig = {
+    settings = {
+      user.name = "GildedSeraphim";
+      user.email = "snathani@protonmail.com";
       init.defaultBranch = "main";
     };
   };
@@ -49,6 +49,7 @@ in {
   home.packages =
     (with pkgs; [
       lazygit
+      codeberg-cli
       gimp
       tree
       inputs.zen.packages.${system}.default
