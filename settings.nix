@@ -100,7 +100,7 @@
   services.blueman.enable = true;
 
   services.flatpak.enable = true;
-  services.gnome.gnome-keyring.enable = true;
+  #services.gnome.gnome-keyring.enable = true;
 
   time.timeZone = "America/Chicago";
 

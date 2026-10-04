@@ -43,10 +43,10 @@
   programs.fish.shellInit = '''';
 
   programs.fish.shellAliases = {
-    l = "eza -al";
+    l = "eza -al --group-directories-first";
     cd = "z";
-    ls = "eza";
-    ll = "eza -l";
+    ls = "eza --group-directories-first";
+    ll = "eza -l --group-directories-first";
     ".." = "cd ..";
     "dot" = "cd /home/sn/.dotfiles/";
     "neo" = "nitch";
