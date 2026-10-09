@@ -99,6 +99,7 @@ in {
       legcord
 
       wtype
+      tree-sitter
     ])
     ++ (with pkgs-unstable; [
       nix-output-monitor
